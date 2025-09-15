@@ -15,8 +15,13 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
+from django.http import HttpResponse
+
 from django.urls import path
 from core import views
+
+def healthz(_): return HttpResponse("ok")
+
 
 urlpatterns = [
     path("admin/", admin.site.urls),
@@ -25,6 +30,7 @@ urlpatterns = [
     path("about/", views.about, name="about"),
     path("glb-test/", views.glb_test, name="glb_test"),
     path("api/ask/", views.api_ask, name="api_ask"),
+    path("healthz/", healthz),
 ]
 
 handler404 = "core.views.error_view"
