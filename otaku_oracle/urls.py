@@ -20,7 +20,7 @@ from django.http import HttpResponse
 from django.urls import path
 from core import views
 
-def healthz(_): return HttpResponse("ok")
+def healthz(): return HttpResponse("ok")
 
 
 urlpatterns = [
