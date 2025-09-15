@@ -1,0 +1,183 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GLB Test Viewer</title>
+  <style>
+    html, body { height: 100%; margin: 0; }
+    body { background: #0b0c0f; color: #e9edf2; font-family: system-ui, sans-serif; }
+    #c { position: fixed; inset: 0; display: block; width: 100vw; height: 100vh; }
+    .ui { position: fixed; left: 10px; top: 10px; background: rgba(0,0,0,.5); padding: 8px 10px; border-radius: 8px; }
+    .ui input[type=range] { width: 220px; }
+  </style>
+</head>
+<body>
+  <div class="ui">
+    <div><strong>GLB Focus Swap Test</strong></div>
+    <div>Scroll or use the slider to change focus.</div>
+    <div>Static dir: /static/models/</div>
+    <div style="margin-top:6px; display:flex; align-items:center; gap:.6rem; flex-wrap:wrap;">
+      <label for="focus">Focus</label>
+      <input id="focus" type="range" min="0" max="1" value="0" step="0.001">
+      <button id="toggleMat" type="button">Toggle Normal Mat</button>
+      <label for="scale">Scale</label>
+      <input id="scale" type="range" min="0.5" max="8" value="2.2" step="0.1">
+    </div>
+    <div id="status" style="margin-top:6px;">Init...</div>
+  </div>
+  <canvas id="c"></canvas>
+  <div style="height: 260vh"></div>
+
+  <script type="importmap">
+    {"imports":{
+      "three":"https://unpkg.com/three@0.159.0/build/three.module.js",
+      "three/addons/":"https://unpkg.com/three@0.159.0/examples/jsm/"
+    }}
+  </script>
+
+  <script type="module">
+    import * as THREE from 'three';
+    import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+    import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+
+    const status = document.getElementById('status');
+    const canvas = document.getElementById('c');
+    canvas.style.background = '#ff00aa';
+
+    window.addEventListener('error', e => status.textContent = 'JS error: ' + e.message);
+    window.addEventListener('unhandledrejection', e => status.textContent = 'Promise error: ' + (e.reason?.message || e.reason));
+
+    const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: false });
+    renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+    renderer.setSize(innerWidth, innerHeight);
+    renderer.outputColorSpace = THREE.SRGBColorSpace;
+    renderer.setClearColor(0x00ff88, 1);
+
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(25, innerWidth / innerHeight, 0.01, 50);
+    camera.position.set(0, 0, 1.0);
+    camera.lookAt(0, 0, 0);
+    const controls = new OrbitControls(camera, canvas);
+    controls.enableDamping = true;
+
+    scene.add(new THREE.HemisphereLight(0xffffff, 0x0b0e14, 1.0));
+    const dir = new THREE.DirectionalLight(0xffffff, 1.0); dir.position.set(3,4,6);
+    scene.add(dir);
+    scene.add(new THREE.AmbientLight(0xffffff, 0.35));
+
+    const dbg = new THREE.Mesh(new THREE.BoxGeometry(1,1,1), new THREE.MeshNormalMaterial());
+    dbg.position.set(-2,0,0);
+    scene.add(dbg);
+    scene.add(new THREE.AxesHelper(1.5));
+    scene.add(new THREE.GridHelper(10,10));
+
+    const loader = new GLTFLoader();
+    const loadGLB = (url) => new Promise((res, rej) => loader.load(url, g => res(g.scene), undefined, rej));
+
+    function centerAndScale(obj, target){
+      const box = new THREE.Box3().setFromObject(obj);
+      const size = new THREE.Vector3(); box.getSize(size);
+      const center = new THREE.Vector3(); box.getCenter(center);
+      obj.position.sub(center);
+      const s = (target || 2.0) / Math.max(size.x, size.y, size.z, 1e-6);
+      obj.scale.setScalar(s);
+    }
+    function setEmphasis(root, emph){
+      root.scale.setScalar(THREE.MathUtils.lerp(0.9, 1.15, emph));
+      root.traverse((o)=>{
+        if(o.isMesh){
+          const mats = Array.isArray(o.material) ? o.material : [o.material];
+          mats.forEach(m=>{ if(!m) return; m.transparent = true; m.opacity = THREE.MathUtils.lerp(0.65,1.0,emph); });
+        }
+      });
+    }
+
+    // Place camera on the blue axis (world +Z) looking at the object's center,
+    // with distance = fraction (default 1/4) of the object's bounding-box depth.
+    function frameOnBlueAxisBoxFraction(obj, fraction = 0.0625, fovDeg = 22, extra = 0.01){
+      obj.updateWorldMatrix(true, true);
+      const box = new THREE.Box3().setFromObject(obj);
+      const size = new THREE.Vector3(); box.getSize(size);
+      const center = new THREE.Vector3(); box.getCenter(center);
+      camera.fov = fovDeg; camera.updateProjectionMatrix();
+      const distPart = Math.max(size.z * Math.max(fraction, 1e-6), 1e-6);
+      const reduced = distPart * 0.75; // reduce distance by a quarter (25%)
+      camera.position.set(0, 0, center.z + reduced + extra);
+      camera.lookAt(0, 0, center.z);
+      if (typeof controls !== 'undefined') { controls.target.set(0,0,center.z); controls.update(); }
+    }
+
+    async function main(){
+      status.textContent = 'Loading models...';
+      const luffy = await loadGLB('/static/models/monkey_d._luffy_scenario.glb');
+      const ace   = await loadGLB('/static/models/portgas_d._ace_one_piece.glb');
+      console.log('[GLB] Luffy loaded', luffy); console.log('[GLB] Ace loaded', ace);
+
+      let targetL = 5.5; let targetA = 5.0;
+      centerAndScale(luffy,targetL); centerAndScale(ace,targetA);
+      const luffyBox = new THREE.Box3().setFromObject(luffy);
+      const aceBox   = new THREE.Box3().setFromObject(ace);
+      scene.add(new THREE.Box3Helper(luffyBox, 0xff00ff));
+      scene.add(new THREE.Box3Helper(aceBox,   0x00ffff));
+
+      const FRONT_Z = 0.3, BACK_Z = -1.6, FRONT_Y = 0.0, BACK_Y = 0.0;
+      luffy.position.set(0,FRONT_Y,FRONT_Z); ace.position.set(0,BACK_Y,BACK_Z);
+      luffy.rotation.y = Math.PI/1.5; // 180 deg CW
+      ace.rotation.y   = -Math.PI/4; // 45 deg CW
+
+      // Add to scene, then frame very close (zoomed-in look)
+      scene.add(luffy, ace);
+      // Read optional fraction/fov/extra from query (?frac=0.25&fov=22&extra=0.01)
+      const params = new URL(location.href).searchParams;
+      const frac = parseFloat(params.get('frac') || '0.125');
+      const fov = parseFloat(params.get('fov') || '22');
+      const extra = parseFloat(params.get('extra') || '0.01');
+      frameOnBlueAxisBoxFraction(luffy, isFinite(frac)?frac:0.25, isFinite(fov)?fov:22, isFinite(extra)?extra:0.01);
+      setEmphasis(luffy,1.0); setEmphasis(ace,0.0);
+
+      const slider = document.getElementById('focus');
+      const scaleSlider = document.getElementById('scale');
+      const focus = { f: 0 };
+      const update = () => {
+        const max = Math.max(1, document.documentElement.scrollHeight - innerHeight);
+        focus.f = Math.min(1, Math.max(0, scrollY / max));
+        slider.value = String(focus.f);
+      };
+      addEventListener('scroll', update, { passive: true });
+      slider.addEventListener('input', () => { focus.f = parseFloat(slider.value) || 0; });
+      update();
+
+      let logT = 0; const clock = new THREE.Clock();
+      (function tick(){
+        const dt = Math.min(clock.getDelta(), 0.033);
+        const f = THREE.MathUtils.clamp(focus.f, 0, 1);
+        const s = THREE.MathUtils.smoothstep(f, 0, 1);
+        dbg.rotation.y += 0.8 * dt;
+        // Apply the same continuous Y-rotation to both objects
+        luffy.rotation.y += 0.8 * dt;
+        ace.rotation.y   += 0.8 * dt;
+        luffy.position.z = THREE.MathUtils.lerp(FRONT_Z, BACK_Z, s);
+        ace.position.z   = THREE.MathUtils.lerp(BACK_Z,  FRONT_Z, s);
+        luffy.position.y = THREE.MathUtils.lerp(FRONT_Y, BACK_Y, s);
+        ace.position.y   = THREE.MathUtils.lerp(BACK_Y,  FRONT_Y, s);
+        setEmphasis(luffy, 1 - s); setEmphasis(ace, s);
+        controls.update();
+        renderer.render(scene, camera);
+        logT += dt; if (logT > 0.5) { console.log('[tick]', { f: f.toFixed(2), s: s.toFixed(2), lz: luffy.position.z.toFixed(2), az: ace.position.z.toFixed(2) }); logT = 0; }
+        requestAnimationFrame(tick);
+      })();
+
+      // allow interactive rescale of both models
+      scaleSlider.addEventListener('input', ()=>{
+        const t = parseFloat(scaleSlider.value) || 2.0;
+        luffy.scale.setScalar(t/targetL * luffy.scale.x);
+        ace.scale.setScalar((t-0.3)/targetA * ace.scale.x);
+        targetL = t; targetA = t-0.3;
+      });
+    }
+    main();
+  </script>
+</body>
+</html>

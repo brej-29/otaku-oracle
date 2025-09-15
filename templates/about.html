@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="oo-about">
+  <!-- Centered heading -->
+  <h2 class="about-title">About Otaku Oracle</h2>
+
+  <!-- Main glass card -->
+ <div class="glass glass-main">
+  <p>
+    Hi! I’m building <strong>Otaku Oracle</strong>—a slick, professional Django playground where
+    anime &amp; manga questions collide with a lightning-fast LLM. Think shōnen-splash energy:
+    neon gradients, halftone panels, and panel-wipe motion… minus the filler arcs.
+  </p>
+  <p>
+    Ask about ongoing status, episode/chapter counts, where to stream in your region, ratings,
+    cast, OST/OP/ED credits, and more. Got a panel or cover? Drop an image URL and we’ll try to
+    make sense of it like a seasoned scanlator.
+  </p>
+  <p>
+    I love this medium—late-night fansubs, convention lines, OP lyrics stuck in my head for days.
+    This project is a small love letter to my fellow otaku: fast, useful, and unapologetically flashy.
+    Welcome home.
+  </p>
+
+  <h3>Credits</h3>
+  <ul>
+    <li><strong>Anime.js</strong> — snappy micro-motions and delightful sprinkles</li>
+    <li><strong>Lottie</strong> — buttery vector animations for loaders &amp; flair</li>
+    <li><strong>FilePond</strong> — silky drag-and-drop uploads that just work</li>
+    <li><strong>OpenRouter</strong> — gateway to modern LLMs (with graceful fallback)</li>
+  </ul>
+</div>
+
+<!-- REPLACE the privacy glass block with this -->
+<div class="glass glass-privacy">
+  <h3 class="privacy-title">Privacy</h3>
+  <p>
+    ☢️ Heads-up: prompts are sent to third-party APIs (OpenRouter). Please don’t paste passwords,
+    bank pins, or your <em>ultra-classified</em> waifu tier list. We protect your vibe, not your
+    secret ninja scrolls. 👘
+  </p>
+</div>
+</section>
+{% endblock %}

@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*.sqlite3
+.env
+otaku_oracle.log
+
+# Django static artifacts
+staticfiles/
+frontend/dist/
+
+# Node
+node_modules/
+frontend/node_modules/
+
+# Vercel local output
+.vercel/
+
+# Python Environment variables
+env/
+venv/
+.venv/
+*/env/
+*/venv/
+*/.venv/

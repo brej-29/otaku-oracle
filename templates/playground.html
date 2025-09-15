@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<section class="oo-playground">
+  <div class="oo-panel">
+    <div class="oo-prompt-row">
+      <input id="prompt" class="oo-input" placeholder="e.g., Is Jujutsu Kaisen ongoing? Episodes? Where to watch?" />
+      <button id="askBtn" class="oo-btn">Ask AI</button>
+    </div>
+
+    <div class="oo-helper-chips">
+      <button data-chip="Is it ongoing?">Is it ongoing?</button>
+      <button data-chip="How many episodes and seasons?">Episode count</button>
+      <button data-chip="Where can I watch it?">Where to watch</button>
+      <button data-chip="Who are the main cast and music composers?">Cast & music</button>
+      <button data-chip="Summarize chapter 1 in 3 lines.">Summarize</button>
+    </div>
+
+    <div class="oo-image-row">
+      <input id="imageUrl" class="oo-input" placeholder="Optional image URL (for panel identification)" />
+      <div class="oo-divider">or</div>
+      <input type="file" id="filepond" />
+      <div class="oo-note">Local images are previewed. For AI vision, use a public image URL.</div>
+    </div>
+
+    <div id="loader" class="oo-loader" data-loader-json="{% static 'lottie/dumpling_loader.json' %}" aria-live="polite"
+      aria-busy="false" hidden>
+      <span class="loader-fallback" aria-hidden="true"></span> <!-- CSS spinner (always works) -->
+      <span class="loader-lottie" aria-hidden="true"></span> <!-- Lottie target -->
+      <span class="oo-loading-text">Asking the Oracle…</span>
+    </div>
+
+    <div id="answer" class="oo-answer"></div>
+
+    <div class="oo-actions" style="display:flex; gap:.5rem; margin-top:.6rem;">
+      <button id="copyBtn" class="oo-btn" style="background:var(--ink); color:#fff;">Copy</button>
+      <button id="clearBtn" class="oo-btn" style="background:linear-gradient(135deg,#999,#777);">Clear</button>
+    </div>
+    <div id="toast" class="oo-toast" role="status" aria-live="polite"></div>
+
+  </div>
+</section>
+{% endblock %}

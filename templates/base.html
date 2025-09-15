@@ -1,0 +1,139 @@
+{% load static %}
+
+{% load django_vite %}
+
+<!doctype html>
+<html lang="en" class="light">
+
+<head>
+
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Otaku Oracle — Ask Anime-grade AI</title>
+  {% block meta %}
+  <meta name="description"
+    content="Ask anime-grade AI about shows, movies and manga—status, episodes, where to watch, cast, music. Learn what “otaku” means, explore genres, and see a stylish 3D parallax hero.">
+  <meta name="keywords"
+    content="anime, manga, otaku, shonen, seinen, shojo, josei, isekai, mecha, slice of life, where to watch anime, episode count, manga chapters, anime cast, OST, J-culture, anime history, manga history">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Otaku Oracle">
+  <meta property="og:title" content="Otaku Oracle — Ask Anime-grade AI">  
+  <meta property="og:description" content="Ask anime-grade AI about shows and manga. Learn otaku history and explore genres with a 3D parallax hero.">
+  <meta property="og:url" content="{{ request.build_absolute_uri|default:'https://example.com' }}">
+  <meta property="og:image" content="{% static 'brand/og-card.png' %}">
+  <meta name="twitter:card" content="summary_large_image">
+  
+  {% endblock %}
+  <link rel="icon" href="{% static 'brand/favicon.svg' %}" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bangers&family=Inter:wght@400;600&family=JetBrains+Mono:wght@400;600&display=swap"
+    rel="stylesheet">
+
+  
+  {% vite_hmr_client %}
+  <script>
+    // Apply saved theme BEFORE CSS loads to avoid flash
+    (function () {
+      try {
+        var saved = localStorage.getItem('oo-theme'); // 'light' | 'dark' | null
+        if (saved === 'dark') {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark'); // default light
+        }
+      } catch (e) { }
+    })();
+  </script>
+  {% vite_asset 'src/main.js' %}
+  <style id="oo-critical">
+    /* Prevent FOUC: keep app hidden until JS reveals it */
+    .oo-page{ visibility:hidden; }
+
+    /* Boot screen must cover immediately even before CSS bundles load */
+    #bootScreen{
+      position:fixed; inset:0;
+      display:flex; align-items:center; justify-content:center;
+      background:#e5e7eb;           /* light gray */
+      z-index:9999;
+    }
+    .dark #bootScreen{ background:#0f1117; } /* if body has .dark early */
+    #bootScreen[hidden]{ display:none !important; }
+    
+  </style>
+</head>
+
+<body class="oo-body">
+  <div id="bootScreen"
+     class="boot-screen"
+     data-boot-json="{% static 'lottie/Pikachu.json' %}"
+     aria-live="polite"
+     aria-busy="true">
+  <span class="boot-lottie" aria-hidden="true"></span>
+</div>
+  <div class="parallax-global pg-1"></div>
+  <div class="parallax-global pg-2"></div>
+  <div id="bgDots" class="bg-dots" data-dots-json="{% static 'lottie/dots_background.json' %}"></div>
+  <canvas id="bg3d" class="bg3d"></canvas>
+
+  <div class="oo-page"><!-- flex column wrapper for sticky footer -->
+
+    <header class="oo-header">
+      <div class="oo-brand">
+        <!-- LOGO: speech bubble w/ tail + katana slash -->
+        <a href="/" class="oo-logo" aria-label="Otaku Oracle logo">
+          <img src="{% static 'brand/otaku_oracle_light-Photoroom.png' %}" alt="Otaku Oracle logo (light)"
+            class="logo-img logo-light" width="256" height="96" loading="eager" />
+          <img src="{% static 'brand/otaku_oracle_dark-Photoroom.png' %}" alt="Otaku Oracle logo (dark)"
+            class="logo-img logo-dark" width="256" height="96" loading="eager" />
+        </a>
+
+        <!-- Kana subtitle (kept, larger & colorful) -->
+        <div class="oo-brand-text">
+          <div class="oo-kana oo-kana-lg">オタク・オラクル</div>
+        </div>
+
+        <!-- NAV -->
+        <nav class="oo-nav">
+          <a href="/" class="oo-link">HOME</a>
+          <a href="/playground/" class="oo-link oo-link--center">PLAYGROUND</a>
+          <a href="/about/" class="oo-link">ABOUT</a>
+        </nav>
+
+        <!-- THEME TOGGLE -->
+        <button id="themeToggle" type="button" class="oo-toggle" aria-label="Toggle theme"
+          data-toggle-json="{% static 'lottie/katana_toggle.json' %}">
+          <span class="toggle-lottie" aria-hidden="true"></span>
+          <span class="oo-toggle-fallback oo-toggle-icon">🌞</span> </button>
+      </div>
+    </header>
+
+    <div class="oo-privacy" role="note" aria-live="polite">
+      <span class="oo-privacy-icon" aria-hidden="true">☣️</span>
+      <span class="oo-privacy-icon" aria-hidden="true">☢️</span>
+      <span class="oo-privacy-text">Prompts are sent to third-party APIs. Please avoid exposing your secret anime waifu
+        list.</span>
+      <span class="oo-privacy-icon" aria-hidden="true">☢️</span>
+      <span class="oo-privacy-icon" aria-hidden="true">☣️</span>
+    </div>
+
+    <main class="oo-main">
+      {% block content %}{% endblock %}
+    </main>
+
+    <footer class="oo-footer">
+      <div class="oo-footer-links">
+        <a class="oo-link" href="https://github.com/brej-29" title="GitHub" target="_blank">GitHub</a>
+        <a class="oo-link" href="https://www.linkedin.com/in/brejesh-balakrishnan-7855051b9/" title="Contact" target="_blank">Contact</a>
+      </div>
+      <div class="oo-small">© Otaku Oracle</div>
+    </footer>
+
+  </div>
+    <div id="ooToasts" class="oo-toasts" aria-live="polite" aria-atomic="true"></div>
+
+</body>
+
+</html>

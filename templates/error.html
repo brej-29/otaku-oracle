@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}{{ code }} — {{ title }}{% endblock %}
+
+{% block content %}
+<section class="section error-hero">
+  <div class="error-card glass">
+    <h1 class="error-title">{{ code }} — {{ title|upper }}</h1>
+    <p class="error-text">{{ detail }}</p>
+
+    <div class="error-actions">
+      <a href="/" class="oo-cta">Return Home</a>
+      <a href="/playground/" class="oo-btn">Open Playground</a>
+    </div>
+  </div>
+</section>
+{% endblock %}
