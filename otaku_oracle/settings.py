@@ -35,7 +35,7 @@ ALLOWED_HOSTS = os.getenv(
 ).split(",")
 
 # Trust HTTPS coming through Vercel’s proxy
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
 
 CSRF_TRUSTED_ORIGINS = os.getenv(
     "CSRF_TRUSTED_ORIGINS",
@@ -84,7 +84,6 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'api.wsgi.app'
 
 # Static files
 STATIC_URL = "/static/"
