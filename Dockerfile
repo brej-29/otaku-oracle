@@ -39,4 +39,6 @@ RUN python manage.py collectstatic --noinput
 
 # Vercel provides $PORT
 EXPOSE 8000
-CMD ["sh","-c","gunicorn otaku_oracle.wsgi:application --bind 0.0.0.0:${PORT:-8000} --workers 3 --timeout 120"]
+#CMD ["sh","-c","gunicorn otaku_oracle.wsgi:application --bind 0.0.0.0:${PORT:-8000} --workers 3 --timeout 120"]
+# replace your CMD with:
+CMD ["sh","-c","gunicorn otaku_oracle.wsgi:application --bind 0.0.0.0:${PORT:-8000} --workers ${WEB_CONCURRENCY:-1} --threads 2 --max-requests 200 --max-requests-jitter 40 --timeout 60"]

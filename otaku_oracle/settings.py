@@ -14,6 +14,11 @@ from pathlib import Path
 import os
 from dotenv import load_dotenv
 
+# --- Static / MIME fixes for 3D ------------------------------------------------
+import mimetypes
+mimetypes.add_type("model/gltf-binary", ".glb")    # GLB (glTF binary)
+#mimetypes.add_type("model/gltf+json", ".gltf")     # optional, for .gltf
+
 load_dotenv()
 
 def _split_env(name: str, default: str = "") -> list[str]:
@@ -88,6 +93,7 @@ TEMPLATES = [
     },
 ]
 
+WHITENOISE_MAX_AGE = 31536000  # 1 year
 
 # Static files
 STATIC_URL = "/static/"
@@ -184,3 +190,4 @@ LOGGING = {
   },
   "loggers": {"django": {"handlers": ["file"], "level": "INFO"}},
 }
+

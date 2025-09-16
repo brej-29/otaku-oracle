@@ -10,6 +10,7 @@ import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 import { marked } from "marked";
 import DOMPurify from "dompurify";
+import { RoomEnvironment } from 'three/examples/jsm/environments/RoomEnvironment.js';
 
 let loaderAnim = null;
 let bootAnim = null;
@@ -314,6 +315,21 @@ document.addEventListener("DOMContentLoaded", aboutEnter);
 
 gsap.registerPlugin(ScrollTrigger);
 
+if (window.gsap && window.ScrollTrigger) {
+  ScrollTrigger.matchMedia({
+    // desktop/tablet
+    "(min-width: 768px)": function() {
+      // your existing parallax, .glass reveals, etc…
+    },
+    // small screens: minimal
+    "(max-width: 767px)": function() {
+      // disable Lenis and heavy triggers entirely
+      if (window.lenis && lenis.stop) lenis.stop();
+      ScrollTrigger.getAll().forEach(st => st.kill());
+    }
+  });
+}
+
 const prefersReduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 /* Smooth scroll (Lenis) — disable if reduce motion */
@@ -444,164 +460,158 @@ function initThemeToggleLottie() {
 /* Three.js background — safe try/catch + reduce-motion freeze */
 // === Three.js: Focus swap (Luffy -> Ace) on scroll ===
 // Ensure the canvas exists before initializing (script is loaded in <head>)
+// --- imports (at top of your JS bundle) ---
+
+// helper: tiny device checks
+const isMobile = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+const deviceMem = navigator.deviceMemory || 4;             // Chrome only
+const lowEnd = isMobile || deviceMem <= 3;
+
+// --- replacement ---
 async function setupThreeFocusSwap() {
   try {
-    console.log('[OO][3D] init start');
-  const canvas = document.getElementById("bg3d");
-  if (!canvas) return; // no background canvas on this page
+    const canvas = document.getElementById('bg3d');
+    if (!canvas) return;
 
-  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    // renderer: cheaper on phones
+    const renderer = new THREE.WebGLRenderer({
+      canvas,
+      antialias: !lowEnd,          // disable MSAA on phones
+      alpha: true
+    });
+    renderer.outputColorSpace = THREE.SRGBColorSpace;
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, lowEnd ? 1.2 : 2));
+    renderer.setSize(window.innerWidth, window.innerHeight, false);
+    renderer.setClearAlpha(0);
 
-  // Scene / camera / renderer
-  const scene = new THREE.Scene();
-  const camera = new THREE.PerspectiveCamera(25, innerWidth / innerHeight, 0.01, 50); // very tight FOV + near plane for extreme close-up
-  camera.position.set(0, 0, 2.0); // seed; will be reframed precisely
-  camera.lookAt(0, 0, 0);
+    // scene/camera
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(25, window.innerWidth / window.innerHeight, 0.01, 50);
+    camera.position.set(0, 0, 2);
+    camera.lookAt(0, 0, 0);
 
-  const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
-  renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
-  renderer.setSize(innerWidth, innerHeight);
-  renderer.outputColorSpace = THREE.SRGBColorSpace;
-  renderer.setClearAlpha(0); // transparent
+    // subtle but important: PMREM env so PBR isn't flat
+    const pmrem = new THREE.PMREMGenerator(renderer);
+    scene.environment = pmrem.fromScene(new RoomEnvironment(renderer), 0.04).texture;
 
-  // Lights
-  scene.add(new THREE.HemisphereLight(0xffffff, 0x0b0e14, 1.0));
-  const dir = new THREE.DirectionalLight(0xffffff, 1.0);
-  dir.position.set(3, 4, 6);
-  scene.add(dir);
-  scene.add(new THREE.AmbientLight(0xffffff, 0.35));
+    // lights (kept soft; env map does most work)
+    scene.add(new THREE.HemisphereLight(0xffffff, 0x0b0e14, 1.0));
+    const dir = new THREE.DirectionalLight(0xffffff, 0.9);
+    dir.position.set(3, 4, 6);
+    scene.add(dir);
 
-  // Loaders / utils
-  const loader = new GLTFLoader();
-  const loadGLB = (url) => new Promise((res, rej) =>
-    loader.load(url, g => res(g.scene), undefined, rej)
-  );
+    // loading manager – wait for *all* assets (including textures) 
+    const manager = new THREE.LoadingManager();
+    const loader  = new GLTFLoader(manager);
 
-  function centerAndScale(obj, targetSize = 2.0) {
-    const box = new THREE.Box3().setFromObject(obj);
-    const size = new THREE.Vector3(); box.getSize(size);
-    const center = new THREE.Vector3(); box.getCenter(center);
-    obj.position.sub(center);
-    const s = targetSize / Math.max(size.x, size.y, size.z, 1e-6);
-    obj.scale.setScalar(s);
-  }
+    const loadGLB = (url) =>
+      new Promise((resolve, reject) => loader.load(url, (g) => resolve(g.scene), undefined, reject));
 
-  function setEmphasis(root, emph /*0..1*/) {
-    // scale + opacity (keep min opacity fairly high so it’s visible)
-    root.scale.setScalar(THREE.MathUtils.lerp(0.9, 1.15, emph));
-    root.traverse((o) => {
-      if (o.isMesh) {
+    // BEGIN loading
+    const luffyP = loadGLB('/static/models/monkey_d._luffy_scenario.glb');
+    const aceP   = loadGLB('/static/models/portgas_d._ace_one_piece.glb');
+
+    let luffy, ace;
+    manager.onLoad = () => {
+      // compile first frame to avoid shader “pop”
+      renderer.compile(scene, camera);
+      start();                     // safe to start animation now
+    };
+
+    // place + behavior once available
+    [luffy, ace] = await Promise.all([luffyP, aceP]);
+
+    function centerAndScale(obj, targetSize = 5.5) {
+      const box = new THREE.Box3().setFromObject(obj);
+      const size = new THREE.Vector3(); box.getSize(size);
+      const center = new THREE.Vector3(); box.getCenter(center);
+      obj.position.sub(center);
+      obj.scale.setScalar(targetSize / Math.max(size.x, size.y, size.z, 1e-6));
+    }
+
+    centerAndScale(luffy, 5.5);
+    centerAndScale(ace,   5.0);
+
+    const FRONT_Z = 0.3;
+    const BACK_Z  = -1.6;
+    luffy.position.set(0, 0, FRONT_Z);
+    ace.position.set(0, 0, BACK_Z);
+    luffy.rotation.y = -Math.PI;
+    ace.rotation.y   = -Math.PI / 4;
+
+    scene.add(luffy, ace);
+
+    // scroll focus (cheap on mobile)
+    const focus = { f: lowEnd ? 1 : 0 };
+
+    // optional GSAP hookup – keep heavy triggers off on phones
+    if (!lowEnd && window.gsap && window.ScrollTrigger) {
+      const endEl = document.getElementById('otaku');
+      const endFn = endEl
+        ? () => endEl.getBoundingClientRect().top + window.scrollY
+        : () => document.documentElement.scrollHeight - window.innerHeight;
+
+      gsap.to(focus, { f: 1, ease: 'none', scrollTrigger: { start: 0, end: endFn, scrub: true } });
+    }
+
+    // emphasis util
+    function setEmphasis(root, emph) {
+      root.scale.setScalar(THREE.MathUtils.lerp(0.9, 1.12, emph));
+      root.traverse((o) => {
+        if (!o.isMesh) return;
         const mats = Array.isArray(o.material) ? o.material : [o.material];
         mats.forEach((m) => {
           if (!m) return;
           m.transparent = true;
-          m.opacity = THREE.MathUtils.lerp(0.65, 1.0, emph);
-          if ("metalness" in m) m.metalness = 0.25;
-          if ("roughness" in m) m.roughness = 0.35;
+          m.opacity = THREE.MathUtils.lerp(0.7, 1.0, emph);
+          if ('metalness' in m) m.metalness = 0.25;
+          if ('roughness' in m) m.roughness = 0.35;
         });
-      }
+      });
+    }
+
+    // initial emphasis
+    setEmphasis(luffy, 1);
+    setEmphasis(ace,   0);
+
+    // resize
+    window.addEventListener('resize', () => {
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(window.innerWidth, window.innerHeight, false);
     });
-  }
 
-  // Load models (make sure these files exist)
-  console.log('[OO][3D] loading GLBs...');
-  let luffy = await loadGLB("/static/models/monkey_d._luffy_scenario.glb");
-  let ace   = await loadGLB("/static/models/portgas_d._ace_one_piece.glb");
-  console.log('[OO][3D] GLBs loaded');
+    // animation loop (starts only after manager.onLoad)
+    function start() {
+      const clock = new THREE.Clock();
+      renderer.setAnimationLoop(() => {
+        const dt = Math.min(clock.getDelta(), 0.033);
+        const s  = THREE.MathUtils.smoothstep(THREE.MathUtils.clamp(focus.f, 0, 1), 0, 1);
 
-  // Make them larger so they feel close on load
-  centerAndScale(luffy, 5.5);
-  centerAndScale(ace,   5.0);
+        luffy.position.z = THREE.MathUtils.lerp(FRONT_Z, BACK_Z, s);
+        ace.position.z   = THREE.MathUtils.lerp(BACK_Z, FRONT_Z, s);
 
-  // Initial placement: Luffy front, Ace back (closer and more separated)
-  const FRONT_Z = 0.3;   // very close to camera
-  const BACK_Z  = -1.6;  // slightly behind
-  const FRONT_Y = 0.0;   // keep perfectly centered vertically
-  const BACK_Y  = 0.0;
-  luffy.position.set(0, FRONT_Y, FRONT_Z);
-  ace.position.set(0, BACK_Y,  BACK_Z);
+        setEmphasis(luffy, 1 - s);
+        setEmphasis(ace,    s);
 
-  // Orientations around vertical axis (Y): clockwise rotations
-  luffy.rotation.y = -Math.PI;          // 180 deg CW
-  ace.rotation.y   = -Math.PI / 4;      // 45 deg CW
+        // rotate around Y only
+        luffy.rotation.set(0, luffy.rotation.y - 0.8 * dt, 0);
+        ace.rotation.set(0,   ace.rotation.y + 0.8 * dt, 0);
 
-  // Align camera on world +Z (blue axis) through the viewport center and
-  // place it at a fraction of the object's bounding-box depth.
-  function frameOnBlueAxisBoxFraction(obj, fraction = 0.0625, fovDeg = 22, extra = 0.01) {
-    obj.updateWorldMatrix(true, true);
-    const box = new THREE.Box3().setFromObject(obj);
-    const size = new THREE.Vector3(); box.getSize(size);
-    const center = new THREE.Vector3(); box.getCenter(center);
-    camera.fov = fovDeg; camera.updateProjectionMatrix();
-    const distPart = Math.max(size.z * Math.max(fraction, 1e-6), 1e-6);
-    const reduced = distPart * 2.25; // 25% closer (as tuned in viewer)
-    camera.position.set(0, 0, center.z + reduced + extra);
-    camera.lookAt(0, 0, center.z);
-  }
+        renderer.render(scene, camera);
+      });
+    }
 
-  scene.add(luffy, ace);
-  frameOnBlueAxisBoxFraction(luffy, 0.0625, 22, 0.01);
-
-  // Initial emphasis
-  setEmphasis(luffy, 1.0);
-  setEmphasis(ace,   0.0);
-
-  // Scroll-controlled focus f ∈ [0..1]
-  const focus = { f: reduce ? 1 : 0 };
-  if (!reduce && typeof gsap !== "undefined") {
-    const endEl = document.getElementById("otaku");
-    const endFn = endEl
-      ? () => endEl.getBoundingClientRect().top + window.scrollY
-      : () => document.documentElement.scrollHeight - window.innerHeight;
-
-    gsap.to(focus, {
-      f: 1,
-      ease: "none",
-      scrollTrigger: { start: 0, end: endFn, scrub: true }
-    });
-  }
-
-  // Resize
-  addEventListener("resize", () => {
-    camera.aspect = innerWidth / innerHeight;
-    camera.updateProjectionMatrix();
-    renderer.setSize(innerWidth, innerHeight);
-  });
-
-  // Animate
-  const clock = new THREE.Clock();
-  function tick() {
-    const dt = Math.min(clock.getDelta(), 0.033);
-    const f  = THREE.MathUtils.clamp(focus.f, 0, 1);
-    const s  = THREE.MathUtils.smoothstep(f, 0, 1);
-
-    // Depth swap within a wider, clearer range
-    luffy.position.z = THREE.MathUtils.lerp(FRONT_Z, BACK_Z, s);
-    ace.position.z   = THREE.MathUtils.lerp(BACK_Z,  FRONT_Z, s);
-
-    // Slight vertical separation
-    luffy.position.y = THREE.MathUtils.lerp(FRONT_Y, BACK_Y, s);
-    ace.position.y   = THREE.MathUtils.lerp(BACK_Y,  FRONT_Y, s);
-
-    // Emphasis (scale + opacity)
-    setEmphasis(luffy, 1 - s);
-    setEmphasis(ace,    s);
-
-    // Rotate only around Y (like the viewer); keep X/Z fixed
-    luffy.rotation.x = 0; ace.rotation.x = 0;
-    luffy.rotation.z = 0; ace.rotation.z = 0;
-    // Continuous Y rotation
-    luffy.rotation.y -= 0.8 * dt;
-    ace.rotation.y   += 0.8 * dt;
-
-    renderer.render(scene, camera);
-    requestAnimationFrame(tick);
-  }
-  tick();
+    // (debug) see draw calls/memory in console
+    if (window.location.search.includes('debug3d')) {
+      setInterval(() => console.log(renderer.info), 2000);
+    }
   } catch (e) {
     console.error('[OO][3D] init error', e);
   }
 }
+setupThreeFocusSwap();
+
 
 // Defer Three.js initialization until DOM is ready so #bg3d exists
 // Call immediately (scripts are deferred by Vite), also fallback on DOM ready
