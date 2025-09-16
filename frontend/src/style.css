@@ -792,3 +792,92 @@ body,.oo-page{ touch-action:pan-y; }
   flex:1 1 auto; min-width:0;
   overflow-wrap:anywhere; word-break:break-word; line-height:1.5;
 }
+
+/* CTA — neon pill, block caps, colorful ring, BIG spark animation */
+.oo-cta{
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;                   /* allow spark to spill out */
+  padding: 1rem 1.4rem;                /* chunkier */
+  border-radius: 9999px;
+  border: 0;
+  cursor: pointer;
+  text-decoration: none;
+
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 900;                    /* blocky */
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  font-size: clamp(1rem, 1.4vw, 1.15rem);
+  line-height: 1;
+
+  color: #0A0A0B;                      /* ink text on neon pill */
+  background: linear-gradient(135deg, var(--primary), var(--accent) 65%, #F59E0B 100%);
+
+  /* subtle inner highlight + soft drop */
+  box-shadow:
+    0 1px 0 rgba(255,255,255,.65) inset,
+    0 12px 28px rgba(0,0,0,.18);
+
+  -webkit-text-stroke: 1px rgba(255,255,255,.45);
+  transition: transform .12s ease, box-shadow .18s ease, filter .2s ease;
+}
+
+/* Colorful gradient ring border using mask */
+.oo-cta::before{
+  content:"";
+  position:absolute; inset:-3px; border-radius:inherit; padding:2px;
+  background: linear-gradient(135deg, #FF2D55, #22D3EE 60%, #F59E0B);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite:xor; mask-composite:exclude;
+  pointer-events:none;
+  z-index: 1;
+}
+
+.oo-cta:hover,
+.oo-cta:focus{
+  transform: translateY(-1px);
+  box-shadow:
+    0 1px 0 rgba(255,255,255,.75) inset,
+    0 16px 32px rgba(0,0,0,.22);
+  filter: saturate(1.08);
+}
+.oo-cta:active{
+  transform: translateY(0);
+}
+.oo-cta:focus-visible{
+  outline: 2px solid #22D3EE; outline-offset: 3px;
+}
+
+/* Dark theme tuning */
+.dark .oo-cta{
+  color: #0A0A0B;
+  box-shadow:
+    0 1px 0 rgba(255,255,255,.35) inset,
+    0 18px 34px rgba(0,0,0,.35);
+}
+
+/* Lottie spark — make it BIG and clearly outside the button */
+.cta-spark{
+  position: absolute;
+  right: -36px;          /* spill outside */
+  top: -44px;            /* spill outside */
+  width: 140px;          /* big spark */
+  height: 140px;
+  pointer-events: none;
+  z-index: 3;
+  filter: drop-shadow(0 14px 16px rgba(0,0,0,.25));
+  transform-origin: 60% 60%;
+  transition: transform .25s ease, opacity .25s ease;
+}
+.oo-cta:hover .cta-spark,
+.oo-cta:focus .cta-spark{
+  transform: rotate(6deg) scale(1.08);
+  opacity: 1;
+}
+
+@media (min-width: 1280px){
+  .cta-spark{ width: 164px; height: 164px; right: -44px; top: -52px; }
+}
