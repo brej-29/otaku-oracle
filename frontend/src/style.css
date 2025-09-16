@@ -759,39 +759,6 @@ body,.oo-page{ touch-action:pan-y; }
 }
 .oo-toggle{ grid-area:toggle; justify-self:end; }
 
-/* Phone layout: logo + toggle on top row, kana next, nav full-width last */
-@media (max-width:640px){
-  .oo-header .oo-brand{
-    grid-template-columns:1fr auto;
-    grid-template-areas:
-      "logo toggle"
-      "kana kana"
-      "nav  nav";
-  }
-  .logo-img{ height:40px; width:auto; }
-  .oo-kana-lg{ font-size:.85rem; letter-spacing:.16em; }
-  .oo-nav .oo-link{                     /* keep links inside the bar */
-    font-size:clamp(.82rem,3.3vw,.98rem);
-    -webkit-text-stroke:1px #0a0a0b;
-    text-shadow:0 1px 0 #C7C9CE, 0 2px 0 #9CA3AF;
-  }
-  .oo-nav .oo-link--center{ margin:0; } /* kill big desktop spacing */
-}
-
-#timeline, #timeine{ width:min(1100px,92vw); margin:1rem auto; padding:0 12px; }
-
-#timeline li, #timeine li{
-  display:flex; align-items:flex-start; gap:.6rem;
-  padding:.6rem .7rem; border-radius:12px;
-}
-#timeline li > span, #timeine li > span{
-  flex:0 0 auto; white-space:nowrap;
-  font-size:clamp(.85rem,3.4vw,1rem);
-}
-#timeline li .t-copy, #timeine li .t-copy{
-  flex:1 1 auto; min-width:0;
-  overflow-wrap:anywhere; word-break:break-word; line-height:1.5;
-}
 
 /* CTA — neon pill, block caps, colorful ring, BIG spark animation */
 .oo-cta{
