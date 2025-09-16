@@ -848,3 +848,87 @@ body,.oo-page{ touch-action:pan-y; }
 @media (min-width: 1280px){
   .cta-spark{ width: 164px; height: 164px; right: -44px; top: -52px; }
 }
+
+
+
+
+
+/* Scope timeline sizing so it doesn't inherit huge section-title styles */
+#timeline .section-title{
+  font-size: clamp(1.6rem, 2.8vw, 2.4rem);
+  line-height: 1.1;
+  letter-spacing: .05em;
+}
+
+/* Reset list and build a two-column grid: [year] [copy] */
+.timeline{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: clamp(.5rem, 1.2vw, .8rem);
+}
+
+/* Each row: first column auto (year), second column fills & wraps */
+.timeline li{
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  align-items: start;
+  column-gap: clamp(.6rem, 2vw, 1rem);
+  max-inline-size: 100%;
+}
+
+/* Year label — keep on one line */
+.timeline li > span:first-child{
+  white-space: nowrap;              /* prevents year breaking */
+  font: 900 clamp(.9rem, 1.6vw, 1.05rem)/1 'Inter', system-ui, sans-serif;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  -webkit-text-stroke: .8px rgba(10,10,11,.65);
+  background: linear-gradient(135deg, #ff2d55, #22d3ee, #f59e0b);
+  -webkit-background-clip: text; background-clip: text;
+  color: transparent;
+}
+
+/* Copy column — MUST wrap; safe for long words/URLs */
+.timeline .t-copy{
+  font: 600 clamp(.92rem, 1.5vw, 1.05rem)/1.5 'Inter', system-ui, sans-serif;
+  letter-spacing: .01em;
+  text-transform: none;
+  color: var(--ink);
+  overflow-wrap: anywhere;          /* modern wrap */
+  word-break: normal;
+  hyphens: auto;
+  max-inline-size: 100%;
+}
+
+/* Prevent the glass container from clipping inner overflow horizontally */
+#timeline.section.glass{
+  overflow: hidden;                 /* hide shadows spills, keep layout clean */
+}
+
+/* Mobile: stack rows nicely, tighten spacing */
+@media (max-width: 700px){
+  #timeline .section-title{
+    font-size: clamp(1.35rem, 5vw, 1.8rem);
+  }
+  .timeline{
+    gap: .6rem;
+  }
+  .timeline li{
+    grid-template-columns: max-content 1fr;  /* still two columns, but smaller gap */
+    column-gap: .6rem;
+  }
+  .timeline li > span:first-child{
+    font-size: clamp(.85rem, 3.4vw, .98rem);
+    -webkit-text-stroke: .6px rgba(10,10,11,.6);
+  }
+  .timeline .t-copy{
+    font-size: clamp(.9rem, 3.6vw, 1rem);
+    line-height: 1.45;
+  }
+}
+
+/* Dark theme legibility tweaks */
+.dark .timeline .t-copy{ color: #f7f8fa; }
+.dark .timeline li > span:first-child{ -webkit-text-stroke: .8px #000; }
