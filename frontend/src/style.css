@@ -849,136 +849,9 @@ body,.oo-page{ touch-action:pan-y; }
   .cta-spark{ width: 164px; height: 164px; right: -44px; top: -52px; }
 }
 
-
-
-
-
-/* Scope timeline sizing so it doesn't inherit huge section-title styles */
-#timeline .section-title{
-  font-size: clamp(1.6rem, 2.8vw, 2.4rem);
-  line-height: 1.1;
-  letter-spacing: .05em;
-}
-
-/* Reset list and build a two-column grid: [year] [copy] */
-.timeline{
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  gap: clamp(.5rem, 1.2vw, .8rem);
-}
-
-/* Each row: first column auto (year), second column fills & wraps */
-.timeline li{
-  display: grid;
-  grid-template-columns: max-content 1fr;
-  align-items: start;
-  column-gap: clamp(.6rem, 2vw, 1rem);
-  max-inline-size: 100%;
-}
-
-/* Year label — keep on one line */
-.timeline li > span:first-child{
-  white-space: nowrap;              /* prevents year breaking */
-  font: 900 clamp(.9rem, 1.6vw, 1.05rem)/1 'Inter', system-ui, sans-serif;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-  -webkit-text-stroke: .8px rgba(10,10,11,.65);
-  background: linear-gradient(135deg, #ff2d55, #22d3ee, #f59e0b);
-  -webkit-background-clip: text; background-clip: text;
-  color: transparent;
-}
-
-/* Copy column — MUST wrap; safe for long words/URLs */
-.timeline .t-copy{
-  font: 600 clamp(.92rem, 1.5vw, 1.05rem)/1.5 'Inter', system-ui, sans-serif;
-  letter-spacing: .01em;
-  text-transform: none;
-  color: var(--ink);
-  overflow-wrap: anywhere;          /* modern wrap */
-  word-break: normal;
-  hyphens: auto;
-  max-inline-size: 100%;
-}
-
-
-/* Mobile: stack rows nicely, tighten spacing */
-@media (max-width: 700px){
-  #timeline .section-title{
-    font-size: clamp(1.35rem, 5vw, 1.8rem);
-  }
-  .timeline{
-    gap: .6rem;
-  }
-  .timeline li{
-    grid-template-columns: max-content 1fr;  /* still two columns, but smaller gap */
-    column-gap: .6rem;
-  }
-  .timeline li > span:first-child{
-    font-size: clamp(.85rem, 3.4vw, .98rem);
-    -webkit-text-stroke: .6px rgba(10,10,11,.6);
-  }
-  .timeline .t-copy{
-    font-size: clamp(.9rem, 3.6vw, 1rem);
-    line-height: 1.45;
-  }
-}
-@media (max-width: 600px){
-  .timeline .t-copy{ font-size: .95rem; }
-}
-/* Dark theme legibility tweaks */
-.dark .timeline .t-copy{ color: #f7f8fa; }
-.dark .timeline li > span:first-child{ -webkit-text-stroke: .8px #000; }
-
-/* keep text from clipping/wrapping badly */
-.timeline { padding-right: clamp(12px, 3vw, 24px); }
-
-.timeline .t-item{
-  display: grid;
-  grid-template-columns: auto 1fr;
-  align-items: start;
-  column-gap: .8rem;
-}
-
-.timeline .t-item > span { /* the year bubble */
-  flex: 0 0 auto;
-}
-
-.timeline .t-copy{           /* the text */
-  flex: 1 1 0;
-  min-width: 0;              /* <-- allow shrink instead of overflow */
-  overflow-wrap: anywhere;   /* modern wrap */
-  word-break: normal;
-  hyphens: auto;
-  line-height: 1.5;
-}
-
 /* --- Timeline fixes (overflow + safe wrapping) --- */
 #timeline.glass { 
   overflow: hidden;                /* clip long shadows/outline bleed */
-}
-
-#timeline .timeline { 
-  padding-right: clamp(12px, 3vw, 28px);  /* breathing room on the right */
-}
-
-#timeline .timeline li{
-  /* year column may grow a bit; copy column must shrink & wrap */
-  grid-template-columns: minmax(88px, max-content) minmax(0, 1fr);
-  column-gap: clamp(.6rem, 2vw, 1rem);
-}
-
-#timeline .timeline li > span:first-child{
-  white-space: nowrap;             /* keep year on one line */
-}
-
-#timeline .timeline .t-copy{
-  min-width: 0;                    /* allow shrink */
-  overflow-wrap: anywhere;         /* wrap long segments safely */
-  word-break: normal;
-  hyphens: auto;
-  line-height: 1.5;
 }
 
 /* Tone down the title size just for this card */
@@ -987,13 +860,50 @@ body,.oo-page{ touch-action:pan-y; }
   line-height: 1.15;
 }
 
+.timeline {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: clamp(.5rem, 1.2vw, .8rem);
+}
+
+.timeline li{
+  display: grid;
+  /* year column flexible but not too small; copy column must shrink & wrap */
+  grid-template-columns: minmax(max-content, 160px) minmax(0, 1fr);
+  column-gap: clamp(.6rem, 2vw, 1rem);
+  align-items: start;
+}
+
+.timeline li > span:first-child{
+  white-space: nowrap;             /* keep year on one line */
+  font-size: clamp(.9rem, 1.6vw, 1.05rem);
+}
+
+.timeline .t-copy{
+  min-width: 0;                    /* allow shrink */        /* wrap long segments safely */
+  overflow-wrap: break-word;       /* wrap long segments safely */
+  word-break: normal;
+  hyphens: auto;
+  line-height: 1.5;
+  font-size: clamp(.92rem, 1.5vw, 1.05rem);
+}
+
 /* Mobile tightening */
 @media (max-width: 700px){
-  #timeline .timeline li{
+  #timeline .section-title {
+    font-size: clamp(1.35rem, 5vw, 1.8rem);
+  }
+  .timeline li{
     column-gap: .6rem;
   }
-  #timeline .timeline .t-copy{
+  .timeline .t-copy{
     font-size: clamp(.9rem, 3.7vw, 1rem);
     line-height: 1.45;
   }
 }
+
+/* Dark theme legibility tweaks */
+.dark .timeline .t-copy{ color: #f7f8fa; }
+.dark .timeline li > span:first-child{ -webkit-text-stroke: .8px #000; }
