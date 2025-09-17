@@ -953,3 +953,47 @@ body,.oo-page{ touch-action:pan-y; }
   hyphens: auto;
   line-height: 1.5;
 }
+
+/* --- Timeline fixes (overflow + safe wrapping) --- */
+#timeline.glass { 
+  overflow: hidden;                /* clip long shadows/outline bleed */
+}
+
+#timeline .timeline { 
+  padding-right: clamp(12px, 3vw, 28px);  /* breathing room on the right */
+}
+
+#timeline .timeline li{
+  /* year column may grow a bit; copy column must shrink & wrap */
+  grid-template-columns: minmax(88px, max-content) minmax(0, 1fr);
+  column-gap: clamp(.6rem, 2vw, 1rem);
+}
+
+#timeline .timeline li > span:first-child{
+  white-space: nowrap;             /* keep year on one line */
+}
+
+#timeline .timeline .t-copy{
+  min-width: 0;                    /* allow shrink */
+  overflow-wrap: anywhere;         /* wrap long segments safely */
+  word-break: normal;
+  hyphens: auto;
+  line-height: 1.5;
+}
+
+/* Tone down the title size just for this card */
+#timeline .section-title{
+  font-size: clamp(1.6rem, 2.8vw, 2.4rem);
+  line-height: 1.15;
+}
+
+/* Mobile tightening */
+@media (max-width: 700px){
+  #timeline .timeline li{
+    column-gap: .6rem;
+  }
+  #timeline .timeline .t-copy{
+    font-size: clamp(.9rem, 3.7vw, 1rem);
+    line-height: 1.45;
+  }
+}

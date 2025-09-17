@@ -334,13 +334,14 @@ const prefersReduce = window.matchMedia('(prefers-reduced-motion: reduce)').matc
 
 /* Smooth scroll (Lenis) — disable if reduce motion */
 let lenis = null;
-if (!prefersReduce) {
-  const Lenis = (await import('@studio-freight/lenis')).default; // if using dynamic import, else keep your static import
+window.addEventListener('load', async () => {
+  if (prefersReduce) return;
+  const { default: Lenis } = await import('@studio-freight/lenis');
   lenis = new Lenis({ lerp: 0.1, wheelMultiplier: 1.1 });
   function raf(t){ lenis.raf(t); requestAnimationFrame(raf); }
   requestAnimationFrame(raf);
-  lenis.on('scroll', ScrollTrigger.update);
-}
+  if (window.ScrollTrigger) lenis.on('scroll', ScrollTrigger.update);
+});
 
 /* Parallax layers — only if not reduced */
 function setupParallax() {
@@ -541,7 +542,7 @@ async function setupThreeFocusSwap() {
     ace.rotation.y   = -Math.PI / 4;
 
     scene.add(luffy, ace);
-
+    start();
     // emphasis util (scale + opacity) — subtle on mobile
     function setEmphasis(root, emph) {
       root.scale.setScalar(THREE.MathUtils.lerp(0.92, 1.12, emph));
