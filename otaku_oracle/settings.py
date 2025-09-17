@@ -173,7 +173,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY", "")
 DEFAULT_MODEL = os.getenv("DEFAULT_MODEL", "")
 FALLBACK_MODEL = os.getenv("FALLBACK_MODEL", "")
-
+ALT_MODEL_1 = os.getenv("ALT_MODEL_1", "")
+ALT_MODEL_2 = os.getenv("ALT_MODEL_2", "")
 
 LOGGING = {
   "version": 1,
