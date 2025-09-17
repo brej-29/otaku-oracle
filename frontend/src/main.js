@@ -183,7 +183,7 @@ if (askBtn) {
 
     const data = await res.json();
     if (data && data.fallback_used) {
-      toast("Primary cooling down — switched to fallback.", "info", 3200);
+      toast("First Jutsu failed — switched to Second Style.", "info", 3200);
     }
 
     const raw = (data && (data.answer ?? data.text)) || "";
@@ -195,7 +195,7 @@ if (askBtn) {
     }
 
   } catch (err) {
-    toast(err?.message || "Network gremlins. Check your chakra.", "error");
+    toast(err?.message || "Network Monsters. Check your chakra.", "error");
   } finally {
     showLoader(false);
     askBtn.disabled = false; askBtn.style.opacity = 1;
@@ -334,14 +334,13 @@ const prefersReduce = window.matchMedia('(prefers-reduced-motion: reduce)').matc
 
 /* Smooth scroll (Lenis) — disable if reduce motion */
 let lenis = null;
-window.addEventListener('load', async () => {
-  if (prefersReduce) return;
-  const { default: Lenis } = await import('@studio-freight/lenis');
+if (!prefersReduce) {
+  const Lenis = (await import('@studio-freight/lenis')).default; // if using dynamic import, else keep your static import
   lenis = new Lenis({ lerp: 0.1, wheelMultiplier: 1.1 });
   function raf(t){ lenis.raf(t); requestAnimationFrame(raf); }
   requestAnimationFrame(raf);
-  if (window.ScrollTrigger) lenis.on('scroll', ScrollTrigger.update);
-});
+  lenis.on('scroll', ScrollTrigger.update);
+}
 
 /* Parallax layers — only if not reduced */
 function setupParallax() {
@@ -472,55 +471,59 @@ const lowEnd = isMobile || deviceMem <= 3;
 async function setupThreeFocusSwap() {
   try {
     const canvas = document.getElementById('bg3d');
-    if (!canvas || canvas.dataset.init === "1") return;
+    if (!canvas) return;
+
+   // guard: don’t init twice
+    if (canvas.dataset.init === "1") return;
     canvas.dataset.init = "1";
 
-    // --- renderer (trimmed for phones) ---
+    // renderer: cheaper on phones
     const renderer = new THREE.WebGLRenderer({
       canvas,
-      antialias: !lowEnd,
+      antialias: !lowEnd,          // disable MSAA on phones
       alpha: true
     });
     renderer.outputColorSpace = THREE.SRGBColorSpace;
-    renderer.setPixelRatio(Math.min(devicePixelRatio, 1.75));
+    renderer.setPixelRatio(Math.min(devicePixelRatio, 1.75)); // trim load a bit
     renderer.setSize(window.innerWidth, window.innerHeight, false);
     renderer.setClearAlpha(0);
 
-    // --- scene / camera ---
+    // scene/camera
     const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(
-      25,
-      window.innerWidth / window.innerHeight,
-      0.01,
-      100
-    );
+    const camera = new THREE.PerspectiveCamera(25, window.innerWidth / window.innerHeight, 0.01, 50);
     camera.position.set(0, 0, 2);
     camera.lookAt(0, 0, 0);
 
-    // --- lights (simple + cheap) ---
+    // subtle but important: PMREM env so PBR isn't flat
+    const pmrem = new THREE.PMREMGenerator(renderer);
+    scene.environment = pmrem.fromScene(new RoomEnvironment(renderer), 0.04).texture;
+
+    // lights (kept soft; env map does most work)
     scene.add(new THREE.HemisphereLight(0xffffff, 0x0b0e14, 1.0));
     const dir = new THREE.DirectionalLight(0xffffff, 0.9);
     dir.position.set(3, 4, 6);
     scene.add(dir);
 
-    // --- loaders ---
+    // loading manager – wait for *all* assets (including textures) 
     const manager = new THREE.LoadingManager();
     const loader  = new GLTFLoader(manager);
 
     const loadGLB = (url) =>
-      new Promise((resolve, reject) =>
-        loader.load(url, (g) => resolve(g.scene), undefined, reject)
-      );
+      new Promise((resolve, reject) => loader.load(url, (g) => resolve(g.scene), undefined, reject));
 
-    // start loading both
+    // BEGIN loading
     const luffyP = loadGLB('/static/models/monkey_d._luffy_scenario.glb');
     const aceP   = loadGLB('/static/models/portgas_d._ace_one_piece.glb');
 
     let luffy, ace;
-    [luffy, ace] = await Promise.all([luffyP, aceP]);
+    manager.onLoad = () => {
+      // compile first frame to avoid shader “pop”
+      renderer.compile(scene, camera);
+      start();                     // safe to start animation now
+    };
 
-    // hide until *everything* (textures) ready to avoid gray/material “pop”
-    luffy.visible = ace.visible = false;
+    // place + behavior once available
+    [luffy, ace] = await Promise.all([luffyP, aceP]);
 
     function centerAndScale(obj, targetSize = 5.5) {
       const box = new THREE.Box3().setFromObject(obj);
@@ -533,34 +536,19 @@ async function setupThreeFocusSwap() {
     centerAndScale(luffy, 5.5);
     centerAndScale(ace,   5.0);
 
-    // depth placement (front/back) + initial facing
-    const FRONT_Z = 0.30;
-    const BACK_Z  = -1.60;
+    const FRONT_Z = 0.3;
+    const BACK_Z  = -1.6;
     luffy.position.set(0, 0, FRONT_Z);
-    ace.position.set(0,   0, BACK_Z);
+    ace.position.set(0, 0, BACK_Z);
     luffy.rotation.y = -Math.PI;
     ace.rotation.y   = -Math.PI / 4;
 
     scene.add(luffy, ace);
-    start();
-    // emphasis util (scale + opacity) — subtle on mobile
-    function setEmphasis(root, emph) {
-      root.scale.setScalar(THREE.MathUtils.lerp(0.92, 1.12, emph));
-      root.traverse((o) => {
-        if (!o.isMesh) return;
-        const mats = Array.isArray(o.material) ? o.material : [o.material];
-        mats.forEach((m) => {
-          if (!m) return;
-          m.transparent = true;
-          m.opacity = THREE.MathUtils.lerp(lowEnd ? 0.8 : 0.65, 1.0, emph);
-          if ('metalness' in m) m.metalness = 0.25;
-          if ('roughness' in m) m.roughness = 0.35;
-        });
-      });
-    }
 
-    // scroll-controlled focus (desktop/tablet only)
+    // scroll focus (cheap on mobile)
     const focus = { f: lowEnd ? 1 : 0 };
+
+    // optional GSAP hookup – keep heavy triggers off on phones
     if (!lowEnd && window.gsap && window.ScrollTrigger) {
       const endEl = document.getElementById('otaku');
       const endFn = endEl
@@ -570,11 +558,21 @@ async function setupThreeFocusSwap() {
       gsap.to(focus, { f: 1, ease: 'none', scrollTrigger: { start: 0, end: endFn, scrub: true } });
     }
 
-    // show once *all* textures are ready; compile first frame to avoid flat shading
-    manager.onLoad = () => {
-      luffy.visible = ace.visible = true;
-      renderer.compile(scene, camera);
-    };
+    // emphasis util
+    function setEmphasis(root, emph) {
+      root.scale.setScalar(THREE.MathUtils.lerp(0.9, 1.12, emph));
+      root.traverse((o) => {
+        if (!o.isMesh) return;
+        const mats = Array.isArray(o.material) ? o.material : [o.material];
+        mats.forEach((m) => {
+          if (!m) return;
+          m.transparent = true;
+          m.opacity = THREE.MathUtils.lerp(0.7, 1.0, emph);
+          if ('metalness' in m) m.metalness = 0.25;
+          if ('roughness' in m) m.roughness = 0.35;
+        });
+      });
+    }
 
     // initial emphasis
     setEmphasis(luffy, 1);
@@ -587,40 +585,36 @@ async function setupThreeFocusSwap() {
       renderer.setSize(window.innerWidth, window.innerHeight, false);
     });
 
-    // pause when tab hidden (saves battery)
-    document.addEventListener('visibilitychange', () => {
-      if (document.hidden) renderer.setAnimationLoop(null);
-      else start();
-    });
-
-    // animation loop
+    // animation loop (starts only after manager.onLoad)
     function start() {
       const clock = new THREE.Clock();
       renderer.setAnimationLoop(() => {
         const dt = Math.min(clock.getDelta(), 0.033);
         const s  = THREE.MathUtils.smoothstep(THREE.MathUtils.clamp(focus.f, 0, 1), 0, 1);
 
-        // swap depth + emphasis
         luffy.position.z = THREE.MathUtils.lerp(FRONT_Z, BACK_Z, s);
-        ace.position.z   = THREE.MathUtils.lerp(BACK_Z,  FRONT_Z, s);
+        ace.position.z   = THREE.MathUtils.lerp(BACK_Z, FRONT_Z, s);
+
         setEmphasis(luffy, 1 - s);
         setEmphasis(ace,    s);
 
-        // clean rotations (Y only)
-        luffy.rotation.x = luffy.rotation.z = 0;
-        ace.rotation.x   = ace.rotation.z   = 0;
-        luffy.rotation.y -= lowEnd ? 0.5 * dt : 0.8 * dt;
-        ace.rotation.y   += lowEnd ? 0.5 * dt : 0.8 * dt;
+        // rotate around Y only
+        luffy.rotation.set(0, luffy.rotation.y - 0.8 * dt, 0);
+        ace.rotation.set(0,   ace.rotation.y + 0.8 * dt, 0);
 
         renderer.render(scene, camera);
       });
     }
-    start();
 
+    // (debug) see draw calls/memory in console
+    if (window.location.search.includes('debug3d')) {
+      setInterval(() => console.log(renderer.info), 2000);
+    }
   } catch (e) {
     console.error('[OO][3D] init error', e);
   }
 }
+setupThreeFocusSwap();
 
 
 // Defer Three.js initialization until DOM is ready so #bg3d exists
