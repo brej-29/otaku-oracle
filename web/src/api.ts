@@ -7,12 +7,14 @@ export type MediaRecord = {
   season: string | null; seasonYear: number | null; source: string | null; year: number | null;
   cover: string | null; color: string | null; studios: string[]; url: string; genres: string[];
 };
-export type Fact = { key: string; label: string; value: string; sentence: string; url: string };
+export type ClaimStatus = "verified" | "conflict" | "unchecked";
+export type Claim = { id: string; text: string; field: string | null; value: string | null; status: ClaimStatus; recordValue: string | null; sourceUrl: string };
 export type Answer = {
-  title: string; record: MediaRecord; facts: Fact[];
-  explanation: string; // unverified prose
-  demo: true; // flips to false once a real backend answers
-  fetchedAt: string;
+  title: string; record: MediaRecord; claims: Claim[];
+  explanation: string | null; // unverified prose
+  mode: "model" | "record-only"; model: { id: string; provider: string } | null;
+  demo: boolean; // true while no backend answered
+  notice: string | null; fetchedAt: string;
 };
 export class ApiError extends Error {
   kind: "rate" | "offline" | "upstream" | "empty";
@@ -67,30 +69,62 @@ const INTENTS: [RegExp, string][] = [
   [/source|based|adapt|manga|novel|original/i, "source"], [/season/i, "season"],
 ];
 
-function factsFor(r: MediaRecord): Record<string, Fact | null> {
-  const f = (key: string, label: string, value: string | null, sentence: string): Fact | null => (value ? { key, label, value, sentence, url: r.url } : null);
+function recordClaims(r: MediaRecord): Record<string, Claim | null> {
+  const c = (field: string, value: string | null, text: string): Claim | null => (value ? { id: field, text, field, value, status: "verified", recordValue: value, sourceUrl: r.url } : null);
   return {
-    studio: r.studios.length ? f("studio", "Studio", r.studios.join(", "), `${r.title} was animated by ${r.studios.join(" and ")}.`) : null,
-    episodes: r.episodes ? f("episodes", "Episodes", String(r.episodes), `${r.title} has ${r.episodes} episodes.`) : null,
-    year: r.year ? f("year", "Started", String(r.year), `${r.title} started airing in ${r.year}.`) : null,
-    format: f("format", "Format", r.format, `${r.title} is a ${r.format} release.`),
-    source: f("source", "Source", r.source, `${r.title} is adapted from a ${r.source?.toLowerCase()} source.`),
-    season: r.season && r.seasonYear ? f("season", "Season", `${r.season} ${r.seasonYear}`, `${r.title} aired in ${r.season} ${r.seasonYear}.`) : null,
+    studio: r.studios.length ? c("studio", r.studios.join(", "), `${r.title} was animated by ${r.studios.join(" and ")}.`) : null,
+    episodes: r.episodes ? c("episodes", String(r.episodes), `${r.title} has ${r.episodes} episodes.`) : null,
+    year: r.year ? c("year", String(r.year), `${r.title} started airing in ${r.year}.`) : null,
+    format: c("format", r.format, `${r.title} is a ${r.format} release.`),
+    source: c("source", r.source, `${r.title} is adapted from a ${r.source?.toLowerCase()} source.`),
+    season: r.season && r.seasonYear ? c("season", `${r.season} ${r.seasonYear}`, `${r.title} aired in ${r.season} ${r.seasonYear}.`) : null,
   };
 }
 
-/** DEMO: verified facts come from the real AniList record; the explanation is a fixed placeholder, never a model output. */
-export async function ask(id: number, question: string, signal?: AbortSignal): Promise<Answer> {
+const API_BASE = (import.meta.env.VITE_API_BASE as string | undefined) ?? "";
+
+async function askBackend(id: number, question: string, signal?: AbortSignal): Promise<Answer> {
+  let res: Response;
+  try {
+    res = await fetch(`${API_BASE}/api/ask`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ titleId: id, question }), signal });
+  } catch (e) {
+    if ((e as Error).name === "AbortError") throw e;
+    throw new ApiError("offline", "Can't reach the server. Check your connection and try again.");
+  }
+  if (res.status === 429) throw new ApiError("rate", "Too many questions for now. Wait a minute, then try again.");
+  if (res.status === 404) throw new ApiError("empty", "That title isn't on AniList.");
+  if (!res.ok) throw new ApiError("upstream", "The answer service had a problem. Nothing was stamped. Try again shortly.");
+  const j = await res.json();
+  return { title: j.title, record: { ...j.record, status: null, studios: j.record.studios ?? [], genres: j.record.genres ?? [] }, claims: j.claims, explanation: j.explanation,
+    mode: j.mode, model: j.model, demo: false, notice: j.notice, fetchedAt: j.fetchedAt };
+}
+
+/** Without VITE_API_BASE this is DEMO: claims come straight from the real AniList record, no model involved.
+ *  `?states` adds two clearly labelled design-review claims so the conflict and unchecked looks can be reviewed. */
+async function askDemo(id: number, question: string, signal?: AbortSignal): Promise<Answer> {
   const record = await getRecord(id, signal);
-  const all = factsFor(record);
+  const all = recordClaims(record);
   const wanted = INTENTS.filter(([re]) => re.test(question)).map(([, k]) => k);
   const keys = wanted.length ? wanted : ["studio", "episodes", "year"];
-  const facts = keys.map((k) => all[k]).filter((x): x is Fact => !!x);
-  if (!facts.length) throw new ApiError("empty", "The AniList record has no fact that answers that. Try asking about the studio, episodes or year.");
-  return {
-    title: record.title, record, facts, demo: true, fetchedAt: new Date().toISOString(),
-    explanation: "A model would add context here, such as tone or themes. Nothing in the record confirms it, so it stays in pencil.",
-  };
+  const claims = keys.map((k) => all[k]).filter((x): x is Claim => !!x);
+  if (!claims.length) throw new ApiError("empty", "The AniList record has no fact that answers that. Try asking about the studio, episodes or year.");
+  const states = typeof location !== "undefined" && new URLSearchParams(location.search).has("states");
+  if (states) {
+    claims.push({ id: "demo-conflict", field: "episodes", value: "99", status: "conflict", recordValue: record.episodes ? String(record.episodes) : "unknown",
+      text: `Design-review claim: ${record.title} has 99 episodes.`, sourceUrl: record.url });
+    claims.push({ id: "demo-unchecked", field: null, value: null, status: "unchecked", recordValue: null, text: "Design-review claim: fans often call it a classic.", sourceUrl: record.url });
+  }
+  return { title: record.title, record, claims, mode: "record-only", model: null, demo: true, fetchedAt: new Date().toISOString(),
+    explanation: states ? "Design-review explanation. A model would add context here. Nothing in the record confirms it." : null,
+    notice: "Demo mode: facts are live from AniList, no model is attached yet." };
+}
+
+export const ask = (id: number, question: string, signal?: AbortSignal) => (API_BASE ? askBackend(id, question, signal) : askDemo(id, question, signal));
+
+export async function popular(signal?: AbortSignal): Promise<Hit[]> {
+  const d = await gql<{ Page: { media: any[] } }>(
+    `query{Page(perPage:8){media(type:ANIME,isAdult:false,sort:POPULARITY_DESC){id title{romaji english} startDate{year} format coverImage{large color}}}}`, {}, signal);
+  return d.Page.media.map((m) => ({ id: m.id, title: m.title.english || m.title.romaji, year: m.startDate?.year ?? null, format: fmt(m.format), cover: m.coverImage?.large ?? null, color: m.coverImage?.color ?? null }));
 }
 
 export type EvalArm = { accuracy: number | null; lo: number | null; hi: number | null; responses: number; expected: number };

@@ -6,6 +6,7 @@ import { Why } from "./components/Why";
 import { How } from "./components/How";
 import { Seal, SealDefs } from "./components/Seal";
 import { HeroStamp } from "./components/HeroStamp";
+import { Starters } from "./components/Starters";
 
 type State = { s: "idle" } | { s: "loading"; slow: boolean } | { s: "done"; a: Answer } | { s: "error"; kind: string; msg: string };
 
@@ -27,6 +28,7 @@ export default function App() {
   const { dark, toggle } = useTheme();
   const result = useRef<HTMLDivElement>(null);
   const ctl = useRef<AbortController | null>(null);
+  const [preset, setPreset] = useState<{ hit: Hit; n: number } | null>(null);
 
   useEffect(() => {
     const on = () => setOnline(true), off = () => setOnline(false);
@@ -72,7 +74,7 @@ export default function App() {
             <p>Ask about any anime. Every fact in the answer is matched to its AniList record and stamped. Anything we couldn't match stays in pencil.</p>
           </div>
           <div className="hero__ask panel" id="ask">
-            <Ask busy={state.s === "loading"} onSubmit={run} />
+            <Ask busy={state.s === "loading"} onSubmit={run} preset={preset} />
           </div>
         </section>
 
@@ -96,6 +98,7 @@ export default function App() {
           )}
         </div>
 
+        <Starters onPick={(h) => { setPreset({ hit: h, n: Date.now() }); document.getElementById("ask")?.scrollIntoView({ behavior: "smooth", block: "center" }); }} />
         <Why />
         <How />
       </main>

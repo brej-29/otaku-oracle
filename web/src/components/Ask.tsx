@@ -7,9 +7,9 @@ const EXAMPLES = [
   { title: "Spirited Away", q: "When did it come out?" },
 ];
 
-type Props = { busy: boolean; onSubmit: (hit: Hit, question: string) => void };
+type Props = { busy: boolean; onSubmit: (hit: Hit, question: string) => void; preset?: { hit: Hit; n: number } | null };
 
-export function Ask({ busy, onSubmit }: Props) {
+export function Ask({ busy, onSubmit, preset }: Props) {
   const uid = useId();
   const [text, setText] = useState("");
   const [hits, setHits] = useState<Hit[]>([]);
@@ -40,6 +40,8 @@ export function Ask({ busy, onSubmit }: Props) {
 
   const choose = (h: Hit) => { setPicked(h); setText(h.title); setOpen(false); setMissing(null); qRef.current?.focus(); };
   const clear = () => { setPicked(null); setText(""); setHits([]); tRef.current?.focus(); };
+
+  useEffect(() => { if (preset) choose(preset.hit); }, [preset]); // eslint-disable-line react-hooks/exhaustive-deps
 
   function onKey(e: React.KeyboardEvent) {
     if (!open || !hits.length) return;
@@ -95,7 +97,7 @@ export function Ask({ busy, onSubmit }: Props) {
         <p id={`${uid}-hint`} className="ask__msg" role={missing === "title" || searchErr ? "alert" : undefined}>
           {missing === "title" ? "Pick a title from the list first." : searchErr ? searchErr
             : !picked && text.trim().length >= 2 && !searching && !hits.length ? "No match on AniList. Check the spelling or try the Japanese title."
-            : picked ? "Title matched to its AniList record." : "Type at least two letters."}
+            : picked ? "Title matched to its AniList record." : hits.length ? "Pick a title from the list." : "Type at least two letters."}
         </p>
       </div>
 

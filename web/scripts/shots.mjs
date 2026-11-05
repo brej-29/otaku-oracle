@@ -21,6 +21,7 @@ async function ask(page, title, q) {
 
 const browser = await chromium.launch();
 for (const [name, viewport] of Object.entries(VIEWPORTS)) {
+  await wait(30000);
   const dir = path.join(OUT, name);
   mkdirSync(dir, { recursive: true });
   const shot = (page, n, full = false) => page.screenshot({ path: path.join(dir, `${n}.png`), fullPage: full });
@@ -34,6 +35,7 @@ for (const [name, viewport] of Object.entries(VIEWPORTS)) {
   await ask(page, "Frieren", "Which studio animated it?");
   await wait(700); await shot(page, "02-answer-stamping");
   await wait(3200); await shot(page, "03-answer-done");
+  await page.goto(`${BASE}/?states`); await ask(page, "Cowboy Bebop", "How many episodes?"); await wait(4200); await shot(page, "03b-answer-three-states");
   await page.locator("#why").scrollIntoViewIfNeeded(); await wait(600); await shot(page, "04-why-pending");
   await page.locator("#how").scrollIntoViewIfNeeded(); await wait(600); await shot(page, "05-how");
   await page.goto(`${BASE}/?sample`); await page.locator("#why").scrollIntoViewIfNeeded(); await wait(1500); await shot(page, "06-why-sample-chart");
@@ -42,7 +44,7 @@ for (const [name, viewport] of Object.entries(VIEWPORTS)) {
   await page.goto(BASE);
   await page.route("https://graphql.anilist.co/**", async (route) => {
     const body = route.request().postData() ?? "";
-    if (body.includes("Page(")) return route.continue();
+    if (route.request().method() === "OPTIONS" || body.includes("Page(")) return route.continue();
     await wait(6000); return route.continue().catch(() => {});
   });
   await ask(page, "Cowboy Bebop", "How many episodes?");
@@ -51,8 +53,8 @@ for (const [name, viewport] of Object.entries(VIEWPORTS)) {
 
   await page.route("https://graphql.anilist.co/**", (route) => {
     const body = route.request().postData() ?? "";
-    if (body.includes("Page(")) return route.continue();
-    return route.fulfill({ status: 429, body: "{}" });
+    if (route.request().method() === "OPTIONS" || body.includes("Page(")) return route.continue();
+    return route.fulfill({ status: 429, body: "{}", headers: { "access-control-allow-origin": "*" } });
   });
   await page.goto(BASE); await ask(page, "Spirited Away", "When did it come out?");
   await page.getByRole("alert").first().waitFor(); await wait(400); await shot(page, "08-error-rate-limited");
@@ -64,7 +66,8 @@ for (const [name, viewport] of Object.entries(VIEWPORTS)) {
   await page.goto(BASE); await page.getByRole("combobox", { name: "Anime title" }).fill("zzzxqzzq"); await wait(1500); await shot(page, "10-no-match");
   await ctx.close();
 
-  // dark theme and reduced motion
+  // dark theme and reduced motion (pause so AniList's 30 requests/minute limit resets)
+  await wait(45000);
   ctx = await browser.newContext({ viewport, colorScheme: "dark", reducedMotion: "reduce" });
   page = await ctx.newPage();
   await page.goto(BASE); await page.evaluate(() => document.fonts.ready); await wait(300); await shot(page, "11-home-dark-reduced");
