@@ -14,6 +14,7 @@ def main():
     parser.add_argument("command", choices=["build", "run", "report"])
     parser.add_argument("--data", default="eval/data")
     parser.add_argument("--output", default="eval/results/baseline-2026-11-06")
+    parser.add_argument("--resume-blocked", action="store_true", help="Explicitly retry unfinished observations after resolving a credential/quota blocker")
     args = parser.parse_args()
     load_dotenv(Path(__file__).resolve().parents[1] / ".env", override=False)
     if args.command == "build":
@@ -22,7 +23,7 @@ def main():
         return
     dataset = json.loads((Path(args.data) / "dataset.json").read_text(encoding="utf-8"))
     if args.command == "run":
-        run(dataset, args.data, args.output)
+        run(dataset, args.data, args.output, resume_blocked=args.resume_blocked)
     else:
         result = report(dataset, args.output)
         print(result["interpretation"])

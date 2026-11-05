@@ -11,24 +11,33 @@ from .network import write_json
 from .scoring import score
 
 
-def interval(rows, field, replicates=10000):
+def interval(rows, field, replicates=10000, model_equal=False):
     if not rows:
         return None
     clusters = defaultdict(lambda: defaultdict(list))
     for row in rows:
-        clusters[row["bucket"]][row["media_id"]].append(row[field])
+        clusters[row["bucket"]][row["media_id"]].append((row.get("model", "single"), row[field]))
     # Preserve the question-weighted ratio when titles have missing question types.
-    strata = [[(sum(values), len(values)) for values in titles.values()] for titles in clusters.values()]
+    strata = []
+    for titles in clusters.values():
+        totals = []
+        for values in titles.values():
+            models = defaultdict(list)
+            for model, value in values:
+                models[model].append(value)
+            totals.append({m: (sum(v), len(v)) for m, v in models.items()})
+        strata.append(totals)
     rng = random.Random(SEED)
     samples = []
     for _ in range(replicates):
-        numerator = denominator = 0
+        totals = defaultdict(lambda: [0, 0])
         for titles in strata:
             for _ in titles:
-                total, count = rng.choice(titles)
-                numerator += total
-                denominator += count
-        samples.append(numerator / denominator)
+                for model, (total, count) in rng.choice(titles).items():
+                    totals[model][0] += total
+                    totals[model][1] += count
+        samples.append(mean(total / count for total, count in totals.values()) if model_equal else
+                       sum(total for total, count in totals.values()) / sum(count for total, count in totals.values()))
     samples.sort()
     # Inverse empirical CDF percentile endpoints (fixed in implementation).
     return [samples[int(.025 * (replicates - 1))], samples[int(.975 * (replicates - 1))]]
@@ -63,8 +72,9 @@ def paired_summary(rows):
         by_question[(row["question_id"], row["model"])].append(row)
     averaged = [{**values[0], "delta": mean(r["delta"] for r in values)} for values in by_question.values()]
     return {"pairs": len(paired), "questions_models": len(averaged),
-            "delta": mean(r["delta"] for r in averaged) if averaged else None,
-            "ci95": interval(averaged, "delta")}
+            "delta": mean(mean(r["delta"] for r in averaged if r["model"] == model)
+                          for model in {r["model"] for r in averaged}) if averaged else None,
+            "ci95": interval(averaged, "delta", model_equal=True)}
 
 
 def percent(value):
@@ -81,7 +91,9 @@ def report(dataset, directory):
     if manifest["dataset_sha256"] != fingerprint(dataset):
         raise ValueError("Result manifest does not match dataset")
     questions = {q["id"]: q for q in dataset["questions"]}
-    rows = [json.loads(s) for s in (directory / "answers.jsonl").read_text(encoding="utf-8").splitlines()]
+    journal = [json.loads(s) for s in (directory / "answers.jsonl").read_text(encoding="utf-8").splitlines()]
+    # Retain failed attempts in the journal, score only the latest observation on resume.
+    rows = list({(r["question_id"], r["model"], r["arm"], r["repeat"]): r for r in journal}.values())
     for row in rows:
         if row["status"] == "ok":
             row.update(score(questions[row["question_id"]], row.get("content")))
@@ -101,9 +113,12 @@ def report(dataset, directory):
             subset = [r for r in rows if (model == "pooled" or r["model"] == model) and (bucket == "all" or r["bucket"] == bucket)]
             paired[f"{model}|{bucket}"] = paired_summary(subset)
     completion = json.loads((directory / "completion.json").read_text(encoding="utf-8"))
+    credential_blocked = any(any(a.get("status") == 401 for a in r.get("attempts", [])) for r in rows if r["status"] != "ok")
     result = {"dataset_sha256": manifest["dataset_sha256"], "title_count": len(dataset["titles"]),
+              "journal_entries": len(journal), "historical_error_entries": sum(r["status"] != "ok" for r in journal),
               "question_count": len(questions), "groups": groups, "paired": paired, "completion": completion,
               "interpretation": "Completed run; assess preregistered thresholds" if completion["complete"] else
+              "BLOCKED: invalid provider credential (HTTP 401); model results unavailable; hypothesis threshold cannot pass" if credential_blocked else
               "Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased"}
     write_json(directory / "summary.json", result)
     lines = ["# Measured baseline", "", result["interpretation"], "",

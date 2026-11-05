@@ -36,7 +36,7 @@ def discover(client, directory):
     return selected
 
 
-def run(dataset, data_directory, output, repeats=3):
+def run(dataset, data_directory, output, repeats=3, resume_blocked=False):
     if repeats != 3:
         raise ValueError("Preregistered protocol requires three repeats")
     output = Path(output)
@@ -61,8 +61,9 @@ def run(dataset, data_directory, output, repeats=3):
         raise ValueError("OPENROUTER_API_KEY is missing; no model requests made")
     journal = output / "answers.jsonl"
     previous = [json.loads(line) for line in journal.read_text(encoding="utf-8").splitlines()] if journal.exists() else []
-    completed = {(r["question_id"], r["model"], r["arm"], r["repeat"]) for r in previous}
-    blocked = {r["model"] for r in previous if r.get("stop_model")}
+    latest = {(r["question_id"], r["model"], r["arm"], r["repeat"]): r for r in previous}
+    completed = {key for key, row in latest.items() if row["status"] == "ok"}
+    blocked = {r["model"] for r in latest.values() if r.get("stop_model")} if not resume_blocked else set()
 
     def append(row):
         # Also redact the credential if an upstream response unexpectedly contains it.

@@ -71,3 +71,47 @@ def test_http_failure_redacts_credentials_and_does_not_retry_quota(monkeypatch):
     else:
         raise AssertionError("Quota failure was not raised")
     assert len(calls) == 1
+
+
+def test_resume_preserves_journal_and_skips_successful_observations(tmp_path, monkeypatch):
+    from eval.runner import run
+    from eval.report import report
+    import eval.runner as runner
+    record = {"id": 1, "title": {"romaji": "Example"}, "season": "SPRING"}
+    q = {"id": "1:season", "media_id": 1, "bucket": "head", "kind": "season", "title": record["title"],
+         "question": "season?", "gold": "SPRING", "citation": "https://anilist.co/anime/1"}
+    dataset = {"titles": [{"bucket": "head", "record": record}], "questions": [q]}
+    output = tmp_path / "results"
+    monkeypatch.setenv("OPENROUTER_API_KEY", "test-credential")
+    monkeypatch.setattr(runner, "discover", lambda *args: ["first:free", "second:free"])
+    monkeypatch.setattr(AniList, "fetch", lambda *args: {"data": {"Media": record}})
+    attempts = []
+    available = False
+    def request(self, url, payload=None, token=None):
+        attempts.append(payload)
+        if not available:
+            raise RequestFailed([{"status": 401}])
+        return {"model": payload["model"], "choices": [{"message": {"content": json.dumps(
+            {"answer": "SPRING", "confidence": 1, "citations": [q["citation"]]})}}]}, []
+    monkeypatch.setattr(Client, "request", request)
+    run(dataset, tmp_path, output)
+    assert len(attempts) == 2
+    run(dataset, tmp_path, output)
+    assert len(attempts) == 2  # normal run does not retry either blocked model
+    available = True
+    run(dataset, tmp_path, output, resume_blocked=True)
+    assert len(attempts) == 14  # two failures retained plus 12 completed A/B observations
+    before = (output / "answers.jsonl").read_text()
+    run(dataset, tmp_path, output)
+    assert (output / "answers.jsonl").read_text() == before
+    result = report(dataset, output)
+    assert result["journal_entries"] == 15 and result["historical_error_entries"] == 2
+    assert result["completion"]["complete"]
+    assert result["groups"]["first:free|B|all:all"]["responses"] == 3
+
+
+def test_pooled_pairing_weights_models_equally():
+    rows = [dict(question_id=f"{i}:year", media_id=i, bucket="head", model=model, repeat=0,
+                 arm=arm, status="ok", correct=arm == "B" and model == "many")
+            for model, ids in (("one", [1]), ("many", [1, 2, 3])) for i in ids for arm in ("A", "B")]
+    assert paired_summary(rows)["delta"] == .5
