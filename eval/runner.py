@@ -6,7 +6,7 @@ from pathlib import Path
 
 from .dataset import RECORD_QUERY, SEED, facts, fingerprint
 from .network import AniList, Client, RequestFailed, now, write_json
-from .providers import credentials, discover, redact, resolve_provider
+from .providers import client_for, credentials, discover, payload_for, redact, resolve_provider
 
 SYSTEM = """Answer one anime metadata question. Return ONLY a JSON object with keys
 answer, confidence (number from 0 to 1), citations (list of source URLs).
@@ -30,7 +30,7 @@ def run(dataset, data_directory, output, repeats=3, resume_blocked=False, provid
     output = Path(output)
     output.mkdir(parents=True, exist_ok=True)
     provider = resolve_provider(provider_name, config_path)
-    client = Client(interval=provider["interval"], retry_rate_limits=True)
+    client = client_for(provider)
     manifest_path = output / "manifest.json"
     digest = fingerprint(dataset)
     if manifest_path.exists():
@@ -43,7 +43,8 @@ def run(dataset, data_directory, output, repeats=3, resume_blocked=False, provid
     else:
         models = discover(client, output, provider)
         manifest = {"started_at": now(), "dataset_sha256": digest, "models": models,
-                    "repeats": repeats, "seed": SEED, "temperature": .2, "max_tokens": 256,
+                    "repeats": repeats, "seed": SEED, "temperature": .2, "max_tokens": provider.get("max_tokens", 256),
+                    "analysis_role": provider.get("analysis_role", "registered_primary"),
                     "system_prompt": SYSTEM, "selection": provider["discovery"], "provider": provider["name"],
                     "provider_config": provider,
                     "expected_model_calls": len(dataset["questions"]) * repeats * 2 * len(models)}
@@ -66,7 +67,7 @@ def run(dataset, data_directory, output, repeats=3, resume_blocked=False, provid
         completed.add((row["question_id"], row["model"], row["arm"], row["repeat"]))
 
     records = {t["record"]["id"]: t["record"] for t in dataset["titles"]}
-    retrieval = AniList(Path(data_directory) / "retrieval")
+    retrieval = AniList(output / "retrieval" if provider.get("analysis_role") == "exploratory_replication" else Path(data_directory) / "retrieval")
     questions = list(dataset["questions"])
     rng = random.Random(SEED)
     rng.shuffle(questions)
@@ -93,8 +94,7 @@ def run(dataset, data_directory, output, repeats=3, resume_blocked=False, provid
                             blocked.add(model)
                             continue
                         messages = prompt(question, record)
-                        payload = {"model": model, "messages": messages, "temperature": .2, "max_tokens": 256,
-                                   **provider["request_options"]}
+                        payload = payload_for(provider, model, messages)
                         row["messages"] = messages
                         response, attempts = client.request(provider["base_url"].rstrip("/") + "/chat/completions", payload, token)
                         choices = response.get("choices") or []

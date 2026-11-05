@@ -39,16 +39,26 @@ def retry_delay(value):
             return None
 
 
+def rate_headers(headers):
+    return {name: headers.get(name) for name in (
+        "x-ratelimit-limit-requests", "x-ratelimit-limit-tokens", "x-ratelimit-remaining-requests",
+        "x-ratelimit-remaining-tokens", "x-ratelimit-reset-requests", "x-ratelimit-reset-tokens") if headers.get(name) is not None}
+
+
 class Client:
-    def __init__(self, interval=2.1, timeout=90, retry_rate_limits=False):
+    def __init__(self, interval=2.1, timeout=90, retry_rate_limits=False, suppress_messages=False, pacer=None):
         self.interval = interval
         self.timeout = timeout
         self.last = 0.0
         self.retry_rate_limits = retry_rate_limits
+        self.suppress_messages = suppress_messages
+        self.pacer = pacer
 
     def request(self, url, payload=None, token=None):
         attempts = []
         for retry in range(3):
+            if self.pacer:
+                self.pacer.before(payload or {})
             time.sleep(max(0, self.interval - (time.monotonic() - self.last)))
             self.last = time.monotonic()
             headers = {"Content-Type": "application/json", "User-Agent": "OtakuOracle-Evaluation/0.1"}
@@ -62,7 +72,9 @@ class Client:
                     data = json.load(response)
                     attempts.append({"at": stamp, "status": response.status, "seconds": round(time.monotonic() - started, 3),
                                      "rate_limit": response.headers.get("X-RateLimit-Limit"),
-                                     "rate_remaining": response.headers.get("X-RateLimit-Remaining")})
+                                     "rate_remaining": response.headers.get("X-RateLimit-Remaining"), "rate_headers": rate_headers(response.headers)})
+                    if self.pacer:
+                        self.pacer.after(data, attempts[-1])
                     return data, attempts
             except urllib.error.HTTPError as error:
                 # Record only JSON error messages with credentials redacted, never request headers.
@@ -73,7 +85,7 @@ class Client:
                     for item in errors:
                         if isinstance(item, dict) and item.get("code") is not None:
                             codes.append(str(item["code"]))
-                        if isinstance(item, dict) and isinstance(item.get("message"), str):
+                        if not self.suppress_messages and isinstance(item, dict) and isinstance(item.get("message"), str):
                             message = item["message"]
                             messages.append(message.replace(token, "[REDACTED]")[:1000] if token else message[:1000])
                 except (ValueError, AttributeError, TypeError):
@@ -81,7 +93,10 @@ class Client:
                 attempts.append({"at": stamp, "status": error.code, "retry_after": error.headers.get("Retry-After"),
                                  "messages": messages, "rate_limit": error.headers.get("X-RateLimit-Limit"),
                                  "rate_remaining": error.headers.get("X-RateLimit-Remaining"),
-                                 "request_limit_minute": error.headers.get("x-ratelimit-limit-req-minute"), "codes": codes})
+                                 "request_limit_minute": error.headers.get("x-ratelimit-limit-req-minute"), "codes": codes,
+                                 "rate_headers": rate_headers(error.headers)})
+                if self.pacer:
+                    self.pacer.after(None, attempts[-1])
                 if "1113" in codes or error.code in (401, 402, 403) or error.headers.get("x-ratelimit-limit-req-minute") == "0":
                     break
                 rate_retry = self.retry_rate_limits and error.code == 429

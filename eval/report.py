@@ -88,6 +88,7 @@ def ci(value):
 def report(dataset, directory):
     directory = Path(directory)
     manifest = json.loads((directory / "manifest.json").read_text(encoding="utf-8"))
+    replication = manifest.get("analysis_role") == "exploratory_replication"
     if manifest["dataset_sha256"] != fingerprint(dataset):
         raise ValueError("Result manifest does not match dataset")
     questions = {q["id"]: q for q in dataset["questions"]}
@@ -126,11 +127,14 @@ def report(dataset, directory):
     result = {"generated_at": now(), "dataset_sha256": manifest["dataset_sha256"], "title_count": len(dataset["titles"]),
               "journal_entries": len(journal), "historical_error_entries": sum(r["status"] != "ok" for r in journal),
               "question_count": len(questions), "groups": groups, "paired": paired, "completion": completion,
-              "interpretation": "Completed run; assess preregistered thresholds" if completion["complete"] else
+              "analysis_role": manifest.get("analysis_role", "registered_primary"),
+              "interpretation": "Completed exploratory replication; excluded from primary threshold" if completion["complete"] and replication else
+              "Completed run; assess preregistered thresholds" if completion["complete"] else
               "BLOCKED: invalid provider credential (HTTP 401); model results unavailable; hypothesis threshold cannot pass" if credential_blocked else
               "Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased"}
     write_json(directory / "summary.json", result)
     lines = ["# Measured baseline", "", result["interpretation"], "",
+             "Exploratory replication added after primary inference began; cannot rescue or overturn its threshold." if replication else "Registered primary analysis.", "",
              f"Report snapshot: {result['generated_at']}; {len(journal)} complete journal entries included; process state: {completion.get('state', 'archived')}.", "",
              f"Titles: {len(dataset['titles'])}; questions: {len(questions)}; repeats planned: 3; clustered bootstrap: 10,000, seed {SEED}.", "",
              "| Model | Arm | Responses / expected | Attempted | Accuracy (95% CI) | Abstention | Confident wrong | Wrong answer | Parse failure | Missing confidence | Citation validity | Correct + citation |",
@@ -166,7 +170,7 @@ def report(dataset, directory):
             if label.startswith(dimension + ":"):
                 lines.append(f"| {model} | {arm} | {label.split(':')[1]} | {value['responses']} / {value['expected']} | {percent(value['correct'])} {ci(value['accuracy_ci95'])} | " +
                              " | ".join(percent(value[k]) for k in ("abstention", "hallucination", "wrong_answer", "parse_failure", "missing_confidence", "citation_validity", "correct_with_citation")) + " |")
-    if completion["complete"]:
+    if completion["complete"] and not replication:
         pooled = paired["pooled|all"]
         passed = (pooled["delta"] >= .1 and pooled["ci95"][0] > 0 and
                   all(paired[f"{m}|all"]["delta"] >= 0 for m in manifest["models"]))

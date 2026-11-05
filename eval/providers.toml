@@ -27,14 +27,39 @@ request_options = {}
 [providers.groq]
 base_url = "https://api.groq.com/openai/v1"
 key_env = "GROQ_API_KEY"
-models = ["llama-3.3-70b-versatile", "llama-3.1-8b-instant"]
-free_models = []
+models = ["openai/gpt-oss-120b"]
+free_models = ["openai/gpt-oss-120b"]
 discovery = "configured"
 interval = 3.1
-run_enabled = false
+run_enabled = true
+analysis_role = "exploratory_replication"
+max_tokens = 1024
+token_parameter = "max_completion_tokens"
+suppress_error_messages = true
+quota_ledger = "eval/results/groq-quota-2026-11-06.json"
+minute_tokens = 6000
+minute_requests = 25
+daily_tokens = 180000
+daily_requests = 900
 health_path = "/models"
-free_tier_notes = "Coordinator observed expired_api_key (401); verify current free eligibility and allowlist before a separate evaluation run."
-request_options = {}
+free_tier_notes = "Existing free credential verified by coordinator; documented model free limits 30 RPM, 1000 RPD, 8000 TPM, 200000 TPD; use stricter local budgets and never upgrade."
+request_options = { reasoning_effort = "low", include_reasoning = false, response_format = { type = "json_object" } }
+
+[providers.nvidia]
+base_url = "https://integrate.api.nvidia.com/v1"
+key_env = "NVIDIA_API_KEY"
+key_env_fallbacks = ["NVDIA_API_KEY"]
+models = ["google/gemma-4-31b-it"]
+free_models = ["google/gemma-4-31b-it"]
+discovery = "configured"
+interval = 3.1
+run_enabled = true
+analysis_role = "exploratory_replication"
+max_tokens = 256
+suppress_error_messages = true
+health_path = "/models"
+free_tier_notes = "Existing authorized free research trial; NVIDIA staff state model-specific unpublished rate limits replaced credits; no paid license/card/sign-up or inaccessible model calls."
+request_options = { response_format = { type = "json_object" } }
 
 [providers.mistral]
 base_url = "https://api.mistral.ai/v1"

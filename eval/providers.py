@@ -27,7 +27,7 @@ def resolve_provider(name=None, path=None):
 
 
 def credentials(provider):
-    token = os.getenv(provider["key_env"])
+    token = next((os.getenv(name) for name in [provider["key_env"], *provider.get("key_env_fallbacks", [])] if os.getenv(name)), None)
     if not token:
         raise ValueError(f"Missing credential in {provider['key_env']}; no request made")
     return token
@@ -36,9 +36,10 @@ def credentials(provider):
 def redact(value):
     encoded = json.dumps(value, ensure_ascii=False)
     for provider in load_providers()["providers"].values():
-        token = os.getenv(provider["key_env"])
-        if token:
-            encoded = encoded.replace(token, "[REDACTED]")
+        for name in [provider["key_env"], *provider.get("key_env_fallbacks", [])]:
+            token = os.getenv(name)
+            if token:
+                encoded = encoded.replace(token, "[REDACTED]")
     return json.loads(encoded)
 
 
@@ -59,9 +60,23 @@ def discover(client, directory, provider):
             "response": {"data": [m for m in catalog["data"] if m["id"] in models]}})
     elif any(m not in provider["free_models"] for m in models):
         raise ValueError("Selected model is not on the explicitly verified free allowlist")
-    if len(models) != 2 or len(set(models)) != 2:
-        raise ValueError("Evaluation requires exactly two distinct free model IDs")
+    expected = 1 if provider.get("analysis_role") == "exploratory_replication" else 2
+    if len(models) != expected or len(set(models)) != expected:
+        raise ValueError(f"Evaluation role requires {expected} distinct free model IDs")
     return models
+
+
+def payload_for(provider, model, messages):
+    return {"model": model, "messages": messages, "temperature": .2,
+            provider.get("token_parameter", "max_tokens"): provider.get("max_tokens", 256),
+            **provider["request_options"]}
+
+
+def client_for(provider):
+    from .pacing import Budget
+    return Client(interval=provider["interval"], retry_rate_limits=True,
+                  suppress_messages=provider.get("suppress_error_messages", False),
+                  pacer=Budget(provider) if provider.get("quota_ledger") else None)
 
 
 def health(directory, path=None, selected=None):
@@ -73,12 +88,12 @@ def health(directory, path=None, selected=None):
         provider = {"name": name, **settings}
         row = {"provider": name, "checked_at": now(), "inference_enabled": settings["run_enabled"],
                "notes": settings["free_tier_notes"], "scope": "authenticated GET only; does not establish chat quota"}
-        token = os.getenv(settings["key_env"])
+        token = next((os.getenv(k) for k in [settings["key_env"], *settings.get("key_env_fallbacks", [])] if os.getenv(k)), None)
         if not token:
             row["status"] = "missing_credential"
         else:
             try:
-                _, attempts = Client().request(settings["base_url"] + settings["health_path"], token=token)
+                _, attempts = Client(suppress_messages=settings.get("suppress_error_messages", False)).request(settings["base_url"] + settings["health_path"], token=token)
                 row.update(status="authenticated", attempts=attempts)
             except RequestFailed as error:
                 row.update(status="request_error", attempts=error.attempts)
@@ -99,15 +114,13 @@ def calibrate(directory, provider_name=None, path=None):
     directory.mkdir(parents=True, exist_ok=True)
     if (directory / "calibration.json").exists():
         raise FileExistsError("Calibration already archived; do not overwrite or tune against results")
-    client = Client(interval=provider["interval"], retry_rate_limits=True)
+    client = client_for(provider)
     models = discover(client, directory, provider)
     rows = []
     for model in models:
         for answer in (7, 19, 42):
-            payload = {"model": model, "temperature": .2, "max_tokens": 256,
-                "messages": [{"role": "system", "content": SYSTEM},
-                             {"role": "user", "content": f'Return only JSON with answer equal to integer {answer}, confidence equal to 1, and citations equal to an empty list.'}],
-                **provider["request_options"]}
+            payload = payload_for(provider, model, [{"role": "system", "content": SYSTEM},
+                {"role": "user", "content": f'Return only JSON with answer equal to integer {answer}, confidence equal to 1, and citations equal to an empty list.'}])
             try:
                 response, attempts = client.request(provider["base_url"] + "/chat/completions", payload, token)
                 choices = response.get("choices") or [{}]
@@ -123,7 +136,7 @@ def calibrate(directory, provider_name=None, path=None):
                 rows.append({"model": model, "payload": payload, "passed": False, "attempts": error.attempts})
                 break
     result = redact({"at": now(), "provider": provider, "purpose": "non-dataset output transport calibration",
-                     "passed": len(rows) == 6 and all(r["passed"] for r in rows), "checks": rows})
+                     "passed": len(rows) == 3 * len(models) and all(r["passed"] for r in rows), "checks": rows})
     write_json(directory / "calibration.json", result)
     print(f"Calibration: {sum(r['passed'] for r in rows)}/{len(rows)} passed; ready={result['passed']}")
     return result
@@ -136,6 +149,7 @@ def calibration_assessment(result):
     responses = [r for r in checks if r.get("content") is not None]
     ready = all(any(r["model"] == m and r["passed"] for r in responses) for m in models)
     return {"format_ready": ready and all(r["passed"] for r in responses),
-            "all_six_checks_passed": result["passed"], "valid_final_answers": sum(r["passed"] for r in checks),
+            "expected_checks": 3 * len(models), "all_planned_checks_passed": result["passed"],
+            "all_six_checks_passed": len(models) == 2 and result["passed"], "valid_final_answers": sum(r["passed"] for r in checks),
             "checks_recorded": len(checks), "availability_failures": sum(r.get("content") is None for r in checks),
             "note": "All returned final answers must match the schema and every model must demonstrate one; availability failures remain failures, not successful checks"}
