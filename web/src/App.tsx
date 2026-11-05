@@ -57,7 +57,7 @@ export default function App() {
       {!online && <p className="offline" role="status">You're offline. Nothing new loads until the connection returns.</p>}
 
       <header className="top wrap">
-        <a className="brand" href="#top" aria-label="Otaku Oracle, home"><span className="brand__mark" aria-hidden="true"><Seal size={34} label="" /></span><span>Otaku Oracle</span></a>
+        <a className="brand" href="#top"><span className="brand__mark" aria-hidden="true"><Seal size={34} label="" /></span><span>Otaku Oracle</span></a>
         <nav aria-label="Sections">
           <a href="#ask">Ask</a><a href="#why">Why</a><a href="#how">How</a>
           <button type="button" className="theme" onClick={toggle} aria-pressed={dark}>{dark ? "Light paper" : "Dark paper"}</button>

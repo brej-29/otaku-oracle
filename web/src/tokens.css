@@ -6,7 +6,7 @@
   --paper-3: #d3dfe8;
   --ink: #1a1f3a;
   --ink-soft: #444b6b;        /* 7.9:1 on paper */
-  --pencil: #2f6f9f;          /* non-photo blue, text-safe 4.9:1 on paper */
+  --pencil: #266190;          /* non-photo blue, 5.5:1 on paper, 4.9:1 on paper-2 */
   --pencil-line: #a9cbe3;     /* guide lines, decorative only */
   --seal: #c0291f;            /* hanko red, 5.6:1 on paper */
   --seal-ink: #fff7f4;        /* text on seal fills */
