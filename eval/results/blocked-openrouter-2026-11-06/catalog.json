@@ -1,0 +1,37 @@
+{
+  "fetched_at": "2026-11-05T19:40:52.102439+00:00",
+  "attempts": [
+    {
+      "at": "2026-11-05T19:40:51.856925+00:00",
+      "status": 200,
+      "seconds": 0.245,
+      "rate_limit": null,
+      "rate_remaining": null
+    }
+  ],
+  "full_catalog_sha256": "f81461de6a236da8506eca9eec09f8c32772c853c331f30698fd81f95fe9217f",
+  "hash_basis": "original committed catalog.json file bytes",
+  "full_catalog_entries": 454,
+  "response": {
+    "data": [
+      {
+        "id": "dots-studio/dots-3-note-preview:free",
+        "name": "Dots Studio: Dots3-Note Preview (free)",
+        "pricing": {
+          "prompt": "0",
+          "completion": "0"
+        },
+        "context_length": 512000
+      },
+      {
+        "id": "cohere/north-mini-code:free",
+        "name": "Cohere: North Mini Code (free)",
+        "pricing": {
+          "prompt": "0",
+          "completion": "0"
+        },
+        "context_length": 256000
+      }
+    ]
+  }
+}
