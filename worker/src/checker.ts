@@ -89,7 +89,7 @@ export function checkClaim(
   // Never badge arbitrary model text: templates express only the compared value.
   const text =
     field && claim.value !== null
-      ? `${labels[field]}: ${field === "studio" && Array.isArray(answer) ? answer.join(", ") : claim.value}.`
+      ? `${labels[field]}: ${field === "studio" && Array.isArray(answer) && answer.every((v) => typeof v === "string") ? answer.join(", ") : claim.value}.`
       : claim.text;
   return {
     id: `claim-${index + 1}`,

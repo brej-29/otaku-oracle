@@ -148,3 +148,13 @@ describe("strict JSON transport", () => {
     expect(() => parseDraft(s)).toThrow(),
   );
 });
+
+it("cannot invoke object methods through an untrusted studio value", () => {
+  expect(
+    checkClaim(
+      record,
+      { field: "studio", value: '[{"toString":null}]', text: "Untrusted" },
+      0,
+    ).status,
+  ).toBe("conflict");
+});

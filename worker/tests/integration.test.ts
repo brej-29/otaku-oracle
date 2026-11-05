@@ -2,7 +2,7 @@ import { beforeAll, beforeEach, afterAll, expect, it, vi } from "vitest";
 import { handle } from "../src/index";
 import { getRecord } from "../src/anilist";
 import { Store, daily } from "../src/storage";
-import { providers, payload } from "../src/providers";
+import { providers, payload, selectFree } from "../src/providers";
 import {
   ask,
   database,
@@ -481,4 +481,17 @@ it("rejects model-id overrides in token-parameter configuration", async () => {
   const net = network();
   expect((await handle(ask(), env, net)).status).toBe(502);
   expect(net).not.toHaveBeenCalled();
+});
+
+it("rejects missing, empty and nonnumeric free-catalog prices", () => {
+  expect(
+    selectFree({
+      data: [
+        { id: "a:free", pricing: { prompt: "", completion: "0" } },
+        { id: "b:free", pricing: { prompt: false, completion: 0 } },
+        { id: "c:free", pricing: { prompt: null, completion: "0" } },
+        { id: "d:free", pricing: { prompt: "0.0", completion: "0" } },
+      ],
+    }),
+  ).toEqual(["d:free"]);
 });

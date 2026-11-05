@@ -115,8 +115,9 @@ export function selectFree(body: any, requested: string[] = []): string[] {
         m.id.endsWith(":free") &&
         ["prompt", "completion"].every(
           (k) =>
-            m.pricing?.[k] !== undefined &&
-            m.pricing?.[k] !== null &&
+            (typeof m.pricing?.[k] === "string" ||
+              typeof m.pricing?.[k] === "number") &&
+            String(m.pricing[k]).trim() !== "" &&
             Number(m.pricing[k]) === 0,
         ),
     )
