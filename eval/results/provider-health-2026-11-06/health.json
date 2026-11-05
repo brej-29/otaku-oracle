@@ -1,0 +1,76 @@
+[
+  {
+    "provider": "zai",
+    "checked_at": "2026-11-05T19:57:21.475461+00:00",
+    "inference_enabled": true,
+    "notes": "Only these two Flash IDs are authorized; coordinator verified both responding without balance on 2026-11-06; numeric daily allowance unverified.",
+    "scope": "authenticated GET only; does not establish chat quota",
+    "status": "authenticated",
+    "attempts": [
+      {
+        "at": "2026-11-05T19:57:21.475986+00:00",
+        "status": 200,
+        "seconds": 0.455,
+        "rate_limit": null,
+        "rate_remaining": null
+      }
+    ]
+  },
+  {
+    "provider": "openrouter",
+    "checked_at": "2026-11-05T19:57:21.932831+00:00",
+    "inference_enabled": true,
+    "notes": "Authenticated key currently returns 401; runtime selection requires :free suffix and zero token prices; account daily caps apply.",
+    "scope": "authenticated GET only; does not establish chat quota",
+    "status": "request_error",
+    "attempts": [
+      {
+        "at": "2026-11-05T19:57:21.932959+00:00",
+        "status": 401,
+        "retry_after": null,
+        "messages": [
+          "User not found."
+        ],
+        "rate_limit": null,
+        "rate_remaining": null,
+        "codes": [
+          "401"
+        ]
+      }
+    ]
+  },
+  {
+    "provider": "groq",
+    "checked_at": "2026-11-05T19:57:22.394406+00:00",
+    "inference_enabled": false,
+    "notes": "Coordinator observed expired_api_key (401); verify current free eligibility and allowlist before a separate evaluation run.",
+    "scope": "authenticated GET only; does not establish chat quota",
+    "status": "authenticated",
+    "attempts": [
+      {
+        "at": "2026-11-05T19:57:22.394529+00:00",
+        "status": 200,
+        "seconds": 0.45,
+        "rate_limit": null,
+        "rate_remaining": null
+      }
+    ]
+  },
+  {
+    "provider": "mistral",
+    "checked_at": "2026-11-05T19:57:22.846645+00:00",
+    "inference_enabled": false,
+    "notes": "Models endpoint authenticates; coordinator observed chat 429 with request allowance 0; paid calls forbidden, verify activated free quota before a separate run.",
+    "scope": "authenticated GET only; does not establish chat quota",
+    "status": "authenticated",
+    "attempts": [
+      {
+        "at": "2026-11-05T19:57:22.846766+00:00",
+        "status": 200,
+        "seconds": 0.514,
+        "rate_limit": null,
+        "rate_remaining": null
+      }
+    ]
+  }
+]

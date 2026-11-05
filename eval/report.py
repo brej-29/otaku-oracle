@@ -7,7 +7,7 @@ from pathlib import Path
 from statistics import mean
 
 from .dataset import SEED, fingerprint
-from .network import write_json
+from .network import now, write_json
 from .scoring import score
 
 
@@ -122,7 +122,7 @@ def report(dataset, directory):
                             for a in ("A", "B") for r in range(3))
     completion["complete"] = completion["complete"] and coverage_complete
     credential_blocked = any(any(a.get("status") == 401 for a in r.get("attempts", [])) for r in rows if r["status"] != "ok")
-    result = {"dataset_sha256": manifest["dataset_sha256"], "title_count": len(dataset["titles"]),
+    result = {"generated_at": now(), "dataset_sha256": manifest["dataset_sha256"], "title_count": len(dataset["titles"]),
               "journal_entries": len(journal), "historical_error_entries": sum(r["status"] != "ok" for r in journal),
               "question_count": len(questions), "groups": groups, "paired": paired, "completion": completion,
               "interpretation": "Completed run; assess preregistered thresholds" if completion["complete"] else
@@ -130,6 +130,7 @@ def report(dataset, directory):
               "Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased"}
     write_json(directory / "summary.json", result)
     lines = ["# Measured baseline", "", result["interpretation"], "",
+             f"Report snapshot: {result['generated_at']}; {len(journal)} complete journal entries included; process state: {completion.get('state', 'archived')}.", "",
              f"Titles: {len(dataset['titles'])}; questions: {len(questions)}; repeats planned: 3; clustered bootstrap: 10,000, seed {SEED}.", "",
              "| Model | Arm | Responses / expected | Attempted | Accuracy (95% CI) | Abstention | Confident wrong | Wrong answer | Parse failure | Missing confidence | Citation validity | Correct + citation |",
              "|---|---|---:|---:|---|---:|---:|---:|---:|---:|---:|---:|"]
@@ -143,7 +144,8 @@ def report(dataset, directory):
               "Citations are exact canonical-URL matches, not entailment checks. N/A means no response/citation denominator.", "",
               "| Model / bucket | Complete pairs | B minus A | 95% CI |", "|---|---:|---:|---|"]
     for key, value in paired.items():
-        lines.append(f"| {key} | {value['pairs']} | {percent(value['delta'])} | {ci(value['ci95'])} |")
+        label = key.replace("|", " / ")
+        lines.append(f"| {label} | {value['pairs']} | {percent(value['delta'])} | {ci(value['ci95'])} |")
     for dimension in ("bucket", "kind"):
         lines += ["", f"## Metrics by {dimension}", "", "| Model | Arm | Slice | Responses / expected | Accuracy (95% CI) | Abstention | Confident wrong | Wrong answer | Parse failure | Missing confidence | Citation validity | Correct + citation |", "|---|---|---|---:|---|---:|---:|---:|---:|---:|---:|---:|"]
         for key, value in groups.items():

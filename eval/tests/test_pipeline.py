@@ -108,6 +108,7 @@ def test_resume_preserves_journal_and_skips_successful_observations(tmp_path, mo
     assert result["journal_entries"] == 15 and result["historical_error_entries"] == 2
     assert result["completion"]["complete"]
     assert result["groups"]["first:free|B|all:all"]["responses"] == 3
+    assert "| first:free / all |" in (output / "summary.md").read_text()
 
 
 def test_pooled_pairing_weights_models_equally():

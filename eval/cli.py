@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 from .dataset import build
 from .report import report
 from .runner import run
-from .providers import calibrate, health
+from .providers import calibrate, calibration_assessment, health
 
 
 def main():
@@ -25,8 +25,10 @@ def main():
         return
     if args.command == "calibrate":
         result = calibrate(args.output, args.provider, args.config)
-        if not result["passed"]:
-            raise SystemExit("Calibration failed; do not start evaluation")
+        assessment = calibration_assessment(result)
+        print(f"Final-answer format ready={assessment['format_ready']}; availability failures={assessment['availability_failures']}")
+        if not assessment["format_ready"]:
+            raise SystemExit("Final-answer format not validated; do not start evaluation")
         return
     if args.command == "build":
         data = build(args.data)
