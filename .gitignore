@@ -23,3 +23,10 @@ venv/
 */env/
 */venv/
 */.venv/
+# Answer Worker local secrets and artifacts
+.dev.vars
+.dev.vars.*
+!.dev.vars.example
+.wrangler/
+worker/dist/
+worker/*.log
