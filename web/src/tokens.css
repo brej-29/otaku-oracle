@@ -1,0 +1,58 @@
+/* Otaku Oracle design tokens. Source of truth: web/DESIGN.md */
+:root {
+  /* paper and ink (manga manuscript) */
+  --paper: #f1f5f8;
+  --paper-2: #e3ebf1;
+  --paper-3: #d3dfe8;
+  --ink: #1a1f3a;
+  --ink-soft: #444b6b;        /* 7.9:1 on paper */
+  --pencil: #2f6f9f;          /* non-photo blue, text-safe 4.9:1 on paper */
+  --pencil-line: #a9cbe3;     /* guide lines, decorative only */
+  --seal: #c0291f;            /* hanko red, 5.6:1 on paper */
+  --seal-ink: #fff7f4;        /* text on seal fills */
+  --focus: #1a1f3a;
+  --ok: #1f6b4a;
+
+  /* type */
+  --font-display: "Dela Gothic One", "Zen Kaku Gothic New", system-ui, sans-serif;
+  --font-body: "Zen Kaku Gothic New", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --step--1: clamp(0.82rem, 0.8rem + 0.1vw, 0.9rem);
+  --step-0: clamp(1rem, 0.97rem + 0.15vw, 1.1rem);
+  --step-1: clamp(1.25rem, 1.15rem + 0.5vw, 1.55rem);
+  --step-2: clamp(1.6rem, 1.3rem + 1.4vw, 2.5rem);
+  --step-3: clamp(2.2rem, 1.5rem + 3.4vw, 4.6rem);
+  --step-4: clamp(2.8rem, 1.4rem + 6.6vw, 7rem);
+
+  /* layout */
+  --gutter: clamp(10px, 1.6vw, 18px);   /* the white space between manga panels */
+  --panel-border: 3px;
+  --page-pad: clamp(16px, 4vw, 56px);
+  --max: 1280px;
+
+  /* motion */
+  --ease-ink: cubic-bezier(0.2, 0.7, 0.1, 1);
+  --ease-stamp: cubic-bezier(0.3, 1.5, 0.5, 1);
+  --t-fast: 140ms;
+  --t-base: 280ms;
+}
+
+:root[data-theme="dark"] {
+  --paper: #12162b;
+  --paper-2: #1b2040;
+  --paper-3: #272d55;
+  --ink: #e9eef6;
+  --ink-soft: #b4bdd6;
+  --pencil: #7fb8e3;
+  --pencil-line: #3a5a7d;
+  --seal: #ff6b5c;
+  --seal-ink: #1a0b09;
+  --focus: #e9eef6;
+  --ok: #6fd3a2;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #12162b; --paper-2: #1b2040; --paper-3: #272d55;
+    --ink: #e9eef6; --ink-soft: #b4bdd6; --pencil: #7fb8e3; --pencil-line: #3a5a7d;
+    --seal: #ff6b5c; --seal-ink: #1a0b09; --focus: #e9eef6; --ok: #6fd3a2;
+  }
+}

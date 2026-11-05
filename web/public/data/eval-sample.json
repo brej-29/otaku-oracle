@@ -1,0 +1,7 @@
+{ "status": "PARTIAL", "sample": true, "updated_at": null, "note": "Sample data to show the chart's shape. These are not results.",
+  "models": [
+    { "id": "sample-a", "label": "Sample model A", "provider": "sample", "primary": true,
+      "arms": { "A": { "accuracy": 0.5, "lo": 0.38, "hi": 0.62, "responses": 120, "expected": 372 }, "B": { "accuracy": 0.82, "lo": 0.74, "hi": 0.9, "responses": 120, "expected": 372 } } },
+    { "id": "sample-b", "label": "Sample model B", "provider": "sample", "primary": false,
+      "arms": { "A": { "accuracy": 0.42, "lo": 0.3, "hi": 0.55, "responses": 60, "expected": 372 }, "B": { "accuracy": 0.7, "lo": 0.58, "hi": 0.81, "responses": 60, "expected": 372 } } }
+  ] }
