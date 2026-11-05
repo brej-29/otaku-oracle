@@ -1,1 +1,24 @@
-{"name":"oracle-answer-worker","private":true,"type":"module","scripts":{"dev":"wrangler d1 migrations apply oracle --local && wrangler dev --local","test":"vitest run","check":"tsc --noEmit","build":"wrangler deploy --dry-run --outdir dist","smoke":"node --experimental-strip-types scripts/smoke.ts"},"devDependencies":{"@cloudflare/workers-types":"5.20261104.1","@types/node":"24.10.0","miniflare":"5.20261104.0-beta","typescript":"5.9.3","vitest":"5.1.0","wrangler":"4.158.0"}}
+{
+  "name": "oracle-answer-worker",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler d1 migrations apply oracle --local && wrangler dev --local",
+    "test": "vitest run",
+    "check": "tsc --noEmit",
+    "build": "wrangler deploy --dry-run --outdir dist",
+    "smoke": "tsx scripts/smoke.ts",
+    "format": "prettier --write src tests scripts providers.json package.json tsconfig.json vitest.config.ts",
+    "format:check": "prettier --check src tests scripts providers.json package.json tsconfig.json vitest.config.ts"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "5.20261104.1",
+    "@types/node": "24.10.0",
+    "miniflare": "5.20261104.0-beta",
+    "prettier": "3.6.2",
+    "tsx": "4.20.6",
+    "typescript": "5.9.3",
+    "vitest": "5.1.0",
+    "wrangler": "4.158.0"
+  }
+}

@@ -3,14 +3,8 @@
     "id": "zai",
     "baseUrl": "https://api.z.ai/api/paas/v4",
     "keyEnv": "ZAI_API_KEY",
-    "models": [
-      "glm-4.7-flash",
-      "glm-4.5-flash"
-    ],
-    "freeModels": [
-      "glm-4.7-flash",
-      "glm-4.5-flash"
-    ],
+    "models": ["glm-4.7-flash", "glm-4.5-flash"],
+    "freeModels": ["glm-4.7-flash", "glm-4.5-flash"],
     "maxTokens": 1536,
     "options": {
       "thinking": {
@@ -26,12 +20,8 @@
     "id": "groq",
     "baseUrl": "https://api.groq.com/openai/v1",
     "keyEnv": "GROQ_API_KEY",
-    "models": [
-      "openai/gpt-oss-120b"
-    ],
-    "freeModels": [
-      "openai/gpt-oss-120b"
-    ],
+    "models": ["openai/gpt-oss-120b"],
+    "freeModels": ["openai/gpt-oss-120b"],
     "tokenParameter": "max_completion_tokens",
     "maxTokens": 1536,
     "options": {
@@ -47,12 +37,8 @@
     "id": "nvidia",
     "baseUrl": "https://integrate.api.nvidia.com/v1",
     "keyEnv": "NVIDIA_API_KEY",
-    "models": [
-      "google/gemma-4-31b-it"
-    ],
-    "freeModels": [
-      "google/gemma-4-31b-it"
-    ],
+    "models": ["google/gemma-4-31b-it"],
+    "freeModels": ["google/gemma-4-31b-it"],
     "maxTokens": 1536,
     "options": {
       "response_format": {

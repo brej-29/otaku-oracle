@@ -1,6 +1,6 @@
 name = "otaku-oracle-answer"
 main = "src/index.ts"
-compatibility_date = "2026-11-06"
+compatibility_date = "2026-11-04"
 workers_dev = true
 
 [vars]
@@ -14,3 +14,6 @@ binding = "DB"
 database_name = "oracle"
 database_id = "00000000-0000-0000-0000-000000000000"
 migrations_dir = "migrations"
+
+[triggers]
+crons = ["17 2 * * *"]
