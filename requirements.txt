@@ -1,9 +1,0 @@
-Django==5.2.6
-gunicorn
-whitenoise==6.7.0
-python-dotenv
-requests
-openai>=1.40.0
-django-vite
-markdown
-bleach
