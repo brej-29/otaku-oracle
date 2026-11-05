@@ -1,0 +1,2980 @@
+{
+  "schema": 1,
+  "created_at": "2026-11-05T19:36:37.957451+00:00",
+  "seed": 20261106,
+  "titles": [
+    {
+      "bucket": "head",
+      "record": {
+        "id": 104276,
+        "title": {
+          "romaji": "Boku no Hero Academia 4",
+          "english": "My Hero Academia Season 4",
+          "native": "僕のヒーローアカデミア４"
+        },
+        "siteUrl": "https://anilist.co/anime/104276",
+        "popularity": 540471,
+        "episodes": 25,
+        "startDate": {
+          "year": 2019
+        },
+        "format": "TV",
+        "source": "MANGA",
+        "season": "FALL",
+        "status": "FINISHED",
+        "isAdult": false,
+        "studios": {
+          "nodes": [
+            {
+              "id": 4,
+              "name": "bones"
+            }
+          ]
+        },
+        "characters": {
+          "pageInfo": {
+            "hasNextPage": false
+          },
+          "edges": [
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 89028
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 89221
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 89222
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 123527
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 126093
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 126357
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 129761
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "bucket": "head",
+      "record": {
+        "id": 1535,
+        "title": {
+          "romaji": "DEATH NOTE",
+          "english": "Death Note",
+          "native": "DEATH NOTE"
+        },
+        "siteUrl": "https://anilist.co/anime/1535",
+        "popularity": 980114,
+        "episodes": 37,
+        "startDate": {
+          "year": 2006
+        },
+        "format": "TV",
+        "source": "MANGA",
+        "season": "FALL",
+        "status": "FINISHED",
+        "isAdult": false,
+        "studios": {
+          "nodes": [
+            {
+              "id": 11,
+              "name": "MADHOUSE"
+            }
+          ]
+        },
+        "characters": {
+          "pageInfo": {
+            "hasNextPage": false
+          },
+          "edges": [
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 71
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 75
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 80
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 463
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 464
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 835
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 1906
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 1927
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 3767
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "bucket": "head",
+      "record": {
+        "id": 11061,
+        "title": {
+          "romaji": "HUNTER×HUNTER (2011)",
+          "english": "Hunter x Hunter (2011)",
+          "native": "HUNTER×HUNTER (2011)"
+        },
+        "siteUrl": "https://anilist.co/anime/11061",
+        "popularity": 855589,
+        "episodes": 148,
+        "startDate": {
+          "year": 2011
+        },
+        "format": "TV",
+        "source": "MANGA",
+        "season": "FALL",
+        "status": "FINISHED",
+        "isAdult": false,
+        "studios": {
+          "nodes": [
+            {
+              "id": 11,
+              "name": "MADHOUSE"
+            }
+          ]
+        },
+        "characters": {
+          "pageInfo": {
+            "hasNextPage": false
+          },
+          "edges": [
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 27
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 28
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 29
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 30
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 31
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "bucket": "head",
+      "record": {
+        "id": 20958,
+        "title": {
+          "romaji": "Shingeki no Kyojin Season 2",
+          "english": "Attack on Titan Season 2",
+          "native": "進撃の巨人 Season２"
+        },
+        "siteUrl": "https://anilist.co/anime/20958",
+        "popularity": 746693,
+        "episodes": 12,
+        "startDate": {
+          "year": 2017
+        },
+        "format": "TV",
+        "source": "MANGA",
+        "season": "SPRING",
+        "status": "FINISHED",
+        "isAdult": false,
+        "studios": {
+          "nodes": [
+            {
+              "id": 858,
+              "name": "WIT STUDIO"
+            }
+          ]
+        },
+        "characters": {
+          "pageInfo": {
+            "hasNextPage": false
+          },
+          "edges": [
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 40881
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 40882
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 46484
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 46494
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 71479
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "bucket": "head",
+      "record": {
+        "id": 21856,
+        "title": {
+          "romaji": "Boku no Hero Academia 2",
+          "english": "My Hero Academia Season 2",
+          "native": "僕のヒーローアカデミア２"
+        },
+        "siteUrl": "https://anilist.co/anime/21856",
+        "popularity": 664727,
+        "episodes": 25,
+        "startDate": {
+          "year": 2017
+        },
+        "format": "TV",
+        "source": "MANGA",
+        "season": "SPRING",
+        "status": "FINISHED",
+        "isAdult": false,
+        "studios": {
+          "nodes": [
+            {
+              "id": 4,
+              "name": "bones"
+            }
+          ]
+        },
+        "characters": {
+          "pageInfo": {
+            "hasNextPage": false
+          },
+          "edges": [
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 88892
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 89028
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 89220
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 89221
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 89222
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 89224
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "bucket": "head",
+      "record": {
+        "id": 16498,
+        "title": {
+          "romaji": "Shingeki no Kyojin",
+          "english": "Attack on Titan",
+          "native": "進撃の巨人"
+        },
+        "siteUrl": "https://anilist.co/anime/16498",
+        "popularity": 1075444,
+        "episodes": 25,
+        "startDate": {
+          "year": 2013
+        },
+        "format": "TV",
+        "source": "MANGA",
+        "season": "SPRING",
+        "status": "FINISHED",
+        "isAdult": false,
+        "studios": {
+          "nodes": [
+            {
+              "id": 858,
+              "name": "WIT STUDIO"
+            }
+          ]
+        },
+        "characters": {
+          "pageInfo": {
+            "hasNextPage": false
+          },
+          "edges": [
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 40881
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 40882
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 46494
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "bucket": "torso",
+      "record": {
+        "id": 103900,
+        "title": {
+          "romaji": "Bokutachi wa Benkyou ga Dekinai",
+          "english": "We Never Learn: BOKUBEN",
+          "native": "ぼくたちは勉強ができない"
+        },
+        "siteUrl": "https://anilist.co/anime/103900",
+        "popularity": 133137,
+        "episodes": 13,
+        "startDate": {
+          "year": 2019
+        },
+        "format": "TV",
+        "source": "MANGA",
+        "season": "SPRING",
+        "status": "FINISHED",
+        "isAdult": false,
+        "studios": {
+          "nodes": [
+            {
+              "id": 6240,
+              "name": "Studio Silver"
+            },
+            {
+              "id": 6239,
+              "name": "Arvo Animation"
+            }
+          ]
+        },
+        "characters": {
+          "pageInfo": {
+            "hasNextPage": false
+          },
+          "edges": [
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 121775
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 121776
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 121777
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 121778
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 125599
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 125600
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "bucket": "torso",
+      "record": {
+        "id": 21123,
+        "title": {
+          "romaji": "DRIFTERS",
+          "english": "DRIFTERS",
+          "native": "DRIFTERS"
+        },
+        "siteUrl": "https://anilist.co/anime/21123",
+        "popularity": 136028,
+        "episodes": 12,
+        "startDate": {
+          "year": 2016
+        },
+        "format": "TV",
+        "source": "MANGA",
+        "season": "FALL",
+        "status": "FINISHED",
+        "isAdult": false,
+        "studios": {
+          "nodes": [
+            {
+              "id": 346,
+              "name": "Hoods Entertainment"
+            }
+          ]
+        },
+        "characters": {
+          "pageInfo": {
+            "hasNextPage": false
+          },
+          "edges": [
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 24183
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 24184
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 24200
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "bucket": "torso",
+      "record": {
+        "id": 9041,
+        "title": {
+          "romaji": "IS: Infinite Stratos",
+          "english": "Infinite Stratos",
+          "native": "IS〈インフィニット・ストラトス〉"
+        },
+        "siteUrl": "https://anilist.co/anime/9041",
+        "popularity": 135326,
+        "episodes": 12,
+        "startDate": {
+          "year": 2011
+        },
+        "format": "TV",
+        "source": "LIGHT_NOVEL",
+        "season": "WINTER",
+        "status": "FINISHED",
+        "isAdult": false,
+        "studios": {
+          "nodes": [
+            {
+              "id": 4418,
+              "name": "8-bit"
+            }
+          ]
+        },
+        "characters": {
+          "pageInfo": {
+            "hasNextPage": false
+          },
+          "edges": [
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 35659
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 35660
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 35662
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 35663
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 36110
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 36111
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "bucket": "torso",
+      "record": {
+        "id": 135806,
+        "title": {
+          "romaji": "Isekai Oji-san",
+          "english": "Uncle from Another World",
+          "native": "異世界おじさん"
+        },
+        "siteUrl": "https://anilist.co/anime/135806",
+        "popularity": 136420,
+        "episodes": 13,
+        "startDate": {
+          "year": 2022
+        },
+        "format": "TV",
+        "source": "MANGA",
+        "season": "SUMMER",
+        "status": "FINISHED",
+        "isAdult": false,
+        "studios": {
+          "nodes": [
+            {
+              "id": 6960,
+              "name": "Atelier Pontdarc"
+            }
+          ]
+        },
+        "characters": {
+          "pageInfo": {
+            "hasNextPage": false
+          },
+          "edges": [
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 205566
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 205568
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "bucket": "torso",
+      "record": {
+        "id": 21718,
+        "title": {
+          "romaji": "Fate/stay night [Heaven's Feel] II. lost butterfly",
+          "english": "Fate/stay night [Heaven's Feel] II. lost butterfly",
+          "native": "Fate/stay night[Heaven's Feel] ⅠⅠ.lost butterfly"
+        },
+        "siteUrl": "https://anilist.co/anime/21718",
+        "popularity": 132496,
+        "episodes": 1,
+        "startDate": {
+          "year": 2019
+        },
+        "format": "MOVIE",
+        "source": "VISUAL_NOVEL",
+        "season": "WINTER",
+        "status": "FINISHED",
+        "isAdult": false,
+        "studios": {
+          "nodes": [
+            {
+              "id": 43,
+              "name": "ufotable"
+            }
+          ]
+        },
+        "characters": {
+          "pageInfo": {
+            "hasNextPage": false
+          },
+          "edges": [
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 496
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 498
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 500
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 503
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "bucket": "torso",
+      "record": {
+        "id": 21306,
+        "title": {
+          "romaji": "Musaigen no Phantom World",
+          "english": "Myriad Colors Phantom World",
+          "native": "無彩限のファントム・ワールド"
+        },
+        "siteUrl": "https://anilist.co/anime/21306",
+        "popularity": 140090,
+        "episodes": 13,
+        "startDate": {
+          "year": 2016
+        },
+        "format": "TV",
+        "source": "LIGHT_NOVEL",
+        "season": "WINTER",
+        "status": "FINISHED",
+        "isAdult": false,
+        "studios": {
+          "nodes": [
+            {
+              "id": 2,
+              "name": "Kyoto Animation"
+            }
+          ]
+        },
+        "characters": {
+          "pageInfo": {
+            "hasNextPage": false
+          },
+          "edges": [
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 89033
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 89034
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 89035
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 89036
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 89499
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "bucket": "long_tail",
+      "record": {
+        "id": 4705,
+        "title": {
+          "romaji": "Tengen Toppa Gurren Lagann: Parallel Works",
+          "english": null,
+          "native": "グレンラガン パラレルワークス"
+        },
+        "siteUrl": "https://anilist.co/anime/4705",
+        "popularity": 8304,
+        "episodes": 8,
+        "startDate": {
+          "year": 2008
+        },
+        "format": "SPECIAL",
+        "source": null,
+        "season": null,
+        "status": "FINISHED",
+        "isAdult": false,
+        "studios": {
+          "nodes": [
+            {
+              "id": 6,
+              "name": "GAINAX"
+            }
+          ]
+        },
+        "characters": {
+          "pageInfo": {
+            "hasNextPage": false
+          },
+          "edges": []
+        }
+      }
+    },
+    {
+      "bucket": "long_tail",
+      "record": {
+        "id": 1563,
+        "title": {
+          "romaji": "Magic Knight Rayearth II",
+          "english": null,
+          "native": "魔法騎士（マジックナイト）レイアース II"
+        },
+        "siteUrl": "https://anilist.co/anime/1563",
+        "popularity": 8462,
+        "episodes": 29,
+        "startDate": {
+          "year": 1995
+        },
+        "format": "TV",
+        "source": "MANGA",
+        "season": "SPRING",
+        "status": "FINISHED",
+        "isAdult": false,
+        "studios": {
+          "nodes": [
+            {
+              "id": 73,
+              "name": "TMS Entertainment"
+            }
+          ]
+        },
+        "characters": {
+          "pageInfo": {
+            "hasNextPage": false
+          },
+          "edges": [
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 518
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 519
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 520
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "bucket": "long_tail",
+      "record": {
+        "id": 20486,
+        "title": {
+          "romaji": "Z/X IGNITION",
+          "english": "Z/X IGNITION",
+          "native": "Z/X IGNITION"
+        },
+        "siteUrl": "https://anilist.co/anime/20486",
+        "popularity": 8442,
+        "episodes": 12,
+        "startDate": {
+          "year": 2014
+        },
+        "format": "TV",
+        "source": "OTHER",
+        "season": "WINTER",
+        "status": "FINISHED",
+        "isAdult": false,
+        "studios": {
+          "nodes": [
+            {
+              "id": 94,
+              "name": "Telecom Animation Film"
+            }
+          ]
+        },
+        "characters": {
+          "pageInfo": {
+            "hasNextPage": false
+          },
+          "edges": [
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 87587
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 87590
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 87591
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 87592
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 87594
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 87595
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "bucket": "long_tail",
+      "record": {
+        "id": 132467,
+        "title": {
+          "romaji": "Tokyo Revengers: Chibi Reve",
+          "english": null,
+          "native": "ちびりべ"
+        },
+        "siteUrl": "https://anilist.co/anime/132467",
+        "popularity": 8427,
+        "episodes": 24,
+        "startDate": {
+          "year": 2021
+        },
+        "format": "ONA",
+        "source": "MANGA",
+        "season": "SPRING",
+        "status": "FINISHED",
+        "isAdult": false,
+        "studios": {
+          "nodes": [
+            {
+              "id": 443,
+              "name": "Studio PuYUKAI"
+            }
+          ]
+        },
+        "characters": {
+          "pageInfo": {
+            "hasNextPage": false
+          },
+          "edges": [
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 145342
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 171920
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 171922
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 171926
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 171927
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "bucket": "long_tail",
+      "record": {
+        "id": 192,
+        "title": {
+          "romaji": "Love Hina: Haru Special - Kimi Sakura Chiru Nakare!!",
+          "english": "Love Hina Spring Movie",
+          "native": "ラブひな春スペシャル 〜キミサクラチルナカレ!!〜"
+        },
+        "siteUrl": "https://anilist.co/anime/192",
+        "popularity": 8411,
+        "episodes": 1,
+        "startDate": {
+          "year": 2001
+        },
+        "format": "SPECIAL",
+        "source": "MANGA",
+        "season": "SPRING",
+        "status": "FINISHED",
+        "isAdult": false,
+        "studios": {
+          "nodes": [
+            {
+              "id": 27,
+              "name": "Xebec"
+            }
+          ]
+        },
+        "characters": {
+          "pageInfo": {
+            "hasNextPage": false
+          },
+          "edges": [
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 1037
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 1038
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 1040
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 1041
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 1042
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 1043
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 6409
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "bucket": "long_tail",
+      "record": {
+        "id": 183128,
+        "title": {
+          "romaji": "Muchuu sa, Kimi ni.",
+          "english": "Captivated, By You",
+          "native": "夢中さ、きみに。"
+        },
+        "siteUrl": "https://anilist.co/anime/183128",
+        "popularity": 8440,
+        "episodes": 5,
+        "startDate": {
+          "year": 2025
+        },
+        "format": "TV",
+        "source": "MANGA",
+        "season": "SUMMER",
+        "status": "FINISHED",
+        "isAdult": false,
+        "studios": {
+          "nodes": [
+            {
+              "id": 95,
+              "name": "Doga Kobo"
+            }
+          ]
+        },
+        "characters": {
+          "pageInfo": {
+            "hasNextPage": false
+          },
+          "edges": [
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 250806
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 300018
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 300019
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 300020
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "104276:studio",
+      "media_id": 104276,
+      "bucket": "head",
+      "kind": "studio",
+      "title": {
+        "romaji": "Boku no Hero Academia 4",
+        "english": "My Hero Academia Season 4",
+        "native": "僕のヒーローアカデミア４"
+      },
+      "question": "Which main animation studio or studios are listed for this anime? Return a list of studio names.",
+      "gold": [
+        "bones"
+      ],
+      "citation": "https://anilist.co/anime/104276"
+    },
+    {
+      "id": "104276:episodes",
+      "media_id": 104276,
+      "bucket": "head",
+      "kind": "episodes",
+      "title": {
+        "romaji": "Boku no Hero Academia 4",
+        "english": "My Hero Academia Season 4",
+        "native": "僕のヒーローアカデミア４"
+      },
+      "question": "How many episodes does this anime have? Return an integer.",
+      "gold": 25,
+      "citation": "https://anilist.co/anime/104276"
+    },
+    {
+      "id": "104276:year",
+      "media_id": 104276,
+      "bucket": "head",
+      "kind": "year",
+      "title": {
+        "romaji": "Boku no Hero Academia 4",
+        "english": "My Hero Academia Season 4",
+        "native": "僕のヒーローアカデミア４"
+      },
+      "question": "In which year did this anime start? Return a four-digit integer.",
+      "gold": 2019,
+      "citation": "https://anilist.co/anime/104276"
+    },
+    {
+      "id": "104276:format",
+      "media_id": 104276,
+      "bucket": "head",
+      "kind": "format",
+      "title": {
+        "romaji": "Boku no Hero Academia 4",
+        "english": "My Hero Academia Season 4",
+        "native": "僕のヒーローアカデミア４"
+      },
+      "question": "What is its AniList format? Return the enum (TV, TV_SHORT, MOVIE, SPECIAL, OVA, ONA, MUSIC, or MANGA).",
+      "gold": "TV",
+      "citation": "https://anilist.co/anime/104276"
+    },
+    {
+      "id": "104276:source",
+      "media_id": 104276,
+      "bucket": "head",
+      "kind": "source",
+      "title": {
+        "romaji": "Boku no Hero Academia 4",
+        "english": "My Hero Academia Season 4",
+        "native": "僕のヒーローアカデミア４"
+      },
+      "question": "What is its source material? Return the AniList source enum, such as ORIGINAL, MANGA, LIGHT_NOVEL, VISUAL_NOVEL, VIDEO_GAME, or OTHER.",
+      "gold": "MANGA",
+      "citation": "https://anilist.co/anime/104276"
+    },
+    {
+      "id": "104276:season",
+      "media_id": 104276,
+      "bucket": "head",
+      "kind": "season",
+      "title": {
+        "romaji": "Boku no Hero Academia 4",
+        "english": "My Hero Academia Season 4",
+        "native": "僕のヒーローアカデミア４"
+      },
+      "question": "In which season did it start? Return WINTER, SPRING, SUMMER, or FALL.",
+      "gold": "FALL",
+      "citation": "https://anilist.co/anime/104276"
+    },
+    {
+      "id": "104276:main_characters",
+      "media_id": 104276,
+      "bucket": "head",
+      "kind": "main_characters",
+      "title": {
+        "romaji": "Boku no Hero Academia 4",
+        "english": "My Hero Academia Season 4",
+        "native": "僕のヒーローアカデミア４"
+      },
+      "question": "How many character edges are labelled MAIN in this anime's AniList record? Return an integer.",
+      "gold": 7,
+      "citation": "https://anilist.co/anime/104276"
+    },
+    {
+      "id": "1535:studio",
+      "media_id": 1535,
+      "bucket": "head",
+      "kind": "studio",
+      "title": {
+        "romaji": "DEATH NOTE",
+        "english": "Death Note",
+        "native": "DEATH NOTE"
+      },
+      "question": "Which main animation studio or studios are listed for this anime? Return a list of studio names.",
+      "gold": [
+        "MADHOUSE"
+      ],
+      "citation": "https://anilist.co/anime/1535"
+    },
+    {
+      "id": "1535:episodes",
+      "media_id": 1535,
+      "bucket": "head",
+      "kind": "episodes",
+      "title": {
+        "romaji": "DEATH NOTE",
+        "english": "Death Note",
+        "native": "DEATH NOTE"
+      },
+      "question": "How many episodes does this anime have? Return an integer.",
+      "gold": 37,
+      "citation": "https://anilist.co/anime/1535"
+    },
+    {
+      "id": "1535:year",
+      "media_id": 1535,
+      "bucket": "head",
+      "kind": "year",
+      "title": {
+        "romaji": "DEATH NOTE",
+        "english": "Death Note",
+        "native": "DEATH NOTE"
+      },
+      "question": "In which year did this anime start? Return a four-digit integer.",
+      "gold": 2006,
+      "citation": "https://anilist.co/anime/1535"
+    },
+    {
+      "id": "1535:format",
+      "media_id": 1535,
+      "bucket": "head",
+      "kind": "format",
+      "title": {
+        "romaji": "DEATH NOTE",
+        "english": "Death Note",
+        "native": "DEATH NOTE"
+      },
+      "question": "What is its AniList format? Return the enum (TV, TV_SHORT, MOVIE, SPECIAL, OVA, ONA, MUSIC, or MANGA).",
+      "gold": "TV",
+      "citation": "https://anilist.co/anime/1535"
+    },
+    {
+      "id": "1535:source",
+      "media_id": 1535,
+      "bucket": "head",
+      "kind": "source",
+      "title": {
+        "romaji": "DEATH NOTE",
+        "english": "Death Note",
+        "native": "DEATH NOTE"
+      },
+      "question": "What is its source material? Return the AniList source enum, such as ORIGINAL, MANGA, LIGHT_NOVEL, VISUAL_NOVEL, VIDEO_GAME, or OTHER.",
+      "gold": "MANGA",
+      "citation": "https://anilist.co/anime/1535"
+    },
+    {
+      "id": "1535:season",
+      "media_id": 1535,
+      "bucket": "head",
+      "kind": "season",
+      "title": {
+        "romaji": "DEATH NOTE",
+        "english": "Death Note",
+        "native": "DEATH NOTE"
+      },
+      "question": "In which season did it start? Return WINTER, SPRING, SUMMER, or FALL.",
+      "gold": "FALL",
+      "citation": "https://anilist.co/anime/1535"
+    },
+    {
+      "id": "1535:main_characters",
+      "media_id": 1535,
+      "bucket": "head",
+      "kind": "main_characters",
+      "title": {
+        "romaji": "DEATH NOTE",
+        "english": "Death Note",
+        "native": "DEATH NOTE"
+      },
+      "question": "How many character edges are labelled MAIN in this anime's AniList record? Return an integer.",
+      "gold": 9,
+      "citation": "https://anilist.co/anime/1535"
+    },
+    {
+      "id": "11061:studio",
+      "media_id": 11061,
+      "bucket": "head",
+      "kind": "studio",
+      "title": {
+        "romaji": "HUNTER×HUNTER (2011)",
+        "english": "Hunter x Hunter (2011)",
+        "native": "HUNTER×HUNTER (2011)"
+      },
+      "question": "Which main animation studio or studios are listed for this anime? Return a list of studio names.",
+      "gold": [
+        "MADHOUSE"
+      ],
+      "citation": "https://anilist.co/anime/11061"
+    },
+    {
+      "id": "11061:episodes",
+      "media_id": 11061,
+      "bucket": "head",
+      "kind": "episodes",
+      "title": {
+        "romaji": "HUNTER×HUNTER (2011)",
+        "english": "Hunter x Hunter (2011)",
+        "native": "HUNTER×HUNTER (2011)"
+      },
+      "question": "How many episodes does this anime have? Return an integer.",
+      "gold": 148,
+      "citation": "https://anilist.co/anime/11061"
+    },
+    {
+      "id": "11061:year",
+      "media_id": 11061,
+      "bucket": "head",
+      "kind": "year",
+      "title": {
+        "romaji": "HUNTER×HUNTER (2011)",
+        "english": "Hunter x Hunter (2011)",
+        "native": "HUNTER×HUNTER (2011)"
+      },
+      "question": "In which year did this anime start? Return a four-digit integer.",
+      "gold": 2011,
+      "citation": "https://anilist.co/anime/11061"
+    },
+    {
+      "id": "11061:format",
+      "media_id": 11061,
+      "bucket": "head",
+      "kind": "format",
+      "title": {
+        "romaji": "HUNTER×HUNTER (2011)",
+        "english": "Hunter x Hunter (2011)",
+        "native": "HUNTER×HUNTER (2011)"
+      },
+      "question": "What is its AniList format? Return the enum (TV, TV_SHORT, MOVIE, SPECIAL, OVA, ONA, MUSIC, or MANGA).",
+      "gold": "TV",
+      "citation": "https://anilist.co/anime/11061"
+    },
+    {
+      "id": "11061:source",
+      "media_id": 11061,
+      "bucket": "head",
+      "kind": "source",
+      "title": {
+        "romaji": "HUNTER×HUNTER (2011)",
+        "english": "Hunter x Hunter (2011)",
+        "native": "HUNTER×HUNTER (2011)"
+      },
+      "question": "What is its source material? Return the AniList source enum, such as ORIGINAL, MANGA, LIGHT_NOVEL, VISUAL_NOVEL, VIDEO_GAME, or OTHER.",
+      "gold": "MANGA",
+      "citation": "https://anilist.co/anime/11061"
+    },
+    {
+      "id": "11061:season",
+      "media_id": 11061,
+      "bucket": "head",
+      "kind": "season",
+      "title": {
+        "romaji": "HUNTER×HUNTER (2011)",
+        "english": "Hunter x Hunter (2011)",
+        "native": "HUNTER×HUNTER (2011)"
+      },
+      "question": "In which season did it start? Return WINTER, SPRING, SUMMER, or FALL.",
+      "gold": "FALL",
+      "citation": "https://anilist.co/anime/11061"
+    },
+    {
+      "id": "11061:main_characters",
+      "media_id": 11061,
+      "bucket": "head",
+      "kind": "main_characters",
+      "title": {
+        "romaji": "HUNTER×HUNTER (2011)",
+        "english": "Hunter x Hunter (2011)",
+        "native": "HUNTER×HUNTER (2011)"
+      },
+      "question": "How many character edges are labelled MAIN in this anime's AniList record? Return an integer.",
+      "gold": 5,
+      "citation": "https://anilist.co/anime/11061"
+    },
+    {
+      "id": "20958:studio",
+      "media_id": 20958,
+      "bucket": "head",
+      "kind": "studio",
+      "title": {
+        "romaji": "Shingeki no Kyojin Season 2",
+        "english": "Attack on Titan Season 2",
+        "native": "進撃の巨人 Season２"
+      },
+      "question": "Which main animation studio or studios are listed for this anime? Return a list of studio names.",
+      "gold": [
+        "WIT STUDIO"
+      ],
+      "citation": "https://anilist.co/anime/20958"
+    },
+    {
+      "id": "20958:episodes",
+      "media_id": 20958,
+      "bucket": "head",
+      "kind": "episodes",
+      "title": {
+        "romaji": "Shingeki no Kyojin Season 2",
+        "english": "Attack on Titan Season 2",
+        "native": "進撃の巨人 Season２"
+      },
+      "question": "How many episodes does this anime have? Return an integer.",
+      "gold": 12,
+      "citation": "https://anilist.co/anime/20958"
+    },
+    {
+      "id": "20958:year",
+      "media_id": 20958,
+      "bucket": "head",
+      "kind": "year",
+      "title": {
+        "romaji": "Shingeki no Kyojin Season 2",
+        "english": "Attack on Titan Season 2",
+        "native": "進撃の巨人 Season２"
+      },
+      "question": "In which year did this anime start? Return a four-digit integer.",
+      "gold": 2017,
+      "citation": "https://anilist.co/anime/20958"
+    },
+    {
+      "id": "20958:format",
+      "media_id": 20958,
+      "bucket": "head",
+      "kind": "format",
+      "title": {
+        "romaji": "Shingeki no Kyojin Season 2",
+        "english": "Attack on Titan Season 2",
+        "native": "進撃の巨人 Season２"
+      },
+      "question": "What is its AniList format? Return the enum (TV, TV_SHORT, MOVIE, SPECIAL, OVA, ONA, MUSIC, or MANGA).",
+      "gold": "TV",
+      "citation": "https://anilist.co/anime/20958"
+    },
+    {
+      "id": "20958:source",
+      "media_id": 20958,
+      "bucket": "head",
+      "kind": "source",
+      "title": {
+        "romaji": "Shingeki no Kyojin Season 2",
+        "english": "Attack on Titan Season 2",
+        "native": "進撃の巨人 Season２"
+      },
+      "question": "What is its source material? Return the AniList source enum, such as ORIGINAL, MANGA, LIGHT_NOVEL, VISUAL_NOVEL, VIDEO_GAME, or OTHER.",
+      "gold": "MANGA",
+      "citation": "https://anilist.co/anime/20958"
+    },
+    {
+      "id": "20958:season",
+      "media_id": 20958,
+      "bucket": "head",
+      "kind": "season",
+      "title": {
+        "romaji": "Shingeki no Kyojin Season 2",
+        "english": "Attack on Titan Season 2",
+        "native": "進撃の巨人 Season２"
+      },
+      "question": "In which season did it start? Return WINTER, SPRING, SUMMER, or FALL.",
+      "gold": "SPRING",
+      "citation": "https://anilist.co/anime/20958"
+    },
+    {
+      "id": "20958:main_characters",
+      "media_id": 20958,
+      "bucket": "head",
+      "kind": "main_characters",
+      "title": {
+        "romaji": "Shingeki no Kyojin Season 2",
+        "english": "Attack on Titan Season 2",
+        "native": "進撃の巨人 Season２"
+      },
+      "question": "How many character edges are labelled MAIN in this anime's AniList record? Return an integer.",
+      "gold": 5,
+      "citation": "https://anilist.co/anime/20958"
+    },
+    {
+      "id": "21856:studio",
+      "media_id": 21856,
+      "bucket": "head",
+      "kind": "studio",
+      "title": {
+        "romaji": "Boku no Hero Academia 2",
+        "english": "My Hero Academia Season 2",
+        "native": "僕のヒーローアカデミア２"
+      },
+      "question": "Which main animation studio or studios are listed for this anime? Return a list of studio names.",
+      "gold": [
+        "bones"
+      ],
+      "citation": "https://anilist.co/anime/21856"
+    },
+    {
+      "id": "21856:episodes",
+      "media_id": 21856,
+      "bucket": "head",
+      "kind": "episodes",
+      "title": {
+        "romaji": "Boku no Hero Academia 2",
+        "english": "My Hero Academia Season 2",
+        "native": "僕のヒーローアカデミア２"
+      },
+      "question": "How many episodes does this anime have? Return an integer.",
+      "gold": 25,
+      "citation": "https://anilist.co/anime/21856"
+    },
+    {
+      "id": "21856:year",
+      "media_id": 21856,
+      "bucket": "head",
+      "kind": "year",
+      "title": {
+        "romaji": "Boku no Hero Academia 2",
+        "english": "My Hero Academia Season 2",
+        "native": "僕のヒーローアカデミア２"
+      },
+      "question": "In which year did this anime start? Return a four-digit integer.",
+      "gold": 2017,
+      "citation": "https://anilist.co/anime/21856"
+    },
+    {
+      "id": "21856:format",
+      "media_id": 21856,
+      "bucket": "head",
+      "kind": "format",
+      "title": {
+        "romaji": "Boku no Hero Academia 2",
+        "english": "My Hero Academia Season 2",
+        "native": "僕のヒーローアカデミア２"
+      },
+      "question": "What is its AniList format? Return the enum (TV, TV_SHORT, MOVIE, SPECIAL, OVA, ONA, MUSIC, or MANGA).",
+      "gold": "TV",
+      "citation": "https://anilist.co/anime/21856"
+    },
+    {
+      "id": "21856:source",
+      "media_id": 21856,
+      "bucket": "head",
+      "kind": "source",
+      "title": {
+        "romaji": "Boku no Hero Academia 2",
+        "english": "My Hero Academia Season 2",
+        "native": "僕のヒーローアカデミア２"
+      },
+      "question": "What is its source material? Return the AniList source enum, such as ORIGINAL, MANGA, LIGHT_NOVEL, VISUAL_NOVEL, VIDEO_GAME, or OTHER.",
+      "gold": "MANGA",
+      "citation": "https://anilist.co/anime/21856"
+    },
+    {
+      "id": "21856:season",
+      "media_id": 21856,
+      "bucket": "head",
+      "kind": "season",
+      "title": {
+        "romaji": "Boku no Hero Academia 2",
+        "english": "My Hero Academia Season 2",
+        "native": "僕のヒーローアカデミア２"
+      },
+      "question": "In which season did it start? Return WINTER, SPRING, SUMMER, or FALL.",
+      "gold": "SPRING",
+      "citation": "https://anilist.co/anime/21856"
+    },
+    {
+      "id": "21856:main_characters",
+      "media_id": 21856,
+      "bucket": "head",
+      "kind": "main_characters",
+      "title": {
+        "romaji": "Boku no Hero Academia 2",
+        "english": "My Hero Academia Season 2",
+        "native": "僕のヒーローアカデミア２"
+      },
+      "question": "How many character edges are labelled MAIN in this anime's AniList record? Return an integer.",
+      "gold": 6,
+      "citation": "https://anilist.co/anime/21856"
+    },
+    {
+      "id": "16498:studio",
+      "media_id": 16498,
+      "bucket": "head",
+      "kind": "studio",
+      "title": {
+        "romaji": "Shingeki no Kyojin",
+        "english": "Attack on Titan",
+        "native": "進撃の巨人"
+      },
+      "question": "Which main animation studio or studios are listed for this anime? Return a list of studio names.",
+      "gold": [
+        "WIT STUDIO"
+      ],
+      "citation": "https://anilist.co/anime/16498"
+    },
+    {
+      "id": "16498:episodes",
+      "media_id": 16498,
+      "bucket": "head",
+      "kind": "episodes",
+      "title": {
+        "romaji": "Shingeki no Kyojin",
+        "english": "Attack on Titan",
+        "native": "進撃の巨人"
+      },
+      "question": "How many episodes does this anime have? Return an integer.",
+      "gold": 25,
+      "citation": "https://anilist.co/anime/16498"
+    },
+    {
+      "id": "16498:year",
+      "media_id": 16498,
+      "bucket": "head",
+      "kind": "year",
+      "title": {
+        "romaji": "Shingeki no Kyojin",
+        "english": "Attack on Titan",
+        "native": "進撃の巨人"
+      },
+      "question": "In which year did this anime start? Return a four-digit integer.",
+      "gold": 2013,
+      "citation": "https://anilist.co/anime/16498"
+    },
+    {
+      "id": "16498:format",
+      "media_id": 16498,
+      "bucket": "head",
+      "kind": "format",
+      "title": {
+        "romaji": "Shingeki no Kyojin",
+        "english": "Attack on Titan",
+        "native": "進撃の巨人"
+      },
+      "question": "What is its AniList format? Return the enum (TV, TV_SHORT, MOVIE, SPECIAL, OVA, ONA, MUSIC, or MANGA).",
+      "gold": "TV",
+      "citation": "https://anilist.co/anime/16498"
+    },
+    {
+      "id": "16498:source",
+      "media_id": 16498,
+      "bucket": "head",
+      "kind": "source",
+      "title": {
+        "romaji": "Shingeki no Kyojin",
+        "english": "Attack on Titan",
+        "native": "進撃の巨人"
+      },
+      "question": "What is its source material? Return the AniList source enum, such as ORIGINAL, MANGA, LIGHT_NOVEL, VISUAL_NOVEL, VIDEO_GAME, or OTHER.",
+      "gold": "MANGA",
+      "citation": "https://anilist.co/anime/16498"
+    },
+    {
+      "id": "16498:season",
+      "media_id": 16498,
+      "bucket": "head",
+      "kind": "season",
+      "title": {
+        "romaji": "Shingeki no Kyojin",
+        "english": "Attack on Titan",
+        "native": "進撃の巨人"
+      },
+      "question": "In which season did it start? Return WINTER, SPRING, SUMMER, or FALL.",
+      "gold": "SPRING",
+      "citation": "https://anilist.co/anime/16498"
+    },
+    {
+      "id": "16498:main_characters",
+      "media_id": 16498,
+      "bucket": "head",
+      "kind": "main_characters",
+      "title": {
+        "romaji": "Shingeki no Kyojin",
+        "english": "Attack on Titan",
+        "native": "進撃の巨人"
+      },
+      "question": "How many character edges are labelled MAIN in this anime's AniList record? Return an integer.",
+      "gold": 3,
+      "citation": "https://anilist.co/anime/16498"
+    },
+    {
+      "id": "103900:studio",
+      "media_id": 103900,
+      "bucket": "torso",
+      "kind": "studio",
+      "title": {
+        "romaji": "Bokutachi wa Benkyou ga Dekinai",
+        "english": "We Never Learn: BOKUBEN",
+        "native": "ぼくたちは勉強ができない"
+      },
+      "question": "Which main animation studio or studios are listed for this anime? Return a list of studio names.",
+      "gold": [
+        "Arvo Animation",
+        "Studio Silver"
+      ],
+      "citation": "https://anilist.co/anime/103900"
+    },
+    {
+      "id": "103900:episodes",
+      "media_id": 103900,
+      "bucket": "torso",
+      "kind": "episodes",
+      "title": {
+        "romaji": "Bokutachi wa Benkyou ga Dekinai",
+        "english": "We Never Learn: BOKUBEN",
+        "native": "ぼくたちは勉強ができない"
+      },
+      "question": "How many episodes does this anime have? Return an integer.",
+      "gold": 13,
+      "citation": "https://anilist.co/anime/103900"
+    },
+    {
+      "id": "103900:year",
+      "media_id": 103900,
+      "bucket": "torso",
+      "kind": "year",
+      "title": {
+        "romaji": "Bokutachi wa Benkyou ga Dekinai",
+        "english": "We Never Learn: BOKUBEN",
+        "native": "ぼくたちは勉強ができない"
+      },
+      "question": "In which year did this anime start? Return a four-digit integer.",
+      "gold": 2019,
+      "citation": "https://anilist.co/anime/103900"
+    },
+    {
+      "id": "103900:format",
+      "media_id": 103900,
+      "bucket": "torso",
+      "kind": "format",
+      "title": {
+        "romaji": "Bokutachi wa Benkyou ga Dekinai",
+        "english": "We Never Learn: BOKUBEN",
+        "native": "ぼくたちは勉強ができない"
+      },
+      "question": "What is its AniList format? Return the enum (TV, TV_SHORT, MOVIE, SPECIAL, OVA, ONA, MUSIC, or MANGA).",
+      "gold": "TV",
+      "citation": "https://anilist.co/anime/103900"
+    },
+    {
+      "id": "103900:source",
+      "media_id": 103900,
+      "bucket": "torso",
+      "kind": "source",
+      "title": {
+        "romaji": "Bokutachi wa Benkyou ga Dekinai",
+        "english": "We Never Learn: BOKUBEN",
+        "native": "ぼくたちは勉強ができない"
+      },
+      "question": "What is its source material? Return the AniList source enum, such as ORIGINAL, MANGA, LIGHT_NOVEL, VISUAL_NOVEL, VIDEO_GAME, or OTHER.",
+      "gold": "MANGA",
+      "citation": "https://anilist.co/anime/103900"
+    },
+    {
+      "id": "103900:season",
+      "media_id": 103900,
+      "bucket": "torso",
+      "kind": "season",
+      "title": {
+        "romaji": "Bokutachi wa Benkyou ga Dekinai",
+        "english": "We Never Learn: BOKUBEN",
+        "native": "ぼくたちは勉強ができない"
+      },
+      "question": "In which season did it start? Return WINTER, SPRING, SUMMER, or FALL.",
+      "gold": "SPRING",
+      "citation": "https://anilist.co/anime/103900"
+    },
+    {
+      "id": "103900:main_characters",
+      "media_id": 103900,
+      "bucket": "torso",
+      "kind": "main_characters",
+      "title": {
+        "romaji": "Bokutachi wa Benkyou ga Dekinai",
+        "english": "We Never Learn: BOKUBEN",
+        "native": "ぼくたちは勉強ができない"
+      },
+      "question": "How many character edges are labelled MAIN in this anime's AniList record? Return an integer.",
+      "gold": 6,
+      "citation": "https://anilist.co/anime/103900"
+    },
+    {
+      "id": "21123:studio",
+      "media_id": 21123,
+      "bucket": "torso",
+      "kind": "studio",
+      "title": {
+        "romaji": "DRIFTERS",
+        "english": "DRIFTERS",
+        "native": "DRIFTERS"
+      },
+      "question": "Which main animation studio or studios are listed for this anime? Return a list of studio names.",
+      "gold": [
+        "Hoods Entertainment"
+      ],
+      "citation": "https://anilist.co/anime/21123"
+    },
+    {
+      "id": "21123:episodes",
+      "media_id": 21123,
+      "bucket": "torso",
+      "kind": "episodes",
+      "title": {
+        "romaji": "DRIFTERS",
+        "english": "DRIFTERS",
+        "native": "DRIFTERS"
+      },
+      "question": "How many episodes does this anime have? Return an integer.",
+      "gold": 12,
+      "citation": "https://anilist.co/anime/21123"
+    },
+    {
+      "id": "21123:year",
+      "media_id": 21123,
+      "bucket": "torso",
+      "kind": "year",
+      "title": {
+        "romaji": "DRIFTERS",
+        "english": "DRIFTERS",
+        "native": "DRIFTERS"
+      },
+      "question": "In which year did this anime start? Return a four-digit integer.",
+      "gold": 2016,
+      "citation": "https://anilist.co/anime/21123"
+    },
+    {
+      "id": "21123:format",
+      "media_id": 21123,
+      "bucket": "torso",
+      "kind": "format",
+      "title": {
+        "romaji": "DRIFTERS",
+        "english": "DRIFTERS",
+        "native": "DRIFTERS"
+      },
+      "question": "What is its AniList format? Return the enum (TV, TV_SHORT, MOVIE, SPECIAL, OVA, ONA, MUSIC, or MANGA).",
+      "gold": "TV",
+      "citation": "https://anilist.co/anime/21123"
+    },
+    {
+      "id": "21123:source",
+      "media_id": 21123,
+      "bucket": "torso",
+      "kind": "source",
+      "title": {
+        "romaji": "DRIFTERS",
+        "english": "DRIFTERS",
+        "native": "DRIFTERS"
+      },
+      "question": "What is its source material? Return the AniList source enum, such as ORIGINAL, MANGA, LIGHT_NOVEL, VISUAL_NOVEL, VIDEO_GAME, or OTHER.",
+      "gold": "MANGA",
+      "citation": "https://anilist.co/anime/21123"
+    },
+    {
+      "id": "21123:season",
+      "media_id": 21123,
+      "bucket": "torso",
+      "kind": "season",
+      "title": {
+        "romaji": "DRIFTERS",
+        "english": "DRIFTERS",
+        "native": "DRIFTERS"
+      },
+      "question": "In which season did it start? Return WINTER, SPRING, SUMMER, or FALL.",
+      "gold": "FALL",
+      "citation": "https://anilist.co/anime/21123"
+    },
+    {
+      "id": "21123:main_characters",
+      "media_id": 21123,
+      "bucket": "torso",
+      "kind": "main_characters",
+      "title": {
+        "romaji": "DRIFTERS",
+        "english": "DRIFTERS",
+        "native": "DRIFTERS"
+      },
+      "question": "How many character edges are labelled MAIN in this anime's AniList record? Return an integer.",
+      "gold": 3,
+      "citation": "https://anilist.co/anime/21123"
+    },
+    {
+      "id": "9041:studio",
+      "media_id": 9041,
+      "bucket": "torso",
+      "kind": "studio",
+      "title": {
+        "romaji": "IS: Infinite Stratos",
+        "english": "Infinite Stratos",
+        "native": "IS〈インフィニット・ストラトス〉"
+      },
+      "question": "Which main animation studio or studios are listed for this anime? Return a list of studio names.",
+      "gold": [
+        "8-bit"
+      ],
+      "citation": "https://anilist.co/anime/9041"
+    },
+    {
+      "id": "9041:episodes",
+      "media_id": 9041,
+      "bucket": "torso",
+      "kind": "episodes",
+      "title": {
+        "romaji": "IS: Infinite Stratos",
+        "english": "Infinite Stratos",
+        "native": "IS〈インフィニット・ストラトス〉"
+      },
+      "question": "How many episodes does this anime have? Return an integer.",
+      "gold": 12,
+      "citation": "https://anilist.co/anime/9041"
+    },
+    {
+      "id": "9041:year",
+      "media_id": 9041,
+      "bucket": "torso",
+      "kind": "year",
+      "title": {
+        "romaji": "IS: Infinite Stratos",
+        "english": "Infinite Stratos",
+        "native": "IS〈インフィニット・ストラトス〉"
+      },
+      "question": "In which year did this anime start? Return a four-digit integer.",
+      "gold": 2011,
+      "citation": "https://anilist.co/anime/9041"
+    },
+    {
+      "id": "9041:format",
+      "media_id": 9041,
+      "bucket": "torso",
+      "kind": "format",
+      "title": {
+        "romaji": "IS: Infinite Stratos",
+        "english": "Infinite Stratos",
+        "native": "IS〈インフィニット・ストラトス〉"
+      },
+      "question": "What is its AniList format? Return the enum (TV, TV_SHORT, MOVIE, SPECIAL, OVA, ONA, MUSIC, or MANGA).",
+      "gold": "TV",
+      "citation": "https://anilist.co/anime/9041"
+    },
+    {
+      "id": "9041:source",
+      "media_id": 9041,
+      "bucket": "torso",
+      "kind": "source",
+      "title": {
+        "romaji": "IS: Infinite Stratos",
+        "english": "Infinite Stratos",
+        "native": "IS〈インフィニット・ストラトス〉"
+      },
+      "question": "What is its source material? Return the AniList source enum, such as ORIGINAL, MANGA, LIGHT_NOVEL, VISUAL_NOVEL, VIDEO_GAME, or OTHER.",
+      "gold": "LIGHT_NOVEL",
+      "citation": "https://anilist.co/anime/9041"
+    },
+    {
+      "id": "9041:season",
+      "media_id": 9041,
+      "bucket": "torso",
+      "kind": "season",
+      "title": {
+        "romaji": "IS: Infinite Stratos",
+        "english": "Infinite Stratos",
+        "native": "IS〈インフィニット・ストラトス〉"
+      },
+      "question": "In which season did it start? Return WINTER, SPRING, SUMMER, or FALL.",
+      "gold": "WINTER",
+      "citation": "https://anilist.co/anime/9041"
+    },
+    {
+      "id": "9041:main_characters",
+      "media_id": 9041,
+      "bucket": "torso",
+      "kind": "main_characters",
+      "title": {
+        "romaji": "IS: Infinite Stratos",
+        "english": "Infinite Stratos",
+        "native": "IS〈インフィニット・ストラトス〉"
+      },
+      "question": "How many character edges are labelled MAIN in this anime's AniList record? Return an integer.",
+      "gold": 6,
+      "citation": "https://anilist.co/anime/9041"
+    },
+    {
+      "id": "135806:studio",
+      "media_id": 135806,
+      "bucket": "torso",
+      "kind": "studio",
+      "title": {
+        "romaji": "Isekai Oji-san",
+        "english": "Uncle from Another World",
+        "native": "異世界おじさん"
+      },
+      "question": "Which main animation studio or studios are listed for this anime? Return a list of studio names.",
+      "gold": [
+        "Atelier Pontdarc"
+      ],
+      "citation": "https://anilist.co/anime/135806"
+    },
+    {
+      "id": "135806:episodes",
+      "media_id": 135806,
+      "bucket": "torso",
+      "kind": "episodes",
+      "title": {
+        "romaji": "Isekai Oji-san",
+        "english": "Uncle from Another World",
+        "native": "異世界おじさん"
+      },
+      "question": "How many episodes does this anime have? Return an integer.",
+      "gold": 13,
+      "citation": "https://anilist.co/anime/135806"
+    },
+    {
+      "id": "135806:year",
+      "media_id": 135806,
+      "bucket": "torso",
+      "kind": "year",
+      "title": {
+        "romaji": "Isekai Oji-san",
+        "english": "Uncle from Another World",
+        "native": "異世界おじさん"
+      },
+      "question": "In which year did this anime start? Return a four-digit integer.",
+      "gold": 2022,
+      "citation": "https://anilist.co/anime/135806"
+    },
+    {
+      "id": "135806:format",
+      "media_id": 135806,
+      "bucket": "torso",
+      "kind": "format",
+      "title": {
+        "romaji": "Isekai Oji-san",
+        "english": "Uncle from Another World",
+        "native": "異世界おじさん"
+      },
+      "question": "What is its AniList format? Return the enum (TV, TV_SHORT, MOVIE, SPECIAL, OVA, ONA, MUSIC, or MANGA).",
+      "gold": "TV",
+      "citation": "https://anilist.co/anime/135806"
+    },
+    {
+      "id": "135806:source",
+      "media_id": 135806,
+      "bucket": "torso",
+      "kind": "source",
+      "title": {
+        "romaji": "Isekai Oji-san",
+        "english": "Uncle from Another World",
+        "native": "異世界おじさん"
+      },
+      "question": "What is its source material? Return the AniList source enum, such as ORIGINAL, MANGA, LIGHT_NOVEL, VISUAL_NOVEL, VIDEO_GAME, or OTHER.",
+      "gold": "MANGA",
+      "citation": "https://anilist.co/anime/135806"
+    },
+    {
+      "id": "135806:season",
+      "media_id": 135806,
+      "bucket": "torso",
+      "kind": "season",
+      "title": {
+        "romaji": "Isekai Oji-san",
+        "english": "Uncle from Another World",
+        "native": "異世界おじさん"
+      },
+      "question": "In which season did it start? Return WINTER, SPRING, SUMMER, or FALL.",
+      "gold": "SUMMER",
+      "citation": "https://anilist.co/anime/135806"
+    },
+    {
+      "id": "135806:main_characters",
+      "media_id": 135806,
+      "bucket": "torso",
+      "kind": "main_characters",
+      "title": {
+        "romaji": "Isekai Oji-san",
+        "english": "Uncle from Another World",
+        "native": "異世界おじさん"
+      },
+      "question": "How many character edges are labelled MAIN in this anime's AniList record? Return an integer.",
+      "gold": 2,
+      "citation": "https://anilist.co/anime/135806"
+    },
+    {
+      "id": "21718:studio",
+      "media_id": 21718,
+      "bucket": "torso",
+      "kind": "studio",
+      "title": {
+        "romaji": "Fate/stay night [Heaven's Feel] II. lost butterfly",
+        "english": "Fate/stay night [Heaven's Feel] II. lost butterfly",
+        "native": "Fate/stay night[Heaven's Feel] ⅠⅠ.lost butterfly"
+      },
+      "question": "Which main animation studio or studios are listed for this anime? Return a list of studio names.",
+      "gold": [
+        "ufotable"
+      ],
+      "citation": "https://anilist.co/anime/21718"
+    },
+    {
+      "id": "21718:episodes",
+      "media_id": 21718,
+      "bucket": "torso",
+      "kind": "episodes",
+      "title": {
+        "romaji": "Fate/stay night [Heaven's Feel] II. lost butterfly",
+        "english": "Fate/stay night [Heaven's Feel] II. lost butterfly",
+        "native": "Fate/stay night[Heaven's Feel] ⅠⅠ.lost butterfly"
+      },
+      "question": "How many episodes does this anime have? Return an integer.",
+      "gold": 1,
+      "citation": "https://anilist.co/anime/21718"
+    },
+    {
+      "id": "21718:year",
+      "media_id": 21718,
+      "bucket": "torso",
+      "kind": "year",
+      "title": {
+        "romaji": "Fate/stay night [Heaven's Feel] II. lost butterfly",
+        "english": "Fate/stay night [Heaven's Feel] II. lost butterfly",
+        "native": "Fate/stay night[Heaven's Feel] ⅠⅠ.lost butterfly"
+      },
+      "question": "In which year did this anime start? Return a four-digit integer.",
+      "gold": 2019,
+      "citation": "https://anilist.co/anime/21718"
+    },
+    {
+      "id": "21718:format",
+      "media_id": 21718,
+      "bucket": "torso",
+      "kind": "format",
+      "title": {
+        "romaji": "Fate/stay night [Heaven's Feel] II. lost butterfly",
+        "english": "Fate/stay night [Heaven's Feel] II. lost butterfly",
+        "native": "Fate/stay night[Heaven's Feel] ⅠⅠ.lost butterfly"
+      },
+      "question": "What is its AniList format? Return the enum (TV, TV_SHORT, MOVIE, SPECIAL, OVA, ONA, MUSIC, or MANGA).",
+      "gold": "MOVIE",
+      "citation": "https://anilist.co/anime/21718"
+    },
+    {
+      "id": "21718:source",
+      "media_id": 21718,
+      "bucket": "torso",
+      "kind": "source",
+      "title": {
+        "romaji": "Fate/stay night [Heaven's Feel] II. lost butterfly",
+        "english": "Fate/stay night [Heaven's Feel] II. lost butterfly",
+        "native": "Fate/stay night[Heaven's Feel] ⅠⅠ.lost butterfly"
+      },
+      "question": "What is its source material? Return the AniList source enum, such as ORIGINAL, MANGA, LIGHT_NOVEL, VISUAL_NOVEL, VIDEO_GAME, or OTHER.",
+      "gold": "VISUAL_NOVEL",
+      "citation": "https://anilist.co/anime/21718"
+    },
+    {
+      "id": "21718:season",
+      "media_id": 21718,
+      "bucket": "torso",
+      "kind": "season",
+      "title": {
+        "romaji": "Fate/stay night [Heaven's Feel] II. lost butterfly",
+        "english": "Fate/stay night [Heaven's Feel] II. lost butterfly",
+        "native": "Fate/stay night[Heaven's Feel] ⅠⅠ.lost butterfly"
+      },
+      "question": "In which season did it start? Return WINTER, SPRING, SUMMER, or FALL.",
+      "gold": "WINTER",
+      "citation": "https://anilist.co/anime/21718"
+    },
+    {
+      "id": "21718:main_characters",
+      "media_id": 21718,
+      "bucket": "torso",
+      "kind": "main_characters",
+      "title": {
+        "romaji": "Fate/stay night [Heaven's Feel] II. lost butterfly",
+        "english": "Fate/stay night [Heaven's Feel] II. lost butterfly",
+        "native": "Fate/stay night[Heaven's Feel] ⅠⅠ.lost butterfly"
+      },
+      "question": "How many character edges are labelled MAIN in this anime's AniList record? Return an integer.",
+      "gold": 4,
+      "citation": "https://anilist.co/anime/21718"
+    },
+    {
+      "id": "21306:studio",
+      "media_id": 21306,
+      "bucket": "torso",
+      "kind": "studio",
+      "title": {
+        "romaji": "Musaigen no Phantom World",
+        "english": "Myriad Colors Phantom World",
+        "native": "無彩限のファントム・ワールド"
+      },
+      "question": "Which main animation studio or studios are listed for this anime? Return a list of studio names.",
+      "gold": [
+        "Kyoto Animation"
+      ],
+      "citation": "https://anilist.co/anime/21306"
+    },
+    {
+      "id": "21306:episodes",
+      "media_id": 21306,
+      "bucket": "torso",
+      "kind": "episodes",
+      "title": {
+        "romaji": "Musaigen no Phantom World",
+        "english": "Myriad Colors Phantom World",
+        "native": "無彩限のファントム・ワールド"
+      },
+      "question": "How many episodes does this anime have? Return an integer.",
+      "gold": 13,
+      "citation": "https://anilist.co/anime/21306"
+    },
+    {
+      "id": "21306:year",
+      "media_id": 21306,
+      "bucket": "torso",
+      "kind": "year",
+      "title": {
+        "romaji": "Musaigen no Phantom World",
+        "english": "Myriad Colors Phantom World",
+        "native": "無彩限のファントム・ワールド"
+      },
+      "question": "In which year did this anime start? Return a four-digit integer.",
+      "gold": 2016,
+      "citation": "https://anilist.co/anime/21306"
+    },
+    {
+      "id": "21306:format",
+      "media_id": 21306,
+      "bucket": "torso",
+      "kind": "format",
+      "title": {
+        "romaji": "Musaigen no Phantom World",
+        "english": "Myriad Colors Phantom World",
+        "native": "無彩限のファントム・ワールド"
+      },
+      "question": "What is its AniList format? Return the enum (TV, TV_SHORT, MOVIE, SPECIAL, OVA, ONA, MUSIC, or MANGA).",
+      "gold": "TV",
+      "citation": "https://anilist.co/anime/21306"
+    },
+    {
+      "id": "21306:source",
+      "media_id": 21306,
+      "bucket": "torso",
+      "kind": "source",
+      "title": {
+        "romaji": "Musaigen no Phantom World",
+        "english": "Myriad Colors Phantom World",
+        "native": "無彩限のファントム・ワールド"
+      },
+      "question": "What is its source material? Return the AniList source enum, such as ORIGINAL, MANGA, LIGHT_NOVEL, VISUAL_NOVEL, VIDEO_GAME, or OTHER.",
+      "gold": "LIGHT_NOVEL",
+      "citation": "https://anilist.co/anime/21306"
+    },
+    {
+      "id": "21306:season",
+      "media_id": 21306,
+      "bucket": "torso",
+      "kind": "season",
+      "title": {
+        "romaji": "Musaigen no Phantom World",
+        "english": "Myriad Colors Phantom World",
+        "native": "無彩限のファントム・ワールド"
+      },
+      "question": "In which season did it start? Return WINTER, SPRING, SUMMER, or FALL.",
+      "gold": "WINTER",
+      "citation": "https://anilist.co/anime/21306"
+    },
+    {
+      "id": "21306:main_characters",
+      "media_id": 21306,
+      "bucket": "torso",
+      "kind": "main_characters",
+      "title": {
+        "romaji": "Musaigen no Phantom World",
+        "english": "Myriad Colors Phantom World",
+        "native": "無彩限のファントム・ワールド"
+      },
+      "question": "How many character edges are labelled MAIN in this anime's AniList record? Return an integer.",
+      "gold": 5,
+      "citation": "https://anilist.co/anime/21306"
+    },
+    {
+      "id": "4705:studio",
+      "media_id": 4705,
+      "bucket": "long_tail",
+      "kind": "studio",
+      "title": {
+        "romaji": "Tengen Toppa Gurren Lagann: Parallel Works",
+        "english": null,
+        "native": "グレンラガン パラレルワークス"
+      },
+      "question": "Which main animation studio or studios are listed for this anime? Return a list of studio names.",
+      "gold": [
+        "GAINAX"
+      ],
+      "citation": "https://anilist.co/anime/4705"
+    },
+    {
+      "id": "4705:episodes",
+      "media_id": 4705,
+      "bucket": "long_tail",
+      "kind": "episodes",
+      "title": {
+        "romaji": "Tengen Toppa Gurren Lagann: Parallel Works",
+        "english": null,
+        "native": "グレンラガン パラレルワークス"
+      },
+      "question": "How many episodes does this anime have? Return an integer.",
+      "gold": 8,
+      "citation": "https://anilist.co/anime/4705"
+    },
+    {
+      "id": "4705:year",
+      "media_id": 4705,
+      "bucket": "long_tail",
+      "kind": "year",
+      "title": {
+        "romaji": "Tengen Toppa Gurren Lagann: Parallel Works",
+        "english": null,
+        "native": "グレンラガン パラレルワークス"
+      },
+      "question": "In which year did this anime start? Return a four-digit integer.",
+      "gold": 2008,
+      "citation": "https://anilist.co/anime/4705"
+    },
+    {
+      "id": "4705:format",
+      "media_id": 4705,
+      "bucket": "long_tail",
+      "kind": "format",
+      "title": {
+        "romaji": "Tengen Toppa Gurren Lagann: Parallel Works",
+        "english": null,
+        "native": "グレンラガン パラレルワークス"
+      },
+      "question": "What is its AniList format? Return the enum (TV, TV_SHORT, MOVIE, SPECIAL, OVA, ONA, MUSIC, or MANGA).",
+      "gold": "SPECIAL",
+      "citation": "https://anilist.co/anime/4705"
+    },
+    {
+      "id": "4705:main_characters",
+      "media_id": 4705,
+      "bucket": "long_tail",
+      "kind": "main_characters",
+      "title": {
+        "romaji": "Tengen Toppa Gurren Lagann: Parallel Works",
+        "english": null,
+        "native": "グレンラガン パラレルワークス"
+      },
+      "question": "How many character edges are labelled MAIN in this anime's AniList record? Return an integer.",
+      "gold": 0,
+      "citation": "https://anilist.co/anime/4705"
+    },
+    {
+      "id": "1563:studio",
+      "media_id": 1563,
+      "bucket": "long_tail",
+      "kind": "studio",
+      "title": {
+        "romaji": "Magic Knight Rayearth II",
+        "english": null,
+        "native": "魔法騎士（マジックナイト）レイアース II"
+      },
+      "question": "Which main animation studio or studios are listed for this anime? Return a list of studio names.",
+      "gold": [
+        "TMS Entertainment"
+      ],
+      "citation": "https://anilist.co/anime/1563"
+    },
+    {
+      "id": "1563:episodes",
+      "media_id": 1563,
+      "bucket": "long_tail",
+      "kind": "episodes",
+      "title": {
+        "romaji": "Magic Knight Rayearth II",
+        "english": null,
+        "native": "魔法騎士（マジックナイト）レイアース II"
+      },
+      "question": "How many episodes does this anime have? Return an integer.",
+      "gold": 29,
+      "citation": "https://anilist.co/anime/1563"
+    },
+    {
+      "id": "1563:year",
+      "media_id": 1563,
+      "bucket": "long_tail",
+      "kind": "year",
+      "title": {
+        "romaji": "Magic Knight Rayearth II",
+        "english": null,
+        "native": "魔法騎士（マジックナイト）レイアース II"
+      },
+      "question": "In which year did this anime start? Return a four-digit integer.",
+      "gold": 1995,
+      "citation": "https://anilist.co/anime/1563"
+    },
+    {
+      "id": "1563:format",
+      "media_id": 1563,
+      "bucket": "long_tail",
+      "kind": "format",
+      "title": {
+        "romaji": "Magic Knight Rayearth II",
+        "english": null,
+        "native": "魔法騎士（マジックナイト）レイアース II"
+      },
+      "question": "What is its AniList format? Return the enum (TV, TV_SHORT, MOVIE, SPECIAL, OVA, ONA, MUSIC, or MANGA).",
+      "gold": "TV",
+      "citation": "https://anilist.co/anime/1563"
+    },
+    {
+      "id": "1563:source",
+      "media_id": 1563,
+      "bucket": "long_tail",
+      "kind": "source",
+      "title": {
+        "romaji": "Magic Knight Rayearth II",
+        "english": null,
+        "native": "魔法騎士（マジックナイト）レイアース II"
+      },
+      "question": "What is its source material? Return the AniList source enum, such as ORIGINAL, MANGA, LIGHT_NOVEL, VISUAL_NOVEL, VIDEO_GAME, or OTHER.",
+      "gold": "MANGA",
+      "citation": "https://anilist.co/anime/1563"
+    },
+    {
+      "id": "1563:season",
+      "media_id": 1563,
+      "bucket": "long_tail",
+      "kind": "season",
+      "title": {
+        "romaji": "Magic Knight Rayearth II",
+        "english": null,
+        "native": "魔法騎士（マジックナイト）レイアース II"
+      },
+      "question": "In which season did it start? Return WINTER, SPRING, SUMMER, or FALL.",
+      "gold": "SPRING",
+      "citation": "https://anilist.co/anime/1563"
+    },
+    {
+      "id": "1563:main_characters",
+      "media_id": 1563,
+      "bucket": "long_tail",
+      "kind": "main_characters",
+      "title": {
+        "romaji": "Magic Knight Rayearth II",
+        "english": null,
+        "native": "魔法騎士（マジックナイト）レイアース II"
+      },
+      "question": "How many character edges are labelled MAIN in this anime's AniList record? Return an integer.",
+      "gold": 3,
+      "citation": "https://anilist.co/anime/1563"
+    },
+    {
+      "id": "20486:studio",
+      "media_id": 20486,
+      "bucket": "long_tail",
+      "kind": "studio",
+      "title": {
+        "romaji": "Z/X IGNITION",
+        "english": "Z/X IGNITION",
+        "native": "Z/X IGNITION"
+      },
+      "question": "Which main animation studio or studios are listed for this anime? Return a list of studio names.",
+      "gold": [
+        "Telecom Animation Film"
+      ],
+      "citation": "https://anilist.co/anime/20486"
+    },
+    {
+      "id": "20486:episodes",
+      "media_id": 20486,
+      "bucket": "long_tail",
+      "kind": "episodes",
+      "title": {
+        "romaji": "Z/X IGNITION",
+        "english": "Z/X IGNITION",
+        "native": "Z/X IGNITION"
+      },
+      "question": "How many episodes does this anime have? Return an integer.",
+      "gold": 12,
+      "citation": "https://anilist.co/anime/20486"
+    },
+    {
+      "id": "20486:year",
+      "media_id": 20486,
+      "bucket": "long_tail",
+      "kind": "year",
+      "title": {
+        "romaji": "Z/X IGNITION",
+        "english": "Z/X IGNITION",
+        "native": "Z/X IGNITION"
+      },
+      "question": "In which year did this anime start? Return a four-digit integer.",
+      "gold": 2014,
+      "citation": "https://anilist.co/anime/20486"
+    },
+    {
+      "id": "20486:format",
+      "media_id": 20486,
+      "bucket": "long_tail",
+      "kind": "format",
+      "title": {
+        "romaji": "Z/X IGNITION",
+        "english": "Z/X IGNITION",
+        "native": "Z/X IGNITION"
+      },
+      "question": "What is its AniList format? Return the enum (TV, TV_SHORT, MOVIE, SPECIAL, OVA, ONA, MUSIC, or MANGA).",
+      "gold": "TV",
+      "citation": "https://anilist.co/anime/20486"
+    },
+    {
+      "id": "20486:source",
+      "media_id": 20486,
+      "bucket": "long_tail",
+      "kind": "source",
+      "title": {
+        "romaji": "Z/X IGNITION",
+        "english": "Z/X IGNITION",
+        "native": "Z/X IGNITION"
+      },
+      "question": "What is its source material? Return the AniList source enum, such as ORIGINAL, MANGA, LIGHT_NOVEL, VISUAL_NOVEL, VIDEO_GAME, or OTHER.",
+      "gold": "OTHER",
+      "citation": "https://anilist.co/anime/20486"
+    },
+    {
+      "id": "20486:season",
+      "media_id": 20486,
+      "bucket": "long_tail",
+      "kind": "season",
+      "title": {
+        "romaji": "Z/X IGNITION",
+        "english": "Z/X IGNITION",
+        "native": "Z/X IGNITION"
+      },
+      "question": "In which season did it start? Return WINTER, SPRING, SUMMER, or FALL.",
+      "gold": "WINTER",
+      "citation": "https://anilist.co/anime/20486"
+    },
+    {
+      "id": "20486:main_characters",
+      "media_id": 20486,
+      "bucket": "long_tail",
+      "kind": "main_characters",
+      "title": {
+        "romaji": "Z/X IGNITION",
+        "english": "Z/X IGNITION",
+        "native": "Z/X IGNITION"
+      },
+      "question": "How many character edges are labelled MAIN in this anime's AniList record? Return an integer.",
+      "gold": 6,
+      "citation": "https://anilist.co/anime/20486"
+    },
+    {
+      "id": "132467:studio",
+      "media_id": 132467,
+      "bucket": "long_tail",
+      "kind": "studio",
+      "title": {
+        "romaji": "Tokyo Revengers: Chibi Reve",
+        "english": null,
+        "native": "ちびりべ"
+      },
+      "question": "Which main animation studio or studios are listed for this anime? Return a list of studio names.",
+      "gold": [
+        "Studio PuYUKAI"
+      ],
+      "citation": "https://anilist.co/anime/132467"
+    },
+    {
+      "id": "132467:episodes",
+      "media_id": 132467,
+      "bucket": "long_tail",
+      "kind": "episodes",
+      "title": {
+        "romaji": "Tokyo Revengers: Chibi Reve",
+        "english": null,
+        "native": "ちびりべ"
+      },
+      "question": "How many episodes does this anime have? Return an integer.",
+      "gold": 24,
+      "citation": "https://anilist.co/anime/132467"
+    },
+    {
+      "id": "132467:year",
+      "media_id": 132467,
+      "bucket": "long_tail",
+      "kind": "year",
+      "title": {
+        "romaji": "Tokyo Revengers: Chibi Reve",
+        "english": null,
+        "native": "ちびりべ"
+      },
+      "question": "In which year did this anime start? Return a four-digit integer.",
+      "gold": 2021,
+      "citation": "https://anilist.co/anime/132467"
+    },
+    {
+      "id": "132467:format",
+      "media_id": 132467,
+      "bucket": "long_tail",
+      "kind": "format",
+      "title": {
+        "romaji": "Tokyo Revengers: Chibi Reve",
+        "english": null,
+        "native": "ちびりべ"
+      },
+      "question": "What is its AniList format? Return the enum (TV, TV_SHORT, MOVIE, SPECIAL, OVA, ONA, MUSIC, or MANGA).",
+      "gold": "ONA",
+      "citation": "https://anilist.co/anime/132467"
+    },
+    {
+      "id": "132467:source",
+      "media_id": 132467,
+      "bucket": "long_tail",
+      "kind": "source",
+      "title": {
+        "romaji": "Tokyo Revengers: Chibi Reve",
+        "english": null,
+        "native": "ちびりべ"
+      },
+      "question": "What is its source material? Return the AniList source enum, such as ORIGINAL, MANGA, LIGHT_NOVEL, VISUAL_NOVEL, VIDEO_GAME, or OTHER.",
+      "gold": "MANGA",
+      "citation": "https://anilist.co/anime/132467"
+    },
+    {
+      "id": "132467:season",
+      "media_id": 132467,
+      "bucket": "long_tail",
+      "kind": "season",
+      "title": {
+        "romaji": "Tokyo Revengers: Chibi Reve",
+        "english": null,
+        "native": "ちびりべ"
+      },
+      "question": "In which season did it start? Return WINTER, SPRING, SUMMER, or FALL.",
+      "gold": "SPRING",
+      "citation": "https://anilist.co/anime/132467"
+    },
+    {
+      "id": "132467:main_characters",
+      "media_id": 132467,
+      "bucket": "long_tail",
+      "kind": "main_characters",
+      "title": {
+        "romaji": "Tokyo Revengers: Chibi Reve",
+        "english": null,
+        "native": "ちびりべ"
+      },
+      "question": "How many character edges are labelled MAIN in this anime's AniList record? Return an integer.",
+      "gold": 5,
+      "citation": "https://anilist.co/anime/132467"
+    },
+    {
+      "id": "192:studio",
+      "media_id": 192,
+      "bucket": "long_tail",
+      "kind": "studio",
+      "title": {
+        "romaji": "Love Hina: Haru Special - Kimi Sakura Chiru Nakare!!",
+        "english": "Love Hina Spring Movie",
+        "native": "ラブひな春スペシャル 〜キミサクラチルナカレ!!〜"
+      },
+      "question": "Which main animation studio or studios are listed for this anime? Return a list of studio names.",
+      "gold": [
+        "Xebec"
+      ],
+      "citation": "https://anilist.co/anime/192"
+    },
+    {
+      "id": "192:episodes",
+      "media_id": 192,
+      "bucket": "long_tail",
+      "kind": "episodes",
+      "title": {
+        "romaji": "Love Hina: Haru Special - Kimi Sakura Chiru Nakare!!",
+        "english": "Love Hina Spring Movie",
+        "native": "ラブひな春スペシャル 〜キミサクラチルナカレ!!〜"
+      },
+      "question": "How many episodes does this anime have? Return an integer.",
+      "gold": 1,
+      "citation": "https://anilist.co/anime/192"
+    },
+    {
+      "id": "192:year",
+      "media_id": 192,
+      "bucket": "long_tail",
+      "kind": "year",
+      "title": {
+        "romaji": "Love Hina: Haru Special - Kimi Sakura Chiru Nakare!!",
+        "english": "Love Hina Spring Movie",
+        "native": "ラブひな春スペシャル 〜キミサクラチルナカレ!!〜"
+      },
+      "question": "In which year did this anime start? Return a four-digit integer.",
+      "gold": 2001,
+      "citation": "https://anilist.co/anime/192"
+    },
+    {
+      "id": "192:format",
+      "media_id": 192,
+      "bucket": "long_tail",
+      "kind": "format",
+      "title": {
+        "romaji": "Love Hina: Haru Special - Kimi Sakura Chiru Nakare!!",
+        "english": "Love Hina Spring Movie",
+        "native": "ラブひな春スペシャル 〜キミサクラチルナカレ!!〜"
+      },
+      "question": "What is its AniList format? Return the enum (TV, TV_SHORT, MOVIE, SPECIAL, OVA, ONA, MUSIC, or MANGA).",
+      "gold": "SPECIAL",
+      "citation": "https://anilist.co/anime/192"
+    },
+    {
+      "id": "192:source",
+      "media_id": 192,
+      "bucket": "long_tail",
+      "kind": "source",
+      "title": {
+        "romaji": "Love Hina: Haru Special - Kimi Sakura Chiru Nakare!!",
+        "english": "Love Hina Spring Movie",
+        "native": "ラブひな春スペシャル 〜キミサクラチルナカレ!!〜"
+      },
+      "question": "What is its source material? Return the AniList source enum, such as ORIGINAL, MANGA, LIGHT_NOVEL, VISUAL_NOVEL, VIDEO_GAME, or OTHER.",
+      "gold": "MANGA",
+      "citation": "https://anilist.co/anime/192"
+    },
+    {
+      "id": "192:season",
+      "media_id": 192,
+      "bucket": "long_tail",
+      "kind": "season",
+      "title": {
+        "romaji": "Love Hina: Haru Special - Kimi Sakura Chiru Nakare!!",
+        "english": "Love Hina Spring Movie",
+        "native": "ラブひな春スペシャル 〜キミサクラチルナカレ!!〜"
+      },
+      "question": "In which season did it start? Return WINTER, SPRING, SUMMER, or FALL.",
+      "gold": "SPRING",
+      "citation": "https://anilist.co/anime/192"
+    },
+    {
+      "id": "192:main_characters",
+      "media_id": 192,
+      "bucket": "long_tail",
+      "kind": "main_characters",
+      "title": {
+        "romaji": "Love Hina: Haru Special - Kimi Sakura Chiru Nakare!!",
+        "english": "Love Hina Spring Movie",
+        "native": "ラブひな春スペシャル 〜キミサクラチルナカレ!!〜"
+      },
+      "question": "How many character edges are labelled MAIN in this anime's AniList record? Return an integer.",
+      "gold": 7,
+      "citation": "https://anilist.co/anime/192"
+    },
+    {
+      "id": "183128:studio",
+      "media_id": 183128,
+      "bucket": "long_tail",
+      "kind": "studio",
+      "title": {
+        "romaji": "Muchuu sa, Kimi ni.",
+        "english": "Captivated, By You",
+        "native": "夢中さ、きみに。"
+      },
+      "question": "Which main animation studio or studios are listed for this anime? Return a list of studio names.",
+      "gold": [
+        "Doga Kobo"
+      ],
+      "citation": "https://anilist.co/anime/183128"
+    },
+    {
+      "id": "183128:episodes",
+      "media_id": 183128,
+      "bucket": "long_tail",
+      "kind": "episodes",
+      "title": {
+        "romaji": "Muchuu sa, Kimi ni.",
+        "english": "Captivated, By You",
+        "native": "夢中さ、きみに。"
+      },
+      "question": "How many episodes does this anime have? Return an integer.",
+      "gold": 5,
+      "citation": "https://anilist.co/anime/183128"
+    },
+    {
+      "id": "183128:year",
+      "media_id": 183128,
+      "bucket": "long_tail",
+      "kind": "year",
+      "title": {
+        "romaji": "Muchuu sa, Kimi ni.",
+        "english": "Captivated, By You",
+        "native": "夢中さ、きみに。"
+      },
+      "question": "In which year did this anime start? Return a four-digit integer.",
+      "gold": 2025,
+      "citation": "https://anilist.co/anime/183128"
+    },
+    {
+      "id": "183128:format",
+      "media_id": 183128,
+      "bucket": "long_tail",
+      "kind": "format",
+      "title": {
+        "romaji": "Muchuu sa, Kimi ni.",
+        "english": "Captivated, By You",
+        "native": "夢中さ、きみに。"
+      },
+      "question": "What is its AniList format? Return the enum (TV, TV_SHORT, MOVIE, SPECIAL, OVA, ONA, MUSIC, or MANGA).",
+      "gold": "TV",
+      "citation": "https://anilist.co/anime/183128"
+    },
+    {
+      "id": "183128:source",
+      "media_id": 183128,
+      "bucket": "long_tail",
+      "kind": "source",
+      "title": {
+        "romaji": "Muchuu sa, Kimi ni.",
+        "english": "Captivated, By You",
+        "native": "夢中さ、きみに。"
+      },
+      "question": "What is its source material? Return the AniList source enum, such as ORIGINAL, MANGA, LIGHT_NOVEL, VISUAL_NOVEL, VIDEO_GAME, or OTHER.",
+      "gold": "MANGA",
+      "citation": "https://anilist.co/anime/183128"
+    },
+    {
+      "id": "183128:season",
+      "media_id": 183128,
+      "bucket": "long_tail",
+      "kind": "season",
+      "title": {
+        "romaji": "Muchuu sa, Kimi ni.",
+        "english": "Captivated, By You",
+        "native": "夢中さ、きみに。"
+      },
+      "question": "In which season did it start? Return WINTER, SPRING, SUMMER, or FALL.",
+      "gold": "SUMMER",
+      "citation": "https://anilist.co/anime/183128"
+    },
+    {
+      "id": "183128:main_characters",
+      "media_id": 183128,
+      "bucket": "long_tail",
+      "kind": "main_characters",
+      "title": {
+        "romaji": "Muchuu sa, Kimi ni.",
+        "english": "Captivated, By You",
+        "native": "夢中さ、きみに。"
+      },
+      "question": "How many character edges are labelled MAIN in this anime's AniList record? Return an integer.",
+      "gold": 4,
+      "citation": "https://anilist.co/anime/183128"
+    }
+  ],
+  "excluded": [
+    {
+      "media_id": 4705,
+      "kind": "source",
+      "reason": "missing_or_incomplete"
+    },
+    {
+      "media_id": 4705,
+      "kind": "season",
+      "reason": "missing_or_incomplete"
+    }
+  ],
+  "rank_population": "FINISHED, non-adult ANIME sorted by popularity descending, then ID ascending"
+}

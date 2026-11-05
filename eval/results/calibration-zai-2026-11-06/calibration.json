@@ -1,0 +1,177 @@
+{
+  "at": "2026-11-05T19:56:32.425990+00:00",
+  "provider": {
+    "name": "zai",
+    "base_url": "https://api.z.ai/api/paas/v4",
+    "key_env": "Z_API_KEY",
+    "models": [
+      "glm-4.7-flash",
+      "glm-4.5-flash"
+    ],
+    "free_models": [
+      "glm-4.7-flash",
+      "glm-4.5-flash"
+    ],
+    "discovery": "configured",
+    "interval": 3.1,
+    "run_enabled": true,
+    "health_path": "/models",
+    "free_tier_notes": "Only these two Flash IDs are authorized; coordinator verified both responding without balance on 2026-11-06; numeric daily allowance unverified.",
+    "request_options": {
+      "thinking": {
+        "type": "disabled"
+      }
+    }
+  },
+  "purpose": "non-dataset output transport calibration",
+  "passed": false,
+  "checks": [
+    {
+      "model": "glm-4.7-flash",
+      "payload": {
+        "model": "glm-4.7-flash",
+        "temperature": 0.2,
+        "max_tokens": 256,
+        "messages": [
+          {
+            "role": "user",
+            "content": "Return only JSON with answer equal to integer 7, confidence equal to 1, and citations equal to an empty list."
+          }
+        ],
+        "thinking": {
+          "type": "disabled"
+        }
+      },
+      "passed": false,
+      "attempts": [
+        {
+          "at": "2026-11-05T19:56:22.038066+00:00",
+          "status": 429,
+          "retry_after": null,
+          "messages": [
+            "The service may be temporarily overloaded, please try again later"
+          ],
+          "rate_limit": null,
+          "rate_remaining": null,
+          "codes": [
+            "1305"
+          ]
+        }
+      ]
+    },
+    {
+      "model": "glm-4.5-flash",
+      "served_model": "glm-4.5-flash",
+      "payload": {
+        "model": "glm-4.5-flash",
+        "temperature": 0.2,
+        "max_tokens": 256,
+        "messages": [
+          {
+            "role": "user",
+            "content": "Return only JSON with answer equal to integer 7, confidence equal to 1, and citations equal to an empty list."
+          }
+        ],
+        "thinking": {
+          "type": "disabled"
+        }
+      },
+      "content": "```json\n{\n  \"answer\": 7,\n  \"confidence\": 1,\n  \"citations\": []\n}\n```",
+      "passed": false,
+      "attempts": [
+        {
+          "at": "2026-11-05T19:56:25.138559+00:00",
+          "status": 200,
+          "seconds": 1.178,
+          "rate_limit": null,
+          "rate_remaining": null
+        }
+      ],
+      "usage": {
+        "completion_tokens": 27,
+        "prompt_tokens": 34,
+        "prompt_tokens_details": {
+          "cached_tokens": 4
+        },
+        "total_tokens": 61
+      },
+      "finish_reason": "stop"
+    },
+    {
+      "model": "glm-4.5-flash",
+      "served_model": "glm-4.5-flash",
+      "payload": {
+        "model": "glm-4.5-flash",
+        "temperature": 0.2,
+        "max_tokens": 256,
+        "messages": [
+          {
+            "role": "user",
+            "content": "Return only JSON with answer equal to integer 19, confidence equal to 1, and citations equal to an empty list."
+          }
+        ],
+        "thinking": {
+          "type": "disabled"
+        }
+      },
+      "content": "```json\n{\n  \"answer\": 19,\n  \"confidence\": 1,\n  \"citations\": []\n}\n```",
+      "passed": false,
+      "attempts": [
+        {
+          "at": "2026-11-05T19:56:28.239153+00:00",
+          "status": 200,
+          "seconds": 1.122,
+          "rate_limit": null,
+          "rate_remaining": null
+        }
+      ],
+      "usage": {
+        "completion_tokens": 27,
+        "prompt_tokens": 34,
+        "prompt_tokens_details": {
+          "cached_tokens": 4
+        },
+        "total_tokens": 61
+      },
+      "finish_reason": "stop"
+    },
+    {
+      "model": "glm-4.5-flash",
+      "served_model": "glm-4.5-flash",
+      "payload": {
+        "model": "glm-4.5-flash",
+        "temperature": 0.2,
+        "max_tokens": 256,
+        "messages": [
+          {
+            "role": "user",
+            "content": "Return only JSON with answer equal to integer 42, confidence equal to 1, and citations equal to an empty list."
+          }
+        ],
+        "thinking": {
+          "type": "disabled"
+        }
+      },
+      "content": "```json\n{\n  \"answer\": 42,\n  \"confidence\": 1,\n  \"citations\": []\n}\n```",
+      "passed": false,
+      "attempts": [
+        {
+          "at": "2026-11-05T19:56:31.339371+00:00",
+          "status": 200,
+          "seconds": 1.086,
+          "rate_limit": null,
+          "rate_remaining": null
+        }
+      ],
+      "usage": {
+        "completion_tokens": 27,
+        "prompt_tokens": 34,
+        "prompt_tokens_details": {
+          "cached_tokens": 13
+        },
+        "total_tokens": 61
+      },
+      "finish_reason": "stop"
+    }
+  ]
+}

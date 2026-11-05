@@ -1,0 +1,19 @@
+{
+  "fetched_at": "2026-11-05T19:35:20.189440+00:00",
+  "query": "query($page:Int!) {\nPage(page:$page, perPage:50) {\nmedia(type:ANIME, status:FINISHED, isAdult:false, sort:[POPULARITY_DESC,ID]) {\n\nid title { romaji english native } siteUrl popularity episodes startDate { year }\nformat source season status isAdult\nstudios(isMain: true) { nodes { id name } }\ncharacters(role: MAIN, perPage: 50) { pageInfo { hasNextPage } edges { role node { id } } }\n\n} } }",
+  "variables": {
+    "page": 101
+  },
+  "attempts": [
+    {
+      "at": "2026-11-05T19:35:19.760067+00:00",
+      "status": 400,
+      "retry_after": null,
+      "messages": [
+        "Page depth exceeds maximum allowed for API requests (5000 entries)"
+      ],
+      "rate_limit": "30",
+      "rate_remaining": "29"
+    }
+  ]
+}
