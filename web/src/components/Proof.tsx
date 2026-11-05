@@ -1,16 +1,18 @@
 import { useState } from "react";
 import { motion, useReducedMotion } from "motion/react";
-import type { Answer, Claim } from "../api";
+import type { Answer, Claim, MediaRecord } from "../api";
+import { recordSays, sentence } from "../sentence";
 import { Seal } from "./Seal";
 
 const STEP = 0.62; // seconds between stamps
 
-function Line({ c, i, title, reduce }: { c: Claim; i: number; title: string; reduce: boolean | null }) {
+function Line({ c, i, title, reduce, r, demo }: { c: Claim; i: number; title: string; reduce: boolean | null; r: MediaRecord; demo: boolean }) {
+  const said = demo ? c.text : sentence(c, r);
   const delay = 0.5 + i * STEP;
   if (c.status === "unchecked") {
     return (
       <li className="proof__line proof__line--unchecked">
-        <span className="proof__claim proof__claim--pencil"><span className="tag tag--pencil">Not checked</span> {c.text}</span>
+        <span className="proof__claim proof__claim--pencil"><span className="tag tag--pencil">Not checked</span> {said}</span>
         <span className="proof__mark--q" aria-hidden="true">?</span>
       </li>
     );
@@ -24,7 +26,7 @@ function Line({ c, i, title, reduce }: { c: Claim; i: number; title: string; red
         animate={{ color: conflict ? "var(--ink-soft)" : "var(--ink)" }}
         transition={{ delay, duration: 0.25 }}
       >
-        {c.text}
+        {said}
       </motion.span>
       {conflict ? (
         <motion.span
@@ -46,7 +48,7 @@ function Line({ c, i, title, reduce }: { c: Claim; i: number; title: string; red
         </motion.span>
       )}
       {conflict ? (
-        <p className="proof__says">AniList says <b>{c.recordValue}</b>. The claim above doesn't match, so it was not stamped.</p>
+        <p className="proof__says">AniList says <b>{recordSays(c)}</b>. The claim above doesn't match, so it was not stamped.</p>
       ) : (
         <a className="proof__src" href={c.sourceUrl} target="_blank" rel="noreferrer" aria-label={`Open the AniList record for ${title}`}>AniList record</a>
       )}
@@ -59,7 +61,7 @@ export function Proof({ answer }: { answer: Answer }) {
   const [note, setNote] = useState<string | null>(null);
   const r = answer.record;
   const verified = answer.claims.filter((c) => c.status === "verified");
-  const text = `${answer.title}\n${verified.map((c) => `- ${c.text}`).join("\n")}\nChecked against the AniList record: ${r.url}`;
+  const text = `${answer.title}\n${verified.map((c) => `- ${answer.demo ? c.text : sentence(c, r)}`).join("\n")}\nChecked against the AniList record: ${r.url}`;
 
   async function copy() {
     try { await navigator.clipboard.writeText(text); setNote("Copied the verified facts and the source link."); }
@@ -81,7 +83,7 @@ export function Proof({ answer }: { answer: Answer }) {
         </header>
 
         <ol className="proof__lines" aria-live="polite">
-          {answer.claims.map((c, i) => <Line key={c.id} c={c} i={i} title={answer.title} reduce={reduce} />)}
+          {answer.claims.map((c, i) => <Line key={c.id} c={c} i={i} title={answer.title} reduce={reduce} r={r} demo={answer.demo} />)}
         </ol>
 
         {answer.explanation && (

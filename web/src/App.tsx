@@ -82,7 +82,7 @@ export default function App() {
           {state.s === "loading" && (
             <div className="panel loading" role="status" aria-label="Checking the answer">
               <div className="skel skel--line" /><div className="skel skel--line" style={{ width: "78%" }} /><div className="skel skel--line" style={{ width: "62%" }} />
-              <p className="fine">{state.slow ? "AniList is slow right now. Still trying." : "Fetching the record."}</p>
+              <p className="fine">{state.slow ? "Still working. A free model is drafting the answer and the checker waits for it. Slow starts can take up to 15 seconds." : "Fetching the record and drafting the answer."}</p>
             </div>
           )}
           {state.s === "error" && (
