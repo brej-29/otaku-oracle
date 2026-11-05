@@ -3,7 +3,7 @@ import { chromium } from "playwright";
 import { mkdirSync } from "node:fs";
 
 const BASE = process.argv[2] ?? "http://localhost:5173";
-const out = new URL("../../docs/shots/claude/live/", import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, "$1");
+const out = new URL("../../docs/shots/proof-sheet/live/", import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, "$1");
 mkdirSync(out, { recursive: true });
 
 const browser = await chromium.launch();

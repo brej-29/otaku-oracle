@@ -1,12 +1,12 @@
 // Usage: npm run build && npx vite preview --port 4173 & node scripts/shots.mjs
-// Writes docs/shots/claude/<viewport>/<screen>.png. Answer shots use the live AniList API.
+// Writes docs/shots/proof-sheet/<viewport>/<screen>.png. Answer shots use the live AniList API.
 import { chromium } from "playwright";
 import { mkdirSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import path from "node:path";
 
 const BASE = process.env.BASE_URL ?? "http://localhost:4173";
-const OUT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../../docs/shots/claude");
+const OUT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../../docs/shots/proof-sheet");
 const VIEWPORTS = { "phone-390": { width: 390, height: 844 }, "tablet-768": { width: 768, height: 1024 }, "desktop-1440": { width: 1440, height: 900 } };
 const wait = (ms) => new Promise((r) => setTimeout(r, ms));
 
