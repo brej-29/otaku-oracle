@@ -1,0 +1,73 @@
+{
+  "fetched_at": "2026-11-05T20:08:17.141127+00:00",
+  "endpoint": "https://graphql.anilist.co",
+  "query": "query($id:Int!) { Media(id:$id, type:ANIME) { \nid title { romaji english native } siteUrl popularity episodes startDate { year }\nformat source season status isAdult\nstudios(isMain: true) { nodes { id name } }\ncharacters(role: MAIN, perPage: 50) { pageInfo { hasNextPage } edges { role node { id } } }\n } }",
+  "variables": {
+    "id": 21123
+  },
+  "attempts": [
+    {
+      "at": "2026-11-05T20:08:16.437367+00:00",
+      "status": 200,
+      "seconds": 0.704,
+      "rate_limit": "30",
+      "rate_remaining": "29"
+    }
+  ],
+  "response": {
+    "data": {
+      "Media": {
+        "id": 21123,
+        "title": {
+          "romaji": "DRIFTERS",
+          "english": "DRIFTERS",
+          "native": "DRIFTERS"
+        },
+        "siteUrl": "https://anilist.co/anime/21123",
+        "popularity": 136028,
+        "episodes": 12,
+        "startDate": {
+          "year": 2016
+        },
+        "format": "TV",
+        "source": "MANGA",
+        "season": "FALL",
+        "status": "FINISHED",
+        "isAdult": false,
+        "studios": {
+          "nodes": [
+            {
+              "id": 346,
+              "name": "Hoods Entertainment"
+            }
+          ]
+        },
+        "characters": {
+          "pageInfo": {
+            "hasNextPage": false
+          },
+          "edges": [
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 24183
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 24184
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 24200
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

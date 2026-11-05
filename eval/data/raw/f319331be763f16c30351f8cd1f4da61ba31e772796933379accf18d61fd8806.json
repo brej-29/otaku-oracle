@@ -1,0 +1,3089 @@
+{
+  "fetched_at": "2026-11-05T19:30:48.157672+00:00",
+  "endpoint": "https://graphql.anilist.co",
+  "query": "query($page:Int!) {\nPage(page:$page, perPage:50) {\nmedia(type:ANIME, status:FINISHED, isAdult:false, sort:[POPULARITY_DESC,ID]) {\n\nid title { romaji english native } siteUrl popularity episodes startDate { year }\nformat source season status isAdult\nstudios(isMain: true) { nodes { id name } }\ncharacters(role: MAIN, perPage: 50) { pageInfo { hasNextPage } edges { role node { id } } }\n\n} } }",
+  "variables": {
+    "page": 1
+  },
+  "attempts": [
+    {
+      "at": "2026-11-05T19:30:46.664636+00:00",
+      "status": 200,
+      "seconds": 1.493,
+      "rate_limit": "30",
+      "rate_remaining": "29"
+    }
+  ],
+  "response": {
+    "data": {
+      "Page": {
+        "media": [
+          {
+            "id": 16498,
+            "title": {
+              "romaji": "Shingeki no Kyojin",
+              "english": "Attack on Titan",
+              "native": "進撃の巨人"
+            },
+            "siteUrl": "https://anilist.co/anime/16498",
+            "popularity": 1075444,
+            "episodes": 25,
+            "startDate": {
+              "year": 2013
+            },
+            "format": "TV",
+            "source": "MANGA",
+            "season": "SPRING",
+            "status": "FINISHED",
+            "isAdult": false,
+            "studios": {
+              "nodes": [
+                {
+                  "id": 858,
+                  "name": "WIT STUDIO"
+                }
+              ]
+            },
+            "characters": {
+              "pageInfo": {
+                "hasNextPage": false
+              },
+              "edges": [
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 40881
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 40882
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 46494
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "id": 101922,
+            "title": {
+              "romaji": "Kimetsu no Yaiba",
+              "english": "Demon Slayer: Kimetsu no Yaiba",
+              "native": "鬼滅の刃"
+            },
+            "siteUrl": "https://anilist.co/anime/101922",
+            "popularity": 1012086,
+            "episodes": 26,
+            "startDate": {
+              "year": 2019
+            },
+            "format": "TV",
+            "source": "MANGA",
+            "season": "SPRING",
+            "status": "FINISHED",
+            "isAdult": false,
+            "studios": {
+              "nodes": [
+                {
+                  "id": 43,
+                  "name": "ufotable"
+                }
+              ]
+            },
+            "characters": {
+              "pageInfo": {
+                "hasNextPage": false
+              },
+              "edges": [
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 126071
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 127518
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 129130
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 129131
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "id": 113415,
+            "title": {
+              "romaji": "Jujutsu Kaisen",
+              "english": "JUJUTSU KAISEN",
+              "native": "呪術廻戦"
+            },
+            "siteUrl": "https://anilist.co/anime/113415",
+            "popularity": 993221,
+            "episodes": 24,
+            "startDate": {
+              "year": 2020
+            },
+            "format": "TV",
+            "source": "MANGA",
+            "season": "FALL",
+            "status": "FINISHED",
+            "isAdult": false,
+            "studios": {
+              "nodes": [
+                {
+                  "id": 569,
+                  "name": "MAPPA"
+                }
+              ]
+            },
+            "characters": {
+              "pageInfo": {
+                "hasNextPage": false
+              },
+              "edges": [
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 126635
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 127212
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 127691
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 133700
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "id": 1535,
+            "title": {
+              "romaji": "DEATH NOTE",
+              "english": "Death Note",
+              "native": "DEATH NOTE"
+            },
+            "siteUrl": "https://anilist.co/anime/1535",
+            "popularity": 980114,
+            "episodes": 37,
+            "startDate": {
+              "year": 2006
+            },
+            "format": "TV",
+            "source": "MANGA",
+            "season": "FALL",
+            "status": "FINISHED",
+            "isAdult": false,
+            "studios": {
+              "nodes": [
+                {
+                  "id": 11,
+                  "name": "MADHOUSE"
+                }
+              ]
+            },
+            "characters": {
+              "pageInfo": {
+                "hasNextPage": false
+              },
+              "edges": [
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 71
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 75
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 80
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 463
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 464
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 835
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 1906
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 1927
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 3767
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "id": 21459,
+            "title": {
+              "romaji": "Boku no Hero Academia",
+              "english": "My Hero Academia",
+              "native": "僕のヒーローアカデミア"
+            },
+            "siteUrl": "https://anilist.co/anime/21459",
+            "popularity": 888366,
+            "episodes": 13,
+            "startDate": {
+              "year": 2016
+            },
+            "format": "TV",
+            "source": "MANGA",
+            "season": "SPRING",
+            "status": "FINISHED",
+            "isAdult": false,
+            "studios": {
+              "nodes": [
+                {
+                  "id": 4,
+                  "name": "bones"
+                }
+              ]
+            },
+            "characters": {
+              "pageInfo": {
+                "hasNextPage": false
+              },
+              "edges": [
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 88892
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 89028
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 89221
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 89224
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "id": 11061,
+            "title": {
+              "romaji": "HUNTER×HUNTER (2011)",
+              "english": "Hunter x Hunter (2011)",
+              "native": "HUNTER×HUNTER (2011)"
+            },
+            "siteUrl": "https://anilist.co/anime/11061",
+            "popularity": 855589,
+            "episodes": 148,
+            "startDate": {
+              "year": 2011
+            },
+            "format": "TV",
+            "source": "MANGA",
+            "season": "FALL",
+            "status": "FINISHED",
+            "isAdult": false,
+            "studios": {
+              "nodes": [
+                {
+                  "id": 11,
+                  "name": "MADHOUSE"
+                }
+              ]
+            },
+            "characters": {
+              "pageInfo": {
+                "hasNextPage": false
+              },
+              "edges": [
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 27
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 28
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 29
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 30
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 31
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "id": 21087,
+            "title": {
+              "romaji": "One Punch Man",
+              "english": "One-Punch Man",
+              "native": "ワンパンマン"
+            },
+            "siteUrl": "https://anilist.co/anime/21087",
+            "popularity": 778913,
+            "episodes": 12,
+            "startDate": {
+              "year": 2015
+            },
+            "format": "TV",
+            "source": "MANGA",
+            "season": "FALL",
+            "status": "FINISHED",
+            "isAdult": false,
+            "studios": {
+              "nodes": [
+                {
+                  "id": 11,
+                  "name": "MADHOUSE"
+                }
+              ]
+            },
+            "characters": {
+              "pageInfo": {
+                "hasNextPage": false
+              },
+              "edges": [
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 73935
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 73979
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "id": 20605,
+            "title": {
+              "romaji": "Tokyo Ghoul",
+              "english": "Tokyo Ghoul",
+              "native": "東京喰種 トーキョーグール"
+            },
+            "siteUrl": "https://anilist.co/anime/20605",
+            "popularity": 752776,
+            "episodes": 12,
+            "startDate": {
+              "year": 2014
+            },
+            "format": "TV",
+            "source": "MANGA",
+            "season": "SUMMER",
+            "status": "FINISHED",
+            "isAdult": false,
+            "studios": {
+              "nodes": [
+                {
+                  "id": 1,
+                  "name": "Studio Pierrot"
+                }
+              ]
+            },
+            "characters": {
+              "pageInfo": {
+                "hasNextPage": false
+              },
+              "edges": [
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 87275
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 87277
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "id": 20958,
+            "title": {
+              "romaji": "Shingeki no Kyojin Season 2",
+              "english": "Attack on Titan Season 2",
+              "native": "進撃の巨人 Season２"
+            },
+            "siteUrl": "https://anilist.co/anime/20958",
+            "popularity": 746693,
+            "episodes": 12,
+            "startDate": {
+              "year": 2017
+            },
+            "format": "TV",
+            "source": "MANGA",
+            "season": "SPRING",
+            "status": "FINISHED",
+            "isAdult": false,
+            "studios": {
+              "nodes": [
+                {
+                  "id": 858,
+                  "name": "WIT STUDIO"
+                }
+              ]
+            },
+            "characters": {
+              "pageInfo": {
+                "hasNextPage": false
+              },
+              "edges": [
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 40881
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 40882
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 46484
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 46494
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 71479
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "id": 5114,
+            "title": {
+              "romaji": "Hagane no Renkinjutsushi: FULLMETAL ALCHEMIST",
+              "english": "Fullmetal Alchemist: Brotherhood",
+              "native": "鋼の錬金術師 FULLMETAL ALCHEMIST"
+            },
+            "siteUrl": "https://anilist.co/anime/5114",
+            "popularity": 742252,
+            "episodes": 64,
+            "startDate": {
+              "year": 2009
+            },
+            "format": "TV",
+            "source": "MANGA",
+            "season": "SPRING",
+            "status": "FINISHED",
+            "isAdult": false,
+            "studios": {
+              "nodes": [
+                {
+                  "id": 4,
+                  "name": "bones"
+                }
+              ]
+            },
+            "characters": {
+              "pageInfo": {
+                "hasNextPage": false
+              },
+              "edges": [
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 11
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 12
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "id": 20,
+            "title": {
+              "romaji": "NARUTO",
+              "english": "Naruto",
+              "native": "NARUTO -ナルト-"
+            },
+            "siteUrl": "https://anilist.co/anime/20",
+            "popularity": 739453,
+            "episodes": 220,
+            "startDate": {
+              "year": 2002
+            },
+            "format": "TV",
+            "source": "MANGA",
+            "season": "FALL",
+            "status": "FINISHED",
+            "isAdult": false,
+            "studios": {
+              "nodes": [
+                {
+                  "id": 1,
+                  "name": "Studio Pierrot"
+                }
+              ]
+            },
+            "characters": {
+              "pageInfo": {
+                "hasNextPage": false
+              },
+              "edges": [
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 13
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 17
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 85
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 145
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "id": 11757,
+            "title": {
+              "romaji": "Sword Art Online",
+              "english": "Sword Art Online",
+              "native": "ソードアート・オンライン"
+            },
+            "siteUrl": "https://anilist.co/anime/11757",
+            "popularity": 731081,
+            "episodes": 25,
+            "startDate": {
+              "year": 2012
+            },
+            "format": "TV",
+            "source": "LIGHT_NOVEL",
+            "season": "SUMMER",
+            "status": "FINISHED",
+            "isAdult": false,
+            "studios": {
+              "nodes": [
+                {
+                  "id": 561,
+                  "name": "A-1 Pictures"
+                }
+              ]
+            },
+            "characters": {
+              "pageInfo": {
+                "hasNextPage": false
+              },
+              "edges": [
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 36765
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 36828
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 36831
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "id": 20954,
+            "title": {
+              "romaji": "Koe no Katachi",
+              "english": "A Silent Voice",
+              "native": "聲の形"
+            },
+            "siteUrl": "https://anilist.co/anime/20954",
+            "popularity": 730838,
+            "episodes": 1,
+            "startDate": {
+              "year": 2016
+            },
+            "format": "MOVIE",
+            "source": "MANGA",
+            "season": "SUMMER",
+            "status": "FINISHED",
+            "isAdult": false,
+            "studios": {
+              "nodes": [
+                {
+                  "id": 2,
+                  "name": "Kyoto Animation"
+                }
+              ]
+            },
+            "characters": {
+              "pageInfo": {
+                "hasNextPage": false
+              },
+              "edges": [
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 80243
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 80491
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 124026
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "id": 21519,
+            "title": {
+              "romaji": "Kimi no Na wa.",
+              "english": "Your Name.",
+              "native": "君の名は。"
+            },
+            "siteUrl": "https://anilist.co/anime/21519",
+            "popularity": 727076,
+            "episodes": 1,
+            "startDate": {
+              "year": 2016
+            },
+            "format": "MOVIE",
+            "source": "ORIGINAL",
+            "season": "SUMMER",
+            "status": "FINISHED",
+            "isAdult": false,
+            "studios": {
+              "nodes": [
+                {
+                  "id": 291,
+                  "name": "CoMix Wave"
+                }
+              ]
+            },
+            "characters": {
+              "pageInfo": {
+                "hasNextPage": false
+              },
+              "edges": [
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 121514
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 121516
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "id": 99147,
+            "title": {
+              "romaji": "Shingeki no Kyojin Season 3",
+              "english": "Attack on Titan Season 3",
+              "native": "進撃の巨人 Season３"
+            },
+            "siteUrl": "https://anilist.co/anime/99147",
+            "popularity": 698883,
+            "episodes": 12,
+            "startDate": {
+              "year": 2018
+            },
+            "format": "TV",
+            "source": "MANGA",
+            "season": "SUMMER",
+            "status": "FINISHED",
+            "isAdult": false,
+            "studios": {
+              "nodes": [
+                {
+                  "id": 858,
+                  "name": "WIT STUDIO"
+                }
+              ]
+            },
+            "characters": {
+              "pageInfo": {
+                "hasNextPage": false
+              },
+              "edges": [
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 40881
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 40882
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 45627
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 46494
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 46496
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 62481
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "id": 21856,
+            "title": {
+              "romaji": "Boku no Hero Academia 2",
+              "english": "My Hero Academia Season 2",
+              "native": "僕のヒーローアカデミア２"
+            },
+            "siteUrl": "https://anilist.co/anime/21856",
+            "popularity": 664727,
+            "episodes": 25,
+            "startDate": {
+              "year": 2017
+            },
+            "format": "TV",
+            "source": "MANGA",
+            "season": "SPRING",
+            "status": "FINISHED",
+            "isAdult": false,
+            "studios": {
+              "nodes": [
+                {
+                  "id": 4,
+                  "name": "bones"
+                }
+              ]
+            },
+            "characters": {
+              "pageInfo": {
+                "hasNextPage": false
+              },
+              "edges": [
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 88892
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 89028
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 89220
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 89221
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 89222
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 89224
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "id": 110277,
+            "title": {
+              "romaji": "Shingeki no Kyojin: The Final Season",
+              "english": "Attack on Titan Final Season",
+              "native": "進撃の巨人 The Final Season"
+            },
+            "siteUrl": "https://anilist.co/anime/110277",
+            "popularity": 654892,
+            "episodes": 16,
+            "startDate": {
+              "year": 2020
+            },
+            "format": "TV",
+            "source": "MANGA",
+            "season": "WINTER",
+            "status": "FINISHED",
+            "isAdult": false,
+            "studios": {
+              "nodes": [
+                {
+                  "id": 569,
+                  "name": "MAPPA"
+                }
+              ]
+            },
+            "characters": {
+              "pageInfo": {
+                "hasNextPage": false
+              },
+              "edges": [
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 40881
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 40882
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 45627
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 45887
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 46484
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 46486
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 46494
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 46498
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 71121
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 125659
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 125660
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 125661
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "id": 127230,
+            "title": {
+              "romaji": "Chainsaw Man",
+              "english": "Chainsaw Man",
+              "native": "チェンソーマン"
+            },
+            "siteUrl": "https://anilist.co/anime/127230",
+            "popularity": 650118,
+            "episodes": 12,
+            "startDate": {
+              "year": 2022
+            },
+            "format": "TV",
+            "source": "MANGA",
+            "season": "FALL",
+            "status": "FINISHED",
+            "isAdult": false,
+            "studios": {
+              "nodes": [
+                {
+                  "id": 569,
+                  "name": "MAPPA"
+                }
+              ]
+            },
+            "characters": {
+              "pageInfo": {
+                "hasNextPage": false
+              },
+              "edges": [
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 130102
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 137079
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 137080
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 137081
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "id": 101759,
+            "title": {
+              "romaji": "Yakusoku no Neverland",
+              "english": "The Promised Neverland",
+              "native": "約束のネバーランド"
+            },
+            "siteUrl": "https://anilist.co/anime/101759",
+            "popularity": 642047,
+            "episodes": 12,
+            "startDate": {
+              "year": 2019
+            },
+            "format": "TV",
+            "source": "MANGA",
+            "season": "WINTER",
+            "status": "FINISHED",
+            "isAdult": false,
+            "studios": {
+              "nodes": [
+                {
+                  "id": 6222,
+                  "name": "CloverWorks"
+                }
+              ]
+            },
+            "characters": {
+              "pageInfo": {
+                "hasNextPage": false
+              },
+              "edges": [
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 121700
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 121724
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 121725
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "id": 20755,
+            "title": {
+              "romaji": "Ansatsu Kyoushitsu",
+              "english": "Assassination Classroom",
+              "native": "暗殺教室"
+            },
+            "siteUrl": "https://anilist.co/anime/20755",
+            "popularity": 638038,
+            "episodes": 22,
+            "startDate": {
+              "year": 2015
+            },
+            "format": "TV",
+            "source": "MANGA",
+            "season": "WINTER",
+            "status": "FINISHED",
+            "isAdult": false,
+            "studios": {
+              "nodes": [
+                {
+                  "id": 456,
+                  "name": "Lerche"
+                }
+              ]
+            },
+            "characters": {
+              "pageInfo": {
+                "hasNextPage": false
+              },
+              "edges": [
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 65643
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 65645
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 71933
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 73881
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 73883
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 85291
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "id": 21507,
+            "title": {
+              "romaji": "Mob Psycho 100",
+              "english": "Mob Psycho 100",
+              "native": "モブサイコ100"
+            },
+            "siteUrl": "https://anilist.co/anime/21507",
+            "popularity": 637663,
+            "episodes": 12,
+            "startDate": {
+              "year": 2016
+            },
+            "format": "TV",
+            "source": "MANGA",
+            "season": "SUMMER",
+            "status": "FINISHED",
+            "isAdult": false,
+            "studios": {
+              "nodes": [
+                {
+                  "id": 4,
+                  "name": "bones"
+                }
+              ]
+            },
+            "characters": {
+              "pageInfo": {
+                "hasNextPage": false
+              },
+              "edges": [
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 89334
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 89616
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 89617
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 89618
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 89621
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "id": 21355,
+            "title": {
+              "romaji": "Re:Zero kara Hajimeru Isekai Seikatsu",
+              "english": "Re:ZERO -Starting Life in Another World-",
+              "native": "Re:ゼロから始める異世界生活"
+            },
+            "siteUrl": "https://anilist.co/anime/21355",
+            "popularity": 636411,
+            "episodes": 25,
+            "startDate": {
+              "year": 2016
+            },
+            "format": "TV",
+            "source": "LIGHT_NOVEL",
+            "season": "SPRING",
+            "status": "FINISHED",
+            "isAdult": false,
+            "studios": {
+              "nodes": [
+                {
+                  "id": 314,
+                  "name": "WHITE FOX"
+                }
+              ]
+            },
+            "characters": {
+              "pageInfo": {
+                "hasNextPage": false
+              },
+              "edges": [
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 88572
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 88573
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 88575
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 88576
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "id": 20665,
+            "title": {
+              "romaji": "Shigatsu wa Kimi no Uso",
+              "english": "Your lie in April",
+              "native": "四月は君の嘘"
+            },
+            "siteUrl": "https://anilist.co/anime/20665",
+            "popularity": 623712,
+            "episodes": 22,
+            "startDate": {
+              "year": 2014
+            },
+            "format": "TV",
+            "source": "MANGA",
+            "season": "FALL",
+            "status": "FINISHED",
+            "isAdult": false,
+            "studios": {
+              "nodes": [
+                {
+                  "id": 561,
+                  "name": "A-1 Pictures"
+                }
+              ]
+            },
+            "characters": {
+              "pageInfo": {
+                "hasNextPage": false
+              },
+              "edges": [
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 69405
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 69407
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 69409
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 69411
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "id": 104578,
+            "title": {
+              "romaji": "Shingeki no Kyojin Season 3 Part 2",
+              "english": "Attack on Titan Season 3 Part 2",
+              "native": "進撃の巨人 Season３ Part.2"
+            },
+            "siteUrl": "https://anilist.co/anime/104578",
+            "popularity": 622321,
+            "episodes": 10,
+            "startDate": {
+              "year": 2019
+            },
+            "format": "TV",
+            "source": "MANGA",
+            "season": "SPRING",
+            "status": "FINISHED",
+            "isAdult": false,
+            "studios": {
+              "nodes": [
+                {
+                  "id": 858,
+                  "name": "WIT STUDIO"
+                }
+              ]
+            },
+            "characters": {
+              "pageInfo": {
+                "hasNextPage": false
+              },
+              "edges": [
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 40881
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 40882
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 45627
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 46494
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 46496
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "id": 1735,
+            "title": {
+              "romaji": "NARUTO: Shippuuden",
+              "english": "Naruto: Shippuden",
+              "native": "NARUTO -ナルト- 疾風伝"
+            },
+            "siteUrl": "https://anilist.co/anime/1735",
+            "popularity": 621745,
+            "episodes": 500,
+            "startDate": {
+              "year": 2007
+            },
+            "format": "TV",
+            "source": "MANGA",
+            "season": "WINTER",
+            "status": "FINISHED",
+            "isAdult": false,
+            "studios": {
+              "nodes": [
+                {
+                  "id": 1,
+                  "name": "Studio Pierrot"
+                }
+              ]
+            },
+            "characters": {
+              "pageInfo": {
+                "hasNextPage": false
+              },
+              "edges": [
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 13
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 17
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 85
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 145
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "id": 21234,
+            "title": {
+              "romaji": "Boku dake ga Inai Machi",
+              "english": "ERASED",
+              "native": "僕だけがいない街"
+            },
+            "siteUrl": "https://anilist.co/anime/21234",
+            "popularity": 615085,
+            "episodes": 12,
+            "startDate": {
+              "year": 2016
+            },
+            "format": "TV",
+            "source": "MANGA",
+            "season": "WINTER",
+            "status": "FINISHED",
+            "isAdult": false,
+            "studios": {
+              "nodes": [
+                {
+                  "id": 561,
+                  "name": "A-1 Pictures"
+                }
+              ]
+            },
+            "characters": {
+              "pageInfo": {
+                "hasNextPage": false
+              },
+              "edges": [
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 89275
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 89276
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "id": 100166,
+            "title": {
+              "romaji": "Boku no Hero Academia 3",
+              "english": "My Hero Academia Season 3",
+              "native": "僕のヒーローアカデミア３"
+            },
+            "siteUrl": "https://anilist.co/anime/100166",
+            "popularity": 609353,
+            "episodes": 25,
+            "startDate": {
+              "year": 2018
+            },
+            "format": "TV",
+            "source": "MANGA",
+            "season": "SPRING",
+            "status": "FINISHED",
+            "isAdult": false,
+            "studios": {
+              "nodes": [
+                {
+                  "id": 4,
+                  "name": "bones"
+                }
+              ]
+            },
+            "characters": {
+              "pageInfo": {
+                "hasNextPage": false
+              },
+              "edges": [
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 88892
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 89028
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 89220
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 89221
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 89222
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 89224
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "id": 9253,
+            "title": {
+              "romaji": "Steins;Gate",
+              "english": "Steins;Gate",
+              "native": "シュタインズ・ゲート"
+            },
+            "siteUrl": "https://anilist.co/anime/9253",
+            "popularity": 605513,
+            "episodes": 24,
+            "startDate": {
+              "year": 2011
+            },
+            "format": "TV",
+            "source": "VISUAL_NOVEL",
+            "season": "SPRING",
+            "status": "FINISHED",
+            "isAdult": false,
+            "studios": {
+              "nodes": [
+                {
+                  "id": 314,
+                  "name": "WHITE FOX"
+                }
+              ]
+            },
+            "characters": {
+              "pageInfo": {
+                "hasNextPage": false
+              },
+              "edges": [
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 34470
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 35252
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 35253
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 35255
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 35258
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "id": 97940,
+            "title": {
+              "romaji": "Black Clover",
+              "english": "Black Clover",
+              "native": "ブラッククローバー"
+            },
+            "siteUrl": "https://anilist.co/anime/97940",
+            "popularity": 602167,
+            "episodes": 170,
+            "startDate": {
+              "year": 2017
+            },
+            "format": "TV",
+            "source": "MANGA",
+            "season": "FALL",
+            "status": "FINISHED",
+            "isAdult": false,
+            "studios": {
+              "nodes": [
+                {
+                  "id": 1,
+                  "name": "Studio Pierrot"
+                }
+              ]
+            },
+            "characters": {
+              "pageInfo": {
+                "hasNextPage": false
+              },
+              "edges": [
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 123283
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 123284
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 123285
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "id": 20464,
+            "title": {
+              "romaji": "Haikyuu!!",
+              "english": "HAIKYU!!",
+              "native": "ハイキュー!!"
+            },
+            "siteUrl": "https://anilist.co/anime/20464",
+            "popularity": 592277,
+            "episodes": 25,
+            "startDate": {
+              "year": 2014
+            },
+            "format": "TV",
+            "source": "MANGA",
+            "season": "SPRING",
+            "status": "FINISHED",
+            "isAdult": false,
+            "studios": {
+              "nodes": [
+                {
+                  "id": 10,
+                  "name": "Production I.G"
+                }
+              ]
+            },
+            "characters": {
+              "pageInfo": {
+                "hasNextPage": false
+              },
+              "edges": [
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 64769
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 64771
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 67327
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 67689
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "id": 101291,
+            "title": {
+              "romaji": "Seishun Buta Yarou wa Bunny Girl Senpai no Yume wo Minai",
+              "english": "Rascal Does Not Dream of Bunny Girl Senpai",
+              "native": "青春ブタ野郎はバニーガール先輩の夢を見ない"
+            },
+            "siteUrl": "https://anilist.co/anime/101291",
+            "popularity": 590732,
+            "episodes": 13,
+            "startDate": {
+              "year": 2018
+            },
+            "format": "TV",
+            "source": "LIGHT_NOVEL",
+            "season": "FALL",
+            "status": "FINISHED",
+            "isAdult": false,
+            "studios": {
+              "nodes": [
+                {
+                  "id": 6222,
+                  "name": "CloverWorks"
+                }
+              ]
+            },
+            "characters": {
+              "pageInfo": {
+                "hasNextPage": false
+              },
+              "edges": [
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 127221
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 127222
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 127613
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 127633
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 127840
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 127841
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "id": 140960,
+            "title": {
+              "romaji": "SPY×FAMILY",
+              "english": "SPY x FAMILY",
+              "native": "SPY×FAMILY"
+            },
+            "siteUrl": "https://anilist.co/anime/140960",
+            "popularity": 581861,
+            "episodes": 12,
+            "startDate": {
+              "year": 2022
+            },
+            "format": "TV",
+            "source": "MANGA",
+            "season": "SPRING",
+            "status": "FINISHED",
+            "isAdult": false,
+            "studios": {
+              "nodes": [
+                {
+                  "id": 6222,
+                  "name": "CloverWorks"
+                },
+                {
+                  "id": 858,
+                  "name": "WIT STUDIO"
+                }
+              ]
+            },
+            "characters": {
+              "pageInfo": {
+                "hasNextPage": false
+              },
+              "edges": [
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 138100
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 138101
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 138102
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "id": 101921,
+            "title": {
+              "romaji": "Kaguya-sama wa Kokurasetai: Tensaitachi no Renai Zunousen",
+              "english": "Kaguya-sama: Love is War",
+              "native": "かぐや様は告らせたい～天才たちの恋愛頭脳戦～"
+            },
+            "siteUrl": "https://anilist.co/anime/101921",
+            "popularity": 568961,
+            "episodes": 12,
+            "startDate": {
+              "year": 2019
+            },
+            "format": "TV",
+            "source": "MANGA",
+            "season": "WINTER",
+            "status": "FINISHED",
+            "isAdult": false,
+            "studios": {
+              "nodes": [
+                {
+                  "id": 561,
+                  "name": "A-1 Pictures"
+                }
+              ]
+            },
+            "characters": {
+              "pageInfo": {
+                "hasNextPage": false
+              },
+              "edges": [
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 120649
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 121101
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 121102
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 121103
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "id": 105333,
+            "title": {
+              "romaji": "Dr. STONE",
+              "english": "Dr. STONE",
+              "native": "Dr.STONE"
+            },
+            "siteUrl": "https://anilist.co/anime/105333",
+            "popularity": 564476,
+            "episodes": 24,
+            "startDate": {
+              "year": 2019
+            },
+            "format": "TV",
+            "source": "MANGA",
+            "season": "SUMMER",
+            "status": "FINISHED",
+            "isAdult": false,
+            "studios": {
+              "nodes": [
+                {
+                  "id": 73,
+                  "name": "TMS Entertainment"
+                }
+              ]
+            },
+            "characters": {
+              "pageInfo": {
+                "hasNextPage": false
+              },
+              "edges": [
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 124142
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 124143
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 124144
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 124145
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 124146
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 124147
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 124162
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "id": 101348,
+            "title": {
+              "romaji": "VINLAND SAGA",
+              "english": "Vinland Saga",
+              "native": "ヴィンランド・サガ"
+            },
+            "siteUrl": "https://anilist.co/anime/101348",
+            "popularity": 558469,
+            "episodes": 24,
+            "startDate": {
+              "year": 2019
+            },
+            "format": "TV",
+            "source": "MANGA",
+            "season": "SUMMER",
+            "status": "FINISHED",
+            "isAdult": false,
+            "studios": {
+              "nodes": [
+                {
+                  "id": 858,
+                  "name": "WIT STUDIO"
+                }
+              ]
+            },
+            "characters": {
+              "pageInfo": {
+                "hasNextPage": false
+              },
+              "edges": [
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 10138
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 13020
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 17438
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "id": 21827,
+            "title": {
+              "romaji": "Violet Evergarden",
+              "english": "Violet Evergarden",
+              "native": "ヴァイオレット・エヴァーガーデン"
+            },
+            "siteUrl": "https://anilist.co/anime/21827",
+            "popularity": 556571,
+            "episodes": 13,
+            "startDate": {
+              "year": 2018
+            },
+            "format": "TV",
+            "source": "LIGHT_NOVEL",
+            "season": "WINTER",
+            "status": "FINISHED",
+            "isAdult": false,
+            "studios": {
+              "nodes": [
+                {
+                  "id": 2,
+                  "name": "Kyoto Animation"
+                }
+              ]
+            },
+            "characters": {
+              "pageInfo": {
+                "hasNextPage": false
+              },
+              "edges": [
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 90169
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "id": 124080,
+            "title": {
+              "romaji": "Horimiya",
+              "english": "Horimiya",
+              "native": "ホリミヤ"
+            },
+            "siteUrl": "https://anilist.co/anime/124080",
+            "popularity": 554092,
+            "episodes": 13,
+            "startDate": {
+              "year": 2021
+            },
+            "format": "TV",
+            "source": "MANGA",
+            "season": "WINTER",
+            "status": "FINISHED",
+            "isAdult": false,
+            "studios": {
+              "nodes": [
+                {
+                  "id": 6222,
+                  "name": "CloverWorks"
+                }
+              ]
+            },
+            "characters": {
+              "pageInfo": {
+                "hasNextPage": false
+              },
+              "edges": [
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 66171
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 66173
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "id": 4224,
+            "title": {
+              "romaji": "Toradora!",
+              "english": "Toradora!",
+              "native": "とらドラ！"
+            },
+            "siteUrl": "https://anilist.co/anime/4224",
+            "popularity": 550691,
+            "episodes": 25,
+            "startDate": {
+              "year": 2008
+            },
+            "format": "TV",
+            "source": "LIGHT_NOVEL",
+            "season": "FALL",
+            "status": "FINISHED",
+            "isAdult": false,
+            "studios": {
+              "nodes": [
+                {
+                  "id": 7,
+                  "name": "J.C.STAFF"
+                }
+              ]
+            },
+            "characters": {
+              "pageInfo": {
+                "hasNextPage": false
+              },
+              "edges": [
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 12064
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 12295
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 12305
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 12306
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 13725
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "id": 19815,
+            "title": {
+              "romaji": "No Game No Life",
+              "english": "No Game, No Life",
+              "native": "ノーゲーム・ノーライフ"
+            },
+            "siteUrl": "https://anilist.co/anime/19815",
+            "popularity": 548402,
+            "episodes": 12,
+            "startDate": {
+              "year": 2014
+            },
+            "format": "TV",
+            "source": "LIGHT_NOVEL",
+            "season": "SPRING",
+            "status": "FINISHED",
+            "isAdult": false,
+            "studios": {
+              "nodes": [
+                {
+                  "id": 11,
+                  "name": "MADHOUSE"
+                }
+              ]
+            },
+            "characters": {
+              "pageInfo": {
+                "hasNextPage": false
+              },
+              "edges": [
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 82523
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 82525
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 82527
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 87887
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "id": 20613,
+            "title": {
+              "romaji": "Akame ga Kill!",
+              "english": "Akame ga Kill!",
+              "native": "アカメが斬る！"
+            },
+            "siteUrl": "https://anilist.co/anime/20613",
+            "popularity": 548153,
+            "episodes": 24,
+            "startDate": {
+              "year": 2014
+            },
+            "format": "TV",
+            "source": "MANGA",
+            "season": "SUMMER",
+            "status": "FINISHED",
+            "isAdult": false,
+            "studios": {
+              "nodes": [
+                {
+                  "id": 314,
+                  "name": "WHITE FOX"
+                }
+              ]
+            },
+            "characters": {
+              "pageInfo": {
+                "hasNextPage": false
+              },
+              "edges": [
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 63351
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 64749
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 65227
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 65229
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 65231
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "id": 20447,
+            "title": {
+              "romaji": "Noragami",
+              "english": "Noragami",
+              "native": "ノラガミ"
+            },
+            "siteUrl": "https://anilist.co/anime/20447",
+            "popularity": 546226,
+            "episodes": 12,
+            "startDate": {
+              "year": 2014
+            },
+            "format": "TV",
+            "source": "MANGA",
+            "season": "WINTER",
+            "status": "FINISHED",
+            "isAdult": false,
+            "studios": {
+              "nodes": [
+                {
+                  "id": 4,
+                  "name": "bones"
+                }
+              ]
+            },
+            "characters": {
+              "pageInfo": {
+                "hasNextPage": false
+              },
+              "edges": [
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 84677
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 84679
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 84681
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "id": 104276,
+            "title": {
+              "romaji": "Boku no Hero Academia 4",
+              "english": "My Hero Academia Season 4",
+              "native": "僕のヒーローアカデミア４"
+            },
+            "siteUrl": "https://anilist.co/anime/104276",
+            "popularity": 540471,
+            "episodes": 25,
+            "startDate": {
+              "year": 2019
+            },
+            "format": "TV",
+            "source": "MANGA",
+            "season": "FALL",
+            "status": "FINISHED",
+            "isAdult": false,
+            "studios": {
+              "nodes": [
+                {
+                  "id": 4,
+                  "name": "bones"
+                }
+              ]
+            },
+            "characters": {
+              "pageInfo": {
+                "hasNextPage": false
+              },
+              "edges": [
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 89028
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 89221
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 89222
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 123527
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 126093
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 126357
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 129761
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "id": 20789,
+            "title": {
+              "romaji": "Nanatsu no Taizai",
+              "english": "The Seven Deadly Sins",
+              "native": "七つの大罪"
+            },
+            "siteUrl": "https://anilist.co/anime/20789",
+            "popularity": 537398,
+            "episodes": 24,
+            "startDate": {
+              "year": 2014
+            },
+            "format": "TV",
+            "source": "MANGA",
+            "season": "FALL",
+            "status": "FINISHED",
+            "isAdult": false,
+            "studios": {
+              "nodes": [
+                {
+                  "id": 561,
+                  "name": "A-1 Pictures"
+                }
+              ]
+            },
+            "characters": {
+              "pageInfo": {
+                "hasNextPage": false
+              },
+              "edges": [
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 72921
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 72923
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 74653
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 77605
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 83801
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 86683
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 88823
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "id": 269,
+            "title": {
+              "romaji": "BLEACH",
+              "english": "Bleach",
+              "native": "BLEACH"
+            },
+            "siteUrl": "https://anilist.co/anime/269",
+            "popularity": 535265,
+            "episodes": 366,
+            "startDate": {
+              "year": 2004
+            },
+            "format": "TV",
+            "source": "MANGA",
+            "season": "FALL",
+            "status": "FINISHED",
+            "isAdult": false,
+            "studios": {
+              "nodes": [
+                {
+                  "id": 1,
+                  "name": "Studio Pierrot"
+                }
+              ]
+            },
+            "characters": {
+              "pageInfo": {
+                "hasNextPage": false
+              },
+              "edges": [
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 5
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 6
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 7
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 564
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 575
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 906
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "id": 21202,
+            "title": {
+              "romaji": "Kono Subarashii Sekai ni Shukufuku wo!",
+              "english": "KONOSUBA -God's blessing on this wonderful world!",
+              "native": "この素晴らしい世界に祝福を！"
+            },
+            "siteUrl": "https://anilist.co/anime/21202",
+            "popularity": 527585,
+            "episodes": 10,
+            "startDate": {
+              "year": 2016
+            },
+            "format": "TV",
+            "source": "LIGHT_NOVEL",
+            "season": "WINTER",
+            "status": "FINISHED",
+            "isAdult": false,
+            "studios": {
+              "nodes": [
+                {
+                  "id": 37,
+                  "name": "Studio DEEN"
+                }
+              ]
+            },
+            "characters": {
+              "pageInfo": {
+                "hasNextPage": false
+              },
+              "edges": [
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 89361
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 89362
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 89363
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 89364
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "id": 112151,
+            "title": {
+              "romaji": "Kimetsu no Yaiba: Mugen Ressha-hen",
+              "english": "Demon Slayer -Kimetsu no Yaiba- The Movie: Mugen Train",
+              "native": "鬼滅の刃 無限列車編"
+            },
+            "siteUrl": "https://anilist.co/anime/112151",
+            "popularity": 517237,
+            "episodes": 1,
+            "startDate": {
+              "year": 2020
+            },
+            "format": "MOVIE",
+            "source": "MANGA",
+            "season": "FALL",
+            "status": "FINISHED",
+            "isAdult": false,
+            "studios": {
+              "nodes": [
+                {
+                  "id": 43,
+                  "name": "ufotable"
+                }
+              ]
+            },
+            "characters": {
+              "pageInfo": {
+                "hasNextPage": false
+              },
+              "edges": [
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 126071
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 127518
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 129130
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 129131
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 129133
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 139737
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "id": 1575,
+            "title": {
+              "romaji": "Code Geass: Hangyaku no Lelouch",
+              "english": "Code Geass: Lelouch of the Rebellion",
+              "native": "コードギアス 反逆のルルーシュ"
+            },
+            "siteUrl": "https://anilist.co/anime/1575",
+            "popularity": 511942,
+            "episodes": 25,
+            "startDate": {
+              "year": 2006
+            },
+            "format": "TV",
+            "source": "ORIGINAL",
+            "season": "FALL",
+            "status": "FINISHED",
+            "isAdult": false,
+            "studios": {
+              "nodes": [
+                {
+                  "id": 14,
+                  "name": "Sunrise"
+                }
+              ]
+            },
+            "characters": {
+              "pageInfo": {
+                "hasNextPage": false
+              },
+              "edges": [
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 417
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 558
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 559
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 1111
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "id": 99423,
+            "title": {
+              "romaji": "Darling in the Franxx",
+              "english": "DARLING in the FRANXX",
+              "native": "ダーリン・イン・ザ・フランキス"
+            },
+            "siteUrl": "https://anilist.co/anime/99423",
+            "popularity": 508917,
+            "episodes": 24,
+            "startDate": {
+              "year": 2018
+            },
+            "format": "TV",
+            "source": "ORIGINAL",
+            "season": "WINTER",
+            "status": "FINISHED",
+            "isAdult": false,
+            "studios": {
+              "nodes": [
+                {
+                  "id": 803,
+                  "name": "TRIGGER"
+                },
+                {
+                  "id": 6222,
+                  "name": "CloverWorks"
+                }
+              ]
+            },
+            "characters": {
+              "pageInfo": {
+                "hasNextPage": false
+              },
+              "edges": [
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 124380
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 124381
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 124382
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 124383
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 124384
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 124385
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 124386
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 124387
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 124388
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 124389
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "id": 20623,
+            "title": {
+              "romaji": "Kiseijuu: Sei no Kakuritsu",
+              "english": "Parasyte -the maxim-",
+              "native": "寄生獣 セイの格率"
+            },
+            "siteUrl": "https://anilist.co/anime/20623",
+            "popularity": 508283,
+            "episodes": 24,
+            "startDate": {
+              "year": 2014
+            },
+            "format": "TV",
+            "source": "MANGA",
+            "season": "FALL",
+            "status": "FINISHED",
+            "isAdult": false,
+            "studios": {
+              "nodes": [
+                {
+                  "id": 11,
+                  "name": "MADHOUSE"
+                }
+              ]
+            },
+            "characters": {
+              "pageInfo": {
+                "hasNextPage": false
+              },
+              "edges": [
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 12323
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 13773
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "id": 145064,
+            "title": {
+              "romaji": "Jujutsu Kaisen 2nd Season",
+              "english": "JUJUTSU KAISEN Season 2",
+              "native": "呪術廻戦 第2期"
+            },
+            "siteUrl": "https://anilist.co/anime/145064",
+            "popularity": 505310,
+            "episodes": 23,
+            "startDate": {
+              "year": 2023
+            },
+            "format": "TV",
+            "source": "MANGA",
+            "season": "SUMMER",
+            "status": "FINISHED",
+            "isAdult": false,
+            "studios": {
+              "nodes": [
+                {
+                  "id": 569,
+                  "name": "MAPPA"
+                }
+              ]
+            },
+            "characters": {
+              "pageInfo": {
+                "hasNextPage": false
+              },
+              "edges": [
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 126635
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 127212
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 127691
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 133699
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 133700
+                  }
+                },
+                {
+                  "role": "MAIN",
+                  "node": {
+                    "id": 133701
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  }
+}

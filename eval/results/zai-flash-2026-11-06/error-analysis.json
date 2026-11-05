@@ -1,0 +1,19 @@
+{
+  "A": [
+    {
+      "model": "glm-4.7-flash",
+      "repeat": 0,
+      "question_id": "1563:season",
+      "title": {
+        "romaji": "Magic Knight Rayearth II",
+        "english": null,
+        "native": "魔法騎士（マジックナイト）レイアース II"
+      },
+      "question": "In which season did it start? Return WINTER, SPRING, SUMMER, or FALL.",
+      "gold": "SPRING",
+      "answer": "WINTER",
+      "failure": "confident wrong"
+    }
+  ],
+  "B": []
+}

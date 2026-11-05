@@ -1,0 +1,8 @@
+{
+  "finished_at": "2026-11-05T19:40:59.789443+00:00",
+  "blocked_models": [
+    "cohere/north-mini-code:free",
+    "dots-studio/dots-3-note-preview:free"
+  ],
+  "complete": false
+}
