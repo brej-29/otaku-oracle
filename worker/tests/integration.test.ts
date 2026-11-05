@@ -112,7 +112,9 @@ it("exposes conflict, unchecked commentary, and original record gold", async () 
       ],
     }),
   );
-  const body = (await (await handle(ask(), env, net)).json()) as any;
+  const body = (await (
+    await handle(ask({ titleId: 1, question: "Tell me about it." }), env, net)
+  ).json()) as any;
   expect(body.claims.map((c: any) => c.status)).toEqual([
     "conflict",
     "unchecked",
@@ -531,4 +533,35 @@ it("bounds an unfinished input stream by the total deadline before any upstream 
   expect(response.status).toBe(400);
   expect(cancelled).toBe(true);
   expect(net).not.toHaveBeenCalled();
+});
+
+it("trims padded live-shaped model output to the requested two fields", async () => {
+  const padded = {
+    answer: "Sunrise animated it and it has 26 episodes.",
+    claims: [
+      { field: "studio", value: '["Sunrise"]', text: "Sunrise" },
+      { field: "episodes", value: "26", text: "26 episodes" },
+      { field: "format", value: "TV", text: "TV" },
+      { field: "source", value: "ORIGINAL", text: "Original" },
+      { field: "season", value: "SPRING", text: "Spring" },
+    ],
+    explanation: null,
+  };
+  const net = network(() =>
+    response({ choices: [{ message: { content: JSON.stringify(padded) } }] }),
+  );
+  const body = (await (
+    await handle(
+      ask({
+        titleId: 1,
+        question:
+          "Which studio animated it and how many episodes does it have?",
+      }),
+      env,
+      net,
+    )
+  ).json()) as any;
+  expect(body.claims.map((c: any) => c.field)).toEqual(["studio", "episodes"]);
+  expect(body.claims.every((c: any) => c.status === "verified")).toBe(true);
+  expect(body.explanation).toBeNull();
 });
