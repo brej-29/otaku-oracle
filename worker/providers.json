@@ -1,0 +1,65 @@
+[
+  {
+    "id": "groq",
+    "baseUrl": "https://api.groq.com/openai/v1",
+    "keyEnv": "GROQ_API_KEY",
+    "models": ["openai/gpt-oss-120b"],
+    "freeModels": ["openai/gpt-oss-120b"],
+    "tokenParameter": "max_completion_tokens",
+    "maxTokens": 1536,
+    "options": {
+      "reasoning_effort": "low",
+      "include_reasoning": false,
+      "response_format": {
+        "type": "json_object"
+      }
+    },
+    "notes": "Existing free plan; quota failures open circuit"
+  },
+  {
+    "id": "openrouter",
+    "baseUrl": "https://openrouter.ai/api/v1",
+    "keyEnv": "OPENROUTER_API_KEY",
+    "models": [],
+    "freeModels": [],
+    "discovery": true,
+    "maxTokens": 1536,
+    "options": {
+      "response_format": {
+        "type": "json_object"
+      }
+    },
+    "notes": "Discover :free AND zero-priced endpoints; force max_price zero and disable paid fallback"
+  },
+  {
+    "id": "zai",
+    "baseUrl": "https://api.z.ai/api/paas/v4",
+    "keyEnv": "ZAI_API_KEY",
+    "models": ["glm-4.7-flash", "glm-4.5-flash"],
+    "freeModels": ["glm-4.7-flash", "glm-4.5-flash"],
+    "maxTokens": 1536,
+    "options": {
+      "thinking": {
+        "type": "disabled"
+      },
+      "response_format": {
+        "type": "json_object"
+      }
+    },
+    "notes": "Existing authorized free Flash credentials only; no automatic upgrade"
+  },
+  {
+    "id": "nvidia",
+    "baseUrl": "https://integrate.api.nvidia.com/v1",
+    "keyEnv": "NVIDIA_API_KEY",
+    "models": ["google/gemma-4-31b-it"],
+    "freeModels": ["google/gemma-4-31b-it"],
+    "maxTokens": 1536,
+    "options": {
+      "response_format": {
+        "type": "json_object"
+      }
+    },
+    "notes": "Existing free research endpoint; no credit purchase"
+  }
+]

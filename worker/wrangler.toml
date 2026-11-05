@@ -1,0 +1,21 @@
+name = "otaku-oracle-answer"
+main = "src/index.ts"
+compatibility_date = "2026-11-04"
+workers_dev = true
+
+[vars]
+SITE_ORIGIN = "http://localhost:5173"
+CLIENT_DAILY_LIMIT = "50"
+MODEL_DAILY_BUDGET = "100"
+PROVIDER_COOLDOWN_SECONDS = "900"
+PROVIDER_TIMEOUT_MS = "8000"
+REQUEST_DEADLINE_MS = "15000"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "oracle"
+database_id = "00000000-0000-0000-0000-000000000000"
+migrations_dir = "migrations"
+
+[triggers]
+crons = ["17 2 * * *"]

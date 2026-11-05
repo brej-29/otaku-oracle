@@ -3,25 +3,21 @@ __pycache__/
 *.py[cod]
 *.sqlite3
 .env
-otaku_oracle.log
-
-# Django static artifacts
-staticfiles/
-frontend/dist/
-
-# Node
-node_modules/
-frontend/node_modules/
-
-# Vercel local output
-.vercel/
-
-# Python Environment variables
-env/
-venv/
+.dev.vars
+.pytest_cache/
 .venv/
+venv/
+env/
 */env/
 */venv/
 */.venv/
-.pytest_cache/
+
+# Node
+node_modules/
+web/dist/
+worker/dist/
+.wrangler/
+
+# Local run state
 eval/results/**/.run.lock
+otaku_oracle.log

@@ -1,0 +1,65 @@
+{
+  "at": "2026-11-05T22:12:44.215Z",
+  "scope": "Local Wrangler with real providers; five serial requests; no answer bodies saved",
+  "rows": [
+    {
+      "request": 1,
+      "http": 200,
+      "elapsedMs": 905,
+      "mode": "model",
+      "quota": "ok",
+      "provider": "groq",
+      "explanation": "omitted"
+    },
+    {
+      "request": 2,
+      "http": 200,
+      "elapsedMs": 439,
+      "mode": "model",
+      "quota": "ok",
+      "provider": "groq",
+      "explanation": "omitted"
+    },
+    {
+      "request": 3,
+      "http": 200,
+      "elapsedMs": 421,
+      "mode": "model",
+      "quota": "ok",
+      "provider": "groq",
+      "explanation": "omitted"
+    },
+    {
+      "request": 4,
+      "http": 200,
+      "elapsedMs": 600,
+      "mode": "model",
+      "quota": "ok",
+      "provider": "groq",
+      "explanation": "omitted"
+    },
+    {
+      "request": 5,
+      "http": 200,
+      "elapsedMs": 803,
+      "mode": "model",
+      "quota": "ok",
+      "provider": "groq",
+      "explanation": "omitted"
+    }
+  ],
+  "summary": {
+    "count": 5,
+    "minMs": 421,
+    "medianMs": 600,
+    "maxMs": 905
+  },
+  "budget": {
+    "before": 8,
+    "after": 13,
+    "delta": 5,
+    "scope": "existing local D1 model-call counter for its current UTC day"
+  },
+  "hedging": false,
+  "state": "Existing local D1 cache, budgets and circuits preserved; no cold-cache or cold-start claim"
+}
