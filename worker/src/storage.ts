@@ -3,6 +3,12 @@ export interface StoredRecord {
   record: AnimeRecord;
   fetchedAt: number;
 }
+export interface ProviderHealth {
+  provider: string;
+  last_success: number;
+  last_failure: number;
+  until_ms: number;
+}
 export class Store {
   constructor(readonly db: D1Database) {}
   async consume(key: string, limit: number, expires: number): Promise<boolean> {
@@ -77,6 +83,36 @@ export class Store {
       )
       .bind(id, until)
       .run();
+  }
+  async health(): Promise<ProviderHealth[]> {
+    const rows = await this.db
+      .prepare(
+        `SELECT h.provider,h.last_success,h.last_failure,COALESCE(c.until_ms,0) AS until_ms FROM provider_health h LEFT JOIN circuits c ON c.provider=h.provider UNION ALL SELECT c.provider,0 AS last_success,0 AS last_failure,c.until_ms FROM circuits c WHERE NOT EXISTS (SELECT 1 FROM provider_health h WHERE h.provider=c.provider)`,
+      )
+      .all<ProviderHealth>();
+    return rows.results;
+  }
+  async healthy(id: string, now: number) {
+    await this.db
+      .prepare(
+        `INSERT INTO provider_health(provider,last_success,last_failure) VALUES(?,?,0) ON CONFLICT(provider) DO UPDATE SET last_success=excluded.last_success`,
+      )
+      .bind(id, now)
+      .run();
+  }
+  async unhealthy(id: string, now: number, until: number) {
+    await this.db.batch([
+      this.db
+        .prepare(
+          `INSERT INTO provider_health(provider,last_success,last_failure) VALUES(?,0,?) ON CONFLICT(provider) DO UPDATE SET last_failure=excluded.last_failure`,
+        )
+        .bind(id, now),
+      this.db
+        .prepare(
+          `INSERT INTO circuits(provider,until_ms) VALUES(?,?) ON CONFLICT(provider) DO UPDATE SET until_ms=MAX(until_ms,excluded.until_ms)`,
+        )
+        .bind(id, until),
+    ]);
   }
   async catalog(id: string, now: number): Promise<string[] | null> {
     const row = await this.db

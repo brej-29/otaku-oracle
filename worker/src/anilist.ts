@@ -1,3 +1,4 @@
+import type { Deadline } from "./deadline";
 import { ApiError, type AnimeRecord, type Fetcher } from "./types";
 import { Store, type StoredRecord } from "./storage";
 import { readLimited } from "./parse";
@@ -47,6 +48,7 @@ export async function getRecord(
   store: Store,
   fetcher: Fetcher,
   now = Date.now(),
+  deadline?: Deadline,
 ): Promise<RecordResult> {
   let map = flights.get(store.db);
   if (!map) {
@@ -54,8 +56,17 @@ export async function getRecord(
     flights.set(store.db, map);
   }
   const current = map.get(id);
-  if (current) return current;
-  const request = load(id, store, fetcher, now);
+  if (current) {
+    if (!deadline) return current;
+    try {
+      return await deadline.run(() => current);
+    } catch {
+      const saved = await store.getRecord(id);
+      if (saved) return { ...saved, cached: true };
+      throw new ApiError(502, "upstream");
+    }
+  }
+  const request = load(id, store, fetcher, now, deadline);
   map.set(id, request);
   try {
     return await request;
@@ -68,6 +79,7 @@ async function load(
   store: Store,
   fetcher: Fetcher,
   now: number,
+  deadline?: Deadline,
 ): Promise<RecordResult> {
   const cached = await store.getRecord(id);
   if (cached && now - cached.fetchedAt < 86400000)
@@ -76,7 +88,10 @@ async function load(
   if (!(await store.lease(id, token, now))) {
     if (cached) return { ...cached, cached: true };
     for (let n = 0; n < 12; n++) {
-      await new Promise((r) => setTimeout(r, 1000));
+      if (deadline && deadline.remaining <= 0) break;
+      await new Promise((r) =>
+        setTimeout(r, Math.min(1000, deadline?.remaining ?? 1000)),
+      );
       const shared = await store.getRecord(id);
       if (shared) return { ...shared, cached: true };
     }
@@ -96,40 +111,45 @@ async function load(
       if (cached) return { ...cached, cached: true };
       throw new ApiError(429, "rate_limited", 60);
     }
-    const response = await fetcher("https://graphql.anilist.co", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: JSON.stringify({ query: QUERY, variables: { id } }),
-      signal: AbortSignal.timeout(10000),
-    });
-    if (response.status === 429) {
-      const until = retryAt(
-        response.headers.get("Retry-After"),
-        Date.now(),
-        60,
-      );
-      await response.body?.cancel();
-      await store.openCircuit("anilist", until);
-      throw new ApiError(
-        429,
-        "rate_limited",
-        Math.ceil((until - Date.now()) / 1000),
-      );
-    }
-    if (response.status === 404) throw new ApiError(404, "title_not_found");
-    if (!response.ok) throw new ApiError(502, "upstream");
-    const body = JSON.parse(await readLimited(response, 150000));
-    if (body.errors?.some((e: any) => e?.status === 404))
-      throw new ApiError(404, "title_not_found");
-    if (body.errors) throw new ApiError(502, "upstream");
-    if (body.data?.Media === null) throw new ApiError(404, "title_not_found");
-    const record = toRecord(body.data?.Media, id);
-    const fetchedAt = Date.now();
-    await store.putRecord(record, fetchedAt);
-    return { record, fetchedAt, cached: false };
+    const retrieve = async (signal: AbortSignal) => {
+      const response = await fetcher("https://graphql.anilist.co", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({ query: QUERY, variables: { id } }),
+        signal,
+      });
+      if (response.status === 429) {
+        const until = retryAt(
+          response.headers.get("Retry-After"),
+          Date.now(),
+          60,
+        );
+        await response.body?.cancel();
+        await store.openCircuit("anilist", until);
+        throw new ApiError(
+          429,
+          "rate_limited",
+          Math.ceil((until - Date.now()) / 1000),
+        );
+      }
+      if (response.status === 404) throw new ApiError(404, "title_not_found");
+      if (!response.ok) throw new ApiError(502, "upstream");
+      const body = JSON.parse(await readLimited(response, 150000));
+      if (body.errors?.some((e: any) => e?.status === 404))
+        throw new ApiError(404, "title_not_found");
+      if (body.errors) throw new ApiError(502, "upstream");
+      if (body.data?.Media === null) throw new ApiError(404, "title_not_found");
+      const record = toRecord(body.data?.Media, id);
+      const fetchedAt = Date.now();
+      await store.putRecord(record, fetchedAt);
+      return { record, fetchedAt, cached: false };
+    };
+    return deadline
+      ? await deadline.run(retrieve, 10000)
+      : await retrieve(AbortSignal.timeout(10000));
   } catch (error) {
     if (error instanceof ApiError && error.status === 404) throw error;
     if (cached) return { ...cached, cached: true };

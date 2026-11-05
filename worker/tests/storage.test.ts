@@ -20,6 +20,7 @@ beforeEach(async () => {
     "upstream_events",
     "circuits",
     "catalogs",
+    "provider_health",
   ])
     await db.prepare(`DELETE FROM ${name}`).run();
 });
@@ -81,4 +82,14 @@ it("cleans expired counters and transient coordination state", async () => {
     await db.prepare("SELECT COUNT(*) AS n FROM counters").first("n"),
   ).toBe(0);
   expect(await store.circuit("p")).toBe(0);
+});
+
+it("persists recent provider success/failure and its cooldown", async () => {
+  await store.healthy("first", 100);
+  await store.unhealthy("first", 200, 900);
+  expect(await store.health()).toEqual([
+    { provider: "first", last_success: 100, last_failure: 200, until_ms: 900 },
+  ]);
+  await store.healthy("first", 1000);
+  expect((await store.health())[0].last_success).toBe(1000);
 });

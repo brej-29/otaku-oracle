@@ -1,3 +1,5 @@
+import { Deadline, duration, requestDuration } from "./deadline";
+import { explanation } from "./explanation";
 import { getRecord } from "./anilist";
 import { checkClaim, recordClaims } from "./checker";
 import { readLimited } from "./parse";
@@ -25,13 +27,18 @@ function settings(env: Env) {
       throw new Error("configuration");
   if (new URL(env.SITE_ORIGIN).origin !== env.SITE_ORIGIN)
     throw new Error("configuration");
+  duration(env.PROVIDER_TIMEOUT_MS, 8000);
+  requestDuration(env);
   providers(env);
 }
 export async function handle(
   request: Request,
   env: Env,
   fetcher: Fetcher = fetch,
+  context?: Pick<ExecutionContext, "waitUntil">,
 ): Promise<Response> {
+  const started = Date.now();
+  let deadline: Deadline | undefined;
   const origin = request.headers.get("Origin");
   const headers = new Headers({
     "Content-Type": "application/json",
@@ -73,9 +80,12 @@ export async function handle(
     const length = request.headers.get("Content-Length");
     if (length !== null && (!/^\d+$/.test(length) || Number(length) > MAX_BODY))
       throw new ApiError(400, "invalid_request");
+    deadline = new Deadline(started + requestDuration(env));
     let input: any;
     try {
-      input = JSON.parse(await readLimited(request, MAX_BODY));
+      input = JSON.parse(
+        await deadline.run((signal) => readLimited(request, MAX_BODY, signal)),
+      );
     } catch {
       throw new ApiError(400, "invalid_request");
     }
@@ -115,14 +125,30 @@ export async function handle(
         "rate_limited",
         Math.max(1, Math.ceil((period.end - now) / 1000)),
       );
-    const result = await getRecord(input.titleId, store, fetcher);
-    const model = await draftAnswer(
+    const result = await getRecord(
+      input.titleId,
+      store,
+      fetcher,
+      Date.now(),
+      deadline,
+    );
+    const attempt = draftAnswer(
       input.question.trim(),
       result.record,
       env,
       store,
       fetcher,
+      deadline,
     );
+    // The response deadline also bounds slow bookkeeping; persist cooldowns in
+    // waitUntil if a provider finishes abort cleanup after record-only is sent.
+    context?.waitUntil(attempt.then(() => {}).catch(() => {}));
+    const model = await deadline
+      .run(() => attempt)
+      .catch(() => ({ draft: null, model: null, degraded: true }));
+    const claims = model.draft
+      ? model.draft.claims.map((c, i) => checkClaim(result.record, c, i))
+      : recordClaims(result.record);
     const response: Answer = {
       title: result.record.title,
       record: result.record,
@@ -130,13 +156,9 @@ export async function handle(
       recordCached: result.cached,
       mode: model.draft ? "model" : "record-only",
       model: model.model,
-      claims: model.draft
-        ? model.draft.claims.map((c, i) => checkClaim(result.record, c, i))
-        : recordClaims(result.record),
+      claims,
       explanation: model.draft
-        ? [model.draft.answer, model.draft.explanation]
-            .filter(Boolean)
-            .join("\n\n")
+        ? explanation(model.draft, claims, result.record)
         : null,
       quota: {
         state: model.draft ? (model.degraded ? "degraded" : "ok") : "exhausted",
@@ -172,10 +194,13 @@ export async function handle(
       },
       502,
     );
+  } finally {
+    deadline?.close();
   }
 }
 export default {
-  fetch: (request: Request, env: Env) => handle(request, env),
+  fetch: (request: Request, env: Env, ctx: ExecutionContext) =>
+    handle(request, env, fetch, ctx),
   scheduled: (_event: ScheduledController, env: Env, ctx: ExecutionContext) =>
     ctx.waitUntil(new Store(env.DB).cleanup(Date.now())),
 };

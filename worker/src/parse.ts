@@ -48,20 +48,28 @@ export function parseDraft(content: unknown): Draft {
 export async function readLimited(
   response: Pick<Response, "body">,
   limit: number,
+  signal?: AbortSignal,
 ): Promise<string> {
   if (!response.body) return "";
   const reader = response.body.getReader();
+  const abort = () => {
+    void reader.cancel().catch(() => {});
+  };
+  signal?.addEventListener("abort", abort, { once: true });
   let size = 0;
   const chunks: Uint8Array[] = [];
   try {
     while (true) {
+      signal?.throwIfAborted();
       const { value, done } = await reader.read();
+      signal?.throwIfAborted();
       if (done) break;
       size += value.byteLength;
       if (size > limit) throw new Error("body_limit");
       chunks.push(value);
     }
   } finally {
+    signal?.removeEventListener("abort", abort);
     await reader.cancel().catch(() => {});
   }
   const merged = new Uint8Array(size);

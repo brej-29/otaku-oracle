@@ -31,6 +31,7 @@ beforeEach(async () => {
     "upstream_events",
     "circuits",
     "catalogs",
+    "provider_health",
   ])
     await db.prepare(`DELETE FROM ${name}`).run();
   env = environment(db);
@@ -76,7 +77,7 @@ it("returns the frozen model response and source-linked verified claims", async 
     status: "verified",
     sourceUrl: record.url,
   });
-  expect(body.explanation).toBe(draft.answer);
+  expect(body.explanation).toBeNull();
   expect(Number.isFinite(Date.parse(body.fetchedAt))).toBe(true);
   expect(Object.keys(body).sort()).toEqual(
     [
@@ -494,4 +495,40 @@ it("rejects missing, empty and nonnumeric free-catalog prices", () => {
       ],
     }),
   ).toEqual(["d:free"]);
+});
+
+it("returns record-only at the total deadline even if provider bookkeeping stalls", async () => {
+  await store.putRecord(record, Date.now());
+  env.REQUEST_DEADLINE_MS = "100";
+  const healthy = vi
+    .spyOn(Store.prototype, "healthy")
+    .mockImplementation(async () => new Promise<void>(() => {}));
+  try {
+    const res = await handle(ask(), env, network());
+    expect(res.status).toBe(200);
+    expect(((await res.json()) as any).mode).toBe("record-only");
+  } finally {
+    healthy.mockRestore();
+  }
+});
+
+it("bounds an unfinished input stream by the total deadline before any upstream call", async () => {
+  env.REQUEST_DEADLINE_MS = "50";
+  let cancelled = false;
+  const body = new ReadableStream({
+    cancel() {
+      cancelled = true;
+    },
+  });
+  const request = new Request("https://worker.example/api/ask", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body,
+    duplex: "half",
+  } as any);
+  const net = network();
+  const response = await handle(request, env, net);
+  expect(response.status).toBe(400);
+  expect(cancelled).toBe(true);
+  expect(net).not.toHaveBeenCalled();
 });

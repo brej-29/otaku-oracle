@@ -1,7 +1,7 @@
-import { readFileSync } from "node:fs";
+import { readFileSync, readdirSync } from "node:fs";
 import { URL } from "node:url";
 import { Miniflare, convertV4MiniflareOptions } from "miniflare";
-import type { AnimeRecord, Env, Provider } from "../src/types";
+import type { AnimeRecord, Draft, Env, Provider } from "../src/types";
 export const record: AnimeRecord = {
   id: 1,
   title: "Cowboy Bebop",
@@ -31,7 +31,7 @@ export const media = {
   coverImage: { large: null, color: null },
   genres: ["Action"],
 };
-export const draft = {
+export const draft: Draft = {
   answer: "The record lists 26 episodes.",
   claims: [{ text: "There are 26 episodes.", field: "episodes", value: "26" }],
   explanation: null,
@@ -58,13 +58,17 @@ export async function database() {
     }),
   );
   const db = await mf.getD1Database("DB");
-  for (const sql of readFileSync(
-    new URL("../migrations/0001_storage.sql", import.meta.url),
-    "utf8",
-  )
-    .split(";")
-    .filter((s) => s.trim()))
-    await db.prepare(sql).run();
+  for (const name of readdirSync(new URL("../migrations/", import.meta.url))
+    .filter((n) => n.endsWith(".sql"))
+    .sort())
+    for (const sql of readFileSync(
+      new URL(`../migrations/${name}`, import.meta.url),
+      "utf8",
+    )
+      .split(";")
+      .filter((s) => s.trim()))
+      await db.prepare(sql).run();
+
   return { mf, db: db as unknown as D1Database };
 }
 export function environment(db: D1Database, changes: Partial<Env> = {}): Env {

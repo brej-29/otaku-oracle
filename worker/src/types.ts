@@ -56,6 +56,7 @@ export interface Provider {
   freeModels: string[];
   discovery?: boolean;
   maxTokens: number;
+  timeoutMs?: number;
   tokenParameter?: string;
   options: Record<string, unknown>;
   notes?: string;
@@ -68,6 +69,8 @@ export interface Env {
   MODEL_DAILY_BUDGET: string;
   PROVIDER_COOLDOWN_SECONDS: string;
   PROVIDERS_JSON?: string;
+  PROVIDER_TIMEOUT_MS?: string;
+  REQUEST_DEADLINE_MS?: string;
   ZAI_API_KEY?: string;
   GROQ_API_KEY?: string;
   NVIDIA_API_KEY?: string;
