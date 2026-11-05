@@ -6,6 +6,7 @@ import time
 import urllib.error
 import urllib.request
 from datetime import datetime, timezone
+from email.utils import parsedate_to_datetime
 from pathlib import Path
 
 
@@ -27,11 +28,23 @@ class RequestFailed(Exception):
         super().__init__(f"Request failed: {attempts[-1]['status']}")
 
 
+def retry_delay(value):
+    """Retry-After can be seconds or an HTTP date; do not shorten server cooldowns."""
+    try:
+        return max(0, float(value))
+    except (ValueError, TypeError):
+        try:
+            return max(0, (parsedate_to_datetime(value) - datetime.now(timezone.utc)).total_seconds())
+        except (ValueError, TypeError, AttributeError):
+            return None
+
+
 class Client:
-    def __init__(self, interval=2.1, timeout=90):
+    def __init__(self, interval=2.1, timeout=90, retry_rate_limits=False):
         self.interval = interval
         self.timeout = timeout
         self.last = 0.0
+        self.retry_rate_limits = retry_rate_limits
 
     def request(self, url, payload=None, token=None):
         attempts = []
@@ -53,11 +66,13 @@ class Client:
                     return data, attempts
             except urllib.error.HTTPError as error:
                 # Record only JSON error messages with credentials redacted, never request headers.
-                messages = []
+                messages, codes = [], []
                 try:
                     body = json.loads(error.read(16384))
-                    errors = body.get("errors", [body.get("error", {})])
+                    errors = body.get("errors", [body.get("error", body)])
                     for item in errors:
+                        if isinstance(item, dict) and item.get("code") is not None:
+                            codes.append(str(item["code"]))
                         if isinstance(item, dict) and isinstance(item.get("message"), str):
                             message = item["message"]
                             messages.append(message.replace(token, "[REDACTED]")[:1000] if token else message[:1000])
@@ -65,9 +80,17 @@ class Client:
                     pass
                 attempts.append({"at": stamp, "status": error.code, "retry_after": error.headers.get("Retry-After"),
                                  "messages": messages, "rate_limit": error.headers.get("X-RateLimit-Limit"),
-                                 "rate_remaining": error.headers.get("X-RateLimit-Remaining")})
-                if error.code not in (500, 502, 503, 504):
+                                 "rate_remaining": error.headers.get("X-RateLimit-Remaining"),
+                                 "request_limit_minute": error.headers.get("x-ratelimit-limit-req-minute"), "codes": codes})
+                if "1113" in codes or error.code in (401, 402, 403) or error.headers.get("x-ratelimit-limit-req-minute") == "0":
                     break
+                rate_retry = self.retry_rate_limits and error.code == 429
+                if error.code not in (500, 502, 503, 504) and not rate_retry:
+                    break
+                delay = retry_delay(error.headers.get("Retry-After"))
+                if retry < 2:
+                    time.sleep(delay if delay is not None else (10 * 2 ** retry if rate_retry else 2 ** retry))
+                continue
             except (urllib.error.URLError, TimeoutError, OSError, ValueError):
                 attempts.append({"at": stamp, "status": "transport_or_invalid_json"})
             if retry < 2:

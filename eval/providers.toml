@@ -1,0 +1,49 @@
+default_provider = "zai"
+
+[providers.zai]
+base_url = "https://api.z.ai/api/paas/v4"
+key_env = "Z_API_KEY"
+models = ["glm-4.7-flash", "glm-4.5-flash"]
+free_models = ["glm-4.7-flash", "glm-4.5-flash"]
+discovery = "configured"
+interval = 3.1
+run_enabled = true
+health_path = "/models"
+free_tier_notes = "Only these two Flash IDs are authorized; coordinator verified both responding without balance on 2026-11-06; numeric daily allowance unverified."
+request_options = { thinking = { type = "disabled" }, response_format = { type = "json_object" } }
+
+[providers.openrouter]
+base_url = "https://openrouter.ai/api/v1"
+key_env = "OPENROUTER_API_KEY"
+models = []
+free_models = []
+discovery = "zero_price_free_suffix"
+interval = 3.1
+run_enabled = true
+health_path = "/key"
+free_tier_notes = "Authenticated key currently returns 401; runtime selection requires :free suffix and zero token prices; account daily caps apply."
+request_options = {}
+
+[providers.groq]
+base_url = "https://api.groq.com/openai/v1"
+key_env = "GROQ_API_KEY"
+models = ["llama-3.3-70b-versatile", "llama-3.1-8b-instant"]
+free_models = []
+discovery = "configured"
+interval = 3.1
+run_enabled = false
+health_path = "/models"
+free_tier_notes = "Coordinator observed expired_api_key (401); verify current free eligibility and allowlist before a separate evaluation run."
+request_options = {}
+
+[providers.mistral]
+base_url = "https://api.mistral.ai/v1"
+key_env = "MISTRAL_API_KEY"
+models = ["mistral-small-latest", "mistral-medium-latest"]
+free_models = []
+discovery = "configured"
+interval = 3.1
+run_enabled = false
+health_path = "/models"
+free_tier_notes = "Models endpoint authenticates; coordinator observed chat 429 with request allowance 0; paid calls forbidden, verify activated free quota before a separate run."
+request_options = {}

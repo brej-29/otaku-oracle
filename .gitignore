@@ -24,3 +24,4 @@ venv/
 */venv/
 */.venv/
 .pytest_cache/
+eval/results/**/.run.lock

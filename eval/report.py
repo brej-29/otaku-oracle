@@ -91,7 +91,11 @@ def report(dataset, directory):
     if manifest["dataset_sha256"] != fingerprint(dataset):
         raise ValueError("Result manifest does not match dataset")
     questions = {q["id"]: q for q in dataset["questions"]}
-    journal = [json.loads(s) for s in (directory / "answers.jsonl").read_text(encoding="utf-8").splitlines()]
+    # A single writer flushes full lines; ignore only an interrupted final line in live snapshots.
+    journal = []
+    for line in (directory / "answers.jsonl").read_text(encoding="utf-8").splitlines(keepends=True):
+        if line.endswith("\n"):
+            journal.append(json.loads(line))
     # Retain failed attempts in the journal, score only the latest observation on resume.
     rows = list({(r["question_id"], r["model"], r["arm"], r["repeat"]): r for r in journal}.values())
     for row in rows:
@@ -113,6 +117,10 @@ def report(dataset, directory):
             subset = [r for r in rows if (model == "pooled" or r["model"] == model) and (bucket == "all" or r["bucket"] == bucket)]
             paired[f"{model}|{bucket}"] = paired_summary(subset)
     completion = json.loads((directory / "completion.json").read_text(encoding="utf-8"))
+    successes = {(r["question_id"], r["model"], r["arm"], r["repeat"]) for r in rows if r["status"] == "ok"}
+    coverage_complete = all((q, m, a, r) in successes for q in questions for m in manifest["models"]
+                            for a in ("A", "B") for r in range(3))
+    completion["complete"] = completion["complete"] and coverage_complete
     credential_blocked = any(any(a.get("status") == 401 for a in r.get("attempts", [])) for r in rows if r["status"] != "ok")
     result = {"dataset_sha256": manifest["dataset_sha256"], "title_count": len(dataset["titles"]),
               "journal_entries": len(journal), "historical_error_entries": sum(r["status"] != "ok" for r in journal),
@@ -137,10 +145,55 @@ def report(dataset, directory):
     for key, value in paired.items():
         lines.append(f"| {key} | {value['pairs']} | {percent(value['delta'])} | {ci(value['ci95'])} |")
     for dimension in ("bucket", "kind"):
-        lines += ["", f"## Accuracy by {dimension}", "", "| Model | Arm | Slice | Responses / expected | Accuracy (95% CI) |", "|---|---|---|---:|---|"]
+        lines += ["", f"## Metrics by {dimension}", "", "| Model | Arm | Slice | Responses / expected | Accuracy (95% CI) | Abstention | Confident wrong | Wrong answer | Parse failure | Missing confidence | Citation validity | Correct + citation |", "|---|---|---|---:|---|---:|---:|---:|---:|---:|---:|---:|"]
         for key, value in groups.items():
             model, arm, label = key.split("|")
             if label.startswith(dimension + ":"):
-                lines.append(f"| {model} | {arm} | {label.split(':')[1]} | {value['responses']} / {value['expected']} | {percent(value['correct'])} {ci(value['accuracy_ci95'])} |")
+                lines.append(f"| {model} | {arm} | {label.split(':')[1]} | {value['responses']} / {value['expected']} | {percent(value['correct'])} {ci(value['accuracy_ci95'])} | " +
+                             " | ".join(percent(value[k]) for k in ("abstention", "hallucination", "wrong_answer", "parse_failure", "missing_confidence", "citation_validity", "correct_with_citation")) + " |")
+    if completion["complete"]:
+        pooled = paired["pooled|all"]
+        passed = (pooled["delta"] >= .1 and pooled["ci95"][0] > 0 and
+                  all(paired[f"{m}|all"]["delta"] >= 0 for m in manifest["models"]))
+        long_tail = paired.get("pooled|long_tail", {}).get("delta")
+        ordering = long_tail is not None and all(long_tail > paired[f"pooled|{b}"]["delta"] for b in ("head", "torso") if f"pooled|{b}" in paired)
+        lines += ["", f"Completed-coverage preregistered threshold: {'PASS' if passed else 'FAIL'}.",
+                  f"Long-tail point-improvement ordering prediction: {'supported' if ordering else 'not supported'}; no separate significance claim."]
+        result["threshold"] = {"passed": passed, "long_tail_ordering": ordering}
+        write_json(directory / "summary.json", result)
+    write_error_analysis(rows, questions, directory)
+    lines += ["", "[Sampled error analysis](error-analysis.md); raw responses and all failures remain in the append-only journal."]
     (directory / "summary.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
     return result
+
+
+def write_error_analysis(rows, questions, directory):
+    lines = ["# Sampled error analysis", "", f"Seed {SEED}; up to ten incorrect observations per arm, sampled without replacement across unique question/model pairs.",
+             "Abstentions and parse failures are included as incorrect and labelled; no examples are fabricated when fewer are available."]
+    artifact = {}
+    rng = random.Random(SEED)
+    for arm in ("A", "B"):
+        candidates = {}
+        for row in rows:
+            if row["arm"] == arm and row["status"] == "ok" and not row["correct"]:
+                candidates.setdefault((row["question_id"], row["model"]), row)
+        selected = rng.sample(list(candidates.values()), min(10, len(candidates)))
+        lines += ["", f"## Arm {arm}: {len(selected)} sampled of {len(candidates)} incorrect question/model pairs", "",
+                  "| Model / repeat | Question | Gold | Answer | Failure |", "|---|---|---|---|---|"]
+        artifact[arm] = []
+        for row in selected:
+            q = questions[row["question_id"]]
+            try:
+                answer = json.loads(row.get("content") or "").get("answer")
+            except (ValueError, TypeError, AttributeError):
+                answer = row.get("content")
+            failure = "parse failure" if row["parse_failure"] else "abstention" if row["abstention"] else "confident wrong" if row["hallucination"] else "wrong"
+            entry = {"model": row["model"], "repeat": row["repeat"], "question_id": q["id"], "title": q["title"],
+                     "question": q["question"], "gold": q["gold"], "answer": answer, "failure": failure}
+            artifact[arm].append(entry)
+            def cell(value):
+                return json.dumps(value, ensure_ascii=False).replace("|", "\\|").replace("\n", " ")
+            title = q["title"].get("romaji") or q["title"].get("english")
+            lines.append(f"| {row['model']} / {row['repeat']} | {cell(str(title) + ': ' + q['question'])} | {cell(q['gold'])} | {cell(answer)} | {failure} |")
+    write_json(directory / "error-analysis.json", artifact)
+    (directory / "error-analysis.md").write_text("\n".join(lines) + "\n", encoding="utf-8")

@@ -82,7 +82,7 @@ def test_resume_preserves_journal_and_skips_successful_observations(tmp_path, mo
          "question": "season?", "gold": "SPRING", "citation": "https://anilist.co/anime/1"}
     dataset = {"titles": [{"bucket": "head", "record": record}], "questions": [q]}
     output = tmp_path / "results"
-    monkeypatch.setenv("OPENROUTER_API_KEY", "test-credential")
+    monkeypatch.setenv("Z_API_KEY", "test-credential")
     monkeypatch.setattr(runner, "discover", lambda *args: ["first:free", "second:free"])
     monkeypatch.setattr(AniList, "fetch", lambda *args: {"data": {"Media": record}})
     attempts = []
