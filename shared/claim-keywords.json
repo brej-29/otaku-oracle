@@ -1,0 +1,8 @@
+{
+  "studio": ["studio", "animat", "produc", "made"],
+  "episodes": ["episode", "how many", "long"],
+  "year": ["year", "when", "air", "start", "release"],
+  "format": ["format", "movie", "film", "tv", "ova", "series"],
+  "source": ["source", "based", "adapt", "manga", "novel", "original"],
+  "season": ["season"]
+}
