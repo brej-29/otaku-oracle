@@ -117,6 +117,7 @@ def report(dataset, directory):
             subset = [r for r in rows if (model == "pooled" or r["model"] == model) and (bucket == "all" or r["bucket"] == bucket)]
             paired[f"{model}|{bucket}"] = paired_summary(subset)
     completion = json.loads((directory / "completion.json").read_text(encoding="utf-8"))
+    completion["blocked_models"] = sorted({r["model"] for r in rows if r.get("stop_model")})
     successes = {(r["question_id"], r["model"], r["arm"], r["repeat"]) for r in rows if r["status"] == "ok"}
     coverage_complete = all((q, m, a, r) in successes for q in questions for m in manifest["models"]
                             for a in ("A", "B") for r in range(3))
@@ -140,6 +141,18 @@ def report(dataset, directory):
         model, arm, _ = key.split("|")
         lines.append(f"| {model} | {arm} | {value['responses']} / {value['expected']} | {value['attempted']} | {percent(value['correct'])} {ci(value['accuracy_ci95'])} | " +
                      " | ".join(percent(value[k]) for k in ("abstention", "hallucination", "wrong_answer", "parse_failure", "missing_confidence", "citation_validity", "correct_with_citation")) + " |")
+    failures = [{k: r.get(k) for k in ("model", "question_id", "arm", "repeat", "status", "attempts")}
+                for r in rows if r["status"] != "ok"]
+    result["request_failures"] = failures
+    write_json(directory / "summary.json", result)
+    if failures:
+        lines += ["", "## Unfinished observations after request failure", "",
+                  "| Model | Question | Arm / repeat | Status | HTTP attempts | Business codes |", "|---|---|---|---|---|---|"]
+        for failure in failures:
+            attempts = failure.get("attempts") or []
+            statuses = ", ".join(str(a["status"]) for a in attempts)
+            codes = ", ".join(c for a in attempts for c in a.get("codes", [])) or "N/A"
+            lines.append(f"| {failure['model']} | {failure['question_id']} | {failure['arm']} / {failure['repeat']} | {failure['status']} | {statuses} | {codes} |")
     lines += ["", "A: ungrounded; B: retrieved known-ID record; C: deterministic same-record extraction (consistency ceiling, not independent truth).",
               "Citations are exact canonical-URL matches, not entailment checks. N/A means no response/citation denominator.", "",
               "| Model / bucket | Complete pairs | B minus A | 95% CI |", "|---|---:|---:|---|"]
