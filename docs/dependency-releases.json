@@ -1,0 +1,57 @@
+[
+  {
+    "package": "react",
+    "version": "19.2.0",
+    "published": "2025-10-01T21:38:32.757Z"
+  },
+  {
+    "package": "react-dom",
+    "version": "19.2.0",
+    "published": "2025-10-01T21:38:42.388Z"
+  },
+  {
+    "package": "@types/node",
+    "version": "24.10.0",
+    "published": "2025-11-03T01:30:01.432Z"
+  },
+  {
+    "package": "@types/react",
+    "version": "19.2.2",
+    "published": "2025-10-07T05:34:25.017Z"
+  },
+  {
+    "package": "@types/react-dom",
+    "version": "19.2.2",
+    "published": "2025-10-13T14:36:46.425Z"
+  },
+  {
+    "package": "@vitejs/plugin-react",
+    "version": "5.1.0",
+    "published": "2025-10-24T09:02:44.199Z"
+  },
+  {
+    "package": "lighthouse",
+    "version": "13.5.0",
+    "published": "2026-09-18T14:13:55.261Z"
+  },
+  {
+    "package": "oxlint",
+    "version": "1.27.0",
+    "published": "2025-11-10T11:34:13.828Z"
+  },
+  {
+    "package": "playwright",
+    "version": "1.56.1",
+    "published": "2025-10-17T00:51:31.864Z"
+  },
+  {
+    "package": "typescript",
+    "version": "5.9.3",
+    "published": "2025-09-30T21:19:38.784Z"
+  },
+  {
+    "package": "vite",
+    "version": "7.3.7",
+    "published": "2026-10-06T05:11:19.017Z"
+  }
+]

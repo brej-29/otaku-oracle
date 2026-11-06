@@ -1,4 +1,39 @@
-# Answer Worker deployment
+# Site and answer API deployment
+
+## Dusk cinema interface
+
+The client stays on the existing React/Vite stack and keeps the separate answer Worker contract. Search, questions and evaluation data are runtime interactions. A server framework would add another deployment/runtime without improving the native-scroll camera or changing the existing non-streaming answer API. This revision adds no animation dependency: CSS handles transforms and the original eight-frame courier; canvas draws ambient particles only while visible. Exact web dependency versions and their published dates are in dependency-releases.json.
+
+Target: Cloudflare Pages Free for the client, plus the existing answer Worker. No deployment or account creation was performed. As checked on 2026-11-06, Pages Free permits 500 builds/month, one concurrent build, 20,000 files and 25 MiB per file ([limits opened](https://developers.cloudflare.com/pages/platform/limits/)). Only web/dist is uploaded; review screenshots and raw audit reports are excluded from that build. The separate API retains its own quota protections.
+
+From a checkout of this branch, with Node 24, build the client against the actual deployed API URL:
+
+~~~powershell
+cd web
+npm.cmd ci
+$env:VITE_API_BASE = 'https://YOUR-ANSWER-WORKER.workers.dev'
+npm.cmd run build
+cd ../worker
+npm.cmd ci
+npx.cmd wrangler login
+# Skip create if the project already exists in the current account.
+npx.cmd wrangler pages project create otaku-oracle --production-branch main
+npx.cmd wrangler pages deploy ../web/dist --project-name otaku-oracle --branch main
+~~~
+
+Use the project URL returned by the command; a taken name may receive a suffix. Set SITE_ORIGIN in worker/wrangler.toml to that exact origin, then follow the existing API database/secret/deployment procedure below and deploy the Worker. Its allowed origin is deliberately exact. VITE_API_BASE is a public endpoint, never a credential. Do not put provider keys in a web environment variable. When it is absent the client clearly labels its record-only demo, and unsupported questions receive no substitute answer.
+
+The [direct-upload commands opened](https://developers.cloudflare.com/pages/get-started/direct-upload/) document project creation and deployment. To preview the backend-connected interface locally, keep one Worker on 8787 and run from web/:
+
+~~~powershell
+$env:VITE_API_BASE = 'http://localhost:8787'
+npm.cmd run dev -- --host localhost --port 5173 --strictPort
+~~~
+
+Leave VITE_API_BASE empty for the labelled demo. The existing service allows http://localhost:5173; another frontend origin will fail CORS. Do not start a second Worker on an occupied port. Local preview and deployment do not establish broad production availability: use the prepared smoke below once both endpoints are deployed.
+
+## Answer Worker
+
 
 Prepared for the user's existing Cloudflare account; nothing has been deployed and no account has been created. Run commands below from `D:\Project\anime-app-wt\worker\worker` in PowerShell (use `npm.cmd` / `npx.cmd` if execution policy blocks the PowerShell shims). Node 24 is the tested runtime. Do not enable a paid plan or buy provider credits.
 

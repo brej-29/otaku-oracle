@@ -1,0 +1,25 @@
+﻿{
+  "version": 1,
+  "identity": "dusk cinema",
+  "motion": {
+    "sceneTravelX": "2 viewport widths",
+    "sceneTravelY": 40,
+    "cloudSeconds": 28,
+    "lanternSeconds": 5,
+    "walkFrames": 8,
+    "walkSeconds": 0.8,
+    "controlMilliseconds": 250,
+    "reduced": "complete static sequence"
+  },
+  "layout": {
+    "phone": 390,
+    "tablet": 768,
+    "desktop": 1440,
+    "headerDesktop": 80,
+    "headerPhone": 70,
+    "deskRadius": 14
+  },
+  "states": ["verified", "conflict", "unchecked"],
+  "canonicalStyles": ["src/tokens.css", "src/app.css"],
+  "artSource": "AniList hot-linked covers and banners; timestamped queries in scripts/fixtures"
+}

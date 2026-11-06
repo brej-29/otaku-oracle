@@ -1,40 +1,66 @@
-# Design system: manga proof sheet
+﻿---
+name: Dusk cinema
+colors:
+  paper: "#f4f0e7"
+  sheet: "#fffdf5"
+  ink: "#26212b"
+  muted: "#655b66"
+  red: "#ae352e"
+  dusk: "#282137"
+  cream: "#fff0cf"
+  gold: "#efc872"
+typography:
+  display:
+    fontFamily: "Journal, Georgia, serif"
+    fontWeight: 400
+  body:
+    fontFamily: "Field, Arial, sans-serif"
+    fontWeight: 400
+rounded:
+  desk: 14
+  button: 8
+components:
+  button-primary:
+    backgroundColor: "{colors.ink}"
+    textColor: "{colors.paper}"
+    rounded: "{rounded.button}"
+---
 
-Idea: manga is drafted in non-photo blue pencil (it does not scan), inked in black, and documents are verified with a hanko seal. Otaku Oracle uses those three real materials as its meaning system.
+## Overview
 
-| Material | Means | Treatment |
-|---|---|---|
-| Ink, indigo black | Checked, stated as fact | solid text, thick panel borders |
-| Blue pencil, dashed | Not checked | dashed rules, pencil blue text, "Not checked" tag |
-| Red seal (確, "confirmed") | Matches the AniList record | 4 pixel rough-edge SVG stamp, springs in |
+An anime night festival in front of a warm editorial journal. Real covers identify the subject immediately. The original fox courier Nori connects the gallery, the question and the source. The night world remains alive before scrolling and becomes a complete still poster when motion is paused.
 
-## Tokens (web/src/tokens.css)
-| Token | Light | Dark | Contrast |
-|---|---|---|---|
-| paper | #f1f5f8 | #12162b | base |
-| ink | #1a1f3a | #e9eef6 | 14.6:1 on paper |
-| ink-soft | #444b6b | #b4bdd6 | 7.9:1 |
-| pencil | #266190 | #7fb8e3 | 5.5:1 on paper, 4.9:1 on paper-2 |
-| seal | #c0291f | #ff6b5c | 5.6:1 on paper |
+## Colors
 
-Contrast values for the pairs I changed were confirmed by Lighthouse (accessibility 100). The other ratios are my calculations, not tool-verified.
+Warm paper, near-black plum ink, vermilion and lantern gold. The moving world uses deep dusk, cream lettering and protected dark surfaces behind reading. Light and dark surface tokens live in src/tokens.css; the night scene retains its cinematic palette in both themes. Status is never colour alone: a tilted solid seal for verified, a crossed open square and visible correction for conflict, and a dashed open mark for unchecked.
 
-## Type
-Dela Gothic One for display (headlines, numerals), Zen Kaku Gothic New 400/500/700 for body. Fluid scale `--step--1` to `--step-4`. Body line length under 66 characters. The seal glyph is a 1.1 KB subset of Dela Gothic One (確認証).
+## Typography
+
+Instrument Serif, normal and italic, is self-hosted under the Journal alias. DM Sans 400 and 600 is self-hosted under Field. Original font licences remain beside the four files. Headlines use the serif and italic accent; controls use the sans. Main hero display reaches 96 px desktop and 76 px phone. Reading and answer headings are quieter, with long questions allowed to wrap at the full available width.
 
 ## Layout
-Uneven manga panels: 3 px ink borders, no radius, one gutter token. Hero is two staggered panels, the pipeline is four panels of different heights. Panel numbers appear only on the pipeline, the one real sequence.
 
-## Motion language
-- One orchestrated moment: a seal lands on the hero panel (spring, 0.9 s delay, rotates to -9 degrees).
-- Answers: each sentence starts in pencil, inks to black and gets stamped, 0.62 s apart (spring, stiffness 520, damping 22).
-- Chart bars grow once on scroll. Buttons press into their offset shadow.
-- `prefers-reduced-motion`: every animation is skipped and the final state shows at once. Shimmer skeletons stop.
+An immediate cover-led opening, a horizontal desktop question desk, a real-title starter row, then a three-scene pinned native-scroll journey. Phone controls stack vertically; the journey still travels sideways and diagonally. No wheel/touch input is intercepted. Scene navigation can move the camera without scrolling by hand. With reduced motion the same scenes form a vertical static sequence.
 
-## Honesty rules in the UI
-- Accuracy numbers load only from `public/data/eval-summary.json`. It currently says PENDING and shows no chart.
-- `?sample` loads a labelled sample file so the chart can be reviewed. The sample is visibly tagged "Not results".
-- The explanation line in an answer is a fixed placeholder, tagged "Demo answer", until a backend exists.
+## Elevation & Depth
 
-## References studied (conceptual, no assets copied)
-Not yet recorded: see docs/UI_BRIEF.md. I have not opened reference sites in this pass, so no reference-based claims are made here.
+Real image planes, offset soft shadows and a separate foreground gate create depth. The scene track travels 2 viewport widths and 40 px vertically; mountains, skyline, gate and moon move at different rates. Clouds drift over 28 seconds, lanterns swing over 5 seconds, and particles render at a capped cadence only while visible. The world is deliberately cel-shaded, not a simulated 3D environment.
+
+## Shapes
+
+Thick original ink contours for the character and scenery; rectangular paper covers and source notes; restrained rounding for working controls. The fox mark, favicon and wordmark belong to the same courier identity. Nori has eight authored leg-frame silhouettes, an animated coat and tail, pointer-aware eyes, blink/look behaviour and separate curious, thinking, happy and puzzled poses.
+
+## Components
+
+- Cover stacks use real AniList image URLs, keep their title captions and respond to the pointer with tilt.
+- Primary actions have a small magnetic response and an arrow movement. Keyboard focus remains a visible outline.
+- The waiting view combines the selected title with Nori and a moving source scene. Progress labels advance only on actual source/response events. A pending response never displays a completed verification.
+- Verified seals land with a brief six-petal burst after the response arrives. Conflicts keep the original statement struck through and show what AniList says. Unchecked prose receives no verified seal.
+- The Why page reads the existing evaluation file at runtime. Illustrative samples remain labelled not results.
+- Pause and reduced motion disable all animation and transitions, including canvas updates, while retaining every control and claim.
+
+## Do's and Don'ts
+
+Keep anime art, human curiosity and the companion ahead of the checking mechanism. Keep the original source close. Do not replace an unsupported demo question with default facts, publish made-up accuracy, or make unchecked prose look verified. Do not add a motion framework to solve effects already handled by the current native animation. Do not hide errors behind decorative loading or use a timer to claim that checking has finished.
+
+Known limits: the world has flatter depth than the strongest reference, some annotations are small, and external art availability depends on the source CDN. Hardware screen-reader, touch-device and native share-sheet verification remains outstanding.

@@ -1,0 +1,234 @@
+{
+  "query": "query{Page(perPage:8){media(id_in:[1,199,16498,154587,20954,21519,101922,110277],type:ANIME,isAdult:false){id title{romaji english native} startDate{year} format coverImage{extraLarge large color} bannerImage siteUrl studios(isMain:true){nodes{name}} episodes genres}}}",
+  "fetchedAt": "2026-11-06T05:40:43.078Z",
+  "data": {
+    "Page": {
+      "media": [
+        {
+          "id": 1,
+          "title": {
+            "romaji": "Cowboy Bebop",
+            "english": "Cowboy Bebop",
+            "native": "カウボーイビバップ"
+          },
+          "startDate": {
+            "year": 1998
+          },
+          "format": "TV",
+          "coverImage": {
+            "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx1-GCsPm7waJ4kS.png",
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx1-GCsPm7waJ4kS.png",
+            "color": "#f16b50"
+          },
+          "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/1-OquNCNB6srGe.jpg",
+          "siteUrl": "https://anilist.co/anime/1",
+          "studios": {
+            "nodes": [
+              {
+                "name": "Sunrise"
+              }
+            ]
+          },
+          "episodes": 26,
+          "genres": ["Action", "Adventure", "Drama", "Sci-Fi"]
+        },
+        {
+          "id": 199,
+          "title": {
+            "romaji": "Sen to Chihiro no Kamikakushi",
+            "english": "Spirited Away",
+            "native": "千と千尋の神隠し"
+          },
+          "startDate": {
+            "year": 2001
+          },
+          "format": "MOVIE",
+          "coverImage": {
+            "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx199-sWefXJvXkDOb.jpg",
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx199-sWefXJvXkDOb.jpg",
+            "color": "#e45d5d"
+          },
+          "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/199-Sm2RU5PSqw7T.jpg",
+          "siteUrl": "https://anilist.co/anime/199",
+          "studios": {
+            "nodes": [
+              {
+                "name": "Studio Ghibli"
+              }
+            ]
+          },
+          "episodes": 1,
+          "genres": ["Adventure", "Drama", "Fantasy", "Supernatural"]
+        },
+        {
+          "id": 16498,
+          "title": {
+            "romaji": "Shingeki no Kyojin",
+            "english": "Attack on Titan",
+            "native": "進撃の巨人"
+          },
+          "startDate": {
+            "year": 2013
+          },
+          "format": "TV",
+          "coverImage": {
+            "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx16498-buvcRTBx4NSm.jpg",
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx16498-buvcRTBx4NSm.jpg",
+            "color": "#f1a143"
+          },
+          "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/16498-8jpFCOcDmneX.jpg",
+          "siteUrl": "https://anilist.co/anime/16498",
+          "studios": {
+            "nodes": [
+              {
+                "name": "WIT STUDIO"
+              }
+            ]
+          },
+          "episodes": 25,
+          "genres": ["Action", "Drama", "Fantasy", "Mystery"]
+        },
+        {
+          "id": 20954,
+          "title": {
+            "romaji": "Koe no Katachi",
+            "english": "A Silent Voice",
+            "native": "聲の形"
+          },
+          "startDate": {
+            "year": 2016
+          },
+          "format": "MOVIE",
+          "coverImage": {
+            "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx20954-sYRfE5jQRtSB.jpg",
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx20954-sYRfE5jQRtSB.jpg",
+            "color": "#5dbbe4"
+          },
+          "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/20954-f30bHMXa5Qoe.jpg",
+          "siteUrl": "https://anilist.co/anime/20954",
+          "studios": {
+            "nodes": [
+              {
+                "name": "Kyoto Animation"
+              }
+            ]
+          },
+          "episodes": 1,
+          "genres": ["Drama", "Romance", "Slice of Life"]
+        },
+        {
+          "id": 21519,
+          "title": {
+            "romaji": "Kimi no Na wa.",
+            "english": "Your Name.",
+            "native": "君の名は。"
+          },
+          "startDate": {
+            "year": 2016
+          },
+          "format": "MOVIE",
+          "coverImage": {
+            "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21519-SUo3ZQuCbYhJ.png",
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21519-SUo3ZQuCbYhJ.png",
+            "color": "#0da1e4"
+          },
+          "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21519-1ayMXgNlmByb.jpg",
+          "siteUrl": "https://anilist.co/anime/21519",
+          "studios": {
+            "nodes": [
+              {
+                "name": "CoMix Wave"
+              }
+            ]
+          },
+          "episodes": 1,
+          "genres": ["Drama", "Romance", "Supernatural"]
+        },
+        {
+          "id": 101922,
+          "title": {
+            "romaji": "Kimetsu no Yaiba",
+            "english": "Demon Slayer: Kimetsu no Yaiba",
+            "native": "鬼滅の刃"
+          },
+          "startDate": {
+            "year": 2019
+          },
+          "format": "TV",
+          "coverImage": {
+            "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx101922-WBsBl0ClmgYL.jpg",
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx101922-WBsBl0ClmgYL.jpg",
+            "color": "#f1c9ae"
+          },
+          "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/101922-33MtJGsUSxga.jpg",
+          "siteUrl": "https://anilist.co/anime/101922",
+          "studios": {
+            "nodes": [
+              {
+                "name": "ufotable"
+              }
+            ]
+          },
+          "episodes": 26,
+          "genres": ["Action", "Adventure", "Drama", "Fantasy", "Supernatural"]
+        },
+        {
+          "id": 110277,
+          "title": {
+            "romaji": "Shingeki no Kyojin: The Final Season",
+            "english": "Attack on Titan Final Season",
+            "native": "進撃の巨人 The Final Season"
+          },
+          "startDate": {
+            "year": 2020
+          },
+          "format": "TV",
+          "coverImage": {
+            "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx110277-sKUNXAsWMNFw.jpg",
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx110277-sKUNXAsWMNFw.jpg",
+            "color": "#ae6b35"
+          },
+          "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/110277-iuGn6F5bK1U1.jpg",
+          "siteUrl": "https://anilist.co/anime/110277",
+          "studios": {
+            "nodes": [
+              {
+                "name": "MAPPA"
+              }
+            ]
+          },
+          "episodes": 16,
+          "genres": ["Action", "Drama", "Fantasy", "Mystery"]
+        },
+        {
+          "id": 154587,
+          "title": {
+            "romaji": "Sousou no Frieren",
+            "english": "Frieren: Beyond Journey’s End",
+            "native": "葬送のフリーレン"
+          },
+          "startDate": {
+            "year": 2023
+          },
+          "format": "TV",
+          "coverImage": {
+            "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx154587-qQTzQnEJJ3oB.jpg",
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx154587-qQTzQnEJJ3oB.jpg",
+            "color": "#bbf1a1"
+          },
+          "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/154587-ivXNJ23SM1xB.jpg",
+          "siteUrl": "https://anilist.co/anime/154587",
+          "studios": {
+            "nodes": [
+              {
+                "name": "MADHOUSE"
+              }
+            ]
+          },
+          "episodes": 28,
+          "genres": ["Adventure", "Drama", "Fantasy"]
+        }
+      ]
+    }
+  }
+}
