@@ -122,7 +122,8 @@ async function load(
         headers: {
           "Content-Type": "application/json",
           Accept: "application/json",
-          "User-Agent": "otaku-oracle/1.0 (+https://github.com/brej-29/otaku-oracle)",
+          "User-Agent":
+            "otaku-oracle/1.0 (+https://github.com/brej-29/otaku-oracle)",
         },
         body: JSON.stringify({ query: QUERY, variables: { id } }),
         signal,
