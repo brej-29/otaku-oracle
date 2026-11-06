@@ -166,8 +166,9 @@ export function Why() {
       </section>
       <p className="honesty-line">
         <Icon name="info" />
-        AniList is the reference, not the truth. A verified claim matches its
-        record; the record itself can still be imperfect.
+        AniList is the reference, not the truth. The original evaluation
+        measures AniList grounding only. Multi-source checks and discussion
+        links are an unmeasured extension.
       </p>
     </div>
   );
@@ -186,7 +187,7 @@ const steps = [
   {
     name: "Check the claims",
     title: "Give every statement its own check.",
-    text: "Tagged values are compared to the record. A match is verified. A contradiction shows a correction. Everything else stays unchecked.",
+    text: "Typed facts are compared across available catalogs. Two sources must agree, or a catalog-specific single source must be explicit. Differences are shown side by side; missing evidence stays unchecked.",
   },
   {
     name: "Keep the source",
@@ -301,8 +302,8 @@ export function How() {
       </section>
       <p className="honesty-line">
         <Icon name="info" />
-        Verified means matched to the AniList record. It doesn’t mean every
-        source is perfect.
+        In the source extension, verified means corroborated or explicitly
+        single-source catalog data. It doesn’t mean every source is perfect.
       </p>
     </div>
   );

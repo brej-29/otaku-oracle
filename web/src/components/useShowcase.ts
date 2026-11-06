@@ -124,6 +124,7 @@ export function useShowcase(motion: boolean) {
   return {
     cards,
     pool,
+    starters: initial.current!.slice(0, 6),
     phase,
     stack,
     setHover,

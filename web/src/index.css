@@ -36,6 +36,7 @@ button:disabled {
   cursor: wait;
   opacity: 0.6;
 }
+summary:focus-visible,
 button:focus-visible,
 a:focus-visible,
 input:focus-visible,

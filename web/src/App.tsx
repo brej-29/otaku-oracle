@@ -1,3 +1,8 @@
+import {
+  ClaimEvidence,
+  SourceOverview,
+  RelatedShelf,
+} from "./components/Evidence";
 import { useCallback, useEffect, useRef, useState } from "react";
 import {
   API_BASE,
@@ -204,14 +209,15 @@ export default function App() {
           ? "curious"
           : walking
             ? "walking"
-            : stage === "done"
+            : stage === "done" &&
+                answer?.claims.some((c) => c.status === "verified")
               ? "happy"
               : "idle";
   async function copy() {
     if (!answer) return;
     try {
       await navigator.clipboard.writeText(
-        `${question}\n${answer.claims.map((c) => `${c.status.toUpperCase()}: ${sentence(c, answer.record)}${c.status === "conflict" ? ` AniList says ${recordSays(c)}.` : ""}`).join("\n")}\n${answer.record.url}`,
+        `${question}\n${answer.claims.map((c) => `${c.status === "verified" && !c.verification ? "RECORD MATCH (single source)" : c.status.toUpperCase()}: ${sentence(c, answer.record)}${c.status === "conflict" ? ` AniList says ${recordSays(c)}.` : ""}`).join("\n")}\n${answer.record.url}`,
       );
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
@@ -254,8 +260,9 @@ export default function App() {
             aria-label="Otaku Oracle home"
           >
             <Logo />
-            <span>
-              otaku <em>oracle.</em>
+            <span className="wordmark">
+              <span>OTAKU</span>
+              <em>oracle</em>
             </span>
           </a>
           <nav aria-label="Main navigation">
@@ -469,24 +476,34 @@ export default function App() {
               )}
               {stage === "done" && answer && (
                 <>
-                  <div className="answer-context">
+                  <div
+                    className="answer-context"
+                    data-kind={answer.questionKind}
+                  >
                     <span className="status-label">
-                      {answer.demo
-                        ? "Demo · record facts only"
-                        : answer.mode === "record-only"
-                          ? "Record-only fallback"
-                          : "Answer received · claims checked"}
+                      {answer.resolution?.status === "discussion"
+                        ? "Discussion / not verified"
+                        : answer.demo
+                          ? "Demo · record facts only"
+                          : answer.mode === "record-only"
+                            ? answer.resolution
+                              ? "Source-led answer"
+                              : "Record-only fallback"
+                            : "Answer received · claims checked"}
                     </span>
                     <p>
-                      {answer.demo
-                        ? "These facts come directly from AniList. No drafted answer is being shown."
-                        : (answer.notice ??
-                          "Each claim below is compared to the retrieved record.")}
+                      {answer.resolution
+                        ? answer.resolution.summary
+                        : answer.demo
+                          ? "These facts come directly from AniList. No drafted answer is being shown."
+                          : (answer.notice ??
+                            "Each claim below is compared to the retrieved record.")}
                     </p>
                   </div>
+                  <SourceOverview answer={answer} />
                   <div className="answer-layout">
                     <div className="answer-claims">
-                      {answer.claims.length === 0 && (
+                      {answer.claims.length === 0 && !answer.resolution && (
                         <div className="empty-claims">
                           <h2>No matching factual claim.</h2>
                           <p>
@@ -497,11 +514,11 @@ export default function App() {
                       )}
                       {answer.claims.map((c, i) => (
                         <article
-                          className={`checked-claim claim-${c.status}`}
+                          className={`checked-claim claim-${c.status === "verified" && !c.verification ? "unchecked" : c.status}`}
                           key={c.id}
                           style={{ animationDelay: `${i * 120}ms` }}
                         >
-                          {c.status === "verified" && (
+                          {c.status === "verified" && c.verification && (
                             <span className="claim-burst" aria-hidden="true">
                               {Array.from({ length: 6 }, (_, n) => (
                                 <i
@@ -517,7 +534,7 @@ export default function App() {
                             <span className="claim-symbol">
                               <Icon
                                 name={
-                                  c.status === "verified"
+                                  c.status === "verified" && c.verification
                                     ? "check"
                                     : c.status === "conflict"
                                       ? "close"
@@ -528,14 +545,22 @@ export default function App() {
                             </span>
                             <span>
                               {c.status === "verified"
-                                ? "Verified"
+                                ? c.verification?.basis === "single-source"
+                                  ? "Verified / single source"
+                                  : c.verification
+                                    ? "Verified / sources agree"
+                                    : answer.demo
+                                      ? "Demo record match"
+                                      : "AniList record match"
                                 : c.status === "conflict"
                                   ? "Conflict"
                                   : "Unchecked"}
                             </span>
                             <span className="claim-field">
-                              {c.field?.replace(/_/g, " ") ??
-                                "Beyond the record"}
+                              {(c.verification?.field ?? c.field)?.replace(
+                                /_/g,
+                                " ",
+                              ) ?? "Beyond the record"}
                             </span>
                           </div>
                           <h2>
@@ -547,9 +572,19 @@ export default function App() {
                           </h2>
                           {c.status === "conflict" && (
                             <p className="correction">
-                              AniList says <strong>{recordSays(c)}</strong>
+                              {c.verification?.basis === "sources-disagree" ? (
+                                <>
+                                  Sources disagree. Their values are shown
+                                  below.
+                                </>
+                              ) : (
+                                <>
+                                  AniList says <strong>{recordSays(c)}</strong>
+                                </>
+                              )}
                             </p>
                           )}
+                          <ClaimEvidence claim={c} />
                           <a
                             href={c.sourceUrl}
                             target="_blank"
@@ -562,6 +597,7 @@ export default function App() {
                           </a>
                         </article>
                       ))}
+                      <RelatedShelf answer={answer} />
                       {answer.explanation && (
                         <aside className="unchecked-prose">
                           <span className="status-label">
@@ -645,8 +681,9 @@ export default function App() {
         <footer className="site-footer">
           <a className="brand" href="?page=ask">
             <Logo />
-            <span>
-              otaku <em>oracle.</em>
+            <span className="wordmark">
+              <span>OTAKU</span>
+              <em>oracle</em>
             </span>
           </a>
           <p>Stay curious. Check the source.</p>

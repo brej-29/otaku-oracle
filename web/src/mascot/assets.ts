@@ -1,3 +1,7 @@
+const decodedImages = new WeakMap<MascotAsset, HTMLImageElement>();
+export function cachedImage(asset: MascotAsset) {
+  return decodedImages.get(asset);
+}
 export const ANIMATIONS = [
   "walk",
   "idle",
@@ -105,6 +109,11 @@ export function loadMascotAsset(): Promise<MascotAsset | null> {
         const timer = setTimeout(() => resolve(false), 4000);
         img.onload = () => {
           clearTimeout(timer);
+          if (
+            img.naturalWidth === asset.columns * asset.frame.width &&
+            img.naturalHeight === asset.rows * asset.frame.height
+          )
+            decodedImages.set(asset, img);
           resolve(
             img.naturalWidth === asset.columns * asset.frame.width &&
               img.naturalHeight === asset.rows * asset.frame.height,

@@ -1,3 +1,4 @@
+import type { SourceExtension, Verification } from "./evidence-types";
 // All network access lives here. UI never talks to a provider directly.
 const ANILIST = "https://graphql.anilist.co";
 
@@ -37,8 +38,9 @@ export type Claim = {
   status: ClaimStatus;
   recordValue: string | null;
   sourceUrl: string;
+  verification?: Verification;
 };
-export type Answer = {
+export type Answer = Partial<SourceExtension> & {
   title: string;
   record: MediaRecord;
   claims: Claim[];
@@ -311,7 +313,7 @@ async function askBackend(
     title: j.title,
     record: {
       ...j.record,
-      status: null,
+      status: j.record.status ?? j.record.details?.status ?? null,
       studios: j.record.studios ?? [],
       genres: j.record.genres ?? [],
     },
@@ -322,6 +324,10 @@ async function askBackend(
     demo: false,
     notice: j.notice,
     fetchedAt: j.fetchedAt,
+    questionKind: j.questionKind,
+    resolution: j.resolution,
+    sources: j.sources,
+    related: j.related,
   };
 }
 

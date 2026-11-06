@@ -2,6 +2,7 @@ import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import type { CSSProperties, ReactNode } from "react";
 import { type Hit } from "../api";
 import { useShowcase } from "./useShowcase";
+import { COMPANION_NAME } from "../mascot/Mascot";
 import { emptyDrive } from "../mascot/types";
 import catalog from "../catalog.json" with { type: "json" };
 import { Icon, Traveller, World, type Pose } from "./Art";
@@ -28,7 +29,7 @@ export function Journey({
     [ready, setReady] = useState(false);
   const drive = useRef(emptyDrive());
   const showcase = useShowcase(motion);
-  const titles = showcase.pool ?? catalog;
+  const titles = showcase.starters;
   useEffect(() => {
     const e = trip.current;
     if (!e) return;
@@ -287,7 +288,9 @@ export function Journey({
             </a>
           </div>
           <Traveller pose={pose} className="hero-courier screen-traveller" />
-          <span className="courier-caption">Nori. Your curious companion.</span>
+          <span className="courier-caption">
+            {COMPANION_NAME}. Your wandering companion.
+          </span>
           <span className="art-credit">Cover art via AniList</span>
         </div>
       </section>

@@ -240,7 +240,7 @@ export function Desk({
       </button>
       <p className="desk-note">
         {API_BASE
-          ? "Seven fields can be checked: studio, episodes, start year, format, source, season and main characters. Other text stays unchecked."
+          ? "Ask about studios, dates, runtime, cast, sequels, schedules and more. We compare available catalogs; news and conversations stay labelled, not verified."
           : "Demo: reads seven AniList fact fields only. No drafted answers; unmatched questions are not answered."}
       </p>
     </form>

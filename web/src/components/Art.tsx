@@ -61,19 +61,14 @@ export function Icon({
 export function Logo() {
   return (
     <svg viewBox="0 0 64 64" aria-hidden="true" fill="none">
-      <path d="M8 9 25 19 39 19 56 9 52 40 32 56 12 40Z" fill="currentColor" />
+      <path d="M12 17h40v38H12Z" stroke="currentColor" strokeWidth="4" />
       <path
-        d="m15 21 13 9-7 9 11 9 11-9-7-9 13-9-3 16-14 13-14-13Z"
-        fill="var(--paper)"
+        d="M25 16q-5-10 2-12 7-1 7 7 9-5 11 1-1 5-11 5"
+        fill="currentColor"
       />
-      <path
-        d="m21 30 7 3m8 0 7-3"
-        stroke="var(--paper)"
-        strokeWidth="3"
-        strokeLinecap="round"
-      />
-      <path d="m28 40 4 3 4-3" stroke="currentColor" strokeWidth="3" />
-      <path d="m31 4 2 8 6 3-7 3-6-3 5-3Z" fill="var(--red)" />
+      <path d="m20 29 12-8 12 8-12 9Z" fill="currentColor" />
+      <path d="m20 46 24-18" stroke="var(--red)" strokeWidth="5" />
+      <path d="m32 43 8 9m-2-11 8 9" stroke="currentColor" strokeWidth="3" />
     </svg>
   );
 }
