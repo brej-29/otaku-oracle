@@ -62,5 +62,7 @@ jobs:
           cache: npm
           cache-dependency-path: web/package-lock.json
       - run: npm ci
+      - run: npm run lint
+      - run: npm run test:unit
       - run: npx tsc -b
       - run: npx vite build

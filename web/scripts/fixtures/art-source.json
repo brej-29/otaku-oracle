@@ -1,6 +1,6 @@
 {
-  "query": "query{Page(perPage:8){media(id_in:[1,199,16498,154587,20954,21519,101922,110277],type:ANIME,isAdult:false){id title{romaji english native} startDate{year} format coverImage{extraLarge large color} bannerImage siteUrl studios(isMain:true){nodes{name}} episodes genres}}}",
-  "fetchedAt": "2026-11-06T05:40:43.078Z",
+  "query": "query{Page(perPage:50){media(id_in:[1,199,154587,16498,20954,21519,101922,110277,21,20,1535,5114,11061,9253,30,20583,21459,21776,21087,9989,9756,20665,101338,10087,21858,20958,113415,127230,145139,151807,161645,166873],type:ANIME,isAdult:false){id title{romaji english} startDate{year} format popularity coverImage{large medium color} bannerImage siteUrl studios(isMain:true){nodes{name}} episodes}}}",
+  "fetchedAt": "2026-11-06T10:46:21.113Z",
   "data": {
     "Page": {
       "media": [
@@ -8,16 +8,16 @@
           "id": 1,
           "title": {
             "romaji": "Cowboy Bebop",
-            "english": "Cowboy Bebop",
-            "native": "カウボーイビバップ"
+            "english": "Cowboy Bebop"
           },
           "startDate": {
             "year": 1998
           },
           "format": "TV",
+          "popularity": 475423,
           "coverImage": {
-            "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx1-GCsPm7waJ4kS.png",
             "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx1-GCsPm7waJ4kS.png",
+            "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx1-GCsPm7waJ4kS.png",
             "color": "#f16b50"
           },
           "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/1-OquNCNB6srGe.jpg",
@@ -29,23 +29,22 @@
               }
             ]
           },
-          "episodes": 26,
-          "genres": ["Action", "Adventure", "Drama", "Sci-Fi"]
+          "episodes": 26
         },
         {
           "id": 199,
           "title": {
             "romaji": "Sen to Chihiro no Kamikakushi",
-            "english": "Spirited Away",
-            "native": "千と千尋の神隠し"
+            "english": "Spirited Away"
           },
           "startDate": {
             "year": 2001
           },
           "format": "MOVIE",
+          "popularity": 488619,
           "coverImage": {
-            "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx199-sWefXJvXkDOb.jpg",
             "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx199-sWefXJvXkDOb.jpg",
+            "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx199-sWefXJvXkDOb.jpg",
             "color": "#e45d5d"
           },
           "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/199-Sm2RU5PSqw7T.jpg",
@@ -57,163 +56,22 @@
               }
             ]
           },
-          "episodes": 1,
-          "genres": ["Adventure", "Drama", "Fantasy", "Supernatural"]
-        },
-        {
-          "id": 16498,
-          "title": {
-            "romaji": "Shingeki no Kyojin",
-            "english": "Attack on Titan",
-            "native": "進撃の巨人"
-          },
-          "startDate": {
-            "year": 2013
-          },
-          "format": "TV",
-          "coverImage": {
-            "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx16498-buvcRTBx4NSm.jpg",
-            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx16498-buvcRTBx4NSm.jpg",
-            "color": "#f1a143"
-          },
-          "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/16498-8jpFCOcDmneX.jpg",
-          "siteUrl": "https://anilist.co/anime/16498",
-          "studios": {
-            "nodes": [
-              {
-                "name": "WIT STUDIO"
-              }
-            ]
-          },
-          "episodes": 25,
-          "genres": ["Action", "Drama", "Fantasy", "Mystery"]
-        },
-        {
-          "id": 20954,
-          "title": {
-            "romaji": "Koe no Katachi",
-            "english": "A Silent Voice",
-            "native": "聲の形"
-          },
-          "startDate": {
-            "year": 2016
-          },
-          "format": "MOVIE",
-          "coverImage": {
-            "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx20954-sYRfE5jQRtSB.jpg",
-            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx20954-sYRfE5jQRtSB.jpg",
-            "color": "#5dbbe4"
-          },
-          "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/20954-f30bHMXa5Qoe.jpg",
-          "siteUrl": "https://anilist.co/anime/20954",
-          "studios": {
-            "nodes": [
-              {
-                "name": "Kyoto Animation"
-              }
-            ]
-          },
-          "episodes": 1,
-          "genres": ["Drama", "Romance", "Slice of Life"]
-        },
-        {
-          "id": 21519,
-          "title": {
-            "romaji": "Kimi no Na wa.",
-            "english": "Your Name.",
-            "native": "君の名は。"
-          },
-          "startDate": {
-            "year": 2016
-          },
-          "format": "MOVIE",
-          "coverImage": {
-            "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21519-SUo3ZQuCbYhJ.png",
-            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21519-SUo3ZQuCbYhJ.png",
-            "color": "#0da1e4"
-          },
-          "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21519-1ayMXgNlmByb.jpg",
-          "siteUrl": "https://anilist.co/anime/21519",
-          "studios": {
-            "nodes": [
-              {
-                "name": "CoMix Wave"
-              }
-            ]
-          },
-          "episodes": 1,
-          "genres": ["Drama", "Romance", "Supernatural"]
-        },
-        {
-          "id": 101922,
-          "title": {
-            "romaji": "Kimetsu no Yaiba",
-            "english": "Demon Slayer: Kimetsu no Yaiba",
-            "native": "鬼滅の刃"
-          },
-          "startDate": {
-            "year": 2019
-          },
-          "format": "TV",
-          "coverImage": {
-            "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx101922-WBsBl0ClmgYL.jpg",
-            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx101922-WBsBl0ClmgYL.jpg",
-            "color": "#f1c9ae"
-          },
-          "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/101922-33MtJGsUSxga.jpg",
-          "siteUrl": "https://anilist.co/anime/101922",
-          "studios": {
-            "nodes": [
-              {
-                "name": "ufotable"
-              }
-            ]
-          },
-          "episodes": 26,
-          "genres": ["Action", "Adventure", "Drama", "Fantasy", "Supernatural"]
-        },
-        {
-          "id": 110277,
-          "title": {
-            "romaji": "Shingeki no Kyojin: The Final Season",
-            "english": "Attack on Titan Final Season",
-            "native": "進撃の巨人 The Final Season"
-          },
-          "startDate": {
-            "year": 2020
-          },
-          "format": "TV",
-          "coverImage": {
-            "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx110277-sKUNXAsWMNFw.jpg",
-            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx110277-sKUNXAsWMNFw.jpg",
-            "color": "#ae6b35"
-          },
-          "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/110277-iuGn6F5bK1U1.jpg",
-          "siteUrl": "https://anilist.co/anime/110277",
-          "studios": {
-            "nodes": [
-              {
-                "name": "MAPPA"
-              }
-            ]
-          },
-          "episodes": 16,
-          "genres": ["Action", "Drama", "Fantasy", "Mystery"]
+          "episodes": 1
         },
         {
           "id": 154587,
           "title": {
             "romaji": "Sousou no Frieren",
-            "english": "Frieren: Beyond Journey’s End",
-            "native": "葬送のフリーレン"
+            "english": "Frieren: Beyond Journey’s End"
           },
           "startDate": {
             "year": 2023
           },
           "format": "TV",
+          "popularity": 496885,
           "coverImage": {
-            "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx154587-qQTzQnEJJ3oB.jpg",
             "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx154587-qQTzQnEJJ3oB.jpg",
+            "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx154587-qQTzQnEJJ3oB.jpg",
             "color": "#bbf1a1"
           },
           "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/154587-ivXNJ23SM1xB.jpg",
@@ -225,8 +83,796 @@
               }
             ]
           },
-          "episodes": 28,
-          "genres": ["Adventure", "Drama", "Fantasy"]
+          "episodes": 28
+        },
+        {
+          "id": 16498,
+          "title": {
+            "romaji": "Shingeki no Kyojin",
+            "english": "Attack on Titan"
+          },
+          "startDate": {
+            "year": 2013
+          },
+          "format": "TV",
+          "popularity": 1075444,
+          "coverImage": {
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx16498-buvcRTBx4NSm.jpg",
+            "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx16498-buvcRTBx4NSm.jpg",
+            "color": "#f1a143"
+          },
+          "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/16498-8jpFCOcDmneX.jpg",
+          "siteUrl": "https://anilist.co/anime/16498",
+          "studios": {
+            "nodes": [
+              {
+                "name": "WIT STUDIO"
+              }
+            ]
+          },
+          "episodes": 25
+        },
+        {
+          "id": 20954,
+          "title": {
+            "romaji": "Koe no Katachi",
+            "english": "A Silent Voice"
+          },
+          "startDate": {
+            "year": 2016
+          },
+          "format": "MOVIE",
+          "popularity": 730838,
+          "coverImage": {
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx20954-sYRfE5jQRtSB.jpg",
+            "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx20954-sYRfE5jQRtSB.jpg",
+            "color": "#5dbbe4"
+          },
+          "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/20954-f30bHMXa5Qoe.jpg",
+          "siteUrl": "https://anilist.co/anime/20954",
+          "studios": {
+            "nodes": [
+              {
+                "name": "Kyoto Animation"
+              }
+            ]
+          },
+          "episodes": 1
+        },
+        {
+          "id": 21519,
+          "title": {
+            "romaji": "Kimi no Na wa.",
+            "english": "Your Name."
+          },
+          "startDate": {
+            "year": 2016
+          },
+          "format": "MOVIE",
+          "popularity": 727076,
+          "coverImage": {
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21519-SUo3ZQuCbYhJ.png",
+            "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx21519-SUo3ZQuCbYhJ.png",
+            "color": "#0da1e4"
+          },
+          "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21519-1ayMXgNlmByb.jpg",
+          "siteUrl": "https://anilist.co/anime/21519",
+          "studios": {
+            "nodes": [
+              {
+                "name": "CoMix Wave"
+              }
+            ]
+          },
+          "episodes": 1
+        },
+        {
+          "id": 101922,
+          "title": {
+            "romaji": "Kimetsu no Yaiba",
+            "english": "Demon Slayer: Kimetsu no Yaiba"
+          },
+          "startDate": {
+            "year": 2019
+          },
+          "format": "TV",
+          "popularity": 1012086,
+          "coverImage": {
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx101922-WBsBl0ClmgYL.jpg",
+            "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx101922-WBsBl0ClmgYL.jpg",
+            "color": "#f1c9ae"
+          },
+          "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/101922-33MtJGsUSxga.jpg",
+          "siteUrl": "https://anilist.co/anime/101922",
+          "studios": {
+            "nodes": [
+              {
+                "name": "ufotable"
+              }
+            ]
+          },
+          "episodes": 26
+        },
+        {
+          "id": 110277,
+          "title": {
+            "romaji": "Shingeki no Kyojin: The Final Season",
+            "english": "Attack on Titan Final Season"
+          },
+          "startDate": {
+            "year": 2020
+          },
+          "format": "TV",
+          "popularity": 654892,
+          "coverImage": {
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx110277-sKUNXAsWMNFw.jpg",
+            "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx110277-sKUNXAsWMNFw.jpg",
+            "color": "#ae6b35"
+          },
+          "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/110277-iuGn6F5bK1U1.jpg",
+          "siteUrl": "https://anilist.co/anime/110277",
+          "studios": {
+            "nodes": [
+              {
+                "name": "MAPPA"
+              }
+            ]
+          },
+          "episodes": 16
+        },
+        {
+          "id": 21,
+          "title": {
+            "romaji": "ONE PIECE",
+            "english": "ONE PIECE"
+          },
+          "startDate": {
+            "year": 1999
+          },
+          "format": "TV",
+          "popularity": 766598,
+          "coverImage": {
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21-ELSYx3yMPcKM.jpg",
+            "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx21-ELSYx3yMPcKM.jpg",
+            "color": "#e49335"
+          },
+          "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21-wf37VakJmZqs.jpg",
+          "siteUrl": "https://anilist.co/anime/21",
+          "studios": {
+            "nodes": [
+              {
+                "name": "Toei Animation"
+              }
+            ]
+          },
+          "episodes": null
+        },
+        {
+          "id": 20,
+          "title": {
+            "romaji": "NARUTO",
+            "english": "Naruto"
+          },
+          "startDate": {
+            "year": 2002
+          },
+          "format": "TV",
+          "popularity": 739453,
+          "coverImage": {
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx20-dE6UHbFFg1A5.jpg",
+            "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx20-dE6UHbFFg1A5.jpg",
+            "color": "#e47850"
+          },
+          "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/20-HHxhPj5JD13a.jpg",
+          "siteUrl": "https://anilist.co/anime/20",
+          "studios": {
+            "nodes": [
+              {
+                "name": "Studio Pierrot"
+              }
+            ]
+          },
+          "episodes": 220
+        },
+        {
+          "id": 1535,
+          "title": {
+            "romaji": "DEATH NOTE",
+            "english": "Death Note"
+          },
+          "startDate": {
+            "year": 2006
+          },
+          "format": "TV",
+          "popularity": 980114,
+          "coverImage": {
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx1535-kUgkcrfOrkUM.jpg",
+            "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx1535-kUgkcrfOrkUM.jpg",
+            "color": null
+          },
+          "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/1535.jpg",
+          "siteUrl": "https://anilist.co/anime/1535",
+          "studios": {
+            "nodes": [
+              {
+                "name": "MADHOUSE"
+              }
+            ]
+          },
+          "episodes": 37
+        },
+        {
+          "id": 5114,
+          "title": {
+            "romaji": "Hagane no Renkinjutsushi: FULLMETAL ALCHEMIST",
+            "english": "Fullmetal Alchemist: Brotherhood"
+          },
+          "startDate": {
+            "year": 2009
+          },
+          "format": "TV",
+          "popularity": 742252,
+          "coverImage": {
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx5114-nSWCgQlmOMtj.jpg",
+            "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx5114-nSWCgQlmOMtj.jpg",
+            "color": "#e4c993"
+          },
+          "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/5114-q0V5URebphSG.jpg",
+          "siteUrl": "https://anilist.co/anime/5114",
+          "studios": {
+            "nodes": [
+              {
+                "name": "bones"
+              }
+            ]
+          },
+          "episodes": 64
+        },
+        {
+          "id": 11061,
+          "title": {
+            "romaji": "HUNTER×HUNTER (2011)",
+            "english": "Hunter x Hunter (2011)"
+          },
+          "startDate": {
+            "year": 2011
+          },
+          "format": "TV",
+          "popularity": 855589,
+          "coverImage": {
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx11061-y5gsT1hoHuHw.png",
+            "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx11061-y5gsT1hoHuHw.png",
+            "color": "#f1d65d"
+          },
+          "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/11061-8WkkTZ6duKpq.jpg",
+          "siteUrl": "https://anilist.co/anime/11061",
+          "studios": {
+            "nodes": [
+              {
+                "name": "MADHOUSE"
+              }
+            ]
+          },
+          "episodes": 148
+        },
+        {
+          "id": 9253,
+          "title": {
+            "romaji": "Steins;Gate",
+            "english": "Steins;Gate"
+          },
+          "startDate": {
+            "year": 2011
+          },
+          "format": "TV",
+          "popularity": 605513,
+          "coverImage": {
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx9253-tIUXF2gfU8Sg.jpg",
+            "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx9253-tIUXF2gfU8Sg.jpg",
+            "color": "#ffd6ae"
+          },
+          "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/n9253-JIhmKgBKsWUN.jpg",
+          "siteUrl": "https://anilist.co/anime/9253",
+          "studios": {
+            "nodes": [
+              {
+                "name": "WHITE FOX"
+              }
+            ]
+          },
+          "episodes": 24
+        },
+        {
+          "id": 30,
+          "title": {
+            "romaji": "Shin Seiki Evangelion",
+            "english": "Neon Genesis Evangelion"
+          },
+          "startDate": {
+            "year": 1995
+          },
+          "format": "TV",
+          "popularity": 504606,
+          "coverImage": {
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx30-AI1zr74Dh4ye.jpg",
+            "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx30-AI1zr74Dh4ye.jpg",
+            "color": "#f17843"
+          },
+          "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/30-gEMoHHIqxDgN.jpg",
+          "siteUrl": "https://anilist.co/anime/30",
+          "studios": {
+            "nodes": [
+              {
+                "name": "GAINAX"
+              },
+              {
+                "name": "Tatsunoko Production"
+              }
+            ]
+          },
+          "episodes": 26
+        },
+        {
+          "id": 20583,
+          "title": {
+            "romaji": "Rail Wars!",
+            "english": "Rail Wars!"
+          },
+          "startDate": {
+            "year": 2014
+          },
+          "format": "TV",
+          "popularity": 49658,
+          "coverImage": {
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx20583-tUV6itvmiwEL.jpg",
+            "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx20583-tUV6itvmiwEL.jpg",
+            "color": "#1a50ff"
+          },
+          "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/20583.jpg",
+          "siteUrl": "https://anilist.co/anime/20583",
+          "studios": {
+            "nodes": [
+              {
+                "name": "Passione"
+              }
+            ]
+          },
+          "episodes": 12
+        },
+        {
+          "id": 21459,
+          "title": {
+            "romaji": "Boku no Hero Academia",
+            "english": "My Hero Academia"
+          },
+          "startDate": {
+            "year": 2016
+          },
+          "format": "TV",
+          "popularity": 888366,
+          "coverImage": {
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21459-nYh85uj2Fuwr.jpg",
+            "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx21459-nYh85uj2Fuwr.jpg",
+            "color": "#f1d643"
+          },
+          "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21459-yeVkolGKdGUV.jpg",
+          "siteUrl": "https://anilist.co/anime/21459",
+          "studios": {
+            "nodes": [
+              {
+                "name": "bones"
+              }
+            ]
+          },
+          "episodes": 13
+        },
+        {
+          "id": 21776,
+          "title": {
+            "romaji": "Kobayashi-san Chi no Maidragon",
+            "english": "Miss Kobayashi's Dragon Maid"
+          },
+          "startDate": {
+            "year": 2017
+          },
+          "format": "TV",
+          "popularity": 334123,
+          "coverImage": {
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21776-bwPaYKhnKfUs.png",
+            "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx21776-bwPaYKhnKfUs.png",
+            "color": "#e4865d"
+          },
+          "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21776-hI5smQyXFK7G.jpg",
+          "siteUrl": "https://anilist.co/anime/21776",
+          "studios": {
+            "nodes": [
+              {
+                "name": "Kyoto Animation"
+              }
+            ]
+          },
+          "episodes": 13
+        },
+        {
+          "id": 21087,
+          "title": {
+            "romaji": "One Punch Man",
+            "english": "One-Punch Man"
+          },
+          "startDate": {
+            "year": 2015
+          },
+          "format": "TV",
+          "popularity": 778913,
+          "coverImage": {
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21087-B5DHjqZ3kW4b.jpg",
+            "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx21087-B5DHjqZ3kW4b.jpg",
+            "color": "#e4ae5d"
+          },
+          "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21087-sHb9zUZFsHe1.jpg",
+          "siteUrl": "https://anilist.co/anime/21087",
+          "studios": {
+            "nodes": [
+              {
+                "name": "MADHOUSE"
+              }
+            ]
+          },
+          "episodes": 12
+        },
+        {
+          "id": 9989,
+          "title": {
+            "romaji": "Ano Hi Mita Hana no Namae wo Bokutachi wa Mada Shiranai.",
+            "english": "Anohana: The Flower We Saw That Day"
+          },
+          "startDate": {
+            "year": 2011
+          },
+          "format": "TV",
+          "popularity": 399231,
+          "coverImage": {
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx9989-hImMg6kCMm6I.jpg",
+            "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx9989-hImMg6kCMm6I.jpg",
+            "color": "#0d78e4"
+          },
+          "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/9989-pyr6rXlV1oAm.jpg",
+          "siteUrl": "https://anilist.co/anime/9989",
+          "studios": {
+            "nodes": [
+              {
+                "name": "A-1 Pictures"
+              }
+            ]
+          },
+          "episodes": 11
+        },
+        {
+          "id": 9756,
+          "title": {
+            "romaji": "Mahou Shoujo Madoka☆Magica",
+            "english": "Puella Magi Madoka Magica"
+          },
+          "startDate": {
+            "year": 2011
+          },
+          "format": "TV",
+          "popularity": 332811,
+          "coverImage": {
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx9756-QnUGwlwwnsuN.jpg",
+            "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx9756-QnUGwlwwnsuN.jpg",
+            "color": "#f1c95d"
+          },
+          "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/9756-d5M8NffgJJHB.jpg",
+          "siteUrl": "https://anilist.co/anime/9756",
+          "studios": {
+            "nodes": [
+              {
+                "name": "Shaft"
+              }
+            ]
+          },
+          "episodes": 12
+        },
+        {
+          "id": 20665,
+          "title": {
+            "romaji": "Shigatsu wa Kimi no Uso",
+            "english": "Your lie in April"
+          },
+          "startDate": {
+            "year": 2014
+          },
+          "format": "TV",
+          "popularity": 623712,
+          "coverImage": {
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx20665-TLgkL8T8IRFd.png",
+            "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx20665-TLgkL8T8IRFd.png",
+            "color": "#e4bb50"
+          },
+          "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/20665-j4kSsfhfkM24.jpg",
+          "siteUrl": "https://anilist.co/anime/20665",
+          "studios": {
+            "nodes": [
+              {
+                "name": "A-1 Pictures"
+              }
+            ]
+          },
+          "episodes": 22
+        },
+        {
+          "id": 101338,
+          "title": {
+            "romaji": "Mob Psycho 100 II",
+            "english": "Mob Psycho 100 II"
+          },
+          "startDate": {
+            "year": 2019
+          },
+          "format": "TV",
+          "popularity": 456310,
+          "coverImage": {
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx101338-rokVscjRYzdP.jpg",
+            "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx101338-rokVscjRYzdP.jpg",
+            "color": "#50e4f1"
+          },
+          "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/101338-Rl54Qhx71dUq.jpg",
+          "siteUrl": "https://anilist.co/anime/101338",
+          "studios": {
+            "nodes": [
+              {
+                "name": "bones"
+              }
+            ]
+          },
+          "episodes": 13
+        },
+        {
+          "id": 10087,
+          "title": {
+            "romaji": "Fate/Zero",
+            "english": "Fate/Zero"
+          },
+          "startDate": {
+            "year": 2011
+          },
+          "format": "TV",
+          "popularity": 352795,
+          "coverImage": {
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx10087-M4Hd9qrHGrXk.png",
+            "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx10087-M4Hd9qrHGrXk.png",
+            "color": "#e4d65d"
+          },
+          "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/10087-32MFY9VnJQ7I.jpg",
+          "siteUrl": "https://anilist.co/anime/10087",
+          "studios": {
+            "nodes": [
+              {
+                "name": "ufotable"
+              }
+            ]
+          },
+          "episodes": 13
+        },
+        {
+          "id": 21858,
+          "title": {
+            "romaji": "Little Witch Academia (TV)",
+            "english": "Little Witch Academia (TV)"
+          },
+          "startDate": {
+            "year": 2017
+          },
+          "format": "TV",
+          "popularity": 169193,
+          "coverImage": {
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21858-huBrbIOGMYXv.jpg",
+            "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx21858-huBrbIOGMYXv.jpg",
+            "color": "#f186c9"
+          },
+          "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21858-eyzQxmTRxtYO.jpg",
+          "siteUrl": "https://anilist.co/anime/21858",
+          "studios": {
+            "nodes": [
+              {
+                "name": "TRIGGER"
+              }
+            ]
+          },
+          "episodes": 25
+        },
+        {
+          "id": 20958,
+          "title": {
+            "romaji": "Shingeki no Kyojin Season 2",
+            "english": "Attack on Titan Season 2"
+          },
+          "startDate": {
+            "year": 2017
+          },
+          "format": "TV",
+          "popularity": 746693,
+          "coverImage": {
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx20958-HuFJyr54Mmir.jpg",
+            "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx20958-HuFJyr54Mmir.jpg",
+            "color": "#e47850"
+          },
+          "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/20958-Y7eQdz9VENBD.jpg",
+          "siteUrl": "https://anilist.co/anime/20958",
+          "studios": {
+            "nodes": [
+              {
+                "name": "WIT STUDIO"
+              }
+            ]
+          },
+          "episodes": 12
+        },
+        {
+          "id": 113415,
+          "title": {
+            "romaji": "Jujutsu Kaisen",
+            "english": "JUJUTSU KAISEN"
+          },
+          "startDate": {
+            "year": 2020
+          },
+          "format": "TV",
+          "popularity": 993221,
+          "coverImage": {
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx113415-LHBAeoZDIsnF.jpg",
+            "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx113415-LHBAeoZDIsnF.jpg",
+            "color": "#e45d5d"
+          },
+          "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/113415-jQBSkxWAAk83.jpg",
+          "siteUrl": "https://anilist.co/anime/113415",
+          "studios": {
+            "nodes": [
+              {
+                "name": "MAPPA"
+              }
+            ]
+          },
+          "episodes": 24
+        },
+        {
+          "id": 127230,
+          "title": {
+            "romaji": "Chainsaw Man",
+            "english": "Chainsaw Man"
+          },
+          "startDate": {
+            "year": 2022
+          },
+          "format": "TV",
+          "popularity": 650118,
+          "coverImage": {
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx127230-DdP4vAdssLoz.png",
+            "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx127230-DdP4vAdssLoz.png",
+            "color": "#6b1a1a"
+          },
+          "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/127230-o8IRwCGVr9KW.jpg",
+          "siteUrl": "https://anilist.co/anime/127230",
+          "studios": {
+            "nodes": [
+              {
+                "name": "MAPPA"
+              }
+            ]
+          },
+          "episodes": 12
+        },
+        {
+          "id": 145139,
+          "title": {
+            "romaji": "Kimetsu no Yaiba: Katanakaji no Sato-hen",
+            "english": "Demon Slayer: Kimetsu no Yaiba Swordsmith Village Arc"
+          },
+          "startDate": {
+            "year": 2023
+          },
+          "format": "TV",
+          "popularity": 382498,
+          "coverImage": {
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx145139-rRimpHGWLhym.png",
+            "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx145139-rRimpHGWLhym.png",
+            "color": "#1aaed6"
+          },
+          "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/145139-V01Prh6UzfRk.jpg",
+          "siteUrl": "https://anilist.co/anime/145139",
+          "studios": {
+            "nodes": [
+              {
+                "name": "ufotable"
+              }
+            ]
+          },
+          "episodes": 11
+        },
+        {
+          "id": 151807,
+          "title": {
+            "romaji": "Ore dake Level Up na Ken",
+            "english": "Solo Leveling"
+          },
+          "startDate": {
+            "year": 2024
+          },
+          "format": "TV",
+          "popularity": 460969,
+          "coverImage": {
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx151807-it355ZgzquUd.png",
+            "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx151807-it355ZgzquUd.png",
+            "color": "#35bbf1"
+          },
+          "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/151807-37yfQA3ym8PA.jpg",
+          "siteUrl": "https://anilist.co/anime/151807",
+          "studios": {
+            "nodes": [
+              {
+                "name": "A-1 Pictures"
+              }
+            ]
+          },
+          "episodes": 12
+        },
+        {
+          "id": 161645,
+          "title": {
+            "romaji": "Kusuriya no Hitorigoto",
+            "english": "The Apothecary Diaries"
+          },
+          "startDate": {
+            "year": 2023
+          },
+          "format": "TV",
+          "popularity": 342628,
+          "coverImage": {
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx161645-QLbzHXiYRgV2.jpg",
+            "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx161645-QLbzHXiYRgV2.jpg",
+            "color": "#f1865d"
+          },
+          "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/161645-oqzTZYIvviWI.jpg",
+          "siteUrl": "https://anilist.co/anime/161645",
+          "studios": {
+            "nodes": [
+              {
+                "name": "OLM"
+              },
+              {
+                "name": "TOHO animation STUDIO"
+              }
+            ]
+          },
+          "episodes": 24
+        },
+        {
+          "id": 166873,
+          "title": {
+            "romaji": "Mushoku Tensei II: Isekai Ittara Honki Dasu Part 2",
+            "english": "Mushoku Tensei: Jobless Reincarnation Season 2 Part 2"
+          },
+          "startDate": {
+            "year": 2024
+          },
+          "format": "TV",
+          "popularity": 218523,
+          "coverImage": {
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx166873-xO0BRPkmwFll.png",
+            "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx166873-xO0BRPkmwFll.png",
+            "color": "#6b431a"
+          },
+          "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/166873-GTi5imE5skM2.jpg",
+          "siteUrl": "https://anilist.co/anime/166873",
+          "studios": {
+            "nodes": [
+              {
+                "name": "Studio Bind"
+              }
+            ]
+          },
+          "episodes": 12
         }
       ]
     }

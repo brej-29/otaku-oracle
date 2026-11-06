@@ -1,3 +1,4 @@
+import artSnapshot from "./fixtures/art-source.json" with { type: "json" };
 import snapshot from "./fixtures/anilist.json" with { type: "json" };
 export const raw = snapshot.data.Page.media.find((r) => r.id === 154587);
 export const record = {
@@ -80,6 +81,18 @@ export async function routes(context, kind = "verified") {
         },
       });
     const body = request.postDataJSON() ?? {};
+    if (body.query?.includes("popular:Page")) {
+      return route.fulfill({
+        contentType: "application/json",
+        headers: { "access-control-allow-origin": "*" },
+        body: JSON.stringify({
+          data: {
+            popular: { media: artSnapshot.data.Page.media.slice(0, 20) },
+            trending: { media: artSnapshot.data.Page.media.slice(12) },
+          },
+        }),
+      });
+    }
     const page = body.query?.includes("Page");
     if (!page && kind === "loading-record") await delay(15000);
     const media = snapshot.data.Page.media;

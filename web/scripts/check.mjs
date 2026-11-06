@@ -38,10 +38,13 @@ for (const kind of [
         .count()) > 0,
       kind,
     );
-    if(kind==="verified"){
-      const actor=await p.locator(".screen-traveller").boundingBox();
-      const heading=await p.locator(".question-heading h1").boundingBox();
-      ok(actor.y+actor.height < heading.y,"companion clears the mobile question");
+    if (kind === "verified") {
+      const actor = await p.locator(".screen-traveller").boundingBox();
+      const heading = await p.locator(".question-heading h1").boundingBox();
+      ok(
+        actor.y + actor.height < heading.y,
+        "companion clears the mobile question",
+      );
     }
     if (kind === "conflict")
       ok(
@@ -192,19 +195,28 @@ const travel = await browser.newContext({
 await routes(travel);
 const tp = await travel.newPage();
 await tp.goto(base);
-await tp.mouse.wheel(0, 200);
-await tp.waitForTimeout(60);
-ok(
-  (await tp.locator(".screen-traveller").getAttribute("data-pose")) ===
-    "walking",
-  "guide walks on scroll",
-);
+await tp.evaluate(() => {
+  const e = document.querySelector(".night-journey");
+  scrollTo(0, e.offsetTop + (e.offsetHeight - innerHeight) * 0.25);
+});
+await tp.locator(".journey-courier .leg-rig").first().waitFor();
+await tp.waitForTimeout(250);
+let walked = false;
+for (let i = 0; i < 12; i++) {
+  await tp.mouse.wheel(0, 13);
+  await tp.waitForTimeout(45);
+  walked ||=
+    (await tp
+      .locator(".journey-courier .traveller")
+      .getAttribute("data-pose")) === "walking";
+}
+ok(walked, "guide walks through the journey");
 ok(
   await tp
-    .locator(".frame-0")
+    .locator(".journey-courier .shin")
     .first()
-    .evaluate((e) => getComputedStyle(e).animationName.includes("walk-frame")),
-  "walking legs animate",
+    .evaluate((e) => getComputedStyle(e).transform !== "none"),
+  "jointed legs follow road distance",
 );
 await tp.getByRole("button", { name: "Pause motion" }).click();
 ok(
