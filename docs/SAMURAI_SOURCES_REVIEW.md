@@ -29,7 +29,8 @@ Sources retained: AniList, a fail-soft exact-ID Jikan adapter, narrowly mapped W
 | Audit batch                  | Mobile Home / Why / How | Desktop Home / Why / How | Other categories |
 | ---------------------------- | ----------------------- | ------------------------ | ---------------- |
 | Initial supplied-atlas image | 83 / 98 / 99            | 98 / 100 / 100           | All 100          |
-| Final frame-sized renderer   | 92 / 98 / 98            | 94 / 100 / 100           | All 100          |
+| Intermediate frame renderer | 92 / 98 / 98            | 94 / 100 / 100           | All 100          |
+| Final copy and focus build  | 91 / 98 / 98            | 93 / 100 / 100           | All 100          |
 
 These are local production-preview measurements, not field data. The failed 83 homepage score is retained in lighthouse-samurai-first.json; current raw reports and exact bundle size are in lighthouse/saga/ and lighthouse-saga.md. Final JavaScript is 82.4 KiB gzip, with no new dependency. The supplied atlas is about 842 KiB and is not included in that JavaScript figure. The homepage's measured cumulative layout shift is zero.
 
