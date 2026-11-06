@@ -1,0 +1,275 @@
+[
+  {
+    "folder": "phone-390",
+    "kind": "idle",
+    "overflow": false,
+    "errors": [],
+    "fixture": true
+  },
+  {
+    "folder": "phone-390",
+    "kind": "loading-record",
+    "overflow": false,
+    "errors": [],
+    "fixture": true
+  },
+  {
+    "folder": "phone-390",
+    "kind": "loading-answer",
+    "overflow": false,
+    "errors": [],
+    "fixture": true
+  },
+  {
+    "folder": "phone-390",
+    "kind": "verified",
+    "overflow": false,
+    "errors": [],
+    "fixture": true
+  },
+  {
+    "folder": "phone-390",
+    "kind": "conflict",
+    "overflow": false,
+    "errors": [],
+    "fixture": true
+  },
+  {
+    "folder": "phone-390",
+    "kind": "unchecked",
+    "overflow": false,
+    "errors": [],
+    "fixture": true
+  },
+  {
+    "folder": "phone-390",
+    "kind": "three-states",
+    "overflow": false,
+    "errors": [],
+    "fixture": true
+  },
+  {
+    "folder": "phone-390",
+    "kind": "record-only",
+    "overflow": false,
+    "errors": [],
+    "fixture": true
+  },
+  {
+    "folder": "phone-390",
+    "kind": "error",
+    "overflow": false,
+    "errors": [],
+    "fixture": true
+  },
+  {
+    "folder": "phone-390",
+    "kind": "offline",
+    "overflow": false,
+    "errors": [],
+    "fixture": true
+  },
+  {
+    "folder": "phone-390",
+    "kind": "rate",
+    "overflow": false,
+    "errors": [],
+    "fixture": true
+  },
+  {
+    "folder": "phone-390",
+    "kind": "why",
+    "overflow": false,
+    "errors": [],
+    "fixture": false
+  },
+  {
+    "folder": "phone-390",
+    "kind": "how",
+    "overflow": false,
+    "errors": [],
+    "fixture": false
+  },
+  {
+    "folder": "tablet-768",
+    "kind": "idle",
+    "overflow": false,
+    "errors": [],
+    "fixture": true
+  },
+  {
+    "folder": "tablet-768",
+    "kind": "loading-record",
+    "overflow": false,
+    "errors": [],
+    "fixture": true
+  },
+  {
+    "folder": "tablet-768",
+    "kind": "loading-answer",
+    "overflow": false,
+    "errors": [],
+    "fixture": true
+  },
+  {
+    "folder": "tablet-768",
+    "kind": "verified",
+    "overflow": false,
+    "errors": [],
+    "fixture": true
+  },
+  {
+    "folder": "tablet-768",
+    "kind": "conflict",
+    "overflow": false,
+    "errors": [],
+    "fixture": true
+  },
+  {
+    "folder": "tablet-768",
+    "kind": "unchecked",
+    "overflow": false,
+    "errors": [],
+    "fixture": true
+  },
+  {
+    "folder": "tablet-768",
+    "kind": "three-states",
+    "overflow": false,
+    "errors": [],
+    "fixture": true
+  },
+  {
+    "folder": "tablet-768",
+    "kind": "record-only",
+    "overflow": false,
+    "errors": [],
+    "fixture": true
+  },
+  {
+    "folder": "tablet-768",
+    "kind": "error",
+    "overflow": false,
+    "errors": [],
+    "fixture": true
+  },
+  {
+    "folder": "tablet-768",
+    "kind": "offline",
+    "overflow": false,
+    "errors": [],
+    "fixture": true
+  },
+  {
+    "folder": "tablet-768",
+    "kind": "rate",
+    "overflow": false,
+    "errors": [],
+    "fixture": true
+  },
+  {
+    "folder": "tablet-768",
+    "kind": "why",
+    "overflow": false,
+    "errors": [],
+    "fixture": false
+  },
+  {
+    "folder": "tablet-768",
+    "kind": "how",
+    "overflow": false,
+    "errors": [],
+    "fixture": false
+  },
+  {
+    "folder": "desktop-1440",
+    "kind": "idle",
+    "overflow": false,
+    "errors": [],
+    "fixture": true
+  },
+  {
+    "folder": "desktop-1440",
+    "kind": "loading-record",
+    "overflow": false,
+    "errors": [],
+    "fixture": true
+  },
+  {
+    "folder": "desktop-1440",
+    "kind": "loading-answer",
+    "overflow": false,
+    "errors": [],
+    "fixture": true
+  },
+  {
+    "folder": "desktop-1440",
+    "kind": "verified",
+    "overflow": false,
+    "errors": [],
+    "fixture": true
+  },
+  {
+    "folder": "desktop-1440",
+    "kind": "conflict",
+    "overflow": false,
+    "errors": [],
+    "fixture": true
+  },
+  {
+    "folder": "desktop-1440",
+    "kind": "unchecked",
+    "overflow": false,
+    "errors": [],
+    "fixture": true
+  },
+  {
+    "folder": "desktop-1440",
+    "kind": "three-states",
+    "overflow": false,
+    "errors": [],
+    "fixture": true
+  },
+  {
+    "folder": "desktop-1440",
+    "kind": "record-only",
+    "overflow": false,
+    "errors": [],
+    "fixture": true
+  },
+  {
+    "folder": "desktop-1440",
+    "kind": "error",
+    "overflow": false,
+    "errors": [],
+    "fixture": true
+  },
+  {
+    "folder": "desktop-1440",
+    "kind": "offline",
+    "overflow": false,
+    "errors": [],
+    "fixture": true
+  },
+  {
+    "folder": "desktop-1440",
+    "kind": "rate",
+    "overflow": false,
+    "errors": [],
+    "fixture": true
+  },
+  {
+    "folder": "desktop-1440",
+    "kind": "why",
+    "overflow": false,
+    "errors": [],
+    "fixture": false
+  },
+  {
+    "folder": "desktop-1440",
+    "kind": "how",
+    "overflow": false,
+    "errors": [],
+    "fixture": false
+  }
+]
