@@ -137,9 +137,11 @@ SITE_URL is the page URL; API_URL is the Worker base URL. EXPECTED_TITLE optiona
 
 ## Continuous integration
 
-.github/workflows/ci.yml includes required locked uv evaluation tests, the Worker install/type/format/test/dry-run pipeline, and web install/tsc/build only when web/package.json exists. It needs no application secrets and never runs either live smoke command. Apply all numbered D1 migrations before deploying this revision. See WORKER_VERIFICATION.md for exact action-version sources and the current branch-integration limitation.
+.github/workflows/ci.yml includes required locked uv evaluation tests, the Worker install/type/format/test/dry-run pipeline, and web install/tsc/build only when web/package.json exists. It needs no application secrets and never runs either live smoke command. Apply both D1 migrations before deploying this revision. See WORKER_VERIFICATION.md for exact action-version sources and the current branch-integration limitation.
 
 
-## Source extension review
+## Source extension
 
-The source backend is a separate feat/sources branch (PR #8). Apply migration 0003 before enabling MULTI_SOURCE_ENABLED=true. Use port 8788 for source-only local review so the existing Worker on 8787 is not duplicated; the web origin remains http://localhost:5173. Set VITE_API_BASE=http://localhost:8788 in the web terminal. Local source-only review intentionally uses MODEL_DAILY_BUDGET=0 and a generated, git-ignored IP_HASH_SECRET; no provider key is needed for this mode. Source terms, limits and all negative availability checks are in SOURCES.md and the source PR. The broader verification is an unmeasured extension, not a new evaluation result.
+Before enabling the additive source contract, apply migration 0003 along with the existing migrations: from worker/, run `npx wrangler d1 migrations apply oracle --local` for development or `npx wrangler d1 migrations apply oracle --remote` only after authenticating and selecting the owner's real D1 binding. `MULTI_SOURCE_ENABLED=true` and `SOURCE_DAILY_BUDGET=500` are supplied in wrangler.toml. Set the budget to zero to retain links and recorded AniList facts without secondary upstream requests. No new account or key is required for AniList, Jikan or Wikidata. No deployment has been performed. Source availability, approval requirements and limits are in SOURCES.md.
+
+For local source-only review: use port 8788 for source-only local review so the existing Worker on 8787 is not duplicated; the web origin remains http://localhost:5173. Set VITE_API_BASE=http://localhost:8788 in the web terminal. Local source-only review intentionally uses MODEL_DAILY_BUDGET=0 and a generated, git-ignored IP_HASH_SECRET; no provider key is needed for this mode. Source terms, limits and all negative availability checks are in SOURCES.md and the source PR. The broader verification is an unmeasured extension, not a new evaluation result.

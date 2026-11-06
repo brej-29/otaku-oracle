@@ -1,9 +1,11 @@
+import { detailsFromMedia } from "./source-record";
 import type { Deadline } from "./deadline";
 import { ApiError, type AnimeRecord, type Fetcher } from "./types";
 import { Store, type StoredRecord } from "./storage";
 import { readLimited } from "./parse";
 import { retryAt } from "./providers";
-const QUERY = `query Record($id:Int!){Media(id:$id,type:ANIME){id title{romaji english native} format episodes studios(isMain:true){nodes{name}} startDate{year} season seasonYear source coverImage{large color} genres}}`;
+const QUERY =
+  "query($id:Int!){Media(id:$id,type:ANIME){id idMal title{romaji english native} format episodes duration status startDate{year month day} endDate{year month day} season seasonYear source coverImage{large color} genres studios(isMain:true){nodes{name}} producers:studios(isMain:false){nodes{name isAnimationStudio}} popularity trending nextAiringEpisode{episode airingAt} relations{edges{relationType node{id title{romaji english} siteUrl}}} characters(role:MAIN,perPage:12){pageInfo{total} edges{node{name{full}} voiceActors(language:JAPANESE){name{full}}}} externalLinks{site url type}}}";
 const flights = new WeakMap<object, Map<number, Promise<RecordResult>>>();
 export interface RecordResult extends StoredRecord {
   cached: boolean;
@@ -38,6 +40,9 @@ export function toRecord(media: any, id: number): AnimeRecord {
     cover: cover?.startsWith("https://") ? cover : null,
     color: nullable(media.coverImage?.color),
     url: `https://anilist.co/anime/${id}`,
+    ...(media.idMal !== undefined
+      ? { idMal: numeric(media.idMal), details: detailsFromMedia(media) }
+      : {}),
     genres: Array.isArray(media.genres)
       ? media.genres.filter((s: unknown) => typeof s === "string").slice(0, 30)
       : [],
