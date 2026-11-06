@@ -1,4 +1,4 @@
-﻿import {chromium} from "playwright";
+import {chromium} from "playwright";
 import {routes,submit} from "./fixtures.mjs";
 const b=await chromium.launch({channel:"msedge"});
 try{
