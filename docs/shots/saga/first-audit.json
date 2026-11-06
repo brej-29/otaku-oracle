@@ -1,0 +1,43 @@
+{
+  "scope": "First production audit before deferred scene and thumbnail changes",
+  "mobile": {
+    "home": [
+      80,
+      100,
+      100,
+      100
+    ],
+    "why": [
+      99,
+      100,
+      100,
+      100
+    ],
+    "how": [
+      99,
+      100,
+      100,
+      100
+    ]
+  },
+  "desktop": {
+    "home": [
+      94,
+      100,
+      100,
+      100
+    ],
+    "why": [
+      100,
+      100,
+      100,
+      100
+    ],
+    "how": [
+      100,
+      100,
+      100,
+      100
+    ]
+  }
+}
