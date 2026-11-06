@@ -403,7 +403,7 @@ export default function App() {
                     {stage === "record"
                       ? "Retrieving this title’s AniList record."
                       : API_BASE
-                        ? "Waiting for a drafted and checked answer. This can take up to 15 seconds."
+                        ? "Waiting for the source response and any claim checks. This can take up to 15 seconds."
                         : "The demo reads source fields; it doesn’t draft an answer."}
                   </p>
                   <ol className="honest-progress">

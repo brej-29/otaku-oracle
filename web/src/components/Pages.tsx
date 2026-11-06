@@ -61,13 +61,12 @@ export function Why() {
           </h2>
           <p>
             Questions about studios, episodes and adaptations deserve more than
-            a plausible guess. We bring the title’s AniList record into the
-            answer, then compare tagged claims against it.
+            a plausible guess. We match the exact title across available
+            catalogs and keep the retrieved values attached to each claim.
           </p>
           <p>
-            A match gets a source. A contradiction gets a correction. Anything
-            beyond the record stays unchecked. That distinction is the whole
-            point.
+            Agreement carries evidence. Differences stay side by side. News and
+            conversation links remain separate from factual verification.
           </p>
         </div>
       </section>
@@ -182,7 +181,7 @@ const steps = [
   {
     name: "Read the record",
     title: "Bring the source into the conversation.",
-    text: "We retrieve the title’s AniList record: its studio, episodes, dates and other available details. Missing fields stay missing.",
+    text: "We start with AniList, match other catalogs by exact identifiers and keep their links. Missing or unavailable values stay visible.",
   },
   {
     name: "Check the claims",
@@ -246,15 +245,15 @@ export function How() {
         </div>
         <div className="process-paper paper-record">
           <Icon name="book" size={28} />
-          <h2>AniList</h2>
+          <h2>Sources</h2>
           <div className="record-rule">
-            Studio <span>Available</span>
+            AniList <span>Record</span>
           </div>
           <div className="record-rule">
-            Episodes <span>Available</span>
+            Other catalogs <span>When available</span>
           </div>
           <div className="record-rule">
-            Source <span>Attached</span>
+            Edition <span>Matched exactly</span>
           </div>
         </div>
         <div className="process-paper paper-answer">
