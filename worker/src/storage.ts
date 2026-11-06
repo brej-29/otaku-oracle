@@ -24,7 +24,7 @@ export class Store {
   async getRecord(id: number): Promise<StoredRecord | null> {
     const row = await this.db
       .prepare("SELECT record,fetched_at FROM records WHERE key=?")
-      .bind(`v1:${id}`)
+      .bind(`v2:${id}`)
       .first<{ record: string; fetched_at: number }>();
     return row
       ? { record: JSON.parse(row.record), fetchedAt: row.fetched_at }
@@ -35,7 +35,7 @@ export class Store {
       .prepare(
         "INSERT INTO records(key,record,fetched_at) VALUES(?,?,?) ON CONFLICT(key) DO UPDATE SET record=excluded.record,fetched_at=excluded.fetched_at",
       )
-      .bind(`v1:${record.id}`, JSON.stringify(record), now)
+      .bind(`v2:${record.id}`, JSON.stringify(record), now)
       .run();
   }
   async lease(id: number, token: string, now: number): Promise<boolean> {
@@ -43,14 +43,14 @@ export class Store {
       .prepare(
         "INSERT INTO leases(key,token,until_ms) VALUES(?,?,?) ON CONFLICT(key) DO UPDATE SET token=excluded.token,until_ms=excluded.until_ms WHERE until_ms <= ? RETURNING token",
       )
-      .bind(`v1:${id}`, token, now + 15000, now)
+      .bind(`v2:${id}`, token, now + 15000, now)
       .first();
     return row !== null;
   }
   async release(id: number, token: string) {
     await this.db
       .prepare("DELETE FROM leases WHERE key=? AND token=?")
-      .bind(`v1:${id}`, token)
+      .bind(`v2:${id}`, token)
       .run();
   }
   async upstream(now: number): Promise<boolean> {
@@ -137,6 +137,13 @@ export class Store {
       this.db.prepare("DELETE FROM leases WHERE until_ms < ?").bind(now),
       this.db.prepare("DELETE FROM circuits WHERE until_ms < ?").bind(now),
       this.db.prepare("DELETE FROM catalogs WHERE expires_at < ?").bind(now),
+      this.db
+        .prepare("DELETE FROM source_cache WHERE expires_at < ?")
+        .bind(now - 604800000),
+      this.db
+        .prepare("DELETE FROM source_events WHERE at_ms < ?")
+        .bind(now - 60000),
+      this.db.prepare("DELETE FROM source_locks WHERE until_ms < ?").bind(now),
     ]);
   }
 }

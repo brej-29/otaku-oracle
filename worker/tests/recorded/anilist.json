@@ -1,0 +1,393 @@
+{
+  "fetchedAt": "2026-11-06T12:58:32Z",
+  "query": "query($id:Int!){Media(id:$id,type:ANIME){id idMal title{romaji english native} format episodes duration status startDate{year month day} endDate{year month day} season seasonYear source coverImage{large color} genres studios(isMain:true){nodes{name}} producers:studios(isMain:false){nodes{name isAnimationStudio}} popularity trending nextAiringEpisode{episode airingAt} relations{edges{relationType node{id title{romaji english} siteUrl}}} characters(role:MAIN,perPage:12){edges{node{name{full}} voiceActors(language:JAPANESE){name{full}}}} externalLinks{site url} streamingEpisodes{title url site}}}",
+  "response": {
+    "data": {
+      "Media": {
+        "id": 154587,
+        "idMal": 52991,
+        "title": {
+          "romaji": "Sousou no Frieren",
+          "english": "Frieren: Beyond Journey\u2019s End",
+          "native": "\u846c\u9001\u306e\u30d5\u30ea\u30fc\u30ec\u30f3"
+        },
+        "format": "TV",
+        "episodes": 28,
+        "duration": 24,
+        "status": "FINISHED",
+        "startDate": {
+          "year": 2023,
+          "month": 9,
+          "day": 29
+        },
+        "endDate": {
+          "year": 2024,
+          "month": 3,
+          "day": 22
+        },
+        "season": "FALL",
+        "seasonYear": 2023,
+        "source": "MANGA",
+        "coverImage": {
+          "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx154587-qQTzQnEJJ3oB.jpg",
+          "color": "#bbf1a1"
+        },
+        "genres": ["Adventure", "Drama", "Fantasy"],
+        "studios": {
+          "nodes": [
+            {
+              "name": "Toho"
+            },
+            {
+              "name": "Shogakukan"
+            },
+            {
+              "name": "Nippon Television Network"
+            },
+            {
+              "name": "Shogakukan-Shueisha Productions"
+            },
+            {
+              "name": "Aniplex"
+            },
+            {
+              "name": "Dentsu"
+            }
+          ]
+        },
+        "producers": {
+          "nodes": [
+            {
+              "name": "Toho",
+              "isAnimationStudio": false
+            },
+            {
+              "name": "Shogakukan",
+              "isAnimationStudio": false
+            },
+            {
+              "name": "Nippon Television Network",
+              "isAnimationStudio": false
+            },
+            {
+              "name": "Shogakukan-Shueisha Productions",
+              "isAnimationStudio": false
+            },
+            {
+              "name": "Aniplex",
+              "isAnimationStudio": false
+            },
+            {
+              "name": "Dentsu",
+              "isAnimationStudio": false
+            }
+          ]
+        },
+        "popularity": 496885,
+        "trending": 13,
+        "nextAiringEpisode": null,
+        "relations": {
+          "edges": [
+            {
+              "relationType": "ADAPTATION",
+              "node": {
+                "id": 118586,
+                "title": {
+                  "romaji": "Sousou no Frieren",
+                  "english": "Frieren: Beyond Journey\u2019s End"
+                },
+                "siteUrl": "https://anilist.co/manga/118586"
+              }
+            },
+            {
+              "relationType": "CHARACTER",
+              "node": {
+                "id": 169811,
+                "title": {
+                  "romaji": "Yuusha",
+                  "english": "The Brave"
+                },
+                "siteUrl": "https://anilist.co/anime/169811"
+              }
+            },
+            {
+              "relationType": "SIDE_STORY",
+              "node": {
+                "id": 170068,
+                "title": {
+                  "romaji": "Sousou no Frieren: \u25cf\u25cf no Mahou",
+                  "english": null
+                },
+                "siteUrl": "https://anilist.co/anime/170068"
+              }
+            },
+            {
+              "relationType": "OTHER",
+              "node": {
+                "id": 175691,
+                "title": {
+                  "romaji": "Haru",
+                  "english": "Sunny"
+                },
+                "siteUrl": "https://anilist.co/anime/175691"
+              }
+            },
+            {
+              "relationType": "SEQUEL",
+              "node": {
+                "id": 182255,
+                "title": {
+                  "romaji": "Sousou no Frieren 2nd Season",
+                  "english": "Frieren: Beyond Journey\u2019s End Season 2"
+                },
+                "siteUrl": "https://anilist.co/anime/182255"
+              }
+            },
+            {
+              "relationType": "SIDE_STORY",
+              "node": {
+                "id": 189513,
+                "title": {
+                  "romaji": "Sousou no Frieren: \u25cf\u25cf no Mahou Part 2",
+                  "english": null
+                },
+                "siteUrl": "https://anilist.co/anime/189513"
+              }
+            }
+          ]
+        },
+        "characters": {
+          "edges": [
+            {
+              "node": {
+                "name": {
+                  "full": "Frieren"
+                }
+              },
+              "voiceActors": [
+                {
+                  "name": {
+                    "full": "Atsumi Tanezaki"
+                  }
+                }
+              ]
+            },
+            {
+              "node": {
+                "name": {
+                  "full": "Fern"
+                }
+              },
+              "voiceActors": [
+                {
+                  "name": {
+                    "full": "Kana Ichinose"
+                  }
+                }
+              ]
+            },
+            {
+              "node": {
+                "name": {
+                  "full": "Stark"
+                }
+              },
+              "voiceActors": [
+                {
+                  "name": {
+                    "full": "Chiaki Kobayashi"
+                  }
+                },
+                {
+                  "name": {
+                    "full": "Arisa Kiyoto"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "externalLinks": [
+          {
+            "site": "Official Site",
+            "url": "https://frieren-anime.jp/"
+          },
+          {
+            "site": "Twitter",
+            "url": "https://twitter.com/anime_frieren"
+          },
+          {
+            "site": "Crunchyroll",
+            "url": "https://www.crunchyroll.com/series/GG5H5XQX4/frieren-beyond-journeys-end"
+          },
+          {
+            "site": "Bilibili TV",
+            "url": "https://www.bilibili.tv/en/media/2090295"
+          },
+          {
+            "site": "YouTube",
+            "url": "https://www.youtube.com/playlist?list=PLwLSw1_eDZl10YPPR7qDsVf10wZfYnIMK"
+          },
+          {
+            "site": "TikTok",
+            "url": "https://www.tiktok.com/@anime_frieren"
+          },
+          {
+            "site": "Netflix",
+            "url": "https://www.netflix.com/title/81726714"
+          },
+          {
+            "site": "Hulu",
+            "url": "https://www.hulu.com/series/frieren-beyond-journeys-end-1d4725f8-06d1-43fb-a077-72143ac5502f"
+          },
+          {
+            "site": "Amazon Prime Video",
+            "url": "https://www.primevideo.com/detail/0FCJEHY4FXTDVCLZ5NR9A0N42N"
+          }
+        ],
+        "streamingEpisodes": [
+          {
+            "title": "Episode 1 - The Journey's End",
+            "url": "http://www.crunchyroll.com/watch/G2XU04E88/the-journeys-end",
+            "site": "Crunchyroll"
+          },
+          {
+            "title": "Episode 2 - It Didn't Have to Be Magic...",
+            "url": "http://www.crunchyroll.com/watch/G8WUNGZ48/it-didnt-have-to-be-magic",
+            "site": "Crunchyroll"
+          },
+          {
+            "title": "Episode 3 - Killing Magic",
+            "url": "http://www.crunchyroll.com/watch/GZ7UV2Z0K/killing-magic",
+            "site": "Crunchyroll"
+          },
+          {
+            "title": "Episode 4 - The Land Where Souls Rest",
+            "url": "http://www.crunchyroll.com/watch/GD9UVQ5P5/the-land-where-souls-rest",
+            "site": "Crunchyroll"
+          },
+          {
+            "title": "Episode 5 - Phantoms of the Dead",
+            "url": "http://www.crunchyroll.com/watch/G14U49MDV/phantoms-of-the-dead",
+            "site": "Crunchyroll"
+          },
+          {
+            "title": "Episode 6 - The Hero of the Village",
+            "url": "http://www.crunchyroll.com/watch/G0DUNDJ79/the-hero-of-the-village",
+            "site": "Crunchyroll"
+          },
+          {
+            "title": "Episode 7 - Like a Fairy Tale",
+            "url": "http://www.crunchyroll.com/watch/GEVUZXXN8/like-a-fairy-tale",
+            "site": "Crunchyroll"
+          },
+          {
+            "title": "Episode 8 - Frieren the Slayer",
+            "url": "http://www.crunchyroll.com/watch/GK9U3MK1G/frieren-the-slayer",
+            "site": "Crunchyroll"
+          },
+          {
+            "title": "Episode 9 - Aura the Guillotine",
+            "url": "http://www.crunchyroll.com/watch/GMKUXQ1QV/aura-the-guillotine",
+            "site": "Crunchyroll"
+          },
+          {
+            "title": "Episode 10 - A Powerful Mage",
+            "url": "http://www.crunchyroll.com/watch/GVWU07N79/a-powerful-mage",
+            "site": "Crunchyroll"
+          },
+          {
+            "title": "Episode 11 - Winter in the Northern Lands",
+            "url": "http://www.crunchyroll.com/watch/G50UZVDZP/winter-in-the-northern-lands",
+            "site": "Crunchyroll"
+          },
+          {
+            "title": "Episode 12 - A Real Hero",
+            "url": "http://www.crunchyroll.com/watch/G7PU414Z2/a-real-hero",
+            "site": "Crunchyroll"
+          },
+          {
+            "title": "Episode 13 - Aversion to One's Own Kind",
+            "url": "http://www.crunchyroll.com/watch/GK9U3KWG4/aversion-to-ones-own-kind",
+            "site": "Crunchyroll"
+          },
+          {
+            "title": "Episode 14 - Privilege of the Young",
+            "url": "http://www.crunchyroll.com/watch/G31UX45VQ/privilege-of-the-young",
+            "site": "Crunchyroll"
+          },
+          {
+            "title": "Episode 15 - Smells Like Trouble",
+            "url": "http://www.crunchyroll.com/watch/GWDU8JN8Z/smells-like-trouble",
+            "site": "Crunchyroll"
+          },
+          {
+            "title": "Episode 16 - Long-Lived Friends",
+            "url": "http://www.crunchyroll.com/watch/GVWU07DK5/long-lived-friends",
+            "site": "Crunchyroll"
+          },
+          {
+            "title": "Episode 17 - Take Care",
+            "url": "http://www.crunchyroll.com/watch/G50UZV29J/take-care",
+            "site": "Crunchyroll"
+          },
+          {
+            "title": "Episode 18 - First-Class Mage Exam",
+            "url": "http://www.crunchyroll.com/watch/G7PU41VQV/first-class-mage-exam",
+            "site": "Crunchyroll"
+          },
+          {
+            "title": "Episode 19 - Well-Laid Plans",
+            "url": "http://www.crunchyroll.com/watch/GD9UV3DKV/well-laid-plans",
+            "site": "Crunchyroll"
+          },
+          {
+            "title": "Episode 20 - Necessary Killing",
+            "url": "http://www.crunchyroll.com/watch/GMKUXP87V/necessary-killing",
+            "site": "Crunchyroll"
+          },
+          {
+            "title": "Episode 21 - The World of Magic",
+            "url": "http://www.crunchyroll.com/watch/GD9UV3JNQ/the-world-of-magic",
+            "site": "Crunchyroll"
+          },
+          {
+            "title": "Episode 22 - Future Enemies",
+            "url": "http://www.crunchyroll.com/watch/GK9U3KJWM/future-enemies",
+            "site": "Crunchyroll"
+          },
+          {
+            "title": "Episode 23 - Conquering the Labyrinth",
+            "url": "http://www.crunchyroll.com/watch/GVWU079EX/conquering-the-labyrinth",
+            "site": "Crunchyroll"
+          },
+          {
+            "title": "Episode 24 - Perfect Replicas",
+            "url": "http://www.crunchyroll.com/watch/GMKUXPGWJ/perfect-replicas",
+            "site": "Crunchyroll"
+          },
+          {
+            "title": "Episode 25 - A Fatal Vulnerability",
+            "url": "http://www.crunchyroll.com/watch/GJWU2002W/a-fatal-vulnerability",
+            "site": "Crunchyroll"
+          },
+          {
+            "title": "Episode 26 - The Height of Magic",
+            "url": "http://www.crunchyroll.com/watch/GEVUZD79N/the-height-of-magic",
+            "site": "Crunchyroll"
+          },
+          {
+            "title": "Episode 27 - An Era of Humans",
+            "url": "http://www.crunchyroll.com/watch/GK9U3E2EJ/an-era-of-humans",
+            "site": "Crunchyroll"
+          },
+          {
+            "title": "Episode 28 - It Would Be Embarrassing When We Met Again",
+            "url": "http://www.crunchyroll.com/watch/G50UZ0DX4/it-would-be-embarrassing-when-we-met-again",
+            "site": "Crunchyroll"
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "at": "2026-11-06T13:45:18.571Z",
+  "status": 200,
+  "milliseconds": 619,
+  "mode": "record-only",
+  "resolution": {
+    "status": "unchecked",
+    "summary": "Some values could not be corroborated. Unavailable and stale sources are shown explicitly."
+  },
+  "sources": [
+    {
+      "id": "anilist",
+      "label": "AniList",
+      "state": "available",
+      "url": "https://anilist.co/anime/154587",
+      "fetchedAt": "2026-11-06T13:22:52.122Z",
+      "cached": true,
+      "note": "Reference, not the truth."
+    },
+    {
+      "id": "mal",
+      "label": "MyAnimeList via Jikan",
+      "url": "https://myanimelist.net/anime/52991",
+      "state": "unavailable",
+      "note": "Unavailable now: the source did not return usable data.",
+      "cached": false,
+      "fetchedAt": null
+    },
+    {
+      "id": "wikidata",
+      "label": "Wikidata",
+      "url": "https://www.wikidata.org/",
+      "state": "unavailable",
+      "note": "Unavailable now: the source did not return usable data.",
+      "cached": false,
+      "fetchedAt": null
+    },
+    {
+      "id": "reddit",
+      "label": "Reddit",
+      "state": "link-only",
+      "url": "https://www.reddit.com/r/anime/",
+      "fetchedAt": null,
+      "cached": false,
+      "note": "Search links only. No Reddit data is fetched; official access requires prior approval."
+    }
+  ],
+  "claims": [
+    {
+      "id": "claim-2",
+      "text": "Episode count: 28.",
+      "field": "episodes",
+      "value": "28",
+      "status": "unchecked",
+      "recordValue": "28",
+      "sourceUrl": "https://anilist.co/anime/154587",
+      "verification": {
+        "field": "episodes",
+        "basis": "insufficient",
+        "evidence": [
+          {
+            "sourceId": "anilist",
+            "source": "AniList",
+            "value": "28",
+            "url": "https://anilist.co/anime/154587",
+            "fetchedAt": "2026-11-06T13:22:52.122Z",
+            "stale": false
+          }
+        ],
+        "note": "Not enough independent evidence to verify this claim."
+      }
+    },
+    {
+      "id": "source-start_date",
+      "text": "Start date: 2023-09-29.",
+      "field": null,
+      "value": "2023-09-29",
+      "status": "unchecked",
+      "recordValue": "2023-09-29",
+      "sourceUrl": "https://anilist.co/anime/154587",
+      "verification": {
+        "field": "start_date",
+        "basis": "insufficient",
+        "evidence": [
+          {
+            "sourceId": "anilist",
+            "source": "AniList",
+            "value": "2023-09-29",
+            "url": "https://anilist.co/anime/154587",
+            "fetchedAt": "2026-11-06T13:22:52.122Z",
+            "stale": false
+          }
+        ],
+        "note": "Not enough independent evidence to verify this claim."
+      }
+    }
+  ],
+  "modelCalled": false,
+  "scope": "Second source-only smoke after replacing the broad label service and allowing Wikidata 5.5 seconds; original negative result retained"
+}
