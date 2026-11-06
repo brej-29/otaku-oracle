@@ -1,0 +1,34 @@
+{
+  "query": "SELECT ?item ?episodes ?start ?end ?networkLabel ?article WHERE { ?item wdt:P4086 \"52991\" . FILTER NOT EXISTS { ?item wdt:P4086 ?other FILTER(?other != \"52991\") } OPTIONAL{?item wdt:P1113 ?episodes} OPTIONAL{?item wdt:P580 ?start} OPTIONAL{?item wdt:P582 ?end} OPTIONAL{?item wdt:P449 ?network} OPTIONAL{?article schema:about ?item;schema:isPartOf <https://en.wikipedia.org/>} SERVICE wikibase:label{bd:serviceParam wikibase:language \"en\"} } LIMIT 30",
+  "fetchedAt": "2026-11-06T13:01:57Z",
+  "response": {
+    "head": {
+      "vars": ["item", "episodes", "start", "end", "networkLabel", "article"]
+    },
+    "results": {
+      "bindings": [
+        {
+          "item": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q130377145"
+          },
+          "episodes": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#decimal",
+            "type": "literal",
+            "value": "28"
+          },
+          "start": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+            "type": "literal",
+            "value": "2023-09-29T00:00:00Z"
+          },
+          "end": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+            "type": "literal",
+            "value": "2024-03-22T00:00:00Z"
+          }
+        }
+      ]
+    }
+  }
+}

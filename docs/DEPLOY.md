@@ -103,3 +103,8 @@ SITE_URL is the page URL; API_URL is the Worker base URL. EXPECTED_TITLE optiona
 ## Continuous integration
 
 .github/workflows/ci.yml includes required locked uv evaluation tests, the Worker install/type/format/test/dry-run pipeline, and web install/tsc/build only when web/package.json exists. It needs no application secrets and never runs either live smoke command. Apply both D1 migrations before deploying this revision. See WORKER_VERIFICATION.md for exact action-version sources and the current branch-integration limitation.
+
+
+## Source extension
+
+Before enabling the additive source contract, apply migration 0003 along with the existing migrations: from worker/, run `npx wrangler d1 migrations apply oracle --local` for development or `npx wrangler d1 migrations apply oracle --remote` only after authenticating and selecting the owner's real D1 binding. `MULTI_SOURCE_ENABLED=true` and `SOURCE_DAILY_BUDGET=500` are supplied in wrangler.toml. Set the budget to zero to retain links and recorded AniList facts without secondary upstream requests. No new account or key is required for AniList, Jikan or Wikidata. No deployment has been performed. Source availability, approval requirements and limits are in SOURCES.md.
