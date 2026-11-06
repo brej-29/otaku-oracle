@@ -417,3 +417,39 @@ it("does not spend the model budget on discussion links", async () => {
     vi.mocked(f).mock.calls.every(([u]) => !String(u).includes("example/v1")),
   ).toBe(true);
 });
+
+it("keeps expanded retrieval out of the compact drafting prompt", async () => {
+  let prompt = "";
+  const f = vi.fn(async (input: RequestInfo | URL, init?: RequestInit) => {
+    const u = String(input);
+    if (u.includes("anilist")) return Response.json(anilist.response);
+    if (u.includes("jikan")) return Response.json({ data: mal });
+    if (u.includes("wikidata")) return Response.json(wikidata.response);
+    prompt = String(init?.body);
+    return Response.json({
+      choices: [
+        {
+          message: {
+            content: JSON.stringify({
+              answer: "There are 28 episodes.",
+              claims: [
+                { text: "28 episodes.", field: "episodes", value: "28" },
+              ],
+              explanation: null,
+            }),
+          },
+        },
+      ],
+    });
+  }) as Fetcher;
+  const r = await handle(
+    ask({ titleId: 154587, question: "How many episodes?" }),
+    environment(db, { MULTI_SOURCE_ENABLED: "true" }),
+    f,
+  );
+  expect(r.status).toBe(200);
+  expect(prompt).not.toBe("");
+  expect(prompt).not.toContain("voice_cast");
+  expect(prompt).not.toContain("resourceLinks");
+  expect(((await r.json()) as Answer).record.details?.voice_cast).toBeDefined();
+});

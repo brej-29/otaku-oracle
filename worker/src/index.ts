@@ -157,7 +157,7 @@ export async function handle(
         ? Promise.resolve({ draft: null, model: null, degraded: false })
         : draftAnswer(
             input.question.trim(),
-            result.record,
+            { ...result.record, details: undefined, resourceLinks: undefined },
             env,
             store,
             fetcher,

@@ -26,3 +26,7 @@ One single adaptation cannot establish source coverage. Studio renames, split co
 ## Optional future Reddit access
 
 An owner wishing to add real thread metadata must first read the linked policy and request explicit approval for this external application. After approval, follow Reddit's current approved app-registration flow and store REDDIT_CLIENT_ID and REDDIT_CLIENT_SECRET as Worker secrets, never in browser configuration. Registration or a free API allocation is not guaranteed. This release does not consume those secrets or call the OAuth API; search links remain usable without them. Any later adapter needs separate tests, deletion/retention handling and confirmed approved limits.
+
+The model receives only the compact original record fields. Rich source details and resource-link arrays are excluded from its prompt; requested extra fields are rendered deterministically. This avoids turning the expanded retrieval into an unnecessary free-tier prompt cost. The second local source-only smoke returned 200 in 619 ms, again with two unchecked claims and both secondary adapters unavailable; both attempts are retained, and neither is an accuracy result.
+
+Routing uses English keywords. Novel phrasing and other languages may fall into the unclear route rather than receive a guessed factual answer.
