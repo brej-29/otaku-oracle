@@ -141,7 +141,10 @@ async function cachedSource(
           "rate-limited",
           "Unavailable now: the shared source rate gate is busy.",
         );
-      const value = await deadline.run(operation, 3000);
+      const value = await deadline.run(
+        operation,
+        id === "wikidata" ? 5500 : 3000,
+      );
       await store.db
         .prepare(
           "INSERT INTO source_cache(key,payload,fetched_at,expires_at) VALUES(?,?,?,?) ON CONFLICT(key) DO UPDATE SET payload=excluded.payload,fetched_at=excluded.fetched_at,expires_at=excluded.expires_at",
@@ -313,7 +316,7 @@ export function wikiQuery(id: number) {
     id +
     '" . FILTER NOT EXISTS{?item wdt:P4086 ?other FILTER(?other != "' +
     id +
-    '") } OPTIONAL{?item wdt:P1113 ?episodes} OPTIONAL{?item p:P580/psv:P580 ?sn . ?sn wikibase:timeValue ?start;wikibase:timePrecision ?startPrecision} OPTIONAL{?item p:P582/psv:P582 ?en . ?en wikibase:timeValue ?end;wikibase:timePrecision ?endPrecision} OPTIONAL{?item wdt:P449 ?network} OPTIONAL{?article schema:about ?item;schema:isPartOf <https://en.wikipedia.org/>} SERVICE wikibase:label{bd:serviceParam wikibase:language "en"}} LIMIT 30'
+    '") } OPTIONAL{?item wdt:P1113 ?episodes} OPTIONAL{?item p:P580/psv:P580 ?sn . ?sn wikibase:timeValue ?start;wikibase:timePrecision ?startPrecision} OPTIONAL{?item p:P582/psv:P582 ?en . ?en wikibase:timeValue ?end;wikibase:timePrecision ?endPrecision} OPTIONAL{?item wdt:P449 ?network} OPTIONAL{?article schema:about ?item;schema:isPartOf <https://en.wikipedia.org/>} OPTIONAL{?network rdfs:label ?networkLabel FILTER(LANG(?networkLabel)="en")}} LIMIT 30'
   );
 }
 export function wikiFacts(body: any): {
