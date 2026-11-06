@@ -228,7 +228,7 @@ export function Journey({
         aria-label="A journey through anime"
       >
         <div className="journey-stage">
-          {ready && (
+          {(ready || !motion) && (
             <>
               <World motion={motion} />
               <div className="journey-film">
