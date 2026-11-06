@@ -13,25 +13,25 @@ Two controlled local answer requests succeeded through localhost:5173 and the si
 
 Final production audits:
 
-| Profile | Home | Why | How | Other three categories |
-|---|---:|---:|---:|---|
-| Mobile performance | 90 | 96 | 98 | 100 on every page |
-| Desktop performance | 100 | 100 | 100 | 100 on every page |
+| Profile             | Home | Why | How | Other three categories |
+| ------------------- | ---: | --: | --: | ---------------------- |
+| Mobile performance  |   90 |  96 |  98 | 100 on every page      |
+| Desktop performance |  100 | 100 | 100 | 100 on every page      |
 
 The first homepage audit scored 80 mobile and 94 desktop; it failed the required mobile floor. Deferring near-viewport artwork, using source-sized thumbnails and discovering the hero image earlier removed the avoidable initial image load. An intermediate optimized run scored 97 mobile; the table reports the later final backend-connected build rather than selecting the highest result. Local scores vary with the external art connection. First-load JavaScript is 75.3 KiB gzip. Build/type checks passed; the install audit found zero vulnerabilities. The eleven exact web dependency versions were verified older than the two-week cutoff.
 
 ## fidelity
 
-| Promise | Evidence and verdict |
-|---|---|
-| Anime is immediate | Match: explicit anime headline, three real hero covers, real title starter row and attributed cover/banner planes through the world. |
-| Warm field-journal base | Match: editorial serif and italic accent, paper/ink, red, tilted source note, human invitation and a working desk. |
-| Living background | Match: motion.json records changed cloud and lantern matrices and a changed canvas image while idle; pause leaves all three unchanged. |
-| A travelling camera | Match within the chosen 2D medium: nine consecutive frames travel from x=0 to x=-2880 and y=0 to y=-40 at desktop width, with scenery/gate layers at different rates. |
+| Promise                   | Evidence and verdict                                                                                                                                                                                                                                         |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Anime is immediate        | Match: explicit anime headline, three real hero covers, real title starter row and attributed cover/banner planes through the world.                                                                                                                         |
+| Warm field-journal base   | Match: editorial serif and italic accent, paper/ink, red, tilted source note, human invitation and a working desk.                                                                                                                                           |
+| Living background         | Match: motion.json records changed cloud and lantern matrices and a changed canvas image while idle; pause leaves all three unchanged.                                                                                                                       |
+| A travelling camera       | Match within the chosen 2D medium: nine consecutive frames travel from x=0 to x=-2880 and y=0 to y=-40 at desktop width, with scenery/gate layers at different rates.                                                                                        |
 | Strong original companion | Match in tested views: hero scale is 245 px desktop and 195 px phone; eight authored walk frames, coat/tail motion, pointer-aware eyes and distinct curious/thinking/happy/puzzled poses. Four-times renders were inspected across all three rebuild passes. |
-| Three claim states | Match: solid red verified seal and brief petal burst; conflict cross/strike/correction; unchecked open dashed treatment. Prose beyond the record never receives a verified seal. |
-| Product truth | Match: arbitrary title search and free-text question use the existing contract; demo limitations, runtime evaluation status and record-only/error states remain explicit. |
-| Still poster and keyboard | Match in recorded checks: system reduction and pause stop movement; content remains complete, focus visible and the combobox usable by keys. |
+| Three claim states        | Match: solid red verified seal and brief petal burst; conflict cross/strike/correction; unchecked open dashed treatment. Prose beyond the record never receives a verified seal.                                                                             |
+| Product truth             | Match: arbitrary title search and free-text question use the existing contract; demo limitations, runtime evaluation status and record-only/error states remain explicit.                                                                                    |
+| Still poster and keyboard | Match in recorded checks: system reduction and pause stop movement; content remains complete, focus visible and the combobox usable by keys.                                                                                                                 |
 
 References opened and studied in the browser:
 
@@ -49,12 +49,12 @@ Measured normal-text token contrast: light ink 13.83:1, muted 5.70:1 and red 5.5
 
 ## material_fixes
 
-| Critique/rebuild pass | Finding | Change and final disposition |
-|---|---|---|
-| One | Retained paper wash flattened the dusk; phone art appeared too late; first face lacked distinction. | Removed the wash, moved art and companion into the first phone view, redrew forehead/cheek/shadow details. Resolved in pass two and final frames. |
-| Two | Bright moon crossed closing type; mobile banner crossed supporting copy; the headline did not name anime. | Protected reading, moved the banner, committed the anime headline and strengthened the near gate/camera plane. Resolved in pass three and final frames. |
-| Three | Loading still felt like a plain card; the Why ornament overflowed; long phone questions were too narrow. | Added the selected-title cinema/loading companion, red seals and petal burst, real cover ornament and full-width question type. The final matrix reports no overflow. A reduced-motion mount edge case was also fixed so all three static scenes exist on initial load. |
-| Final capture validity | Some remote covers had not decoded at capture time. | Added explicit image readiness; nine settled hero variants were recaptured, and all nine still scenes were captured individually to avoid a stitched sticky-header artifact. The contact sheet was refreshed. Resolved. |
+| Critique/rebuild pass  | Finding                                                                                                   | Change and final disposition                                                                                                                                                                                                                                            |
+| ---------------------- | --------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| One                    | Retained paper wash flattened the dusk; phone art appeared too late; first face lacked distinction.       | Removed the wash, moved art and companion into the first phone view, redrew forehead/cheek/shadow details. Resolved in pass two and final frames.                                                                                                                       |
+| Two                    | Bright moon crossed closing type; mobile banner crossed supporting copy; the headline did not name anime. | Protected reading, moved the banner, committed the anime headline and strengthened the near gate/camera plane. Resolved in pass three and final frames.                                                                                                                 |
+| Three                  | Loading still felt like a plain card; the Why ornament overflowed; long phone questions were too narrow.  | Added the selected-title cinema/loading companion, red seals and petal burst, real cover ornament and full-width question type. The final matrix reports no overflow. A reduced-motion mount edge case was also fixed so all three static scenes exist on initial load. |
+| Final capture validity | Some remote covers had not decoded at capture time.                                                       | Added explicit image readiness; nine settled hero variants were recaptured, and all nine still scenes were captured individually to avoid a stitched sticky-header artifact. The contact sheet was refreshed. Resolved.                                                 |
 
 The single source heuristic scan flagged two coloured side borders in the lantern-rib drawing. They are decorative ribs inside an original lantern, not an accent border on a UI card; this is a contextual false positive. No second scan or independent reviewer is claimed.
 
@@ -65,3 +65,7 @@ No open material finding remains in the pictured scope. This disposition does no
 ## keep
 
 Keep the real anime art, expressive large courier, warm invitation and living night camera together; keep the answer view quieter, the distinctions honest and the source one click away. Review the actual images rather than this description: docs/shots/saga/contact-sheet.png and docs/shots/saga/scroll-strip.png. Preview and deployment commands are in web/README.md and docs/DEPLOY.md.
+
+## Owner refinement / 6 November 2026
+
+The owner subsequently identified four material gaps: the opening had a hard left/right seam, the covers never changed, the source note was fixed to one title, and the walking legs were too stiff. Those findings supersede the earlier no-open-finding statement for that reviewed version. The fixes and new evidence are in [SAGA_REFINEMENT.md](SAGA_REFINEMENT.md), with a before/after contact sheet in shots/saga/refinement/. The original three rebuild passes above remain historical, not evidence that this later feedback had already been implemented.
