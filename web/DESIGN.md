@@ -48,11 +48,11 @@ Real image planes, offset soft shadows and a separate foreground gate create dep
 
 ## Shapes
 
-Thick original ink contours for the character and scenery; rectangular paper covers and source notes; restrained rounding for working controls. The fox mark, favicon and wordmark belong to the same courier identity. Nori has eight authored leg-frame silhouettes, an animated coat and tail, pointer-aware eyes, blink/look behaviour and separate curious, thinking, happy and puzzled poses.
+Thick original ink contours for the character and scenery; rectangular paper covers and source notes; restrained rounding for working controls. The fox mark, favicon and wordmark belong to the same courier identity. Nori keeps the original face and costume, with jointed hip/knee/ankle legs driven by road distance, planted stance feet, arm counter-swing, an animated tail, pointer-aware eyes and distinct curious, thinking, happy and puzzled poses. A validated optional sprite pack can replace the drawing without a component change; see docs/MASCOT_ASSET_SPEC.md.
 
 ## Components
 
-- Cover stacks use real AniList image URLs, keep their title captions and respond to the pointer with tilt.
+- The three-card stack retains its original positions. A shuffled deck cycles through popular and trending AniList titles without simultaneous duplicates; source notes derive from the same front-title object. One six-hour cached metadata request and 32 real bundled records avoid per-card requests. Hover/focus pauses, leaving resumes, and reduced motion keeps one still set. The continuous dusk world reaches behind the type through an atmospheric veil.
 - Primary actions have a small magnetic response and an arrow movement. Keyboard focus remains a visible outline.
 - The waiting view combines the selected title with Nori and a moving source scene. Progress labels advance only on actual source/response events. A pending response never displays a completed verification.
 - Verified seals land with a brief six-petal burst after the response arrives. Conflicts keep the original statement struck through and show what AniList says. Unchecked prose receives no verified seal.

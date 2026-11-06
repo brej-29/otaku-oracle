@@ -1,4 +1,4 @@
-﻿{
+{
   "version": 1,
   "identity": "dusk cinema",
   "motion": {
@@ -6,10 +6,13 @@
     "sceneTravelY": 40,
     "cloudSeconds": 28,
     "lanternSeconds": 5,
-    "walkFrames": 8,
-    "walkSeconds": 0.8,
     "controlMilliseconds": 250,
-    "reduced": "complete static sequence"
+    "reduced": "complete static sequence",
+    "walkStrideNativeUnits": 76,
+    "walkStanceFraction": 0.62,
+    "walkBlendMilliseconds": 75,
+    "coverIntervalMilliseconds": 4800,
+    "coverTransitionMilliseconds": 850
   },
   "layout": {
     "phone": 390,

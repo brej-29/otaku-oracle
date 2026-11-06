@@ -1,4 +1,4 @@
-import catalog from "../catalog.json";
+import catalog from "../catalog.json" with { type: "json" };
 import { useEffect, useState } from "react";
 import { getEval, type EvalSummary } from "../api";
 import { Icon, Logo, Traveller } from "./Art";

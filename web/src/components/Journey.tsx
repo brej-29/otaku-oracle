@@ -1,7 +1,9 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import type { CSSProperties, ReactNode } from "react";
-import { popular, type Hit } from "../api";
-import catalog from "../catalog.json";
+import { type Hit } from "../api";
+import { useShowcase } from "./useShowcase";
+import { emptyDrive } from "../mascot/types";
+import catalog from "../catalog.json" with { type: "json" };
 import { Icon, Traveller, World, type Pose } from "./Art";
 
 export function Journey({
@@ -24,7 +26,9 @@ export function Journey({
   const trip = useRef<HTMLElement>(null),
     [scene, setScene] = useState(0),
     [ready, setReady] = useState(false);
-  const [titles, setTitles] = useState<Hit[]>(catalog);
+  const drive = useRef(emptyDrive());
+  const showcase = useShowcase(motion);
+  const titles = showcase.pool ?? catalog;
   useEffect(() => {
     const e = trip.current;
     if (!e) return;
@@ -40,54 +44,114 @@ export function Journey({
     observer.observe(e);
     return () => observer.disconnect();
   }, []);
-  useEffect(() => {
-    const c = new AbortController();
-    popular(c.signal)
-      .then((h) => {
-        if (h.length) setTitles(h);
-      })
-      .catch(() => {});
-    return () => c.abort();
-  }, []);
-  useEffect(() => {
+
+  useLayoutEffect(() => {
     let frame = 0,
-      timer: ReturnType<typeof setTimeout>;
-    const update = () => {
+      timer: ReturnType<typeof setTimeout>,
+      initialized = false,
+      lastTime = performance.now(),
+      lastPosition = 0;
+    const stop = () => {
+      drive.current.moving = false;
+      drive.current.velocity = 0;
+      onWalking(false);
+    };
+    const update = (time: number, scrolling = false) => {
       const e = trip.current;
       if (!e) return;
       const p = Math.max(
         0,
-        Math.min(1, (scrollY - e.offsetTop) / (e.offsetHeight - innerHeight)),
+        Math.min(
+          1,
+          (scrollY - e.offsetTop) / Math.max(1, e.offsetHeight - innerHeight),
+        ),
       );
       e.style.setProperty("--camera", String(p));
       setScene(Math.min(2, Math.floor(p * 2 + 0.3)));
       onProgress(p);
+      const stage = e.querySelector<HTMLElement>(".journey-stage"),
+        courier = e.querySelector<HTMLElement>(".journey-courier"),
+        path = e.querySelector<SVGPathElement>(".world-ground"),
+        matrix = path?.getScreenCTM();
+      let position = innerWidth * 1.13 * p;
+      if (stage && courier && path && matrix) {
+        const actor = courier.getBoundingClientRect(),
+          screenX = actor.left + actor.width * 0.5;
+        position = screenX - matrix.e;
+        const transform = new DOMMatrix([
+            matrix.a,
+            matrix.b,
+            matrix.c,
+            matrix.d,
+            matrix.e,
+            matrix.f,
+          ]),
+          target = new DOMPoint(screenX, 0).matrixTransform(
+            transform.inverse(),
+          ).x;
+        let lo = 0,
+          hi = path.getTotalLength();
+        for (let i = 0; i < 12; i++) {
+          const mid = (lo + hi) / 2;
+          if (path.getPointAtLength(mid).x < target) lo = mid;
+          else hi = mid;
+        }
+        const length = (lo + hi) / 2,
+          point = path.getPointAtLength(length),
+          screen = new DOMPoint(point.x, point.y).matrixTransform(transform);
+        const before = path.getPointAtLength(Math.max(0, length - 10)),
+          after = path.getPointAtLength(
+            Math.min(path.getTotalLength(), length + 10),
+          );
+        drive.current.slope =
+          ((after.y - before.y) * matrix.d) /
+          Math.max(0.001, (after.x - before.x) * matrix.a);
+        courier.style.setProperty(
+          "--ground-top",
+          screen.y -
+            stage.getBoundingClientRect().top -
+            courier.offsetHeight * 0.94516129 +
+            "px",
+        );
+      }
+      const delta = position - lastPosition;
+      if (initialized && scrolling && motion && Math.abs(delta) > 0.05) {
+        drive.current.travel += Math.abs(delta);
+        drive.current.velocity =
+          delta / Math.max(0.008, (time - lastTime) / 1000);
+        drive.current.direction = delta >= 0 ? 1 : -1;
+        drive.current.moving = true;
+        onWalking(true);
+        clearTimeout(timer);
+        timer = setTimeout(stop, 180);
+      }
+      drive.current.position = position;
+      lastPosition = position;
+      lastTime = time;
+      initialized = true;
     };
     const scroll = () => {
       cancelAnimationFrame(frame);
-      frame = requestAnimationFrame(update);
-      onWalking(motion);
-      clearTimeout(timer);
-      timer = setTimeout(() => onWalking(false), 180);
+      frame = requestAnimationFrame((t) => update(t, true));
     };
-    update();
+    const resize = () => update(performance.now());
+    update(performance.now());
     addEventListener("scroll", scroll, { passive: true });
-    addEventListener("resize", update);
+    addEventListener("resize", resize);
     return () => {
       cancelAnimationFrame(frame);
       clearTimeout(timer);
+      stop();
       removeEventListener("scroll", scroll);
-      removeEventListener("resize", update);
+      removeEventListener("resize", resize);
     };
-  }, [motion, onProgress, onWalking]);
+  }, [motion, onProgress, onWalking, ready]);
   function pick(h: Hit) {
     onChoose?.(h);
-    document
-      .getElementById("ask")
-      ?.scrollIntoView({
-        behavior: motion ? "smooth" : "instant",
-        block: "center",
-      });
+    document.getElementById("ask")?.scrollIntoView({
+      behavior: motion ? "smooth" : "instant",
+      block: "center",
+    });
     setTimeout(
       () => document.getElementById("question")?.focus({ preventScroll: true }),
       motion ? 450 : 0,
@@ -109,8 +173,8 @@ export function Journey({
     e.currentTarget.style.setProperty("--rx", "0deg");
     e.currentTarget.style.setProperty("--ry", "0deg");
   }
-  const hero = catalog.slice(0, 3),
-    source = catalog[0];
+  const hero = showcase.cards,
+    source = hero[0];
   return (
     <>
       <section className="opening" aria-labelledby="opening-title">
@@ -138,45 +202,84 @@ export function Journey({
           </a>
         </div>
         <div className="hero-art">
-          <div className="cover-stack">
+          <div
+            className="cover-stack"
+            ref={showcase.stack}
+            data-phase={showcase.phase}
+            data-front-id={source.id}
+            data-carousel-paused={showcase.paused}
+            onPointerEnter={() => showcase.setHover(true)}
+            onPointerLeave={() => showcase.setHover(false)}
+            onFocusCapture={() => showcase.setFocused(true)}
+            onBlurCapture={(e) => {
+              if (!e.currentTarget.contains(e.relatedTarget))
+                showcase.setFocused(false);
+            }}
+          >
             {hero.map((h, i) => (
               <button
                 className={"cover-poster poster-" + i}
+                data-title-id={h.id}
+                data-image-failed={!h.cover || undefined}
+                data-slot={i}
                 key={h.id}
                 onClick={() => pick(h)}
                 onPointerMove={tilt}
                 onPointerLeave={unTilt}
                 aria-label={"Ask about " + h.title}
-                style={{ "--order": i } as CSSProperties}
+                style={
+                  {
+                    "--order": i,
+                    "--cover-color": h.color ?? "#e4c392",
+                  } as CSSProperties
+                }
               >
                 <img
                   src={h.cover}
                   width="250"
                   height="355"
                   alt={h.title}
+                  onError={(e) => {
+                    e.currentTarget.style.visibility = "hidden";
+                    e.currentTarget.parentElement?.setAttribute(
+                      "data-image-failed",
+                      "true",
+                    );
+                  }}
                   fetchPriority={i < 2 ? "high" : "low"}
                 />
-                <span>
+                <span className="cover-unavailable" aria-hidden="true">
+                  {h.title}
+                  <small>Cover unavailable</small>
+                </span>
+                <span className="cover-caption">
                   {h.title}
                   <Icon size={15} />
                 </span>
               </button>
             ))}
           </div>
-          <div className="source-note">
+          <div
+            className="source-note"
+            key={source.id}
+            data-front-id={source.id}
+            data-phase={showcase.phase}
+          >
             <div>
               <Icon name="book" size={15} />
               <span>Source notes</span>
             </div>
-            <strong>{source.title}</strong>
+            <strong title={source.title}>{source.title}</strong>
             <dl>
               <div>
                 <dt>Studio</dt>
-                <dd>{source.studio}</dd>
+                <dd title={source.studio || "Unlisted"}>
+                  {source.studio || "Unlisted"}
+                </dd>
               </div>
               <div>
                 <dt>Episodes</dt>
-                <dd>{source.episodes}</dd>
+                <dd>{source.episodes ?? "Unlisted"}</dd>
               </div>
             </dl>
             <a href={source.url} target="_blank" rel="noreferrer">
@@ -385,7 +488,7 @@ export function Journey({
                 </section>
               </div>
               <div className="journey-courier">
-                <Traveller pose={pose} />
+                <Traveller pose={pose} drive={drive} />
                 <span className="speech-bubble">
                   {scene === 0
                     ? "Where to next?"
