@@ -86,6 +86,8 @@ export interface Env {
   REQUEST_DEADLINE_MS?: string;
   MULTI_SOURCE_ENABLED?: string;
   SOURCE_DAILY_BUDGET?: string;
+  ANILIST_RELAY_URL?: string;
+  ANILIST_RELAY_KEY?: string;
   ZAI_API_KEY?: string;
   GROQ_API_KEY?: string;
   NVIDIA_API_KEY?: string;
