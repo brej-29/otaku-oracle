@@ -107,13 +107,16 @@ const reduced = await browser.newContext({ reducedMotion: "reduce" });
 await routes(reduced);
 const rp = await reduced.newPage();
 await rp.goto(base);
+await rp.locator('.hero-courier[data-renderer="sprite"]').waitFor();
 ok(
   await rp.evaluate(() => document.documentElement.dataset.motion === "off"),
   "reduced motion",
 );
 ok(
   await rp
-    .locator(".traveller-body")
+    .locator(
+      ".hero-courier .sprite-viewport, .hero-courier .wanderer-silhouette",
+    )
     .first()
     .evaluate((e) => getComputedStyle(e).animationName === "none"),
   "still traveller",
@@ -199,7 +202,7 @@ await tp.evaluate(() => {
   const e = document.querySelector(".night-journey");
   scrollTo(0, e.offsetTop + (e.offsetHeight - innerHeight) * 0.25);
 });
-await tp.locator(".journey-courier .leg-rig").first().waitFor();
+await tp.locator(".journey-courier .sprite-atlas").first().waitFor();
 await tp.waitForTimeout(250);
 let walked = false;
 for (let i = 0; i < 12; i++) {
@@ -213,15 +216,17 @@ for (let i = 0; i < 12; i++) {
 ok(walked, "guide walks through the journey");
 ok(
   await tp
-    .locator(".journey-courier .shin")
+    .locator(".journey-courier .sprite-atlas")
     .first()
     .evaluate((e) => getComputedStyle(e).transform !== "none"),
-  "jointed legs follow road distance",
+  "atlas frames follow road distance",
 );
 await tp.getByRole("button", { name: "Pause motion" }).click();
 ok(
   await tp
-    .locator(".traveller-body")
+    .locator(
+      ".hero-courier .sprite-viewport, .hero-courier .wanderer-silhouette",
+    )
     .first()
     .evaluate((e) => getComputedStyle(e).animationName === "none"),
   "pause stops guide",
@@ -233,7 +238,9 @@ const pp = await pending.newPage();
 await pp.goto(base);
 await submit(pp);
 await pp
-  .getByText("Waiting for a drafted and checked answer.", { exact: false })
+  .getByText("Waiting for the source response and any claim checks.", {
+    exact: false,
+  })
   .waitFor();
 ok(
   (await pp.locator(".loading-courier").getAttribute("data-pose")) ===

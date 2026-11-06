@@ -1,0 +1,15 @@
+{
+  "scores": {
+    "performance": 83,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+  },
+  "metrics": {
+    "first-contentful-paint": 1512.0366,
+    "largest-contentful-paint": 3257.3529,
+    "total-blocking-time": 380,
+    "cumulative-layout-shift": 0,
+    "speed-index": 2351.874130633589
+  }
+}

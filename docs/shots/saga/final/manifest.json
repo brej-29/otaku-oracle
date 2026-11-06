@@ -98,6 +98,62 @@
     "fixture": true
   },
   {
+    "folder": "phone-390",
+    "kind": "agreement",
+    "overflow": false,
+    "errors": [],
+    "fixture": true
+  },
+  {
+    "folder": "phone-390",
+    "kind": "source-conflict",
+    "overflow": false,
+    "errors": [],
+    "fixture": true
+  },
+  {
+    "folder": "phone-390",
+    "kind": "source-unchecked",
+    "overflow": false,
+    "errors": [],
+    "fixture": true
+  },
+  {
+    "folder": "phone-390",
+    "kind": "source-stale",
+    "overflow": false,
+    "errors": [],
+    "fixture": true
+  },
+  {
+    "folder": "phone-390",
+    "kind": "single-source",
+    "overflow": false,
+    "errors": [],
+    "fixture": true
+  },
+  {
+    "folder": "phone-390",
+    "kind": "news",
+    "overflow": false,
+    "errors": [],
+    "fixture": true
+  },
+  {
+    "folder": "phone-390",
+    "kind": "discussion",
+    "overflow": false,
+    "errors": [],
+    "fixture": true
+  },
+  {
+    "folder": "phone-390",
+    "kind": "unclear",
+    "overflow": false,
+    "errors": [],
+    "fixture": true
+  },
+  {
     "folder": "tablet-768",
     "kind": "idle",
     "overflow": false,
@@ -196,6 +252,62 @@
     "fixture": true
   },
   {
+    "folder": "tablet-768",
+    "kind": "agreement",
+    "overflow": false,
+    "errors": [],
+    "fixture": true
+  },
+  {
+    "folder": "tablet-768",
+    "kind": "source-conflict",
+    "overflow": false,
+    "errors": [],
+    "fixture": true
+  },
+  {
+    "folder": "tablet-768",
+    "kind": "source-unchecked",
+    "overflow": false,
+    "errors": [],
+    "fixture": true
+  },
+  {
+    "folder": "tablet-768",
+    "kind": "source-stale",
+    "overflow": false,
+    "errors": [],
+    "fixture": true
+  },
+  {
+    "folder": "tablet-768",
+    "kind": "single-source",
+    "overflow": false,
+    "errors": [],
+    "fixture": true
+  },
+  {
+    "folder": "tablet-768",
+    "kind": "news",
+    "overflow": false,
+    "errors": [],
+    "fixture": true
+  },
+  {
+    "folder": "tablet-768",
+    "kind": "discussion",
+    "overflow": false,
+    "errors": [],
+    "fixture": true
+  },
+  {
+    "folder": "tablet-768",
+    "kind": "unclear",
+    "overflow": false,
+    "errors": [],
+    "fixture": true
+  },
+  {
     "folder": "desktop-1440",
     "kind": "idle",
     "overflow": false,
@@ -289,6 +401,62 @@
   {
     "folder": "desktop-1440",
     "kind": "why-sample",
+    "overflow": false,
+    "errors": [],
+    "fixture": true
+  },
+  {
+    "folder": "desktop-1440",
+    "kind": "agreement",
+    "overflow": false,
+    "errors": [],
+    "fixture": true
+  },
+  {
+    "folder": "desktop-1440",
+    "kind": "source-conflict",
+    "overflow": false,
+    "errors": [],
+    "fixture": true
+  },
+  {
+    "folder": "desktop-1440",
+    "kind": "source-unchecked",
+    "overflow": false,
+    "errors": [],
+    "fixture": true
+  },
+  {
+    "folder": "desktop-1440",
+    "kind": "source-stale",
+    "overflow": false,
+    "errors": [],
+    "fixture": true
+  },
+  {
+    "folder": "desktop-1440",
+    "kind": "single-source",
+    "overflow": false,
+    "errors": [],
+    "fixture": true
+  },
+  {
+    "folder": "desktop-1440",
+    "kind": "news",
+    "overflow": false,
+    "errors": [],
+    "fixture": true
+  },
+  {
+    "folder": "desktop-1440",
+    "kind": "discussion",
+    "overflow": false,
+    "errors": [],
+    "fixture": true
+  },
+  {
+    "folder": "desktop-1440",
+    "kind": "unclear",
     "overflow": false,
     "errors": [],
     "fixture": true

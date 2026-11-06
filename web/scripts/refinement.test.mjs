@@ -1,6 +1,5 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { STRIDE, gait, knee, foot } from "../src/mascot/gait.ts";
 import { validateAsset, frameFor } from "../src/mascot/assets.ts";
 import {
   fallbackTitles,
@@ -75,52 +74,9 @@ test("pool cache expires and malformed storage fails closed", () => {
     items.length,
   );
 });
-test("stance feet remain planted as the body travels", () => {
-  for (const start of [0, 0.5]) {
-    const samples = [0, 0.1, 0.2, 0.3, 0.4, 0.5].map((p) => {
-      const d = (p + start) * STRIDE;
-      const f = foot(p, 113);
-      return f.x + d;
-    });
-    assert.ok(Math.max(...samples) - Math.min(...samples) < 1e-8);
-  }
-});
-test("hip, knee and ankle have physical segment lengths", () => {
-  for (let i = 0; i < 32; i++) {
-    const g = gait((i * STRIDE) / 32);
-    for (const leg of [g.left, g.right]) {
-      assert.ok(
-        Math.abs(
-          Math.hypot(leg.knee.x - leg.hip.x, leg.knee.y - leg.hip.y) - 28,
-        ) < 1e-8,
-      );
-      assert.ok(
-        Math.abs(
-          Math.hypot(leg.ankle.x - leg.knee.x, leg.ankle.y - leg.knee.y) - 29,
-        ) < 0.002,
-      );
-    }
-  }
-});
-test("contact, down, passing and up change height and swing clearance", () => {
-  assert.equal(gait(0).bob, 0);
-  assert.ok(gait(STRIDE * 0.125).bob > 1.9);
-  assert.ok(gait(STRIDE * 0.375).bob < -1.9);
-  assert.ok(foot(0.81, 113).y < 265);
-  assert.equal(foot(0.2, 113).y, 281);
-});
-test("gait remains finite in reverse and settles to the same idle anchors", () => {
-  for (const d of [-1000, -50, 0, 1234]) {
-    const g = gait(d, 0);
-    assert.equal(g.left.ankle.x, 107);
-    assert.equal(g.right.ankle.x, 150);
-    assert.equal(g.left.ankle.y, 281);
-    assert.ok(Number.isFinite(knee(g.left.hip, g.left.ankle).x));
-  }
-});
 const manifest = () => ({
   version: 1,
-  image: "nori.webp",
+  image: "wanderer.webp",
   frame: { width: 256, height: 320 },
   columns: 8,
   rows: 8,
@@ -144,7 +100,7 @@ const manifest = () => ({
 test("valid drop-in sprite manifest resolves within its folder", () => {
   const m = validateAsset(manifest());
   assert.ok(m);
-  assert.equal(m.image, "http://localhost/mascot/nori.webp");
+  assert.equal(m.image, "http://localhost/mascot/wanderer.webp");
 });
 test("missing states, oversize atlases and off-origin images use the builtin fallback", () => {
   let m = manifest();
@@ -167,4 +123,25 @@ test("sprite walk frames are distance-locked and reduced motion is still", () =>
   assert.equal(frameFor(m, "walk", 5000, 0, 1, true), 0);
   assert.equal(frameFor(m, "walk", 0, 80, 1, true), 8);
   assert.equal(frameFor(m, "think", 1000, 0, 1, false), 16);
+});
+
+const supplied = JSON.parse(
+  await (
+    await import("node:fs/promises")
+  ).readFile(
+    new URL("../public/mascot/manifest.json", import.meta.url),
+    "utf8",
+  ),
+);
+test("owner pack validates without fixing its dimensions or frame map", () => {
+  const m = validateAsset(supplied);
+  assert.ok(m);
+
+  assert.equal(
+    frameFor(m, "idle", 0, 0, 1, false),
+    m.animations.idle.frames[0],
+  );
+  assert.ok(
+    m.animations.think.frames.includes(frameFor(m, "think", 100, 0, 1, true)),
+  );
 });

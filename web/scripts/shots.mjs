@@ -10,7 +10,7 @@ const widths = { "phone-390": 390, "tablet-768": 768, "desktop-1440": 1440 };
 for (const [folder, width] of Object.entries(widths)) {
   const dir = new URL(`${folder}/`, root);
   await mkdir(dir, { recursive: true });
-  for (const kind of [
+  for (const kind of process.env.SHOT_KINDS?.split(",") ?? [
     "idle",
     "loading-record",
     "loading-answer",
@@ -25,6 +25,14 @@ for (const [folder, width] of Object.entries(widths)) {
     "why",
     "how",
     "why-sample",
+    "agreement",
+    "source-conflict",
+    "source-unchecked",
+    "source-stale",
+    "single-source",
+    "news",
+    "discussion",
+    "unclear",
   ]) {
     const ctx = await browser.newContext({
       viewport: { width, height: width === 390 ? 844 : 900 },
@@ -39,15 +47,26 @@ for (const [folder, width] of Object.entries(widths)) {
     );
     await page.evaluate(() => document.fonts.ready);
     if (!["idle", "why", "how", "why-sample"].includes(kind)) {
-      await submit(page);
+      await submit(
+        page,
+        kind === "news"
+          ? "Any news about the next season?"
+          : kind === "discussion"
+            ? "How do you interpret the ending?"
+            : kind === "unclear"
+              ? "Tell me something unexpected."
+              : undefined,
+      );
       if (kind.startsWith("loading")) await page.locator(".waiting").waitFor();
       else if (["error", "offline", "rate"].includes(kind))
         await page.getByRole("alert").waitFor();
+      else if (["news", "discussion", "unclear"].includes(kind))
+        await page.locator(".conversation-shelf").waitFor();
       else await page.locator(".checked-claim").first().waitFor();
     }
     if (kind === "loading-answer")
       await page
-        .getByText("Waiting for a drafted and checked answer.", {
+        .getByText("Waiting for the source response and any claim checks.", {
           exact: false,
         })
         .waitFor();
@@ -57,7 +76,16 @@ for (const [folder, width] of Object.entries(widths)) {
       await page
         .locator(".opening img, .orbit-art, .source-record img")
         .evaluateAll(async (es) => {
-          await Promise.all(es.map((i) => i.decode().catch(() => {})));
+          await Promise.all(
+            es
+              .filter((i) => i.getBoundingClientRect().width > 0)
+              .map((i) =>
+                Promise.race([
+                  i.decode().catch(() => {}),
+                  new Promise((r) => setTimeout(r, 6000)),
+                ]),
+              ),
+          );
         });
       await page.evaluate(() => scrollTo(0, 0));
     }
@@ -79,6 +107,11 @@ for (const [folder, width] of Object.entries(widths)) {
       errors,
       fixture: kind !== "why" && kind !== "how",
     });
+    await writeFile(
+      new URL("progress.json", root),
+      JSON.stringify(manifest, null, 2),
+    );
+    console.log(folder + " / " + kind + " captured");
     if (kind === "idle") {
       for (const [stage, p] of [
         ["journey-worlds", 0],
@@ -104,7 +137,15 @@ for (const [folder, width] of Object.entries(widths)) {
               r.top < innerHeight
             );
           });
-          await Promise.all(visible.map((i) => i.decode().catch(() => {})));
+          await Promise.all(
+            visible.map((i) => {
+              i.loading = "eager";
+              return Promise.race([
+                i.decode().catch(() => {}),
+                new Promise((resolve) => setTimeout(resolve, 6000)),
+              ]);
+            }),
+          );
         });
         await page.screenshot({
           path: new URL(`${stage}.png`, dir).pathname.replace(
