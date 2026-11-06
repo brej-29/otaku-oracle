@@ -7,6 +7,7 @@ export type Hit = {
   year: number | null;
   format: string | null;
   cover: string | null;
+  smallCover?: string | null;
   color: string | null;
 };
 export type MediaRecord = {
@@ -384,7 +385,7 @@ export const ask = (id: number, question: string, signal?: AbortSignal) =>
 
 export async function popular(signal?: AbortSignal): Promise<Hit[]> {
   const d = await gql<{ Page: { media: any[] } }>(
-    `query{Page(perPage:8){media(type:ANIME,isAdult:false,sort:POPULARITY_DESC){id title{romaji english} startDate{year} format coverImage{large color}}}}`,
+    `query{Page(perPage:8){media(type:ANIME,isAdult:false,sort:POPULARITY_DESC){id title{romaji english} startDate{year} format coverImage{large medium color}}}}`,
     {},
     signal,
   );
@@ -394,6 +395,7 @@ export async function popular(signal?: AbortSignal): Promise<Hit[]> {
     year: m.startDate?.year ?? null,
     format: fmt(m.format),
     cover: m.coverImage?.large ?? null,
+    smallCover: m.coverImage?.medium ?? null,
     color: m.coverImage?.color ?? null,
   }));
 }
