@@ -1,0 +1,27 @@
+{
+  "source": "src/tokens.css",
+  "motion": {
+    "controlMs": [
+      150,
+      300
+    ],
+    "pageMs": 500,
+    "sealMs": 600,
+    "scroll": "native, frame-coalesced",
+    "reduced": "static foreground sequence and still guide",
+    "pause": "visible header control"
+  },
+  "layout": {
+    "headerPx": 76,
+    "phoneHeaderPx": 68,
+    "readingMaxPx": 1260,
+    "answerMaxPx": 1160,
+    "portraitBreakpointPx": 700
+  },
+  "states": [
+    "verified",
+    "conflict",
+    "unchecked"
+  ],
+  "art": "original vector landscape and leaf-hooded traveller"
+}

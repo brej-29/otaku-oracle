@@ -1,40 +1,78 @@
-# Design system: manga proof sheet
+---
+name: Otaku Oracle field atlas
+description: A continuous route from curiosity to a source
+colors:
+  paper: "#f4f0e4"
+  sheet: "#fffdf5"
+  ink: "#252b25"
+  muted: "#626958"
+  vermilion: "#ac3929"
+  forest: "#34553e"
+  sage: "#dce6bc"
+  line: "#c9cbbb"
+  dark-paper: "#1c2420"
+  dark-sheet: "#263029"
+  dark-ink: "#f2efdf"
+  dark-muted: "#b8c1ad"
+  dark-vermilion: "#f08b72"
+  dark-forest: "#d7e4b3"
+typography:
+  display:
+    fontFamily: "Journal, Georgia, serif"
+    fontSize: "clamp(74px, 6.5vw, 110px)"
+    fontWeight: 400
+    lineHeight: 0.96
+    letterSpacing: "-0.025em"
+  body:
+    fontFamily: "Field, Arial, sans-serif"
+    fontSize: "15px"
+    fontWeight: 400
+    lineHeight: 1.7
+rounded:
+  paper: "4px"
+  control: "5px"
+spacing:
+  small: "8px"
+  medium: "20px"
+  large: "40px"
+components:
+  primary-button:
+    backgroundColor: "{colors.ink}"
+    textColor: "{colors.paper}"
+    rounded: "{rounded.control}"
+    padding: "12px 20px"
+---
 
-Idea: manga is drafted in non-photo blue pencil (it does not scan), inked in black, and documents are verified with a hanko seal. Otaku Oracle uses those three real materials as its meaning system.
+## Overview
 
-| Material | Means | Treatment |
-|---|---|---|
-| Ink, indigo black | Checked, stated as fact | solid text, thick panel borders |
-| Blue pencil, dashed | Not checked | dashed rules, pencil blue text, "Not checked" tag |
-| Red seal (確, "confirmed") | Matches the AniList record | 4 pixel rough-edge SVG stamp, springs in |
+An illustrated field atlas: editorial paper, a travelling source trail and an original leaf-hooded guide. The first stop is a working question desk; the next two reveal the claim language and return to the source. The character, logo, scenery and wording are original. Reference influence is documented in docs/JOURNEY_DESIGN.md; no reference assets or code are shipped.
 
-## Tokens (web/src/tokens.css)
-| Token | Light | Dark | Contrast |
-|---|---|---|---|
-| paper | #f1f5f8 | #12162b | base |
-| ink | #1a1f3a | #e9eef6 | 14.6:1 on paper |
-| ink-soft | #444b6b | #b4bdd6 | 7.9:1 |
-| pencil | #266190 | #7fb8e3 | 5.5:1 on paper, 4.9:1 on paper-2 |
-| seal | #c0291f | #ff6b5c | 5.6:1 on paper |
+## Colors
 
-Contrast values for the pairs I changed were confirmed by Lighthouse (accessibility 100). The other ratios are my calculations, not tool-verified.
+The light ink/paper pair measures 12.70:1; muted/paper 5.01:1; vermilion/paper 5.47:1; verified forest/sheet 8.20:1. Dark ink/paper is 13.75:1; muted/paper 8.52:1; vermilion/paper 6.53:1; verified forest/sheet 10.17:1. These are calculated sRGB ratios for text pairs, not a claim about decorative illustration colors. States also have labels and icons: closed check, crossed contradiction and dashed unchecked notation.
 
-## Type
-Dela Gothic One for display (headlines, numerals), Zen Kaku Gothic New 400/500/700 for body. Fluid scale `--step--1` to `--step-4`. Body line length under 66 characters. The seal glyph is a 1.1 KB subset of Dela Gothic One (確認証).
+## Typography
+
+Journal is the self-hosted Instrument Serif face, normal and italic; Field is self-hosted DM Sans, regular and semibold. The display voice preserves the owner-selected field-journal identity. Desktop display scales with the viewport; phone display is 64px. Reading copy is 13-15px, controls 11-14px and secondary annotations 9-12px. Narrow annotations are a known refinement opportunity, not a universal prescription. Font licenses are retained in public/fonts.
 
 ## Layout
-Uneven manga panels: 3 px ink borders, no radius, one gutter token. Hero is two staggered panels, the pipeline is four panels of different heights. Panel numbers appear only on the pipeline, the one real sequence.
 
-## Motion language
-- One orchestrated moment: a seal lands on the hero panel (spring, 0.9 s delay, rotates to -9 degrees).
-- Answers: each sentence starts in pencil, inks to black and gets stamped, 0.62 s apart (spring, stiffness 520, damping 22).
-- Chart bars grow once on scroll. Buttons press into their offset shadow.
-- `prefers-reduced-motion`: every animation is skipped and the final state shows at once. Shimmer skeletons stop.
+Three connected desktop scenes occupy a sticky stage across three viewport heights. The foreground moves horizontally; scenery planes travel at different speeds and rise slightly. The traveller follows the actual source-path geometry. Portrait uses a continuous sticky landscape behind a vertically readable foreground, preserving native input and scroll behavior. At 390px the question desk remains usable without sideways page scroll. Reading pages use a 1260px maximum, answers 1160px; answer source notes become a single column on phones.
 
-## Honesty rules in the UI
-- Accuracy numbers load only from `public/data/eval-summary.json`. It currently says PENDING and shows no chart.
-- `?sample` loads a labelled sample file so the chart can be reviewed. The sample is visibly tagged "Not results".
-- The explanation line in an answer is a fixed placeholder, tagged "Demo answer", until a backend exists.
+## Elevation & Depth
 
-## References studied (conceptual, no assets copied)
-Not yet recorded: see docs/UI_BRIEF.md. I have not opened reference sites in this pass, so no reference-based claims are made here.
+Near and far landscape planes carry camera depth. Journal sheets use soft offset shadows rather than thick panels. Reading content is above the traveller; occlusion puts it behind the paper instead of over links. On reading/answer pages it has an assigned resting place. Its movement uses transforms and reserves no layout space.
+
+## Shapes
+
+The new identity is a six-sided eye/compass. The original traveller has a leaf hood, dark face, pale eyes, a vermilion scarf and a satchel. Sheets have small corners; check seals are round; unchecked borders are dashed. The illustration is deliberately flat vector work, not a borrowed three-dimensional asset.
+
+## Components
+
+The title combobox supports arrows, Enter and Escape; labels match accessible names. Question input remains freeform with a 200-character limit. Verified claims have green source-linked seals; conflicts strike through the disputed sentence and show AniList's value; unchecked prose never receives a verified treatment. The answer service is behind the existing adapter. Demo mode is visible and abstains on questions outside its record fields. Loading reports real source retrieval and a pending answer; checks appear only when the response arrives. Cancellation keeps the question.
+
+Motion uses native scroll, CSS and small frame callbacks, with no animation dependency. Routine control feedback is 150-300ms, page arrival 500ms and seals 600ms. Walking only runs while scrolling; input, loading, success and error select curious/thinking/happy/puzzled poses. Reduced motion and the visible pause control stop spatial animation and walking, yielding readable static scenes. System reduced motion cannot accidentally be overridden by the play control.
+
+## Do's and Don'ts
+
+Keep record links and all three statuses explicit. Preserve the original question on errors. Read evaluation status and scores at runtime; label samples as not results. Never promote commentary to verified, substitute a canned answer, use fake progress stages, obscure controls with the traveller, or claim that a record match makes the source infallible. AniList is the reference, not the truth.
