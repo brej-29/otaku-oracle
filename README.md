@@ -2,7 +2,15 @@
 
 Anime answers where every fact is checked against its AniList record and stamped. Facts that match get a seal. Facts that contradict the record are struck through, with the record's value shown. Anything that cannot be checked stays in pencil.
 
-Status: the product works locally end to end. It is not deployed yet, and the evaluation that tests the central claim is still running. This README is updated with the case study (problem, evidence, results, limits, live link) when both are done.
+Status: the product works locally end to end. It is not deployed yet. The evaluation is partly done: the registered pass or fail for the central claim is **blocked**, not decided, because one of the two registered models (`glm-4.7-flash`) has only 16% of its answers. Early descriptive numbers and every hard question are answered in [docs/WHY.md](docs/WHY.md).
+
+| Evidence so far (partial, descriptive) | Ungrounded | Grounded in the record |
+|---|---:|---:|
+| `glm-4.5-flash`, complete run | 67.2% | 100.0% |
+| `gpt-oss-120b`, exploratory, 49% done | 57.1% | 100.0% |
+| `gemma-4-31b-it`, exploratory, 55% done | 66.0% | 100.0% |
+
+Grounded accuracy is a ceiling, since the record holds the answer. The informative number is the ungrounded one: roughly one answer in three is wrong, and the wrong ones are stated with confidence.
 
 ## The problem
 
