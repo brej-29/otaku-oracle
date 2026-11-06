@@ -1,3 +1,8 @@
+import type {
+  EvidenceField,
+  SourceExtension,
+  Verification,
+} from "./source-types";
 export type Field =
   | "studio"
   | "episodes"
@@ -28,6 +33,13 @@ export interface AnimeRecord {
   color: string | null;
   url: string;
   genres: string[];
+  resourceLinks?: {
+    site: string;
+    url: string;
+    kind: "streaming" | "reference";
+  }[];
+  idMal?: number | null;
+  details?: Partial<Record<EvidenceField, string>>;
 }
 export interface Claim {
   id: string;
@@ -37,6 +49,7 @@ export interface Claim {
   status: "verified" | "conflict" | "unchecked";
   recordValue: string | null;
   sourceUrl: string;
+  verification?: Verification;
 }
 export interface DraftClaim {
   text: string;
@@ -71,6 +84,8 @@ export interface Env {
   PROVIDERS_JSON?: string;
   PROVIDER_TIMEOUT_MS?: string;
   REQUEST_DEADLINE_MS?: string;
+  MULTI_SOURCE_ENABLED?: string;
+  SOURCE_DAILY_BUDGET?: string;
   ZAI_API_KEY?: string;
   GROQ_API_KEY?: string;
   NVIDIA_API_KEY?: string;
@@ -86,7 +101,7 @@ export class ApiError extends Error {
     super(code);
   }
 }
-export interface Answer {
+export interface Answer extends Partial<SourceExtension> {
   title: string;
   record: AnimeRecord;
   fetchedAt: string;

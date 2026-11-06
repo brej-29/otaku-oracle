@@ -1,3 +1,6 @@
+import { classify } from "./classify";
+import { collectSources } from "./sources";
+import { extendAnswer } from "./verification";
 import { Deadline, duration, requestDuration } from "./deadline";
 import { explanation } from "./explanation";
 import { getRecord } from "./anilist";
@@ -132,14 +135,34 @@ export async function handle(
       Date.now(),
       deadline,
     );
-    const attempt = draftAnswer(
-      input.question.trim(),
-      result.record,
-      env,
-      store,
-      fetcher,
-      deadline,
-    );
+    const route = classify(input.question.trim());
+    const expanded = env.MULTI_SOURCE_ENABLED === "true";
+    const evidence = expanded
+      ? collectSources(result.record, route.kind, env, store, fetcher, deadline)
+      : Promise.resolve([]);
+    const attempt =
+      expanded &&
+      (route.kind !== "fact" ||
+        route.fields.every(
+          (f) =>
+            ![
+              "studio",
+              "episodes",
+              "year",
+              "format",
+              "source",
+              "season",
+            ].includes(f),
+        ))
+        ? Promise.resolve({ draft: null, model: null, degraded: false })
+        : draftAnswer(
+            input.question.trim(),
+            result.record,
+            env,
+            store,
+            fetcher,
+            deadline,
+          );
     // The response deadline also bounds slow bookkeeping; persist cooldowns in
     // waitUntil if a provider finishes abort cleanup after record-only is sent.
     context?.waitUntil(attempt.then(() => {}).catch(() => {}));
@@ -169,6 +192,10 @@ export async function handle(
           : null
         : "The answer service is unavailable or its free allowance is used up. Showing facts from the source record.",
     };
+    if (expanded) {
+      const values = await deadline.run(() => evidence).catch(() => []);
+      return json(extendAnswer(response, route.kind, route.fields, values));
+    }
     return json(response);
   } catch (error) {
     if (error instanceof ApiError) {
