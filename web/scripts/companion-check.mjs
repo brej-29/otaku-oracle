@@ -36,6 +36,19 @@ for (const width of [390, 768, 1440]) {
     (await hero.getAttribute("data-sprite-frame")) === "8",
     "idle atlas frame " + width,
   );
+  await p
+    .locator(".cover-stack img")
+    .evaluateAll(async (images) =>
+      Promise.all(
+        images.map((image) =>
+          Promise.race([
+            image.decode().catch(() => {}),
+            new Promise((resolve) => setTimeout(resolve, 6000)),
+          ]),
+        ),
+      ),
+    );
+  await advanceTo("idle");
   await p.screenshot({ path: path("idle-" + width + ".png") });
   await p.getByRole("combobox").focus();
   await p.clock.runFor(50);
