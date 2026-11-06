@@ -453,3 +453,41 @@ it("keeps expanded retrieval out of the compact drafting prompt", async () => {
   expect(prompt).not.toContain("resourceLinks");
   expect(((await r.json()) as Answer).record.details?.voice_cast).toBeDefined();
 });
+
+it("marks an unmapped secondary catalog without guessing", async () => {
+  const deadline = new Deadline(Date.now() + 1000);
+  try {
+    const values = await collectSources(
+      record,
+      "fact",
+      environment(db),
+      store,
+      vi.fn(async (input: RequestInfo | URL) =>
+        String(input).includes("jikan")
+          ? Response.json({ data: mal })
+          : Response.json({ results: { bindings: [] } }),
+      ) as Fetcher,
+      deadline,
+    );
+    expect(values.find((s) => s.source.id === "wikidata")?.source.state).toBe(
+      "not-matched",
+    );
+  } finally {
+    deadline.close();
+  }
+});
+it("does not report exhausted model quota for an intentional source-only field", async () => {
+  const f = net();
+  const r = await handle(
+    ask({ titleId: 154587, question: "What is the airing status?" }),
+    environment(db, { MULTI_SOURCE_ENABLED: "true" }),
+    f,
+  );
+  const body = (await r.json()) as Answer;
+  expect(body.mode).toBe("record-only");
+  expect(body.quota.state).toBe("ok");
+  expect(body.notice).toContain("no drafted answer");
+  expect(
+    vi.mocked(f).mock.calls.every(([u]) => !String(u).includes("example/v1")),
+  ).toBe(true);
+});

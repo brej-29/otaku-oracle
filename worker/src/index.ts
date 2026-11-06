@@ -140,7 +140,7 @@ export async function handle(
     const evidence = expanded
       ? collectSources(result.record, route.kind, env, store, fetcher, deadline)
       : Promise.resolve([]);
-    const attempt =
+    const sourceOnly =
       expanded &&
       (route.kind !== "fact" ||
         route.fields.every(
@@ -153,16 +153,17 @@ export async function handle(
               "source",
               "season",
             ].includes(f),
-        ))
-        ? Promise.resolve({ draft: null, model: null, degraded: false })
-        : draftAnswer(
-            input.question.trim(),
-            { ...result.record, details: undefined, resourceLinks: undefined },
-            env,
-            store,
-            fetcher,
-            deadline,
-          );
+        ));
+    const attempt = sourceOnly
+      ? Promise.resolve({ draft: null, model: null, degraded: false })
+      : draftAnswer(
+          input.question.trim(),
+          { ...result.record, details: undefined, resourceLinks: undefined },
+          env,
+          store,
+          fetcher,
+          deadline,
+        );
     // The response deadline also bounds slow bookkeeping; persist cooldowns in
     // waitUntil if a provider finishes abort cleanup after record-only is sent.
     context?.waitUntil(attempt.then(() => {}).catch(() => {}));
@@ -184,13 +185,21 @@ export async function handle(
         ? explanation(model.draft, claims, result.record)
         : null,
       quota: {
-        state: model.draft ? (model.degraded ? "degraded" : "ok") : "exhausted",
+        state: sourceOnly
+          ? "ok"
+          : model.draft
+            ? model.degraded
+              ? "degraded"
+              : "ok"
+            : "exhausted",
       },
-      notice: model.draft
-        ? model.degraded
-          ? "A backup answer service was used; the original record is linked for every claim."
-          : null
-        : "The answer service is unavailable or its free allowance is used up. Showing facts from the source record.",
+      notice: sourceOnly
+        ? "Showing source data and related links; no drafted answer was requested."
+        : model.draft
+          ? model.degraded
+            ? "A backup answer service was used; the original record is linked for every claim."
+            : null
+          : "The answer service is unavailable or its free allowance is used up. Showing facts from the source record.",
     };
     if (expanded) {
       const values = await deadline.run(() => evidence).catch(() => []);

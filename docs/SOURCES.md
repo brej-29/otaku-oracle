@@ -30,3 +30,5 @@ An owner wishing to add real thread metadata must first read the linked policy a
 The model receives only the compact original record fields. Rich source details and resource-link arrays are excluded from its prompt; requested extra fields are rendered deterministically. This avoids turning the expanded retrieval into an unnecessary free-tier prompt cost. The second local source-only smoke returned 200 in 619 ms, again with two unchecked claims and both secondary adapters unavailable; both attempts are retained, and neither is an accuracy result.
 
 Routing uses English keywords. Novel phrasing and other languages may fall into the unclear route rather than receive a guessed factual answer.
+
+A third local source-only check returned 200 in 526 ms, again with both secondary adapters unavailable and both claims unchecked. Live secondary adapter availability remains unverified after three attempts; further local retries were stopped. The comparison tests remain fixture evidence, not evidence of live availability.

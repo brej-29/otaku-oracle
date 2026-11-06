@@ -316,7 +316,7 @@ export function wikiQuery(id: number) {
     id +
     '" . FILTER NOT EXISTS{?item wdt:P4086 ?other FILTER(?other != "' +
     id +
-    '") } OPTIONAL{?item wdt:P1113 ?episodes} OPTIONAL{?item p:P580/psv:P580 ?sn . ?sn wikibase:timeValue ?start;wikibase:timePrecision ?startPrecision} OPTIONAL{?item p:P582/psv:P582 ?en . ?en wikibase:timeValue ?end;wikibase:timePrecision ?endPrecision} OPTIONAL{?item wdt:P449 ?network} OPTIONAL{?article schema:about ?item;schema:isPartOf <https://en.wikipedia.org/>} OPTIONAL{?network rdfs:label ?networkLabel FILTER(LANG(?networkLabel)="en")}} LIMIT 30'
+    '") } OPTIONAL{?item wdt:P1113 ?episodes} OPTIONAL{?item p:P580/psv:P580 ?sn . ?sn wikibase:timeValue ?start;wikibase:timePrecision ?startPrecision} OPTIONAL{?item p:P582/psv:P582 ?en . ?en wikibase:timeValue ?end;wikibase:timePrecision ?endPrecision} OPTIONAL{?item wdt:P449 ?network . OPTIONAL{?network rdfs:label ?networkLabel FILTER(LANG(?networkLabel)="en")}} OPTIONAL{?article schema:about ?item;schema:isPartOf <https://en.wikipedia.org/>}} LIMIT 30'
   );
 }
 export function wikiFacts(body: any): {
@@ -501,9 +501,20 @@ export async function collectSources(
           "https://query.wikidata.org/sparql?query=" +
           encodeURIComponent(wikiQuery(id!)) +
           "&format=json";
-        const data = wikiFacts(
-          await json(url, fetcher, store, "wikidata", signal),
-        );
+        const body = await json(url, fetcher, store, "wikidata", signal);
+        let data: ReturnType<typeof wikiFacts>;
+        try {
+          data = wikiFacts(body);
+        } catch {
+          return blank(
+            "wikidata",
+            "Wikidata",
+            "https://www.wikidata.org/",
+            "not-matched",
+            "No single unambiguous adaptation with this exact identifier was found.",
+          );
+        }
+
         return {
           source: {
             id: "wikidata",
