@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "delayMs": 5000,
+  "initial": "neutral silhouette",
+  "final": "sprite",
+  "formUsableDuringLoad": true,
+  "layoutShiftInMascot": false
+}

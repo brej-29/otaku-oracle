@@ -8,7 +8,7 @@ The owner-supplied atlas is rendered at every companion location: hero, journey,
 
 The supplied 352 by 320 / 4 by 5 atlas uses its documented foot anchor and 288-native-pixel stride. All visible foot baselines were measured at source row 302 (one at 303), matching the manifest anchor. Walk frames follow actual travel distance, reverse facing follows scroll, and stop returns to idle. The hero alone has transform breathing, pointer-facing, glance, thought, focus gesture and a rare quiet draw during a 26-second active cycle. Hidden tabs/offscreen heroes suspend their activity; pause and reduced motion show one idle pose. The loader remains generic for any validated PNG/WebP manifest.
 
-A frame-sized canvas paints only changed frames or resize. The decoded atlas is reused across poses, avoiding an asynchronous image event at every pose change. Breathing and facing use compositor transforms; canvas frames are capped at 2x pixel density. The original supplied artwork remains unchanged.
+A frame-sized canvas paints only changed frames or resize. The decoded atlas is reused across poses, avoiding an asynchronous image event at every pose change. Breathing and facing use compositor transforms; canvas frames are capped at 2x pixel density. The original supplied artwork remains unchanged. A separate five-second image-transfer check confirms that the form remains usable and the silhouette is replaced without changing its dimensions; atlas loading allows twelve seconds while the tiny manifest retains a four-second limit.
 
 ## Source experience and truth
 

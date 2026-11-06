@@ -106,7 +106,7 @@ export function loadMascotAsset(): Promise<MascotAsset | null> {
       if (!asset) return null;
       const valid = await new Promise<boolean>((resolve) => {
         const img = new Image();
-        const timer = setTimeout(() => resolve(false), 4000);
+        const timer = setTimeout(() => resolve(false), 12000);
         img.onload = () => {
           clearTimeout(timer);
           if (
