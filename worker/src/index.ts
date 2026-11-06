@@ -10,6 +10,20 @@ import { credential, draftAnswer, providers } from "./providers";
 import { clientHash, daily, Store } from "./storage";
 import { ApiError, type Answer, type Env, type Fetcher } from "./types";
 const MAX_BODY = 2048;
+// AniList rejects Cloudflare egress IPs, so AniList calls can go through a relay on another network.
+function relayed(fetcher: Fetcher, env: Env): Fetcher {
+  if (!env.ANILIST_RELAY_URL) return fetcher;
+  return (input, init) =>
+    String(input).startsWith("https://graphql.anilist.co")
+      ? fetcher(env.ANILIST_RELAY_URL!, {
+          ...init,
+          headers: {
+            ...(init?.headers as object),
+            "x-relay-key": env.ANILIST_RELAY_KEY ?? "",
+          },
+        })
+      : fetcher(input, init);
+}
 function settings(env: Env) {
   if (
     !env.DB ||
@@ -131,7 +145,7 @@ export async function handle(
     const result = await getRecord(
       input.titleId,
       store,
-      fetcher,
+      relayed(fetcher, env),
       Date.now(),
       deadline,
     );

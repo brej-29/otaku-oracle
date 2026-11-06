@@ -122,6 +122,8 @@ async function load(
         headers: {
           "Content-Type": "application/json",
           Accept: "application/json",
+          "User-Agent":
+            "otaku-oracle/1.0 (+https://github.com/brej-29/otaku-oracle)",
         },
         body: JSON.stringify({ query: QUERY, variables: { id } }),
         signal,
@@ -141,7 +143,10 @@ async function load(
         );
       }
       if (response.status === 404) throw new ApiError(404, "title_not_found");
-      if (!response.ok) throw new ApiError(502, "upstream");
+      if (!response.ok) {
+        console.warn("anilist_status", response.status);
+        throw new ApiError(502, "upstream");
+      }
       const body = JSON.parse(await readLimited(response, 150000));
       if (body.errors?.some((e: any) => e?.status === 404))
         throw new ApiError(404, "title_not_found");
@@ -158,6 +163,7 @@ async function load(
   } catch (error) {
     if (error instanceof ApiError && error.status === 404) throw error;
     if (cached) return { ...cached, cached: true };
+    console.warn("anilist_error", String((error as Error)?.message ?? error));
     throw error instanceof ApiError ? error : new ApiError(502, "upstream");
   } finally {
     await store.release(id, token);
