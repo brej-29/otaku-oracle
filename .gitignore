@@ -21,3 +21,6 @@ worker/dist/
 # Local run state
 eval/results/**/.run.lock
 otaku_oracle.log
+
+web/*.log
+web/*-local.json

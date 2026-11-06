@@ -1,0 +1,158 @@
+{
+  "query": "query{Page(perPage:4){media(id_in:[154587,1,16498,199],type:ANIME){id title{romaji english native} format episodes status season seasonYear source startDate{year} coverImage{extraLarge large medium color} studios(isMain:true){nodes{name}} siteUrl genres characters(role:MAIN){pageInfo{total}}}}}",
+  "fetchedAt": "2026-11-06T04:16:37.068Z",
+  "data": {
+    "Page": {
+      "media": [
+        {
+          "id": 1,
+          "title": {
+            "romaji": "Cowboy Bebop",
+            "english": "Cowboy Bebop",
+            "native": "カウボーイビバップ"
+          },
+          "format": "TV",
+          "episodes": 26,
+          "status": "FINISHED",
+          "season": "SPRING",
+          "seasonYear": 1998,
+          "source": "ORIGINAL",
+          "startDate": {
+            "year": 1998
+          },
+          "coverImage": {
+            "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx1-GCsPm7waJ4kS.png",
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx1-GCsPm7waJ4kS.png",
+            "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx1-GCsPm7waJ4kS.png",
+            "color": "#f16b50"
+          },
+          "studios": {
+            "nodes": [
+              {
+                "name": "Sunrise"
+              }
+            ]
+          },
+          "siteUrl": "https://anilist.co/anime/1",
+          "genres": ["Action", "Adventure", "Drama", "Sci-Fi"],
+          "characters": {
+            "pageInfo": {
+              "total": 4
+            }
+          }
+        },
+        {
+          "id": 199,
+          "title": {
+            "romaji": "Sen to Chihiro no Kamikakushi",
+            "english": "Spirited Away",
+            "native": "千と千尋の神隠し"
+          },
+          "format": "MOVIE",
+          "episodes": 1,
+          "status": "FINISHED",
+          "season": "SUMMER",
+          "seasonYear": 2001,
+          "source": "ORIGINAL",
+          "startDate": {
+            "year": 2001
+          },
+          "coverImage": {
+            "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx199-sWefXJvXkDOb.jpg",
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx199-sWefXJvXkDOb.jpg",
+            "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx199-sWefXJvXkDOb.jpg",
+            "color": "#e45d5d"
+          },
+          "studios": {
+            "nodes": [
+              {
+                "name": "Studio Ghibli"
+              }
+            ]
+          },
+          "siteUrl": "https://anilist.co/anime/199",
+          "genres": ["Adventure", "Drama", "Fantasy", "Supernatural"],
+          "characters": {
+            "pageInfo": {
+              "total": 2
+            }
+          }
+        },
+        {
+          "id": 16498,
+          "title": {
+            "romaji": "Shingeki no Kyojin",
+            "english": "Attack on Titan",
+            "native": "進撃の巨人"
+          },
+          "format": "TV",
+          "episodes": 25,
+          "status": "FINISHED",
+          "season": "SPRING",
+          "seasonYear": 2013,
+          "source": "MANGA",
+          "startDate": {
+            "year": 2013
+          },
+          "coverImage": {
+            "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx16498-buvcRTBx4NSm.jpg",
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx16498-buvcRTBx4NSm.jpg",
+            "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx16498-buvcRTBx4NSm.jpg",
+            "color": "#f1a143"
+          },
+          "studios": {
+            "nodes": [
+              {
+                "name": "WIT STUDIO"
+              }
+            ]
+          },
+          "siteUrl": "https://anilist.co/anime/16498",
+          "genres": ["Action", "Drama", "Fantasy", "Mystery"],
+          "characters": {
+            "pageInfo": {
+              "total": 3
+            }
+          }
+        },
+        {
+          "id": 154587,
+          "title": {
+            "romaji": "Sousou no Frieren",
+            "english": "Frieren: Beyond Journey’s End",
+            "native": "葬送のフリーレン"
+          },
+          "format": "TV",
+          "episodes": 28,
+          "status": "FINISHED",
+          "season": "FALL",
+          "seasonYear": 2023,
+          "source": "MANGA",
+          "startDate": {
+            "year": 2023
+          },
+          "coverImage": {
+            "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx154587-qQTzQnEJJ3oB.jpg",
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx154587-qQTzQnEJJ3oB.jpg",
+            "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx154587-qQTzQnEJJ3oB.jpg",
+            "color": "#bbf1a1"
+          },
+          "studios": {
+            "nodes": [
+              {
+                "name": "MADHOUSE"
+              }
+            ]
+          },
+          "siteUrl": "https://anilist.co/anime/154587",
+          "genres": ["Adventure", "Drama", "Fantasy"],
+          "characters": {
+            "pageInfo": {
+              "total": 3
+            }
+          }
+        }
+      ]
+    }
+  }
+}

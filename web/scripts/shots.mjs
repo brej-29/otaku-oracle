@@ -1,78 +1,242 @@
-// Usage: npm run build && npx vite preview --port 4173 & node scripts/shots.mjs
-// Writes docs/shots/proof-sheet/<viewport>/<screen>.png. Answer shots use the live AniList API.
 import { chromium } from "playwright";
-import { mkdirSync } from "node:fs";
-import { fileURLToPath } from "node:url";
-import path from "node:path";
-
-const BASE = process.env.BASE_URL ?? "http://localhost:4173";
-const OUT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../../docs/shots/proof-sheet");
-const VIEWPORTS = { "phone-390": { width: 390, height: 844 }, "tablet-768": { width: 768, height: 1024 }, "desktop-1440": { width: 1440, height: 900 } };
-const wait = (ms) => new Promise((r) => setTimeout(r, ms));
-
-async function ask(page, title, q) {
-  await page.getByRole("combobox", { name: "Anime title" }).fill(title);
-  await page.getByRole("option").first().waitFor({ timeout: 15000 });
-  await page.keyboard.press("ArrowDown");
-  await page.keyboard.press("Enter");
-  await page.getByLabel("Your question").fill(q);
-  await page.getByRole("button", { name: "Check it" }).click();
-}
-
-const browser = await chromium.launch();
-for (const [name, viewport] of Object.entries(VIEWPORTS)) {
-  await wait(30000);
-  const dir = path.join(OUT, name);
-  mkdirSync(dir, { recursive: true });
-  const shot = (page, n, full = false) => page.screenshot({ path: path.join(dir, `${n}.png`), fullPage: full });
-
-  // light, default motion
-  let ctx = await browser.newContext({ viewport, colorScheme: "light", deviceScaleFactor: 1 });
-  let page = await ctx.newPage();
-  await page.goto(BASE); await page.evaluate(() => document.fonts.ready); await wait(2200);
-  await shot(page, "01-home"); await shot(page, "01-home-full", true);
-
-  await ask(page, "Frieren", "Which studio animated it?");
-  await wait(700); await shot(page, "02-answer-stamping");
-  await wait(3200); await shot(page, "03-answer-done");
-  await page.goto(`${BASE}/?states`); await ask(page, "Cowboy Bebop", "How many episodes?"); await wait(4200); await shot(page, "03b-answer-three-states");
-  await page.locator("#why").scrollIntoViewIfNeeded(); await wait(600); await shot(page, "04-why-pending");
-  await page.locator("#how").scrollIntoViewIfNeeded(); await wait(600); await shot(page, "05-how");
-  await page.goto(`${BASE}/?sample`); await page.locator("#why").scrollIntoViewIfNeeded(); await wait(1500); await shot(page, "06-why-sample-chart");
-
-  // states
-  await page.goto(BASE);
-  await page.route("https://graphql.anilist.co/**", async (route) => {
-    const body = route.request().postData() ?? "";
-    if (route.request().method() === "OPTIONS" || body.includes("Page(")) return route.continue();
-    await wait(6000); return route.continue().catch(() => {});
-  });
-  await ask(page, "Cowboy Bebop", "How many episodes?");
-  await wait(5000); await shot(page, "07-loading-slow");
-  await page.unroute("https://graphql.anilist.co/**");
-
-  await page.route("https://graphql.anilist.co/**", (route) => {
-    const body = route.request().postData() ?? "";
-    if (route.request().method() === "OPTIONS" || body.includes("Page(")) return route.continue();
-    return route.fulfill({ status: 429, body: "{}", headers: { "access-control-allow-origin": "*" } });
-  });
-  await page.goto(BASE); await ask(page, "Spirited Away", "When did it come out?");
-  await page.getByRole("alert").first().waitFor(); await wait(400); await shot(page, "08-error-rate-limited");
-  await page.unroute("https://graphql.anilist.co/**");
-
-  await page.goto(BASE); await ctx.setOffline(true); await page.evaluate(() => dispatchEvent(new Event("offline")));
-  await wait(400); await shot(page, "09-offline"); await ctx.setOffline(false);
-
-  await page.goto(BASE); await page.getByRole("combobox", { name: "Anime title" }).fill("zzzxqzzq"); await wait(1500); await shot(page, "10-no-match");
-  await ctx.close();
-
-  // dark theme and reduced motion (pause so AniList's 30 requests/minute limit resets)
-  await wait(45000);
-  ctx = await browser.newContext({ viewport, colorScheme: "dark", reducedMotion: "reduce" });
-  page = await ctx.newPage();
-  await page.goto(BASE); await page.evaluate(() => document.fonts.ready); await wait(300); await shot(page, "11-home-dark-reduced");
-  await ask(page, "Frieren", "Which studio animated it?"); await wait(900); await shot(page, "12-answer-dark-reduced");
-  await ctx.close();
+import { mkdir, writeFile } from "node:fs/promises";
+import { routes, submit } from "./fixtures.mjs";
+const BASE = process.env.BASE_URL ?? "http://localhost:4178";
+const PASS = process.env.SHOT_PASS ?? "final";
+const root = new URL(`../../docs/shots/saga/${PASS}/`, import.meta.url);
+const browser = await chromium.launch({ channel: "msedge" });
+const manifest = [];
+const widths = { "phone-390": 390, "tablet-768": 768, "desktop-1440": 1440 };
+for (const [folder, width] of Object.entries(widths)) {
+  const dir = new URL(`${folder}/`, root);
+  await mkdir(dir, { recursive: true });
+  for (const kind of process.env.SHOT_KINDS?.split(",") ?? [
+    "idle",
+    "loading-record",
+    "loading-answer",
+    "verified",
+    "conflict",
+    "unchecked",
+    "three-states",
+    "record-only",
+    "error",
+    "offline",
+    "rate",
+    "why",
+    "how",
+    "why-sample",
+    "agreement",
+    "source-conflict",
+    "source-unchecked",
+    "source-stale",
+    "single-source",
+    "news",
+    "discussion",
+    "unclear",
+  ]) {
+    const ctx = await browser.newContext({
+      viewport: { width, height: width === 390 ? 844 : 900 },
+      colorScheme: "light",
+    });
+    await routes(ctx, kind);
+    const page = await ctx.newPage();
+    const errors = [];
+    page.on("pageerror", (e) => errors.push(e.name));
+    await page.goto(
+      `${BASE}/?review=1${kind === "why" || kind === "how" || kind === "why-sample" ? `&page=${kind === "why-sample" ? "why&sample" : kind}` : ""}`,
+    );
+    await page.evaluate(() => document.fonts.ready);
+    if (!["idle", "why", "how", "why-sample"].includes(kind)) {
+      await submit(
+        page,
+        kind === "news"
+          ? "Any news about the next season?"
+          : kind === "discussion"
+            ? "How do you interpret the ending?"
+            : kind === "unclear"
+              ? "Tell me something unexpected."
+              : undefined,
+      );
+      if (kind.startsWith("loading")) await page.locator(".waiting").waitFor();
+      else if (["error", "offline", "rate"].includes(kind))
+        await page.getByRole("alert").waitFor();
+      else if (["news", "discussion", "unclear"].includes(kind))
+        await page.locator(".conversation-shelf").waitFor();
+      else await page.locator(".checked-claim").first().waitFor();
+    }
+    if (kind === "loading-answer")
+      await page
+        .getByText("Waiting for the source response and any claim checks.", {
+          exact: false,
+        })
+        .waitFor();
+    if (!["loading-record", "loading-answer"].includes(kind)) {
+      if (await page.locator(".source-record img").count())
+        await page.locator(".source-record").scrollIntoViewIfNeeded();
+      await page
+        .locator(".opening img, .orbit-art, .source-record img")
+        .evaluateAll(async (es) => {
+          await Promise.all(
+            es
+              .filter((i) => i.getBoundingClientRect().width > 0)
+              .map((i) =>
+                Promise.race([
+                  i.decode().catch(() => {}),
+                  new Promise((r) => setTimeout(r, 6000)),
+                ]),
+              ),
+          );
+        });
+      await page.evaluate(() => scrollTo(0, 0));
+    }
+    await page.waitForTimeout(kind.startsWith("loading") ? 150 : 700);
+    const overflow = await page.evaluate(
+      () => document.documentElement.scrollWidth > innerWidth,
+    );
+    await page.screenshot({
+      path: new URL(`${kind}.png`, dir).pathname.replace(
+        /^\/([A-Za-z]:)/,
+        "$1",
+      ),
+      fullPage: !["idle", "loading-record", "loading-answer"].includes(kind),
+    });
+    manifest.push({
+      folder,
+      kind,
+      overflow,
+      errors,
+      fixture: kind !== "why" && kind !== "how",
+    });
+    await writeFile(
+      new URL("progress.json", root),
+      JSON.stringify(manifest, null, 2),
+    );
+    console.log(folder + " / " + kind + " captured");
+    if (kind === "idle") {
+      for (const [stage, p] of [
+        ["journey-worlds", 0],
+        ["journey-middle", 0.5],
+        ["journey-source", 1],
+      ]) {
+        await page.evaluate((p) => {
+          const el = document.querySelector(".night-journey");
+          window.scrollTo(
+            0,
+            el.offsetTop + (el.offsetHeight - innerHeight) * p,
+          );
+        }, p);
+        await page.locator(".scene-track").waitFor();
+        await page.waitForTimeout(500);
+        await page.locator(".travel-scene img").evaluateAll(async (es) => {
+          const visible = es.filter((i) => {
+            const r = i.getBoundingClientRect();
+            return (
+              r.right > 0 &&
+              r.left < innerWidth &&
+              r.bottom > 0 &&
+              r.top < innerHeight
+            );
+          });
+          await Promise.all(
+            visible.map((i) => {
+              i.loading = "eager";
+              return Promise.race([
+                i.decode().catch(() => {}),
+                new Promise((resolve) => setTimeout(resolve, 6000)),
+              ]);
+            }),
+          );
+        });
+        await page.screenshot({
+          path: new URL(`${stage}.png`, dir).pathname.replace(
+            /^\/([A-Za-z]:)/,
+            "$1",
+          ),
+        });
+      }
+    }
+    await ctx.close();
+  }
+  for (const [variant, options] of [
+    ["reduced", { reducedMotion: "reduce", colorScheme: "light" }],
+    ["dark", { reducedMotion: "reduce", colorScheme: "dark" }],
+  ]) {
+    const ctx = await browser.newContext({
+      viewport: { width, height: width === 390 ? 844 : 900 },
+      ...options,
+    });
+    await routes(ctx);
+    const p = await ctx.newPage();
+    await p.goto(BASE);
+    await p.evaluate(() => document.fonts.ready);
+    await p.screenshot({
+      path: new URL(`idle-${variant}.png`, dir).pathname.replace(
+        /^\/([A-Za-z]:)/,
+        "$1",
+      ),
+    });
+    if (variant === "reduced") {
+      for (const [i, name] of [
+        "journey-still",
+        "journey-still-details",
+        "journey-still-next",
+      ].entries()) {
+        const scene = p.locator(".travel-scene").nth(i);
+        await scene.evaluate((e) => e.scrollIntoView({ block: "start" }));
+        await scene.locator("img").evaluateAll(async (es) => {
+          await Promise.all(
+            es
+              .filter((i) => i.getBoundingClientRect().width > 0)
+              .map((i) => {
+                i.loading = "eager";
+                return Promise.race([
+                  i.decode().catch(() => {}),
+                  new Promise((r) => setTimeout(r, 8000)),
+                ]);
+              }),
+          );
+        });
+        await scene.screenshot({
+          path: new URL(name + ".png", dir).pathname.replace(
+            /^\/([A-Za-z]:)/,
+            "$1",
+          ),
+        });
+      }
+    }
+    if (variant === "dark") {
+      await submit(p);
+      await p.locator(".checked-claim").first().waitFor();
+      await p.locator(".source-record").scrollIntoViewIfNeeded();
+      await p
+        .waitForFunction(
+          () => [...document.images].every((i) => i.complete),
+          null,
+          { timeout: 6000 },
+        )
+        .catch(() => {});
+      await p.evaluate(() => scrollTo(0, 0));
+      await p.screenshot({
+        path: new URL("answer-dark.png", dir).pathname.replace(
+          /^\/([A-Za-z]:)/,
+          "$1",
+        ),
+        fullPage: true,
+      });
+    }
+    await ctx.close();
+  }
 }
 await browser.close();
-console.log("shots written to", OUT);
+await writeFile(
+  new URL("manifest.json", root),
+  JSON.stringify(manifest, null, 2),
+);
+const failed = manifest.filter((m) => m.overflow || m.errors.length);
+console.log(
+  `${manifest.length} states captured; ${failed.length} overflow/runtime failures`,
+);
+if (failed.length) {
+  console.log(failed);
+  process.exitCode = 1;
+}
