@@ -1,12 +1,12 @@
-# Nori asset pack
+# Wanderer asset pack
 
-The built-in illustrated courier is the default. An optional transparent sprite atlas can replace it without changing components or the answer contract. No animation dependency is downloaded.
+The owner-supplied samurai atlas is the default. An optional transparent sprite atlas can replace it without changing components or the answer contract. No animation dependency is downloaded.
 
 ## Install
 
 1. Put a transparent PNG or WebP atlas in `web/public/mascot/`, for example `courier.webp`.
 2. Replace `web/public/mascot/manifest.json` with the manifest below. Paths are relative to that folder. Rebuild and publish normally; for local development, reload the page.
-3. To restore the built-in courier, use `{ "version": 1, "enabled": false }`. A missing manifest, invalid manifest, missing image, timeout or wrong image dimensions also keeps the built-in courier. The page reserves the same footprint while loading.
+3. To restore the neutral samurai silhouette, use `{ "version": 1, "enabled": false }`. A missing manifest, invalid manifest, missing image, timeout or wrong image dimensions also keeps the neutral samurai silhouette. The page reserves the same footprint while loading.
 
 Only PNG/WebP sprite atlases are supported. Export other authoring formats into an atlas; no vector-player or proprietary animation runtime is required.
 
@@ -59,11 +59,11 @@ Only PNG/WebP sprite atlases are supported. Export other authoring formats into 
 
 Frames are zero-based, left to right, then top to bottom. The example is a 2048 by 2560 atlas, with four unused cells. All six animation names are required. A non-looping pose holds its final frame until the state changes. Idle, look, think, celebrate and puzzled follow elapsed time; walking follows actual road distance, so `fps` is metadata for the walk rather than a timer. `walkStride` is the horizontal travel in native frame pixels per complete two-step cycle. Calibrate it to planted-foot motion in the art. Reversing scroll reverses facing; the built-in rig also reverses its distance phase.
 
-`anchor` is the normalized planted-foot origin within every frame, shared across all animations. Keep it fixed. It is aligned to the built-in ground point at 50% width and 94.516129% height; sprite proportions are preserved and may extend beyond the box. Transparent padding must keep ears, props and jumping poses inside each cell. No baked-in floor or moving shadow: the feet must land at the shared anchor. Recommended first pack: 256 by 320 cells, 16 walking frames, crisp outlined cel shading and a small palette. Preserve the original face, scarf and silhouette unless a replacement is explicitly commissioned. Preview at normal size and 4x.
+`anchor` is the normalized planted-foot origin within every frame, shared across all animations. Keep it fixed. It is aligned to the built-in ground point at 50% width and 94.516129% height; sprite proportions are preserved and may extend beyond the box. Transparent padding must keep ears, props and jumping poses inside each cell. No baked-in floor or moving shadow: the feet must land at the shared anchor. Recommended first pack: 256 by 320 cells, 16 walking frames, crisp outlined cel shading and a small palette. Preserve the approved face, topknot and silhouette unless a replacement is explicitly commissioned. Preview at normal size and 4x.
 
 ## Limits and fallback
 
-Each cell must be 16-1024 px per dimension; grid dimensions 1-32; complete atlas at most 4096 px per dimension and 8 million pixels. Recommend compressed size below 1.5 MiB (checked by the asset author, not a network-size guarantee). Every animation has 1-128 valid frame indexes, 1-60 fps and an explicit Boolean `loop`. `walkStride` must be 8-1024. Facing is `left` or `right`. Anchor components must be finite numbers in [0,1]. Only same-origin `.png` and `.webp` files below `/mascot/` are accepted; no query strings, fragments, remote hosts or parent-directory escapes. The decoded image must exactly match cell size times grid size. Manifest and image loading each have a four-second deadline. The shipped disabled manifest intentionally requests no atlas.
+Each cell must be 16-1024 px per dimension; grid dimensions 1-32; complete atlas at most 4096 px per dimension and 8 million pixels. Recommend compressed size below 1.5 MiB (checked by the asset author, not a network-size guarantee). Every animation has 1-128 valid frame indexes, 1-60 fps and an explicit Boolean `loop`. `walkStride` must be 8-1024. Facing is `left` or `right`. Anchor components must be finite numbers in [0,1]. Only same-origin `.png` and `.webp` files below `/mascot/` are accepted; no query strings, fragments, remote hosts or parent-directory escapes. The decoded image must exactly match cell size times grid size. Manifest and image loading each have a four-second deadline. The shipped manifest selects the supplied atlas. Set enabled:false to test the neutral fallback.
 
 Reduced motion or the visible pause control selects the first idle frame with no frame loop. Offscreen atlases stop updating. The built-in fallback is visible until a complete pack passes validation. Missing art never blocks title search or an answer.
 
@@ -71,8 +71,14 @@ Reduced motion or the visible pause control selects the first idle frame with no
 
 Draw contact, down, passing and up on each side, with a clear hip/knee/ankle chain. Hold a planted foot fixed relative to the ground throughout stance; lift the passing foot, counter-swing the arms, and keep the head readable with a small pelvis bob. Test slow and fast scroll, reverse travel, stop/start, narrow layouts and reduced motion. An atlas cannot repair a sliding walk: match its stance travel to `walkStride`.
 
-The included default uses a 76-unit two-step cycle, 62% stance, 28/29-unit thigh/shin lengths and inverse-kinematic knees. Its foot stays at the road position during steady stance; a 75 ms easing response blends into and out of the resting pose. The ground follows the illustrated road rather than an unrelated viewport baseline.
+The supplied pack uses 352 by 320 frames, four columns and five rows. Frames 0-7 walk right, 8 is idle, 9 look, 10 think, 11 a puzzled/open-hand gesture, and 12-19 draw and return the sword. The manifest may repeat frames to pace the flourish. Walk stride is 288 native pixels per full cycle; measured visible feet in all 20 frames end at row 302 (one ends at 303), matching the supplied 0.94516129 vertical anchor. Eight authored walk frames necessarily have discrete contact changes; scroll-distance playback keeps speed proportional without inventing extra frames. Review the strip at 4x before adjusting stride. Facing mirrors around the manifest anchor on reverse travel.
+
+The display name is exported once as COMPANION_NAME from web/src/mascot/Mascot.tsx. Hero-only idle actions use existing named animations and transforms, not a second sheet. Pause/reduced motion selects the first idle frame. Missing or invalid assets use a neutral samurai silhouette; no previous character artwork is retained.
 
 ## Verify locally
 
-From `web/`, run `npm run test:unit`, `npm run build`, then preview. `node scripts/refinement-check.mjs` tests valid, missing and invalid packs using test-only colored frames, plus resize and still-mode behavior. Visual evidence is in `docs/shots/saga/refinement/`. The test atlas is not shipped as character art.
+From `web/`, run `npm run test:unit`, `npm run build`, then preview. `node scripts/companion-check.mjs` tests valid, missing and invalid packs using test-only colored frames, plus resize and still-mode behavior. Visual evidence is in `docs/shots/saga/samurai/`. The test atlas is not shipped as character art.
+
+## Frame renderer
+
+The browser decodes one atlas and reuses it across pose changes. Only the active frame is painted into a display-sized canvas, capped at 2x pixel density; the entire multi-frame image is never used as a large DOM image. The canvas repaints only when a frame or size changes. Breathing/facing use compositor transforms. This avoids oversized image bounds, repeated decode events and false whole-sheet largest-content candidates while keeping the owner's artwork unchanged.

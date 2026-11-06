@@ -35,3 +35,6 @@ Evidence: ../docs/shots/saga/, ../docs/lighthouse-saga.md and ../docs/SAGA_REVIE
 ## Weight
 
 React and its renderer are the only production dependencies. Existing typed API/sentence helpers remain. CSS and native scroll coordinate the camera, canvas particles stop outside the viewport, and the journey artwork mounts near the viewport. Tiny starter images use source-sized thumbnails; full hero art is discovered early. All eleven direct package versions are exact and older than the two-week cutoff; see ../docs/dependency-releases.json. Audit and browser packages are development-only.
+
+
+The samurai atlas is owner-supplied and configured by public/mascot/manifest.json. Change COMPANION_NAME in src/mascot/Mascot.tsx to rename the visible companion. Source extension development uses the separate feat/sources Worker on localhost:8788; set VITE_API_BASE=http://localhost:8788 while testing it. Port 8787 may be occupied by the earlier Worker, so do not start a duplicate there. Current evidence: docs/SAMURAI_SOURCES_REVIEW.md and docs/shots/saga/contact-sheet.png.

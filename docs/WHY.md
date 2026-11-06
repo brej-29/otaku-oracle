@@ -78,3 +78,8 @@ Preregistered: a completed run where the pooled gain is under 10 points or the i
 - `glm-4.7-flash` is not complete, so the registered pass or fail is **blocked**, not decided.
 - The Worker and interface run locally. There is no live URL yet.
 - Lighthouse was last measured before the cover row and claim states were added (mobile 96, 100, 100, 100). It must be re-run on the final build.
+
+
+## Unmeasured source extension / 6 November 2026
+
+The multi-source checker and news/discussion links are a product extension, not an evaluated result. The preregistered experiment measures AniList grounding only. It does not measure cross-catalog identity, source independence, source disagreement, routing quality, announcements or discussion relevance. Recorded-fixture tests establish software behavior, not factual accuracy. Two catalogs can copy from common upstream material; disagreement may reflect edition or taxonomy differences. The new interface separates corroboration, explicit single-source catalog data, unchecked claims and discussion links.

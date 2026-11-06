@@ -1,18 +1,18 @@
 {
   "version": 1,
-  "identity": "dusk cinema",
+  "identity": "dusk cinema / samurai wanderer",
   "motion": {
     "sceneTravelX": "2 viewport widths",
     "sceneTravelY": 40,
     "cloudSeconds": 28,
     "lanternSeconds": 5,
     "controlMilliseconds": 250,
-    "reduced": "complete static sequence",
-    "walkStrideNativeUnits": 76,
-    "walkStanceFraction": 0.62,
-    "walkBlendMilliseconds": 75,
+    "reduced": "first idle atlas frame; complete static sequence",
     "coverIntervalMilliseconds": 4800,
-    "coverTransitionMilliseconds": 850
+    "coverTransitionMilliseconds": 850,
+    "walkStride": "manifest native pixels per cycle",
+    "heroActionCycleSeconds": 26,
+    "heroBreathingSeconds": 4.8
   },
   "layout": {
     "phone": 390,
@@ -22,7 +22,14 @@
     "headerPhone": 70,
     "deskRadius": 14
   },
-  "states": ["verified", "conflict", "unchecked"],
-  "canonicalStyles": ["src/tokens.css", "src/app.css"],
+  "states": [
+    "verified",
+    "conflict",
+    "unchecked"
+  ],
+  "canonicalStyles": [
+    "src/tokens.css",
+    "src/app.css"
+  ],
   "artSource": "AniList hot-linked covers and banners; timestamped queries in scripts/fixtures"
 }
