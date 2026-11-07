@@ -152,7 +152,12 @@ async function cachedSource(
         .bind(key, JSON.stringify(value), Date.now(), Date.now() + ttl)
         .run();
       return value;
-    } catch {
+    } catch (error) {
+      console.warn(
+        "source_error",
+        id,
+        String((error as Error)?.message ?? error),
+      );
       return fallback(
         "unavailable",
         "Unavailable now: the source did not return usable data.",
@@ -182,7 +187,8 @@ async function json(
   const r = await fetcher(url, {
     headers: { Accept: "application/json", "User-Agent": UA },
     signal,
-    redirect: "error",
+    // Workers reject "error"; "manual" returns the 3xx, which fails r.ok below.
+    redirect: "manual",
   });
   if (r.status === 429 || r.status === 503) {
     await store.openCircuit(
@@ -193,6 +199,7 @@ async function json(
     throw new Error("source_cooldown");
   }
   if (!r.ok) {
+    console.warn("source_status", id, r.status);
     await r.body?.cancel();
     throw new Error("source_unavailable");
   }
