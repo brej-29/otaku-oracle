@@ -1,1 +1,95 @@
-{ "status": "PENDING", "updated_at": null, "note": "Evaluation is still running. No accuracy is claimed until a run completes.", "models": [] }
+{
+  "status": "COMPLETE",
+  "updated_at": "2026-11-07T20:31:05.272801+00:00",
+  "note": "Registered result passed: pooled B minus A is 38.7 points, 95% CI 31.7 to 46.0. Grounded accuracy is a ceiling because the record holds the answer. Exploratory models are not pooled.",
+  "models": [
+    {
+      "id": "glm-4.7-flash",
+      "label": "glm-4.7-flash",
+      "provider": "zai",
+      "primary": true,
+      "arms": {
+        "A": {
+          "accuracy": 0.5456989247311828,
+          "lo": 0.46994535519125685,
+          "hi": 0.6242937853107344,
+          "responses": 372,
+          "expected": 372
+        },
+        "B": {
+          "accuracy": 0.9919354838709677,
+          "lo": 0.9758064516129032,
+          "hi": 1.0,
+          "responses": 372,
+          "expected": 372
+        }
+      }
+    },
+    {
+      "id": "glm-4.5-flash",
+      "label": "glm-4.5-flash",
+      "provider": "zai",
+      "primary": true,
+      "arms": {
+        "A": {
+          "accuracy": 0.6720430107526881,
+          "lo": 0.58994708994709,
+          "hi": 0.7526881720430108,
+          "responses": 372,
+          "expected": 372
+        },
+        "B": {
+          "accuracy": 1,
+          "lo": 1.0,
+          "hi": 1.0,
+          "responses": 372,
+          "expected": 372
+        }
+      }
+    },
+    {
+      "id": "google/gemma-4-31b-it",
+      "label": "gemma-4-31b-it",
+      "provider": "nvidia",
+      "primary": false,
+      "arms": {
+        "A": {
+          "accuracy": 0.6290322580645161,
+          "lo": 0.5582010582010583,
+          "hi": 0.701058201058201,
+          "responses": 372,
+          "expected": 372
+        },
+        "B": {
+          "accuracy": 1,
+          "lo": 1.0,
+          "hi": 1.0,
+          "responses": 372,
+          "expected": 372
+        }
+      }
+    },
+    {
+      "id": "openai/gpt-oss-120b",
+      "label": "gpt-oss-120b",
+      "provider": "groq",
+      "primary": false,
+      "arms": {
+        "A": {
+          "accuracy": 0.5725806451612904,
+          "lo": 0.5079365079365079,
+          "hi": 0.6424731182795699,
+          "responses": 372,
+          "expected": 372
+        },
+        "B": {
+          "accuracy": 1,
+          "lo": 1.0,
+          "hi": 1.0,
+          "responses": 372,
+          "expected": 372
+        }
+      }
+    }
+  ]
+}

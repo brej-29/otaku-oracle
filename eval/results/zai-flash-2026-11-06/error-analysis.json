@@ -3,6 +3,76 @@
     {
       "model": "glm-4.7-flash",
       "repeat": 0,
+      "question_id": "135806:main_characters",
+      "title": {
+        "romaji": "Isekai Oji-san",
+        "english": "Uncle from Another World",
+        "native": "異世界おじさん"
+      },
+      "question": "How many character edges are labelled MAIN in this anime's AniList record? Return an integer.",
+      "gold": 2,
+      "answer": 5,
+      "failure": "confident wrong"
+    },
+    {
+      "model": "glm-4.5-flash",
+      "repeat": 1,
+      "question_id": "20486:season",
+      "title": {
+        "romaji": "Z/X IGNITION",
+        "english": "Z/X IGNITION",
+        "native": "Z/X IGNITION"
+      },
+      "question": "In which season did it start? Return WINTER, SPRING, SUMMER, or FALL.",
+      "gold": "WINTER",
+      "answer": "SPRING",
+      "failure": "confident wrong"
+    },
+    {
+      "model": "glm-4.5-flash",
+      "repeat": 0,
+      "question_id": "21718:main_characters",
+      "title": {
+        "romaji": "Fate/stay night [Heaven's Feel] II. lost butterfly",
+        "english": "Fate/stay night [Heaven's Feel] II. lost butterfly",
+        "native": "Fate/stay night[Heaven's Feel] ⅠⅠ.lost butterfly"
+      },
+      "question": "How many character edges are labelled MAIN in this anime's AniList record? Return an integer.",
+      "gold": 4,
+      "answer": 3,
+      "failure": "confident wrong"
+    },
+    {
+      "model": "glm-4.5-flash",
+      "repeat": 0,
+      "question_id": "132467:year",
+      "title": {
+        "romaji": "Tokyo Revengers: Chibi Reve",
+        "english": null,
+        "native": "ちびりべ"
+      },
+      "question": "In which year did this anime start? Return a four-digit integer.",
+      "gold": 2021,
+      "answer": 2022,
+      "failure": "confident wrong"
+    },
+    {
+      "model": "glm-4.5-flash",
+      "repeat": 0,
+      "question_id": "183128:year",
+      "title": {
+        "romaji": "Muchuu sa, Kimi ni.",
+        "english": "Captivated, By You",
+        "native": "夢中さ、きみに。"
+      },
+      "question": "In which year did this anime start? Return a four-digit integer.",
+      "gold": 2025,
+      "answer": 2023,
+      "failure": "confident wrong"
+    },
+    {
+      "model": "glm-4.7-flash",
+      "repeat": 0,
       "question_id": "1563:season",
       "title": {
         "romaji": "Magic Knight Rayearth II",
@@ -13,7 +83,82 @@
       "gold": "SPRING",
       "answer": "WINTER",
       "failure": "confident wrong"
+    },
+    {
+      "model": "glm-4.7-flash",
+      "repeat": 0,
+      "question_id": "21718:year",
+      "title": {
+        "romaji": "Fate/stay night [Heaven's Feel] II. lost butterfly",
+        "english": "Fate/stay night [Heaven's Feel] II. lost butterfly",
+        "native": "Fate/stay night[Heaven's Feel] ⅠⅠ.lost butterfly"
+      },
+      "question": "In which year did this anime start? Return a four-digit integer.",
+      "gold": 2019,
+      "answer": 2017,
+      "failure": "confident wrong"
+    },
+    {
+      "model": "glm-4.5-flash",
+      "repeat": 1,
+      "question_id": "132467:season",
+      "title": {
+        "romaji": "Tokyo Revengers: Chibi Reve",
+        "english": null,
+        "native": "ちびりべ"
+      },
+      "question": "In which season did it start? Return WINTER, SPRING, SUMMER, or FALL.",
+      "gold": "SPRING",
+      "answer": "WINTER",
+      "failure": "confident wrong"
+    },
+    {
+      "model": "glm-4.7-flash",
+      "repeat": 0,
+      "question_id": "21123:studio",
+      "title": {
+        "romaji": "DRIFTERS",
+        "english": "DRIFTERS",
+        "native": "DRIFTERS"
+      },
+      "question": "Which main animation studio or studios are listed for this anime? Return a list of studio names.",
+      "gold": [
+        "Hoods Entertainment"
+      ],
+      "answer": [
+        "Production I.G"
+      ],
+      "failure": "confident wrong"
+    },
+    {
+      "model": "glm-4.5-flash",
+      "repeat": 0,
+      "question_id": "21856:main_characters",
+      "title": {
+        "romaji": "Boku no Hero Academia 2",
+        "english": "My Hero Academia Season 2",
+        "native": "僕のヒーローアカデミア２"
+      },
+      "question": "How many character edges are labelled MAIN in this anime's AniList record? Return an integer.",
+      "gold": 6,
+      "answer": 15,
+      "failure": "confident wrong"
     }
   ],
-  "B": []
+  "B": [
+    {
+      "model": "glm-4.7-flash",
+      "repeat": 0,
+      "question_id": "20486:main_characters",
+      "title": {
+        "romaji": "Z/X IGNITION",
+        "english": "Z/X IGNITION",
+        "native": "Z/X IGNITION"
+      },
+      "question": "How many character edges are labelled MAIN in this anime's AniList record? Return an integer.",
+      "gold": 6,
+      "answer": 5,
+      "failure": "confident wrong"
+    }
+  ]
 }

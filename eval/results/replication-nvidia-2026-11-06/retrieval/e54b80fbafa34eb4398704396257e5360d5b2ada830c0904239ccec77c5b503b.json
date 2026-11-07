@@ -1,0 +1,98 @@
+{
+  "fetched_at": "2026-11-05T20:23:13.918228+00:00",
+  "endpoint": "https://graphql.anilist.co",
+  "query": "query($id:Int!) { Media(id:$id, type:ANIME) { \nid title { romaji english native } siteUrl popularity episodes startDate { year }\nformat source season status isAdult\nstudios(isMain: true) { nodes { id name } }\ncharacters(role: MAIN, perPage: 50) { pageInfo { hasNextPage } edges { role node { id } } }\n } }",
+  "variables": {
+    "id": 104276
+  },
+  "attempts": [
+    {
+      "at": "2026-11-05T20:23:13.212773+00:00",
+      "status": 200,
+      "seconds": 0.705,
+      "rate_limit": "30",
+      "rate_remaining": "29",
+      "rate_headers": {}
+    }
+  ],
+  "response": {
+    "data": {
+      "Media": {
+        "id": 104276,
+        "title": {
+          "romaji": "Boku no Hero Academia 4",
+          "english": "My Hero Academia Season 4",
+          "native": "僕のヒーローアカデミア４"
+        },
+        "siteUrl": "https://anilist.co/anime/104276",
+        "popularity": 540471,
+        "episodes": 25,
+        "startDate": {
+          "year": 2019
+        },
+        "format": "TV",
+        "source": "MANGA",
+        "season": "FALL",
+        "status": "FINISHED",
+        "isAdult": false,
+        "studios": {
+          "nodes": [
+            {
+              "id": 4,
+              "name": "bones"
+            }
+          ]
+        },
+        "characters": {
+          "pageInfo": {
+            "hasNextPage": false
+          },
+          "edges": [
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 89028
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 89221
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 89222
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 123527
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 126093
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 126357
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 129761
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

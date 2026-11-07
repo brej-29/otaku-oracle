@@ -1,7 +1,7 @@
 {
-  "pid": 44212,
-  "started_at": "2026-11-05T20:05:36.733984+00:00",
+  "pid": 43672,
+  "finished_at": "2026-11-06T22:52:45.605305+00:00",
   "provider": "zai",
   "calibration": "eval/results/calibration-json-zai-2026-11-06/calibration.json",
-  "state": "running"
+  "state": "exited"
 }

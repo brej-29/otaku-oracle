@@ -1,0 +1,55 @@
+{
+  "fetched_at": "2026-11-05T20:23:20.009113+00:00",
+  "endpoint": "https://graphql.anilist.co",
+  "query": "query($id:Int!) { Media(id:$id, type:ANIME) { \nid title { romaji english native } siteUrl popularity episodes startDate { year }\nformat source season status isAdult\nstudios(isMain: true) { nodes { id name } }\ncharacters(role: MAIN, perPage: 50) { pageInfo { hasNextPage } edges { role node { id } } }\n } }",
+  "variables": {
+    "id": 4705
+  },
+  "attempts": [
+    {
+      "at": "2026-11-05T20:23:19.413470+00:00",
+      "status": 200,
+      "seconds": 0.596,
+      "rate_limit": "30",
+      "rate_remaining": "27",
+      "rate_headers": {}
+    }
+  ],
+  "response": {
+    "data": {
+      "Media": {
+        "id": 4705,
+        "title": {
+          "romaji": "Tengen Toppa Gurren Lagann: Parallel Works",
+          "english": null,
+          "native": "グレンラガン パラレルワークス"
+        },
+        "siteUrl": "https://anilist.co/anime/4705",
+        "popularity": 8304,
+        "episodes": 8,
+        "startDate": {
+          "year": 2008
+        },
+        "format": "SPECIAL",
+        "source": null,
+        "season": null,
+        "status": "FINISHED",
+        "isAdult": false,
+        "studios": {
+          "nodes": [
+            {
+              "id": 6,
+              "name": "GAINAX"
+            }
+          ]
+        },
+        "characters": {
+          "pageInfo": {
+            "hasNextPage": false
+          },
+          "edges": []
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,753 @@
+{
+  "generated_at": "2026-11-06T09:20:44.239634+00:00",
+  "dataset_sha256": "fcc083e2d3c6950b03630c54d48db2382df9686c0802e9373c3eafae7422d8ea",
+  "title_count": 18,
+  "journal_entries": 882,
+  "historical_error_entries": 14,
+  "question_count": 124,
+  "groups": {
+    "google/gemma-4-31b-it|A|all:all": {
+      "expected": 372,
+      "attempted": 372,
+      "responses": 372,
+      "errors": 0,
+      "coverage": 1.0,
+      "correct": 0.6290322580645161,
+      "abstention": 0,
+      "hallucination": 0.3709677419354839,
+      "wrong_answer": 0.3709677419354839,
+      "parse_failure": 0,
+      "missing_confidence": 0,
+      "correct_with_citation": 0.239247311827957,
+      "citation_validity": 0.28337874659400547,
+      "citation_count": 367,
+      "accuracy_ci95": [
+        0.5582010582010583,
+        0.701058201058201
+      ]
+    },
+    "google/gemma-4-31b-it|A|bucket:head": {
+      "expected": 126,
+      "attempted": 126,
+      "responses": 126,
+      "errors": 0,
+      "coverage": 1.0,
+      "correct": 0.8095238095238095,
+      "abstention": 0,
+      "hallucination": 0.19047619047619047,
+      "wrong_answer": 0.19047619047619047,
+      "parse_failure": 0,
+      "missing_confidence": 0,
+      "correct_with_citation": 0.2777777777777778,
+      "citation_validity": 0.29508196721311475,
+      "citation_count": 122,
+      "accuracy_ci95": [
+        0.7142857142857143,
+        0.8571428571428571
+      ]
+    },
+    "google/gemma-4-31b-it|A|bucket:long_tail": {
+      "expected": 120,
+      "attempted": 120,
+      "responses": 120,
+      "errors": 0,
+      "coverage": 1.0,
+      "correct": 0.36666666666666664,
+      "abstention": 0,
+      "hallucination": 0.6333333333333333,
+      "wrong_answer": 0.6333333333333333,
+      "parse_failure": 0,
+      "missing_confidence": 0,
+      "correct_with_citation": 0.225,
+      "citation_validity": 0.31666666666666665,
+      "citation_count": 120,
+      "accuracy_ci95": [
+        0.23015873015873015,
+        0.525
+      ]
+    },
+    "google/gemma-4-31b-it|A|bucket:torso": {
+      "expected": 126,
+      "attempted": 126,
+      "responses": 126,
+      "errors": 0,
+      "coverage": 1.0,
+      "correct": 0.6984126984126984,
+      "abstention": 0,
+      "hallucination": 0.30158730158730157,
+      "wrong_answer": 0.30158730158730157,
+      "parse_failure": 0,
+      "missing_confidence": 0,
+      "correct_with_citation": 0.21428571428571427,
+      "citation_validity": 0.24,
+      "citation_count": 125,
+      "accuracy_ci95": [
+        0.5714285714285714,
+        0.8095238095238095
+      ]
+    },
+    "google/gemma-4-31b-it|A|kind:episodes": {
+      "expected": 54,
+      "attempted": 54,
+      "responses": 54,
+      "errors": 0,
+      "coverage": 1.0,
+      "correct": 0.6111111111111112,
+      "abstention": 0,
+      "hallucination": 0.3888888888888889,
+      "wrong_answer": 0.3888888888888889,
+      "parse_failure": 0,
+      "missing_confidence": 0,
+      "correct_with_citation": 0,
+      "citation_validity": 0.0,
+      "citation_count": 54,
+      "accuracy_ci95": [
+        0.4444444444444444,
+        0.7777777777777778
+      ]
+    },
+    "google/gemma-4-31b-it|A|kind:format": {
+      "expected": 54,
+      "attempted": 54,
+      "responses": 54,
+      "errors": 0,
+      "coverage": 1.0,
+      "correct": 0.9259259259259259,
+      "abstention": 0,
+      "hallucination": 0.07407407407407407,
+      "wrong_answer": 0.07407407407407407,
+      "parse_failure": 0,
+      "missing_confidence": 0,
+      "correct_with_citation": 0.8148148148148148,
+      "citation_validity": 0.8703703703703703,
+      "citation_count": 54,
+      "accuracy_ci95": [
+        0.8148148148148148,
+        1.0
+      ]
+    },
+    "google/gemma-4-31b-it|A|kind:main_characters": {
+      "expected": 54,
+      "attempted": 54,
+      "responses": 54,
+      "errors": 0,
+      "coverage": 1.0,
+      "correct": 0.2037037037037037,
+      "abstention": 0,
+      "hallucination": 0.7962962962962963,
+      "wrong_answer": 0.7962962962962963,
+      "parse_failure": 0,
+      "missing_confidence": 0,
+      "correct_with_citation": 0.018518518518518517,
+      "citation_validity": 0.16666666666666666,
+      "citation_count": 54,
+      "accuracy_ci95": [
+        0.05555555555555555,
+        0.37037037037037035
+      ]
+    },
+    "google/gemma-4-31b-it|A|kind:season": {
+      "expected": 51,
+      "attempted": 51,
+      "responses": 51,
+      "errors": 0,
+      "coverage": 1.0,
+      "correct": 0.5882352941176471,
+      "abstention": 0,
+      "hallucination": 0.4117647058823529,
+      "wrong_answer": 0.4117647058823529,
+      "parse_failure": 0,
+      "missing_confidence": 0,
+      "correct_with_citation": 0,
+      "citation_validity": 0.0,
+      "citation_count": 51,
+      "accuracy_ci95": [
+        0.4117647058823529,
+        0.7647058823529411
+      ]
+    },
+    "google/gemma-4-31b-it|A|kind:source": {
+      "expected": 51,
+      "attempted": 51,
+      "responses": 51,
+      "errors": 0,
+      "coverage": 1.0,
+      "correct": 0.9215686274509803,
+      "abstention": 0,
+      "hallucination": 0.0784313725490196,
+      "wrong_answer": 0.0784313725490196,
+      "parse_failure": 0,
+      "missing_confidence": 0,
+      "correct_with_citation": 0.8627450980392157,
+      "citation_validity": 0.9411764705882353,
+      "citation_count": 51,
+      "accuracy_ci95": [
+        0.803921568627451,
+        1.0
+      ]
+    },
+    "google/gemma-4-31b-it|A|kind:studio": {
+      "expected": 54,
+      "attempted": 54,
+      "responses": 54,
+      "errors": 0,
+      "coverage": 1.0,
+      "correct": 0.5555555555555556,
+      "abstention": 0,
+      "hallucination": 0.4444444444444444,
+      "wrong_answer": 0.4444444444444444,
+      "parse_failure": 0,
+      "missing_confidence": 0,
+      "correct_with_citation": 0,
+      "citation_validity": 0.0,
+      "citation_count": 52,
+      "accuracy_ci95": [
+        0.3333333333333333,
+        0.7777777777777778
+      ]
+    },
+    "google/gemma-4-31b-it|A|kind:year": {
+      "expected": 54,
+      "attempted": 54,
+      "responses": 54,
+      "errors": 0,
+      "coverage": 1.0,
+      "correct": 0.6111111111111112,
+      "abstention": 0,
+      "hallucination": 0.3888888888888889,
+      "wrong_answer": 0.3888888888888889,
+      "parse_failure": 0,
+      "missing_confidence": 0,
+      "correct_with_citation": 0,
+      "citation_validity": 0.0,
+      "citation_count": 51,
+      "accuracy_ci95": [
+        0.5,
+        0.7037037037037037
+      ]
+    },
+    "google/gemma-4-31b-it|B|all:all": {
+      "expected": 372,
+      "attempted": 372,
+      "responses": 372,
+      "errors": 0,
+      "coverage": 1.0,
+      "correct": 1,
+      "abstention": 0,
+      "hallucination": 0,
+      "wrong_answer": 0,
+      "parse_failure": 0,
+      "missing_confidence": 0,
+      "correct_with_citation": 1,
+      "citation_validity": 1.0,
+      "citation_count": 372,
+      "accuracy_ci95": [
+        1.0,
+        1.0
+      ]
+    },
+    "google/gemma-4-31b-it|B|bucket:head": {
+      "expected": 126,
+      "attempted": 126,
+      "responses": 126,
+      "errors": 0,
+      "coverage": 1.0,
+      "correct": 1,
+      "abstention": 0,
+      "hallucination": 0,
+      "wrong_answer": 0,
+      "parse_failure": 0,
+      "missing_confidence": 0,
+      "correct_with_citation": 1,
+      "citation_validity": 1.0,
+      "citation_count": 126,
+      "accuracy_ci95": [
+        1.0,
+        1.0
+      ]
+    },
+    "google/gemma-4-31b-it|B|bucket:long_tail": {
+      "expected": 120,
+      "attempted": 120,
+      "responses": 120,
+      "errors": 0,
+      "coverage": 1.0,
+      "correct": 1,
+      "abstention": 0,
+      "hallucination": 0,
+      "wrong_answer": 0,
+      "parse_failure": 0,
+      "missing_confidence": 0,
+      "correct_with_citation": 1,
+      "citation_validity": 1.0,
+      "citation_count": 120,
+      "accuracy_ci95": [
+        1.0,
+        1.0
+      ]
+    },
+    "google/gemma-4-31b-it|B|bucket:torso": {
+      "expected": 126,
+      "attempted": 126,
+      "responses": 126,
+      "errors": 0,
+      "coverage": 1.0,
+      "correct": 1,
+      "abstention": 0,
+      "hallucination": 0,
+      "wrong_answer": 0,
+      "parse_failure": 0,
+      "missing_confidence": 0,
+      "correct_with_citation": 1,
+      "citation_validity": 1.0,
+      "citation_count": 126,
+      "accuracy_ci95": [
+        1.0,
+        1.0
+      ]
+    },
+    "google/gemma-4-31b-it|B|kind:episodes": {
+      "expected": 54,
+      "attempted": 54,
+      "responses": 54,
+      "errors": 0,
+      "coverage": 1.0,
+      "correct": 1,
+      "abstention": 0,
+      "hallucination": 0,
+      "wrong_answer": 0,
+      "parse_failure": 0,
+      "missing_confidence": 0,
+      "correct_with_citation": 1,
+      "citation_validity": 1.0,
+      "citation_count": 54,
+      "accuracy_ci95": [
+        1.0,
+        1.0
+      ]
+    },
+    "google/gemma-4-31b-it|B|kind:format": {
+      "expected": 54,
+      "attempted": 54,
+      "responses": 54,
+      "errors": 0,
+      "coverage": 1.0,
+      "correct": 1,
+      "abstention": 0,
+      "hallucination": 0,
+      "wrong_answer": 0,
+      "parse_failure": 0,
+      "missing_confidence": 0,
+      "correct_with_citation": 1,
+      "citation_validity": 1.0,
+      "citation_count": 54,
+      "accuracy_ci95": [
+        1.0,
+        1.0
+      ]
+    },
+    "google/gemma-4-31b-it|B|kind:main_characters": {
+      "expected": 54,
+      "attempted": 54,
+      "responses": 54,
+      "errors": 0,
+      "coverage": 1.0,
+      "correct": 1,
+      "abstention": 0,
+      "hallucination": 0,
+      "wrong_answer": 0,
+      "parse_failure": 0,
+      "missing_confidence": 0,
+      "correct_with_citation": 1,
+      "citation_validity": 1.0,
+      "citation_count": 54,
+      "accuracy_ci95": [
+        1.0,
+        1.0
+      ]
+    },
+    "google/gemma-4-31b-it|B|kind:season": {
+      "expected": 51,
+      "attempted": 51,
+      "responses": 51,
+      "errors": 0,
+      "coverage": 1.0,
+      "correct": 1,
+      "abstention": 0,
+      "hallucination": 0,
+      "wrong_answer": 0,
+      "parse_failure": 0,
+      "missing_confidence": 0,
+      "correct_with_citation": 1,
+      "citation_validity": 1.0,
+      "citation_count": 51,
+      "accuracy_ci95": [
+        1.0,
+        1.0
+      ]
+    },
+    "google/gemma-4-31b-it|B|kind:source": {
+      "expected": 51,
+      "attempted": 51,
+      "responses": 51,
+      "errors": 0,
+      "coverage": 1.0,
+      "correct": 1,
+      "abstention": 0,
+      "hallucination": 0,
+      "wrong_answer": 0,
+      "parse_failure": 0,
+      "missing_confidence": 0,
+      "correct_with_citation": 1,
+      "citation_validity": 1.0,
+      "citation_count": 51,
+      "accuracy_ci95": [
+        1.0,
+        1.0
+      ]
+    },
+    "google/gemma-4-31b-it|B|kind:studio": {
+      "expected": 54,
+      "attempted": 54,
+      "responses": 54,
+      "errors": 0,
+      "coverage": 1.0,
+      "correct": 1,
+      "abstention": 0,
+      "hallucination": 0,
+      "wrong_answer": 0,
+      "parse_failure": 0,
+      "missing_confidence": 0,
+      "correct_with_citation": 1,
+      "citation_validity": 1.0,
+      "citation_count": 54,
+      "accuracy_ci95": [
+        1.0,
+        1.0
+      ]
+    },
+    "google/gemma-4-31b-it|B|kind:year": {
+      "expected": 54,
+      "attempted": 54,
+      "responses": 54,
+      "errors": 0,
+      "coverage": 1.0,
+      "correct": 1,
+      "abstention": 0,
+      "hallucination": 0,
+      "wrong_answer": 0,
+      "parse_failure": 0,
+      "missing_confidence": 0,
+      "correct_with_citation": 1,
+      "citation_validity": 1.0,
+      "citation_count": 54,
+      "accuracy_ci95": [
+        1.0,
+        1.0
+      ]
+    },
+    "deterministic|C|all:all": {
+      "expected": 124,
+      "attempted": 124,
+      "responses": 124,
+      "errors": 0,
+      "coverage": 1.0,
+      "correct": 1,
+      "abstention": 0,
+      "hallucination": 0,
+      "wrong_answer": 0,
+      "parse_failure": 0,
+      "missing_confidence": 0,
+      "correct_with_citation": 1,
+      "citation_validity": 1.0,
+      "citation_count": 124,
+      "accuracy_ci95": [
+        1.0,
+        1.0
+      ]
+    },
+    "deterministic|C|bucket:head": {
+      "expected": 42,
+      "attempted": 42,
+      "responses": 42,
+      "errors": 0,
+      "coverage": 1.0,
+      "correct": 1,
+      "abstention": 0,
+      "hallucination": 0,
+      "wrong_answer": 0,
+      "parse_failure": 0,
+      "missing_confidence": 0,
+      "correct_with_citation": 1,
+      "citation_validity": 1.0,
+      "citation_count": 42,
+      "accuracy_ci95": [
+        1.0,
+        1.0
+      ]
+    },
+    "deterministic|C|bucket:long_tail": {
+      "expected": 40,
+      "attempted": 40,
+      "responses": 40,
+      "errors": 0,
+      "coverage": 1.0,
+      "correct": 1,
+      "abstention": 0,
+      "hallucination": 0,
+      "wrong_answer": 0,
+      "parse_failure": 0,
+      "missing_confidence": 0,
+      "correct_with_citation": 1,
+      "citation_validity": 1.0,
+      "citation_count": 40,
+      "accuracy_ci95": [
+        1.0,
+        1.0
+      ]
+    },
+    "deterministic|C|bucket:torso": {
+      "expected": 42,
+      "attempted": 42,
+      "responses": 42,
+      "errors": 0,
+      "coverage": 1.0,
+      "correct": 1,
+      "abstention": 0,
+      "hallucination": 0,
+      "wrong_answer": 0,
+      "parse_failure": 0,
+      "missing_confidence": 0,
+      "correct_with_citation": 1,
+      "citation_validity": 1.0,
+      "citation_count": 42,
+      "accuracy_ci95": [
+        1.0,
+        1.0
+      ]
+    },
+    "deterministic|C|kind:episodes": {
+      "expected": 18,
+      "attempted": 18,
+      "responses": 18,
+      "errors": 0,
+      "coverage": 1.0,
+      "correct": 1,
+      "abstention": 0,
+      "hallucination": 0,
+      "wrong_answer": 0,
+      "parse_failure": 0,
+      "missing_confidence": 0,
+      "correct_with_citation": 1,
+      "citation_validity": 1.0,
+      "citation_count": 18,
+      "accuracy_ci95": [
+        1.0,
+        1.0
+      ]
+    },
+    "deterministic|C|kind:format": {
+      "expected": 18,
+      "attempted": 18,
+      "responses": 18,
+      "errors": 0,
+      "coverage": 1.0,
+      "correct": 1,
+      "abstention": 0,
+      "hallucination": 0,
+      "wrong_answer": 0,
+      "parse_failure": 0,
+      "missing_confidence": 0,
+      "correct_with_citation": 1,
+      "citation_validity": 1.0,
+      "citation_count": 18,
+      "accuracy_ci95": [
+        1.0,
+        1.0
+      ]
+    },
+    "deterministic|C|kind:main_characters": {
+      "expected": 18,
+      "attempted": 18,
+      "responses": 18,
+      "errors": 0,
+      "coverage": 1.0,
+      "correct": 1,
+      "abstention": 0,
+      "hallucination": 0,
+      "wrong_answer": 0,
+      "parse_failure": 0,
+      "missing_confidence": 0,
+      "correct_with_citation": 1,
+      "citation_validity": 1.0,
+      "citation_count": 18,
+      "accuracy_ci95": [
+        1.0,
+        1.0
+      ]
+    },
+    "deterministic|C|kind:season": {
+      "expected": 17,
+      "attempted": 17,
+      "responses": 17,
+      "errors": 0,
+      "coverage": 1.0,
+      "correct": 1,
+      "abstention": 0,
+      "hallucination": 0,
+      "wrong_answer": 0,
+      "parse_failure": 0,
+      "missing_confidence": 0,
+      "correct_with_citation": 1,
+      "citation_validity": 1.0,
+      "citation_count": 17,
+      "accuracy_ci95": [
+        1.0,
+        1.0
+      ]
+    },
+    "deterministic|C|kind:source": {
+      "expected": 17,
+      "attempted": 17,
+      "responses": 17,
+      "errors": 0,
+      "coverage": 1.0,
+      "correct": 1,
+      "abstention": 0,
+      "hallucination": 0,
+      "wrong_answer": 0,
+      "parse_failure": 0,
+      "missing_confidence": 0,
+      "correct_with_citation": 1,
+      "citation_validity": 1.0,
+      "citation_count": 17,
+      "accuracy_ci95": [
+        1.0,
+        1.0
+      ]
+    },
+    "deterministic|C|kind:studio": {
+      "expected": 18,
+      "attempted": 18,
+      "responses": 18,
+      "errors": 0,
+      "coverage": 1.0,
+      "correct": 1,
+      "abstention": 0,
+      "hallucination": 0,
+      "wrong_answer": 0,
+      "parse_failure": 0,
+      "missing_confidence": 0,
+      "correct_with_citation": 1,
+      "citation_validity": 1.0,
+      "citation_count": 18,
+      "accuracy_ci95": [
+        1.0,
+        1.0
+      ]
+    },
+    "deterministic|C|kind:year": {
+      "expected": 18,
+      "attempted": 18,
+      "responses": 18,
+      "errors": 0,
+      "coverage": 1.0,
+      "correct": 1,
+      "abstention": 0,
+      "hallucination": 0,
+      "wrong_answer": 0,
+      "parse_failure": 0,
+      "missing_confidence": 0,
+      "correct_with_citation": 1,
+      "citation_validity": 1.0,
+      "citation_count": 18,
+      "accuracy_ci95": [
+        1.0,
+        1.0
+      ]
+    }
+  },
+  "paired": {
+    "google/gemma-4-31b-it|all": {
+      "pairs": 372,
+      "questions_models": 124,
+      "delta": 0.3709677419354839,
+      "ci95": [
+        0.2989417989417989,
+        0.44179894179894186
+      ]
+    },
+    "google/gemma-4-31b-it|head": {
+      "pairs": 126,
+      "questions_models": 42,
+      "delta": 0.19047619047619047,
+      "ci95": [
+        0.14285714285714285,
+        0.2857142857142857
+      ]
+    },
+    "google/gemma-4-31b-it|long_tail": {
+      "pairs": 120,
+      "questions_models": 40,
+      "delta": 0.6333333333333333,
+      "ci95": [
+        0.475,
+        0.7698412698412699
+      ]
+    },
+    "google/gemma-4-31b-it|torso": {
+      "pairs": 126,
+      "questions_models": 42,
+      "delta": 0.30158730158730157,
+      "ci95": [
+        0.19047619047619047,
+        0.42857142857142855
+      ]
+    },
+    "pooled|all": {
+      "pairs": 372,
+      "questions_models": 124,
+      "delta": 0.3709677419354839,
+      "ci95": [
+        0.2989417989417989,
+        0.44179894179894186
+      ]
+    },
+    "pooled|head": {
+      "pairs": 126,
+      "questions_models": 42,
+      "delta": 0.19047619047619047,
+      "ci95": [
+        0.14285714285714285,
+        0.2857142857142857
+      ]
+    },
+    "pooled|long_tail": {
+      "pairs": 120,
+      "questions_models": 40,
+      "delta": 0.6333333333333333,
+      "ci95": [
+        0.475,
+        0.7698412698412699
+      ]
+    },
+    "pooled|torso": {
+      "pairs": 126,
+      "questions_models": 42,
+      "delta": 0.30158730158730157,
+      "ci95": [
+        0.19047619047619047,
+        0.42857142857142855
+      ]
+    }
+  },
+  "completion": {
+    "state": "finished",
+    "finished_at": "2026-11-06T09:20:30.743168+00:00",
+    "blocked_models": [],
+    "complete": true
+  },
+  "analysis_role": "exploratory_replication",
+  "interpretation": "Completed exploratory replication; excluded from primary threshold",
+  "request_failures": []
+}

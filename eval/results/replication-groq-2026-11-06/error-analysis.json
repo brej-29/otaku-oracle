@@ -1,0 +1,153 @@
+{
+  "A": [
+    {
+      "model": "openai/gpt-oss-120b",
+      "repeat": 0,
+      "question_id": "183128:episodes",
+      "title": {
+        "romaji": "Muchuu sa, Kimi ni.",
+        "english": "Captivated, By You",
+        "native": "夢中さ、きみに。"
+      },
+      "question": "How many episodes does this anime have? Return an integer.",
+      "gold": 5,
+      "answer": 1,
+      "failure": "wrong"
+    },
+    {
+      "model": "openai/gpt-oss-120b",
+      "repeat": 0,
+      "question_id": "21306:episodes",
+      "title": {
+        "romaji": "Musaigen no Phantom World",
+        "english": "Myriad Colors Phantom World",
+        "native": "無彩限のファントム・ワールド"
+      },
+      "question": "How many episodes does this anime have? Return an integer.",
+      "gold": 13,
+      "answer": 12,
+      "failure": "confident wrong"
+    },
+    {
+      "model": "openai/gpt-oss-120b",
+      "repeat": 0,
+      "question_id": "132467:studio",
+      "title": {
+        "romaji": "Tokyo Revengers: Chibi Reve",
+        "english": null,
+        "native": "ちびりべ"
+      },
+      "question": "Which main animation studio or studios are listed for this anime? Return a list of studio names.",
+      "gold": [
+        "Studio PuYUKAI"
+      ],
+      "answer": [
+        "Studio Pierrot"
+      ],
+      "failure": "confident wrong"
+    },
+    {
+      "model": "openai/gpt-oss-120b",
+      "repeat": 0,
+      "question_id": "135806:studio",
+      "title": {
+        "romaji": "Isekai Oji-san",
+        "english": "Uncle from Another World",
+        "native": "異世界おじさん"
+      },
+      "question": "Which main animation studio or studios are listed for this anime? Return a list of studio names.",
+      "gold": [
+        "Atelier Pontdarc"
+      ],
+      "answer": [
+        "Satelight"
+      ],
+      "failure": "wrong"
+    },
+    {
+      "model": "openai/gpt-oss-120b",
+      "repeat": 0,
+      "question_id": "1563:format",
+      "title": {
+        "romaji": "Magic Knight Rayearth II",
+        "english": null,
+        "native": "魔法騎士（マジックナイト）レイアース II"
+      },
+      "question": "What is its AniList format? Return the enum (TV, TV_SHORT, MOVIE, SPECIAL, OVA, ONA, MUSIC, or MANGA).",
+      "gold": "TV",
+      "answer": "OVA",
+      "failure": "confident wrong"
+    },
+    {
+      "model": "openai/gpt-oss-120b",
+      "repeat": 0,
+      "question_id": "1563:season",
+      "title": {
+        "romaji": "Magic Knight Rayearth II",
+        "english": null,
+        "native": "魔法騎士（マジックナイト）レイアース II"
+      },
+      "question": "In which season did it start? Return WINTER, SPRING, SUMMER, or FALL.",
+      "gold": "SPRING",
+      "answer": "FALL",
+      "failure": "wrong"
+    },
+    {
+      "model": "openai/gpt-oss-120b",
+      "repeat": 0,
+      "question_id": "4705:main_characters",
+      "title": {
+        "romaji": "Tengen Toppa Gurren Lagann: Parallel Works",
+        "english": null,
+        "native": "グレンラガン パラレルワークス"
+      },
+      "question": "How many character edges are labelled MAIN in this anime's AniList record? Return an integer.",
+      "gold": 0,
+      "answer": null,
+      "failure": "abstention"
+    },
+    {
+      "model": "openai/gpt-oss-120b",
+      "repeat": 0,
+      "question_id": "104276:year",
+      "title": {
+        "romaji": "Boku no Hero Academia 4",
+        "english": "My Hero Academia Season 4",
+        "native": "僕のヒーローアカデミア４"
+      },
+      "question": "In which year did this anime start? Return a four-digit integer.",
+      "gold": 2019,
+      "answer": 2016,
+      "failure": "confident wrong"
+    },
+    {
+      "model": "openai/gpt-oss-120b",
+      "repeat": 0,
+      "question_id": "192:main_characters",
+      "title": {
+        "romaji": "Love Hina: Haru Special - Kimi Sakura Chiru Nakare!!",
+        "english": "Love Hina Spring Movie",
+        "native": "ラブひな春スペシャル 〜キミサクラチルナカレ!!〜"
+      },
+      "question": "How many character edges are labelled MAIN in this anime's AniList record? Return an integer.",
+      "gold": 7,
+      "answer": null,
+      "failure": "abstention"
+    },
+    {
+      "model": "openai/gpt-oss-120b",
+      "repeat": 0,
+      "question_id": "1535:main_characters",
+      "title": {
+        "romaji": "DEATH NOTE",
+        "english": "Death Note",
+        "native": "DEATH NOTE"
+      },
+      "question": "How many character edges are labelled MAIN in this anime's AniList record? Return an integer.",
+      "gold": 9,
+      "answer": null,
+      "failure": "abstention"
+    }
+  ],
+  "B": []
+}

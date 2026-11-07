@@ -1,0 +1,753 @@
+{
+  "generated_at": "2026-11-07T20:31:05.272801+00:00",
+  "dataset_sha256": "fcc083e2d3c6950b03630c54d48db2382df9686c0802e9373c3eafae7422d8ea",
+  "title_count": 18,
+  "journal_entries": 1157,
+  "historical_error_entries": 289,
+  "question_count": 124,
+  "groups": {
+    "openai/gpt-oss-120b|A|all:all": {
+      "expected": 372,
+      "attempted": 372,
+      "responses": 372,
+      "errors": 0,
+      "coverage": 1.0,
+      "correct": 0.5725806451612904,
+      "abstention": 0.1586021505376344,
+      "hallucination": 0.20967741935483872,
+      "wrong_answer": 0.26881720430107525,
+      "parse_failure": 0,
+      "missing_confidence": 0,
+      "correct_with_citation": 0.23387096774193547,
+      "citation_validity": 0.3067484662576687,
+      "citation_count": 326,
+      "accuracy_ci95": [
+        0.5079365079365079,
+        0.6424731182795699
+      ]
+    },
+    "openai/gpt-oss-120b|A|bucket:head": {
+      "expected": 126,
+      "attempted": 126,
+      "responses": 126,
+      "errors": 0,
+      "coverage": 1.0,
+      "correct": 0.753968253968254,
+      "abstention": 0.14285714285714285,
+      "hallucination": 0.0873015873015873,
+      "wrong_answer": 0.10317460317460317,
+      "parse_failure": 0,
+      "missing_confidence": 0,
+      "correct_with_citation": 0.29365079365079366,
+      "citation_validity": 0.3389830508474576,
+      "citation_count": 118,
+      "accuracy_ci95": [
+        0.6428571428571429,
+        0.8492063492063492
+      ]
+    },
+    "openai/gpt-oss-120b|A|bucket:long_tail": {
+      "expected": 120,
+      "attempted": 120,
+      "responses": 120,
+      "errors": 0,
+      "coverage": 1.0,
+      "correct": 0.3416666666666667,
+      "abstention": 0.19166666666666668,
+      "hallucination": 0.3333333333333333,
+      "wrong_answer": 0.4666666666666667,
+      "parse_failure": 0,
+      "missing_confidence": 0,
+      "correct_with_citation": 0.14166666666666666,
+      "citation_validity": 0.27835051546391754,
+      "citation_count": 97,
+      "accuracy_ci95": [
+        0.21929824561403508,
+        0.5083333333333333
+      ]
+    },
+    "openai/gpt-oss-120b|A|bucket:torso": {
+      "expected": 126,
+      "attempted": 126,
+      "responses": 126,
+      "errors": 0,
+      "coverage": 1.0,
+      "correct": 0.6111111111111112,
+      "abstention": 0.14285714285714285,
+      "hallucination": 0.21428571428571427,
+      "wrong_answer": 0.24603174603174602,
+      "parse_failure": 0,
+      "missing_confidence": 0,
+      "correct_with_citation": 0.2619047619047619,
+      "citation_validity": 0.2972972972972973,
+      "citation_count": 111,
+      "accuracy_ci95": [
+        0.5158730158730159,
+        0.6904761904761905
+      ]
+    },
+    "openai/gpt-oss-120b|A|kind:episodes": {
+      "expected": 54,
+      "attempted": 54,
+      "responses": 54,
+      "errors": 0,
+      "coverage": 1.0,
+      "correct": 0.5370370370370371,
+      "abstention": 0,
+      "hallucination": 0.3148148148148148,
+      "wrong_answer": 0.46296296296296297,
+      "parse_failure": 0,
+      "missing_confidence": 0,
+      "correct_with_citation": 0,
+      "citation_validity": 0.0,
+      "citation_count": 55,
+      "accuracy_ci95": [
+        0.3333333333333333,
+        0.7407407407407407
+      ]
+    },
+    "openai/gpt-oss-120b|A|kind:format": {
+      "expected": 54,
+      "attempted": 54,
+      "responses": 54,
+      "errors": 0,
+      "coverage": 1.0,
+      "correct": 0.8148148148148148,
+      "abstention": 0.018518518518518517,
+      "hallucination": 0.09259259259259259,
+      "wrong_answer": 0.16666666666666666,
+      "parse_failure": 0,
+      "missing_confidence": 0,
+      "correct_with_citation": 0.7777777777777778,
+      "citation_validity": 0.9607843137254902,
+      "citation_count": 51,
+      "accuracy_ci95": [
+        0.7037037037037037,
+        0.9444444444444444
+      ]
+    },
+    "openai/gpt-oss-120b|A|kind:main_characters": {
+      "expected": 54,
+      "attempted": 54,
+      "responses": 54,
+      "errors": 0,
+      "coverage": 1.0,
+      "correct": 0,
+      "abstention": 1,
+      "hallucination": 0,
+      "wrong_answer": 0,
+      "parse_failure": 0,
+      "missing_confidence": 0,
+      "correct_with_citation": 0,
+      "citation_validity": null,
+      "citation_count": 0,
+      "accuracy_ci95": [
+        0.0,
+        0.0
+      ]
+    },
+    "openai/gpt-oss-120b|A|kind:season": {
+      "expected": 51,
+      "attempted": 51,
+      "responses": 51,
+      "errors": 0,
+      "coverage": 1.0,
+      "correct": 0.5882352941176471,
+      "abstention": 0.0784313725490196,
+      "hallucination": 0.3137254901960784,
+      "wrong_answer": 0.3333333333333333,
+      "parse_failure": 0,
+      "missing_confidence": 0,
+      "correct_with_citation": 0,
+      "citation_validity": 0.0,
+      "citation_count": 47,
+      "accuracy_ci95": [
+        0.4117647058823529,
+        0.7647058823529411
+      ]
+    },
+    "openai/gpt-oss-120b|A|kind:source": {
+      "expected": 51,
+      "attempted": 51,
+      "responses": 51,
+      "errors": 0,
+      "coverage": 1.0,
+      "correct": 0.9411764705882353,
+      "abstention": 0,
+      "hallucination": 0.058823529411764705,
+      "wrong_answer": 0.058823529411764705,
+      "parse_failure": 0,
+      "missing_confidence": 0,
+      "correct_with_citation": 0.8627450980392157,
+      "citation_validity": 0.8703703703703703,
+      "citation_count": 54,
+      "accuracy_ci95": [
+        0.8235294117647058,
+        1.0
+      ]
+    },
+    "openai/gpt-oss-120b|A|kind:studio": {
+      "expected": 54,
+      "attempted": 54,
+      "responses": 54,
+      "errors": 0,
+      "coverage": 1.0,
+      "correct": 0.5,
+      "abstention": 0,
+      "hallucination": 0.3888888888888889,
+      "wrong_answer": 0.5,
+      "parse_failure": 0,
+      "missing_confidence": 0,
+      "correct_with_citation": 0.018518518518518517,
+      "citation_validity": 0.06060606060606061,
+      "citation_count": 66,
+      "accuracy_ci95": [
+        0.3148148148148148,
+        0.6851851851851852
+      ]
+    },
+    "openai/gpt-oss-120b|A|kind:year": {
+      "expected": 54,
+      "attempted": 54,
+      "responses": 54,
+      "errors": 0,
+      "coverage": 1.0,
+      "correct": 0.6481481481481481,
+      "abstention": 0,
+      "hallucination": 0.2962962962962963,
+      "wrong_answer": 0.35185185185185186,
+      "parse_failure": 0,
+      "missing_confidence": 0,
+      "correct_with_citation": 0,
+      "citation_validity": 0.0,
+      "citation_count": 53,
+      "accuracy_ci95": [
+        0.4444444444444444,
+        0.8333333333333334
+      ]
+    },
+    "openai/gpt-oss-120b|B|all:all": {
+      "expected": 372,
+      "attempted": 372,
+      "responses": 372,
+      "errors": 0,
+      "coverage": 1.0,
+      "correct": 1,
+      "abstention": 0,
+      "hallucination": 0,
+      "wrong_answer": 0,
+      "parse_failure": 0,
+      "missing_confidence": 0,
+      "correct_with_citation": 1,
+      "citation_validity": 1.0,
+      "citation_count": 372,
+      "accuracy_ci95": [
+        1.0,
+        1.0
+      ]
+    },
+    "openai/gpt-oss-120b|B|bucket:head": {
+      "expected": 126,
+      "attempted": 126,
+      "responses": 126,
+      "errors": 0,
+      "coverage": 1.0,
+      "correct": 1,
+      "abstention": 0,
+      "hallucination": 0,
+      "wrong_answer": 0,
+      "parse_failure": 0,
+      "missing_confidence": 0,
+      "correct_with_citation": 1,
+      "citation_validity": 1.0,
+      "citation_count": 126,
+      "accuracy_ci95": [
+        1.0,
+        1.0
+      ]
+    },
+    "openai/gpt-oss-120b|B|bucket:long_tail": {
+      "expected": 120,
+      "attempted": 120,
+      "responses": 120,
+      "errors": 0,
+      "coverage": 1.0,
+      "correct": 1,
+      "abstention": 0,
+      "hallucination": 0,
+      "wrong_answer": 0,
+      "parse_failure": 0,
+      "missing_confidence": 0,
+      "correct_with_citation": 1,
+      "citation_validity": 1.0,
+      "citation_count": 120,
+      "accuracy_ci95": [
+        1.0,
+        1.0
+      ]
+    },
+    "openai/gpt-oss-120b|B|bucket:torso": {
+      "expected": 126,
+      "attempted": 126,
+      "responses": 126,
+      "errors": 0,
+      "coverage": 1.0,
+      "correct": 1,
+      "abstention": 0,
+      "hallucination": 0,
+      "wrong_answer": 0,
+      "parse_failure": 0,
+      "missing_confidence": 0,
+      "correct_with_citation": 1,
+      "citation_validity": 1.0,
+      "citation_count": 126,
+      "accuracy_ci95": [
+        1.0,
+        1.0
+      ]
+    },
+    "openai/gpt-oss-120b|B|kind:episodes": {
+      "expected": 54,
+      "attempted": 54,
+      "responses": 54,
+      "errors": 0,
+      "coverage": 1.0,
+      "correct": 1,
+      "abstention": 0,
+      "hallucination": 0,
+      "wrong_answer": 0,
+      "parse_failure": 0,
+      "missing_confidence": 0,
+      "correct_with_citation": 1,
+      "citation_validity": 1.0,
+      "citation_count": 54,
+      "accuracy_ci95": [
+        1.0,
+        1.0
+      ]
+    },
+    "openai/gpt-oss-120b|B|kind:format": {
+      "expected": 54,
+      "attempted": 54,
+      "responses": 54,
+      "errors": 0,
+      "coverage": 1.0,
+      "correct": 1,
+      "abstention": 0,
+      "hallucination": 0,
+      "wrong_answer": 0,
+      "parse_failure": 0,
+      "missing_confidence": 0,
+      "correct_with_citation": 1,
+      "citation_validity": 1.0,
+      "citation_count": 54,
+      "accuracy_ci95": [
+        1.0,
+        1.0
+      ]
+    },
+    "openai/gpt-oss-120b|B|kind:main_characters": {
+      "expected": 54,
+      "attempted": 54,
+      "responses": 54,
+      "errors": 0,
+      "coverage": 1.0,
+      "correct": 1,
+      "abstention": 0,
+      "hallucination": 0,
+      "wrong_answer": 0,
+      "parse_failure": 0,
+      "missing_confidence": 0,
+      "correct_with_citation": 1,
+      "citation_validity": 1.0,
+      "citation_count": 54,
+      "accuracy_ci95": [
+        1.0,
+        1.0
+      ]
+    },
+    "openai/gpt-oss-120b|B|kind:season": {
+      "expected": 51,
+      "attempted": 51,
+      "responses": 51,
+      "errors": 0,
+      "coverage": 1.0,
+      "correct": 1,
+      "abstention": 0,
+      "hallucination": 0,
+      "wrong_answer": 0,
+      "parse_failure": 0,
+      "missing_confidence": 0,
+      "correct_with_citation": 1,
+      "citation_validity": 1.0,
+      "citation_count": 51,
+      "accuracy_ci95": [
+        1.0,
+        1.0
+      ]
+    },
+    "openai/gpt-oss-120b|B|kind:source": {
+      "expected": 51,
+      "attempted": 51,
+      "responses": 51,
+      "errors": 0,
+      "coverage": 1.0,
+      "correct": 1,
+      "abstention": 0,
+      "hallucination": 0,
+      "wrong_answer": 0,
+      "parse_failure": 0,
+      "missing_confidence": 0,
+      "correct_with_citation": 1,
+      "citation_validity": 1.0,
+      "citation_count": 51,
+      "accuracy_ci95": [
+        1.0,
+        1.0
+      ]
+    },
+    "openai/gpt-oss-120b|B|kind:studio": {
+      "expected": 54,
+      "attempted": 54,
+      "responses": 54,
+      "errors": 0,
+      "coverage": 1.0,
+      "correct": 1,
+      "abstention": 0,
+      "hallucination": 0,
+      "wrong_answer": 0,
+      "parse_failure": 0,
+      "missing_confidence": 0,
+      "correct_with_citation": 1,
+      "citation_validity": 1.0,
+      "citation_count": 54,
+      "accuracy_ci95": [
+        1.0,
+        1.0
+      ]
+    },
+    "openai/gpt-oss-120b|B|kind:year": {
+      "expected": 54,
+      "attempted": 54,
+      "responses": 54,
+      "errors": 0,
+      "coverage": 1.0,
+      "correct": 1,
+      "abstention": 0,
+      "hallucination": 0,
+      "wrong_answer": 0,
+      "parse_failure": 0,
+      "missing_confidence": 0,
+      "correct_with_citation": 1,
+      "citation_validity": 1.0,
+      "citation_count": 54,
+      "accuracy_ci95": [
+        1.0,
+        1.0
+      ]
+    },
+    "deterministic|C|all:all": {
+      "expected": 124,
+      "attempted": 124,
+      "responses": 124,
+      "errors": 0,
+      "coverage": 1.0,
+      "correct": 1,
+      "abstention": 0,
+      "hallucination": 0,
+      "wrong_answer": 0,
+      "parse_failure": 0,
+      "missing_confidence": 0,
+      "correct_with_citation": 1,
+      "citation_validity": 1.0,
+      "citation_count": 124,
+      "accuracy_ci95": [
+        1.0,
+        1.0
+      ]
+    },
+    "deterministic|C|bucket:head": {
+      "expected": 42,
+      "attempted": 42,
+      "responses": 42,
+      "errors": 0,
+      "coverage": 1.0,
+      "correct": 1,
+      "abstention": 0,
+      "hallucination": 0,
+      "wrong_answer": 0,
+      "parse_failure": 0,
+      "missing_confidence": 0,
+      "correct_with_citation": 1,
+      "citation_validity": 1.0,
+      "citation_count": 42,
+      "accuracy_ci95": [
+        1.0,
+        1.0
+      ]
+    },
+    "deterministic|C|bucket:long_tail": {
+      "expected": 40,
+      "attempted": 40,
+      "responses": 40,
+      "errors": 0,
+      "coverage": 1.0,
+      "correct": 1,
+      "abstention": 0,
+      "hallucination": 0,
+      "wrong_answer": 0,
+      "parse_failure": 0,
+      "missing_confidence": 0,
+      "correct_with_citation": 1,
+      "citation_validity": 1.0,
+      "citation_count": 40,
+      "accuracy_ci95": [
+        1.0,
+        1.0
+      ]
+    },
+    "deterministic|C|bucket:torso": {
+      "expected": 42,
+      "attempted": 42,
+      "responses": 42,
+      "errors": 0,
+      "coverage": 1.0,
+      "correct": 1,
+      "abstention": 0,
+      "hallucination": 0,
+      "wrong_answer": 0,
+      "parse_failure": 0,
+      "missing_confidence": 0,
+      "correct_with_citation": 1,
+      "citation_validity": 1.0,
+      "citation_count": 42,
+      "accuracy_ci95": [
+        1.0,
+        1.0
+      ]
+    },
+    "deterministic|C|kind:episodes": {
+      "expected": 18,
+      "attempted": 18,
+      "responses": 18,
+      "errors": 0,
+      "coverage": 1.0,
+      "correct": 1,
+      "abstention": 0,
+      "hallucination": 0,
+      "wrong_answer": 0,
+      "parse_failure": 0,
+      "missing_confidence": 0,
+      "correct_with_citation": 1,
+      "citation_validity": 1.0,
+      "citation_count": 18,
+      "accuracy_ci95": [
+        1.0,
+        1.0
+      ]
+    },
+    "deterministic|C|kind:format": {
+      "expected": 18,
+      "attempted": 18,
+      "responses": 18,
+      "errors": 0,
+      "coverage": 1.0,
+      "correct": 1,
+      "abstention": 0,
+      "hallucination": 0,
+      "wrong_answer": 0,
+      "parse_failure": 0,
+      "missing_confidence": 0,
+      "correct_with_citation": 1,
+      "citation_validity": 1.0,
+      "citation_count": 18,
+      "accuracy_ci95": [
+        1.0,
+        1.0
+      ]
+    },
+    "deterministic|C|kind:main_characters": {
+      "expected": 18,
+      "attempted": 18,
+      "responses": 18,
+      "errors": 0,
+      "coverage": 1.0,
+      "correct": 1,
+      "abstention": 0,
+      "hallucination": 0,
+      "wrong_answer": 0,
+      "parse_failure": 0,
+      "missing_confidence": 0,
+      "correct_with_citation": 1,
+      "citation_validity": 1.0,
+      "citation_count": 18,
+      "accuracy_ci95": [
+        1.0,
+        1.0
+      ]
+    },
+    "deterministic|C|kind:season": {
+      "expected": 17,
+      "attempted": 17,
+      "responses": 17,
+      "errors": 0,
+      "coverage": 1.0,
+      "correct": 1,
+      "abstention": 0,
+      "hallucination": 0,
+      "wrong_answer": 0,
+      "parse_failure": 0,
+      "missing_confidence": 0,
+      "correct_with_citation": 1,
+      "citation_validity": 1.0,
+      "citation_count": 17,
+      "accuracy_ci95": [
+        1.0,
+        1.0
+      ]
+    },
+    "deterministic|C|kind:source": {
+      "expected": 17,
+      "attempted": 17,
+      "responses": 17,
+      "errors": 0,
+      "coverage": 1.0,
+      "correct": 1,
+      "abstention": 0,
+      "hallucination": 0,
+      "wrong_answer": 0,
+      "parse_failure": 0,
+      "missing_confidence": 0,
+      "correct_with_citation": 1,
+      "citation_validity": 1.0,
+      "citation_count": 17,
+      "accuracy_ci95": [
+        1.0,
+        1.0
+      ]
+    },
+    "deterministic|C|kind:studio": {
+      "expected": 18,
+      "attempted": 18,
+      "responses": 18,
+      "errors": 0,
+      "coverage": 1.0,
+      "correct": 1,
+      "abstention": 0,
+      "hallucination": 0,
+      "wrong_answer": 0,
+      "parse_failure": 0,
+      "missing_confidence": 0,
+      "correct_with_citation": 1,
+      "citation_validity": 1.0,
+      "citation_count": 18,
+      "accuracy_ci95": [
+        1.0,
+        1.0
+      ]
+    },
+    "deterministic|C|kind:year": {
+      "expected": 18,
+      "attempted": 18,
+      "responses": 18,
+      "errors": 0,
+      "coverage": 1.0,
+      "correct": 1,
+      "abstention": 0,
+      "hallucination": 0,
+      "wrong_answer": 0,
+      "parse_failure": 0,
+      "missing_confidence": 0,
+      "correct_with_citation": 1,
+      "citation_validity": 1.0,
+      "citation_count": 18,
+      "accuracy_ci95": [
+        1.0,
+        1.0
+      ]
+    }
+  },
+  "paired": {
+    "openai/gpt-oss-120b|all": {
+      "pairs": 372,
+      "questions_models": 124,
+      "delta": 0.4274193548387097,
+      "ci95": [
+        0.35752688172043007,
+        0.49206349206349204
+      ]
+    },
+    "openai/gpt-oss-120b|head": {
+      "pairs": 126,
+      "questions_models": 42,
+      "delta": 0.24603174603174602,
+      "ci95": [
+        0.15079365079365079,
+        0.35714285714285715
+      ]
+    },
+    "openai/gpt-oss-120b|long_tail": {
+      "pairs": 120,
+      "questions_models": 40,
+      "delta": 0.6583333333333333,
+      "ci95": [
+        0.4916666666666666,
+        0.7807017543859649
+      ]
+    },
+    "openai/gpt-oss-120b|torso": {
+      "pairs": 126,
+      "questions_models": 42,
+      "delta": 0.3888888888888889,
+      "ci95": [
+        0.30952380952380953,
+        0.4841269841269841
+      ]
+    },
+    "pooled|all": {
+      "pairs": 372,
+      "questions_models": 124,
+      "delta": 0.4274193548387097,
+      "ci95": [
+        0.35752688172043007,
+        0.49206349206349204
+      ]
+    },
+    "pooled|head": {
+      "pairs": 126,
+      "questions_models": 42,
+      "delta": 0.24603174603174602,
+      "ci95": [
+        0.15079365079365079,
+        0.35714285714285715
+      ]
+    },
+    "pooled|long_tail": {
+      "pairs": 120,
+      "questions_models": 40,
+      "delta": 0.6583333333333333,
+      "ci95": [
+        0.4916666666666666,
+        0.7807017543859649
+      ]
+    },
+    "pooled|torso": {
+      "pairs": 126,
+      "questions_models": 42,
+      "delta": 0.3888888888888889,
+      "ci95": [
+        0.30952380952380953,
+        0.4841269841269841
+      ]
+    }
+  },
+  "completion": {
+    "state": "finished",
+    "finished_at": "2026-11-07T20:30:50.790448+00:00",
+    "blocked_models": [],
+    "complete": true
+  },
+  "analysis_role": "exploratory_replication",
+  "interpretation": "Completed exploratory replication; excluded from primary threshold",
+  "request_failures": []
+}

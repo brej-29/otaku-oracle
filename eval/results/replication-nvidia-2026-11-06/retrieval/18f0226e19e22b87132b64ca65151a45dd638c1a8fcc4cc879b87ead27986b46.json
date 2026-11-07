@@ -1,0 +1,109 @@
+{
+  "fetched_at": "2026-11-05T20:16:55.380214+00:00",
+  "endpoint": "https://graphql.anilist.co",
+  "query": "query($id:Int!) { Media(id:$id, type:ANIME) { \nid title { romaji english native } siteUrl popularity episodes startDate { year }\nformat source season status isAdult\nstudios(isMain: true) { nodes { id name } }\ncharacters(role: MAIN, perPage: 50) { pageInfo { hasNextPage } edges { role node { id } } }\n } }",
+  "variables": {
+    "id": 1535
+  },
+  "attempts": [
+    {
+      "at": "2026-11-05T20:16:54.707970+00:00",
+      "status": 200,
+      "seconds": 0.672,
+      "rate_limit": "30",
+      "rate_remaining": "28"
+    }
+  ],
+  "response": {
+    "data": {
+      "Media": {
+        "id": 1535,
+        "title": {
+          "romaji": "DEATH NOTE",
+          "english": "Death Note",
+          "native": "DEATH NOTE"
+        },
+        "siteUrl": "https://anilist.co/anime/1535",
+        "popularity": 980114,
+        "episodes": 37,
+        "startDate": {
+          "year": 2006
+        },
+        "format": "TV",
+        "source": "MANGA",
+        "season": "FALL",
+        "status": "FINISHED",
+        "isAdult": false,
+        "studios": {
+          "nodes": [
+            {
+              "id": 11,
+              "name": "MADHOUSE"
+            }
+          ]
+        },
+        "characters": {
+          "pageInfo": {
+            "hasNextPage": false
+          },
+          "edges": [
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 71
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 75
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 80
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 463
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 464
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 835
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 1906
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 1927
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 3767
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

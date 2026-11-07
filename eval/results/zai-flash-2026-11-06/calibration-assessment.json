@@ -1,5 +1,7 @@
 {
   "format_ready": true,
+  "expected_checks": 6,
+  "all_planned_checks_passed": false,
   "all_six_checks_passed": false,
   "valid_final_answers": 4,
   "checks_recorded": 5,

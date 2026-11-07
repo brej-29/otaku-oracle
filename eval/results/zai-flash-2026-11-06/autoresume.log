@@ -1,0 +1,987 @@
+11061:episodes repeat=0 arm=A model=glm-4.7-flash: recorded
+11061:episodes repeat=0 arm=B model=glm-4.7-flash: recorded
+11061:episodes repeat=1 arm=A model=glm-4.7-flash: recorded
+11061:episodes repeat=1 arm=B model=glm-4.7-flash: recorded
+11061:episodes repeat=2 arm=A model=glm-4.7-flash: recorded
+11061:episodes repeat=2 arm=B model=glm-4.7-flash: recorded
+9041:main_characters repeat=0 arm=A model=glm-4.7-flash: recorded
+9041:main_characters repeat=0 arm=B model=glm-4.7-flash: recorded
+9041:main_characters repeat=1 arm=A model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+9041:main_characters repeat=1 arm=A model=glm-4.7-flash: recorded
+9041:main_characters repeat=1 arm=B model=glm-4.7-flash: recorded
+9041:main_characters repeat=2 arm=A model=glm-4.7-flash: recorded
+9041:main_characters repeat=2 arm=B model=glm-4.7-flash: recorded
+21856:season repeat=0 arm=A model=glm-4.7-flash: recorded
+21856:season repeat=0 arm=B model=glm-4.7-flash: recorded
+21856:season repeat=1 arm=B model=glm-4.7-flash: recorded
+21856:season repeat=1 arm=A model=glm-4.7-flash: recorded
+21856:season repeat=2 arm=B model=glm-4.7-flash: recorded
+21856:season repeat=2 arm=A model=glm-4.7-flash: recorded
+21306:studio repeat=0 arm=B model=glm-4.7-flash: recorded
+21306:studio repeat=0 arm=A model=glm-4.7-flash: recorded
+21306:studio repeat=1 arm=A model=glm-4.7-flash: recorded
+21306:studio repeat=1 arm=B model=glm-4.7-flash: recorded
+21306:studio repeat=2 arm=A model=glm-4.7-flash: recorded
+21306:studio repeat=2 arm=B model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+21306:studio repeat=2 arm=B model=glm-4.7-flash: recorded
+192:season repeat=0 arm=A model=glm-4.7-flash: recorded
+192:season repeat=0 arm=B model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+192:season repeat=0 arm=B model=glm-4.7-flash: recorded
+192:season repeat=1 arm=B model=glm-4.7-flash: recorded
+192:season repeat=1 arm=A model=glm-4.7-flash: recorded
+192:season repeat=2 arm=A model=glm-4.7-flash: recorded
+192:season repeat=2 arm=B model=glm-4.7-flash: recorded
+1563:episodes repeat=0 arm=B model=glm-4.7-flash: recorded
+1563:episodes repeat=0 arm=A model=glm-4.7-flash: recorded
+1563:episodes repeat=1 arm=A model=glm-4.7-flash: recorded
+1563:episodes repeat=1 arm=B model=glm-4.7-flash: recorded
+1563:episodes repeat=2 arm=B model=glm-4.7-flash: recorded
+1563:episodes repeat=2 arm=A model=glm-4.7-flash: recorded
+1535:format repeat=0 arm=A model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+1535:format repeat=0 arm=A model=glm-4.7-flash: recorded
+1535:format repeat=0 arm=B model=glm-4.7-flash: recorded
+1535:format repeat=1 arm=B model=glm-4.7-flash: recorded
+1535:format repeat=1 arm=A model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+1535:format repeat=1 arm=A model=glm-4.7-flash: recorded
+1535:format repeat=2 arm=B model=glm-4.7-flash: recorded
+1535:format repeat=2 arm=A model=glm-4.7-flash: recorded
+21306:episodes repeat=0 arm=B model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+21306:episodes repeat=0 arm=B model=glm-4.7-flash: recorded
+21306:episodes repeat=0 arm=A model=glm-4.7-flash: recorded
+21306:episodes repeat=1 arm=A model=glm-4.7-flash: recorded
+21306:episodes repeat=1 arm=B model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+21306:episodes repeat=1 arm=B model=glm-4.7-flash: recorded
+21306:episodes repeat=2 arm=B model=glm-4.7-flash: recorded
+21306:episodes repeat=2 arm=A model=glm-4.7-flash: recorded
+103900:year repeat=0 arm=B model=glm-4.7-flash: recorded
+103900:year repeat=0 arm=A model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+103900:year repeat=0 arm=A model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+103900:year repeat=0 arm=A model=glm-4.7-flash: recorded
+103900:year repeat=1 arm=B model=glm-4.7-flash: recorded
+103900:year repeat=1 arm=A model=glm-4.7-flash: recorded
+103900:year repeat=2 arm=B model=glm-4.7-flash: recorded
+103900:year repeat=2 arm=A model=glm-4.7-flash: recorded
+20486:year repeat=0 arm=B model=glm-4.7-flash: recorded
+20486:year repeat=0 arm=A model=glm-4.7-flash: recorded
+20486:year repeat=1 arm=A model=glm-4.7-flash: recorded
+20486:year repeat=1 arm=B model=glm-4.7-flash: recorded
+20486:year repeat=2 arm=A model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+20486:year repeat=2 arm=A model=glm-4.7-flash: recorded
+20486:year repeat=2 arm=B model=glm-4.7-flash: recorded
+132467:studio repeat=0 arm=A model=glm-4.7-flash: recorded
+132467:studio repeat=0 arm=B model=glm-4.7-flash: recorded
+132467:studio repeat=1 arm=A model=glm-4.7-flash: recorded
+132467:studio repeat=1 arm=B model=glm-4.7-flash: recorded
+132467:studio repeat=2 arm=A model=glm-4.7-flash: recorded
+132467:studio repeat=2 arm=B model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+132467:studio repeat=2 arm=B model=glm-4.7-flash: recorded
+132467:main_characters repeat=0 arm=B model=glm-4.7-flash: recorded
+132467:main_characters repeat=0 arm=A model=glm-4.7-flash: recorded
+132467:main_characters repeat=1 arm=A model=glm-4.7-flash: recorded
+132467:main_characters repeat=1 arm=B model=glm-4.7-flash: recorded
+132467:main_characters repeat=2 arm=A model=glm-4.7-flash: recorded
+132467:main_characters repeat=2 arm=B model=glm-4.7-flash: recorded
+20486:season repeat=0 arm=A model=glm-4.7-flash: recorded
+20486:season repeat=0 arm=B model=glm-4.7-flash: recorded
+20486:season repeat=1 arm=A model=glm-4.7-flash: recorded
+20486:season repeat=1 arm=B model=glm-4.7-flash: recorded
+20486:season repeat=2 arm=A model=glm-4.7-flash: recorded
+20486:season repeat=2 arm=B model=glm-4.7-flash: recorded
+20958:format repeat=0 arm=B model=glm-4.7-flash: recorded
+20958:format repeat=0 arm=A model=glm-4.7-flash: recorded
+20958:format repeat=1 arm=A model=glm-4.7-flash: recorded
+20958:format repeat=1 arm=B model=glm-4.7-flash: recorded
+20958:format repeat=2 arm=A model=glm-4.7-flash: recorded
+20958:format repeat=2 arm=B model=glm-4.7-flash: recorded
+135806:studio repeat=0 arm=B model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+135806:studio repeat=0 arm=B model=glm-4.7-flash: recorded
+135806:studio repeat=0 arm=A model=glm-4.7-flash: recorded
+135806:studio repeat=1 arm=A model=glm-4.7-flash: recorded
+135806:studio repeat=1 arm=B model=glm-4.7-flash: recorded
+135806:studio repeat=2 arm=A model=glm-4.7-flash: recorded
+135806:studio repeat=2 arm=B model=glm-4.7-flash: recorded
+11061:year repeat=0 arm=A model=glm-4.7-flash: recorded
+11061:year repeat=0 arm=B model=glm-4.7-flash: recorded
+11061:year repeat=1 arm=A model=glm-4.7-flash: recorded
+11061:year repeat=1 arm=B model=glm-4.7-flash: recorded
+11061:year repeat=2 arm=A model=glm-4.7-flash: recorded
+11061:year repeat=2 arm=B model=glm-4.7-flash: recorded
+9041:format repeat=0 arm=B model=glm-4.7-flash: recorded
+9041:format repeat=0 arm=A model=glm-4.7-flash: recorded
+9041:format repeat=1 arm=B model=glm-4.7-flash: recorded
+9041:format repeat=1 arm=A model=glm-4.7-flash: recorded
+9041:format repeat=2 arm=A model=glm-4.7-flash: recorded
+9041:format repeat=2 arm=B model=glm-4.7-flash: recorded
+21123:format repeat=0 arm=A model=glm-4.7-flash: recorded
+21123:format repeat=0 arm=B model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+21123:format repeat=0 arm=B model=glm-4.7-flash: recorded
+21123:format repeat=1 arm=B model=glm-4.7-flash: recorded
+21123:format repeat=1 arm=A model=glm-4.7-flash: recorded
+21123:format repeat=2 arm=A model=glm-4.7-flash: recorded
+21123:format repeat=2 arm=B model=glm-4.7-flash: recorded
+21123:studio repeat=0 arm=A model=glm-4.7-flash: recorded
+21123:studio repeat=0 arm=B model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+21123:studio repeat=0 arm=B model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+21123:studio repeat=0 arm=B model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+21123:studio repeat=0 arm=B model=glm-4.7-flash: recorded
+21123:studio repeat=1 arm=A model=glm-4.7-flash: recorded
+21123:studio repeat=1 arm=B model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+21123:studio repeat=1 arm=B model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+21123:studio repeat=1 arm=B model=glm-4.7-flash: recorded
+21123:studio repeat=2 arm=A model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+21123:studio repeat=2 arm=A model=glm-4.7-flash: recorded
+21123:studio repeat=2 arm=B model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+21123:studio repeat=2 arm=B model=glm-4.7-flash: recorded
+9041:studio repeat=0 arm=B model=glm-4.7-flash: recorded
+9041:studio repeat=0 arm=A model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+9041:studio repeat=0 arm=A model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+9041:studio repeat=0 arm=A model=glm-4.7-flash: recorded
+9041:studio repeat=1 arm=A model=glm-4.7-flash: recorded
+9041:studio repeat=1 arm=B model=glm-4.7-flash: recorded
+9041:studio repeat=2 arm=B model=glm-4.7-flash: recorded
+9041:studio repeat=2 arm=A model=glm-4.7-flash: recorded
+103900:main_characters repeat=0 arm=A model=glm-4.7-flash: recorded
+103900:main_characters repeat=0 arm=B model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+103900:main_characters repeat=0 arm=B model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+103900:main_characters repeat=0 arm=B model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+103900:main_characters repeat=0 arm=B model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+103900:main_characters repeat=0 arm=B model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+103900:main_characters repeat=0 arm=B model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+103900:main_characters repeat=0 arm=B model=glm-4.7-flash: recorded
+103900:main_characters repeat=1 arm=B model=glm-4.7-flash: recorded
+103900:main_characters repeat=1 arm=A model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+103900:main_characters repeat=1 arm=A model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+103900:main_characters repeat=1 arm=A model=glm-4.7-flash: recorded
+103900:main_characters repeat=2 arm=A model=glm-4.7-flash: recorded
+103900:main_characters repeat=2 arm=B model=glm-4.7-flash: recorded
+21856:format repeat=0 arm=A model=glm-4.7-flash: recorded
+21856:format repeat=0 arm=B model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+21856:format repeat=0 arm=B model=glm-4.7-flash: recorded
+21856:format repeat=1 arm=A model=glm-4.7-flash: recorded
+21856:format repeat=1 arm=B model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+21856:format repeat=1 arm=B model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+21856:format repeat=1 arm=B model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+21856:format repeat=1 arm=B model=glm-4.7-flash: recorded
+21856:format repeat=2 arm=A model=glm-4.7-flash: recorded
+21856:format repeat=2 arm=B model=glm-4.7-flash: recorded
+183128:studio repeat=0 arm=A model=glm-4.7-flash: recorded
+183128:studio repeat=0 arm=B model=glm-4.7-flash: recorded
+183128:studio repeat=1 arm=B model=glm-4.7-flash: recorded
+183128:studio repeat=1 arm=A model=glm-4.7-flash: recorded
+183128:studio repeat=2 arm=A model=glm-4.7-flash: recorded
+183128:studio repeat=2 arm=B model=glm-4.7-flash: recorded
+21718:studio repeat=0 arm=B model=glm-4.7-flash: recorded
+21718:studio repeat=0 arm=A model=glm-4.7-flash: recorded
+21718:studio repeat=1 arm=B model=glm-4.7-flash: recorded
+21718:studio repeat=1 arm=A model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+21718:studio repeat=1 arm=A model=glm-4.7-flash: recorded
+21718:studio repeat=2 arm=B model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+21718:studio repeat=2 arm=B model=glm-4.7-flash: recorded
+21718:studio repeat=2 arm=A model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+21718:studio repeat=2 arm=A model=glm-4.7-flash: recorded
+9041:year repeat=0 arm=B model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+9041:year repeat=0 arm=B model=glm-4.7-flash: recorded
+9041:year repeat=0 arm=A model=glm-4.7-flash: recorded
+9041:year repeat=1 arm=A model=glm-4.7-flash: recorded
+9041:year repeat=1 arm=B model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+9041:year repeat=1 arm=B model=glm-4.7-flash: recorded
+9041:year repeat=2 arm=A model=glm-4.7-flash: recorded
+9041:year repeat=2 arm=B model=glm-4.7-flash: recorded
+21718:season repeat=0 arm=A model=glm-4.7-flash: recorded
+21718:season repeat=0 arm=B model=glm-4.7-flash: recorded
+21718:season repeat=1 arm=B model=glm-4.7-flash: recorded
+21718:season repeat=1 arm=A model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+21718:season repeat=1 arm=A model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+21718:season repeat=1 arm=A model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+21718:season repeat=1 arm=A model=glm-4.7-flash: recorded
+21718:season repeat=2 arm=B model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+21718:season repeat=2 arm=B model=glm-4.7-flash: recorded
+21718:season repeat=2 arm=A model=glm-4.7-flash: recorded
+21856:studio repeat=0 arm=B model=glm-4.7-flash: recorded
+21856:studio repeat=0 arm=A model=glm-4.7-flash: recorded
+21856:studio repeat=1 arm=A model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+21856:studio repeat=1 arm=A model=glm-4.7-flash: recorded
+21856:studio repeat=1 arm=B model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+21856:studio repeat=1 arm=B model=glm-4.7-flash: recorded
+21856:studio repeat=2 arm=B model=glm-4.7-flash: recorded
+21856:studio repeat=2 arm=A model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+21856:studio repeat=2 arm=A model=glm-4.7-flash: recorded
+21718:main_characters repeat=0 arm=B model=glm-4.7-flash: recorded
+21718:main_characters repeat=0 arm=A model=glm-4.7-flash: recorded
+21718:main_characters repeat=1 arm=A model=glm-4.7-flash: recorded
+21718:main_characters repeat=1 arm=B model=glm-4.7-flash: recorded
+21718:main_characters repeat=2 arm=B model=glm-4.7-flash: recorded
+21718:main_characters repeat=2 arm=A model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+21718:main_characters repeat=2 arm=A model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+21718:main_characters repeat=2 arm=A model=glm-4.7-flash: recorded
+20486:format repeat=0 arm=A model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+20486:format repeat=0 arm=A model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+20486:format repeat=0 arm=A model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+20486:format repeat=0 arm=A model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+20486:format repeat=0 arm=A model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+20486:format repeat=0 arm=A model=glm-4.7-flash: recorded
+20486:format repeat=0 arm=B model=glm-4.7-flash: recorded
+20486:format repeat=1 arm=B model=glm-4.7-flash: recorded
+20486:format repeat=1 arm=A model=glm-4.7-flash: recorded
+20486:format repeat=2 arm=A model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+20486:format repeat=2 arm=A model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+20486:format repeat=2 arm=A model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+20486:format repeat=2 arm=A model=glm-4.7-flash: recorded
+20486:format repeat=2 arm=B model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+20486:format repeat=2 arm=B model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+20486:format repeat=2 arm=B model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+20486:format repeat=2 arm=B model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+20486:format repeat=2 arm=B model=glm-4.7-flash: recorded
+20486:source repeat=0 arm=A model=glm-4.7-flash: recorded
+20486:source repeat=0 arm=B model=glm-4.7-flash: recorded
+20486:source repeat=1 arm=A model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+20486:source repeat=1 arm=A model=glm-4.7-flash: recorded
+20486:source repeat=1 arm=B model=glm-4.7-flash: recorded
+20486:source repeat=2 arm=B model=glm-4.7-flash: recorded
+20486:source repeat=2 arm=A model=glm-4.7-flash: recorded
+21856:source repeat=0 arm=B model=glm-4.7-flash: recorded
+21856:source repeat=0 arm=A model=glm-4.7-flash: recorded
+21856:source repeat=1 arm=B model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+21856:source repeat=1 arm=B model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+21856:source repeat=1 arm=B model=glm-4.7-flash: recorded
+21856:source repeat=1 arm=A model=glm-4.7-flash: recorded
+21856:source repeat=2 arm=A model=glm-4.7-flash: recorded
+21856:source repeat=2 arm=B model=glm-4.7-flash: recorded
+16498:year repeat=0 arm=A model=glm-4.7-flash: recorded
+16498:year repeat=0 arm=B model=glm-4.7-flash: recorded
+16498:year repeat=1 arm=B model=glm-4.7-flash: recorded
+16498:year repeat=1 arm=A model=glm-4.7-flash: recorded
+16498:year repeat=2 arm=B model=glm-4.7-flash: recorded
+16498:year repeat=2 arm=A model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+16498:year repeat=2 arm=A model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+16498:year repeat=2 arm=A model=glm-4.7-flash: recorded
+1563:format repeat=0 arm=B model=glm-4.7-flash: recorded
+1563:format repeat=0 arm=A model=glm-4.7-flash: recorded
+1563:format repeat=1 arm=A model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+1563:format repeat=1 arm=A model=glm-4.7-flash: recorded
+1563:format repeat=1 arm=B model=glm-4.7-flash: recorded
+1563:format repeat=2 arm=B model=glm-4.7-flash: recorded
+1563:format repeat=2 arm=A model=glm-4.7-flash: recorded
+11061:season repeat=0 arm=B model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+11061:season repeat=0 arm=B model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+11061:season repeat=0 arm=B model=glm-4.7-flash: recorded
+11061:season repeat=0 arm=A model=glm-4.7-flash: recorded
+11061:season repeat=1 arm=B model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+11061:season repeat=1 arm=B model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+11061:season repeat=1 arm=B model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+11061:season repeat=1 arm=B model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+11061:season repeat=1 arm=B model=glm-4.7-flash: recorded
+11061:season repeat=1 arm=A model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+11061:season repeat=1 arm=A model=glm-4.7-flash: recorded
+11061:season repeat=2 arm=B model=glm-4.7-flash: recorded
+11061:season repeat=2 arm=A model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+11061:season repeat=2 arm=A model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+11061:season repeat=2 arm=A model=glm-4.7-flash: recorded
+9041:source repeat=0 arm=A model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+9041:source repeat=0 arm=A model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+9041:source repeat=0 arm=A model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+9041:source repeat=0 arm=A model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+9041:source repeat=0 arm=A model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+9041:source repeat=0 arm=A model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+9041:source repeat=0 arm=A model=glm-4.7-flash: recorded
+9041:source repeat=0 arm=B model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+9041:source repeat=0 arm=B model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+9041:source repeat=0 arm=B model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+9041:source repeat=0 arm=B model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+9041:source repeat=0 arm=B model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+9041:source repeat=0 arm=B model=glm-4.7-flash: recorded
+9041:source repeat=1 arm=A model=glm-4.7-flash: recorded
+9041:source repeat=1 arm=B model=glm-4.7-flash: recorded
+9041:source repeat=2 arm=A model=glm-4.7-flash: recorded
+9041:source repeat=2 arm=B model=glm-4.7-flash: recorded
+192:source repeat=0 arm=A model=glm-4.7-flash: recorded
+192:source repeat=0 arm=B model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+192:source repeat=0 arm=B model=glm-4.7-flash: recorded
+192:source repeat=1 arm=A model=glm-4.7-flash: recorded
+192:source repeat=1 arm=B model=glm-4.7-flash: recorded
+192:source repeat=2 arm=B model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+192:source repeat=2 arm=B model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+192:source repeat=2 arm=B model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+192:source repeat=2 arm=B model=glm-4.7-flash: recorded
+192:source repeat=2 arm=A model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+192:source repeat=2 arm=A model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+192:source repeat=2 arm=A model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+192:source repeat=2 arm=A model=glm-4.7-flash: recorded
+1563:studio repeat=0 arm=A model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+1563:studio repeat=0 arm=A model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+1563:studio repeat=0 arm=A model=glm-4.7-flash: recorded
+1563:studio repeat=0 arm=B model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+1563:studio repeat=0 arm=B model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+1563:studio repeat=0 arm=B model=glm-4.7-flash: recorded
+1563:studio repeat=1 arm=A model=glm-4.7-flash: recorded
+1563:studio repeat=1 arm=B model=glm-4.7-flash: recorded
+1563:studio repeat=2 arm=A model=glm-4.7-flash: recorded
+1563:studio repeat=2 arm=B model=glm-4.7-flash: recorded
+1535:main_characters repeat=0 arm=B model=glm-4.7-flash: recorded
+1535:main_characters repeat=0 arm=A model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+1535:main_characters repeat=0 arm=A model=glm-4.7-flash: recorded
+1535:main_characters repeat=1 arm=A model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+1535:main_characters repeat=1 arm=A model=glm-4.7-flash: recorded
+1535:main_characters repeat=1 arm=B model=glm-4.7-flash: recorded
+1535:main_characters repeat=2 arm=B model=glm-4.7-flash: recorded
+1535:main_characters repeat=2 arm=A model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+1535:main_characters repeat=2 arm=A model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+1535:main_characters repeat=2 arm=A model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+1535:main_characters repeat=2 arm=A model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+1535:main_characters repeat=2 arm=A model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+1535:main_characters repeat=2 arm=A model=glm-4.7-flash: recorded
+103900:season repeat=0 arm=A model=glm-4.7-flash: recorded
+103900:season repeat=0 arm=B model=glm-4.7-flash: recorded
+103900:season repeat=1 arm=A model=glm-4.7-flash: recorded
+103900:season repeat=1 arm=B model=glm-4.7-flash: recorded
+103900:season repeat=2 arm=A model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+103900:season repeat=2 arm=A model=glm-4.7-flash: recorded
+103900:season repeat=2 arm=B model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+103900:season repeat=2 arm=B model=glm-4.7-flash: recorded
+16498:format repeat=0 arm=B model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+16498:format repeat=0 arm=B model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+16498:format repeat=0 arm=B model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+16498:format repeat=0 arm=B model=glm-4.7-flash: recorded
+16498:format repeat=0 arm=A model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+16498:format repeat=0 arm=A model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+16498:format repeat=0 arm=A model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+16498:format repeat=0 arm=A model=glm-4.7-flash: recorded
+16498:format repeat=1 arm=B model=glm-4.7-flash: recorded
+16498:format repeat=1 arm=A model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+16498:format repeat=1 arm=A model=glm-4.7-flash: recorded
+16498:format repeat=2 arm=A model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+16498:format repeat=2 arm=A model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+16498:format repeat=2 arm=A model=glm-4.7-flash: recorded
+16498:format repeat=2 arm=B model=glm-4.7-flash: recorded
+135806:season repeat=0 arm=A model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+135806:season repeat=0 arm=A model=glm-4.7-flash: recorded
+135806:season repeat=0 arm=B model=glm-4.7-flash: recorded
+135806:season repeat=1 arm=A model=glm-4.7-flash: recorded
+135806:season repeat=1 arm=B model=glm-4.7-flash: recorded
+135806:season repeat=2 arm=A model=glm-4.7-flash: recorded
+135806:season repeat=2 arm=B model=glm-4.7-flash: recorded
+21718:episodes repeat=0 arm=A model=glm-4.7-flash: recorded
+21718:episodes repeat=0 arm=B model=glm-4.7-flash: recorded
+21718:episodes repeat=1 arm=A model=glm-4.7-flash: recorded
+21718:episodes repeat=1 arm=B model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+21718:episodes repeat=1 arm=B model=glm-4.7-flash: recorded
+21718:episodes repeat=2 arm=A model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+21718:episodes repeat=2 arm=A model=glm-4.7-flash: recorded
+21718:episodes repeat=2 arm=B model=glm-4.7-flash: recorded
+104276:season repeat=0 arm=B model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+104276:season repeat=0 arm=B model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+104276:season repeat=0 arm=B model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+104276:season repeat=0 arm=B model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+104276:season repeat=0 arm=B model=glm-4.7-flash: recorded
+104276:season repeat=0 arm=A model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+104276:season repeat=0 arm=A model=glm-4.7-flash: recorded
+104276:season repeat=1 arm=A model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+104276:season repeat=1 arm=A model=glm-4.7-flash: recorded
+104276:season repeat=1 arm=B model=glm-4.7-flash: recorded
+104276:season repeat=2 arm=A model=glm-4.7-flash: recorded
+104276:season repeat=2 arm=B model=glm-4.7-flash: recorded
+104276:year repeat=0 arm=B model=glm-4.7-flash: recorded
+104276:year repeat=0 arm=A model=glm-4.7-flash: recorded
+104276:year repeat=1 arm=B model=glm-4.7-flash: recorded
+104276:year repeat=1 arm=A model=glm-4.7-flash: recorded
+104276:year repeat=2 arm=A model=glm-4.7-flash: recorded
+104276:year repeat=2 arm=B model=glm-4.7-flash: recorded
+192:episodes repeat=0 arm=B model=glm-4.7-flash: recorded
+192:episodes repeat=0 arm=A model=glm-4.7-flash: recorded
+192:episodes repeat=1 arm=A model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+192:episodes repeat=1 arm=A model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+192:episodes repeat=1 arm=A model=glm-4.7-flash: recorded
+192:episodes repeat=1 arm=B model=glm-4.7-flash: recorded
+192:episodes repeat=2 arm=A model=glm-4.7-flash: recorded
+192:episodes repeat=2 arm=B model=glm-4.7-flash: recorded
+192:studio repeat=0 arm=B model=glm-4.7-flash: recorded
+192:studio repeat=0 arm=A model=glm-4.7-flash: recorded
+192:studio repeat=1 arm=B model=glm-4.7-flash: recorded
+192:studio repeat=1 arm=A model=glm-4.7-flash: recorded
+192:studio repeat=2 arm=A model=glm-4.7-flash: recorded
+192:studio repeat=2 arm=B model=glm-4.7-flash: recorded
+132467:year repeat=0 arm=A model=glm-4.7-flash: stopped
+Incomplete: descriptive observed-response scores only; hypothesis threshold cannot pass; missingness may be biased
+132467:year repeat=0 arm=A model=glm-4.7-flash: recorded
+132467:year repeat=0 arm=B model=glm-4.7-flash: recorded
+132467:year repeat=1 arm=B model=glm-4.7-flash: recorded
+132467:year repeat=1 arm=A model=glm-4.7-flash: recorded
+132467:year repeat=2 arm=A model=glm-4.7-flash: recorded
+132467:year repeat=2 arm=B model=glm-4.7-flash: recorded
+132467:source repeat=0 arm=A model=glm-4.7-flash: recorded
+132467:source repeat=0 arm=B model=glm-4.7-flash: recorded
+132467:source repeat=1 arm=B model=glm-4.7-flash: recorded
+132467:source repeat=1 arm=A model=glm-4.7-flash: recorded
+132467:source repeat=2 arm=B model=glm-4.7-flash: recorded
+132467:source repeat=2 arm=A model=glm-4.7-flash: recorded
+11061:source repeat=0 arm=A model=glm-4.7-flash: recorded
+11061:source repeat=0 arm=B model=glm-4.7-flash: recorded
+11061:source repeat=1 arm=B model=glm-4.7-flash: recorded
+11061:source repeat=1 arm=A model=glm-4.7-flash: recorded
+11061:source repeat=2 arm=B model=glm-4.7-flash: recorded
+11061:source repeat=2 arm=A model=glm-4.7-flash: recorded
+20486:studio repeat=0 arm=A model=glm-4.7-flash: recorded
+20486:studio repeat=0 arm=B model=glm-4.7-flash: recorded
+20486:studio repeat=1 arm=A model=glm-4.7-flash: recorded
+20486:studio repeat=1 arm=B model=glm-4.7-flash: recorded
+20486:studio repeat=2 arm=B model=glm-4.7-flash: recorded
+20486:studio repeat=2 arm=A model=glm-4.7-flash: recorded
+183128:season repeat=0 arm=A model=glm-4.7-flash: recorded
+183128:season repeat=0 arm=B model=glm-4.7-flash: recorded
+183128:season repeat=1 arm=B model=glm-4.7-flash: recorded
+183128:season repeat=1 arm=A model=glm-4.7-flash: recorded
+183128:season repeat=2 arm=A model=glm-4.7-flash: recorded
+183128:season repeat=2 arm=B model=glm-4.7-flash: recorded
+135806:year repeat=0 arm=A model=glm-4.7-flash: recorded
+135806:year repeat=0 arm=B model=glm-4.7-flash: recorded
+135806:year repeat=1 arm=B model=glm-4.7-flash: recorded
+135806:year repeat=1 arm=A model=glm-4.7-flash: recorded
+135806:year repeat=2 arm=A model=glm-4.7-flash: recorded
+135806:year repeat=2 arm=B model=glm-4.7-flash: recorded
+135806:source repeat=0 arm=B model=glm-4.7-flash: recorded
+135806:source repeat=0 arm=A model=glm-4.7-flash: recorded
+135806:source repeat=1 arm=B model=glm-4.7-flash: recorded
+135806:source repeat=1 arm=A model=glm-4.7-flash: recorded
+135806:source repeat=2 arm=A model=glm-4.7-flash: recorded
+135806:source repeat=2 arm=B model=glm-4.7-flash: recorded
+20958:year repeat=0 arm=B model=glm-4.7-flash: recorded
+20958:year repeat=0 arm=A model=glm-4.7-flash: recorded
+20958:year repeat=1 arm=A model=glm-4.7-flash: recorded
+20958:year repeat=1 arm=B model=glm-4.7-flash: recorded
+20958:year repeat=2 arm=A model=glm-4.7-flash: recorded
+20958:year repeat=2 arm=B model=glm-4.7-flash: recorded
+1535:season repeat=0 arm=B model=glm-4.7-flash: recorded
+1535:season repeat=0 arm=A model=glm-4.7-flash: recorded
+1535:season repeat=1 arm=A model=glm-4.7-flash: recorded
+1535:season repeat=1 arm=B model=glm-4.7-flash: recorded
+1535:season repeat=2 arm=B model=glm-4.7-flash: recorded
+1535:season repeat=2 arm=A model=glm-4.7-flash: recorded
+1535:episodes repeat=0 arm=A model=glm-4.7-flash: recorded
+1535:episodes repeat=0 arm=B model=glm-4.7-flash: recorded
+1535:episodes repeat=1 arm=A model=glm-4.7-flash: recorded
+1535:episodes repeat=1 arm=B model=glm-4.7-flash: recorded
+1535:episodes repeat=2 arm=A model=glm-4.7-flash: recorded
+1535:episodes repeat=2 arm=B model=glm-4.7-flash: recorded
+103900:studio repeat=0 arm=B model=glm-4.7-flash: recorded
+103900:studio repeat=0 arm=A model=glm-4.7-flash: recorded
+103900:studio repeat=1 arm=A model=glm-4.7-flash: recorded
+103900:studio repeat=1 arm=B model=glm-4.7-flash: recorded
+103900:studio repeat=2 arm=B model=glm-4.7-flash: recorded
+103900:studio repeat=2 arm=A model=glm-4.7-flash: recorded
+192:main_characters repeat=0 arm=B model=glm-4.7-flash: recorded
+192:main_characters repeat=0 arm=A model=glm-4.7-flash: recorded
+192:main_characters repeat=1 arm=B model=glm-4.7-flash: recorded
+192:main_characters repeat=1 arm=A model=glm-4.7-flash: recorded
+192:main_characters repeat=2 arm=B model=glm-4.7-flash: recorded
+192:main_characters repeat=2 arm=A model=glm-4.7-flash: recorded
+20486:main_characters repeat=0 arm=A model=glm-4.7-flash: recorded
+20486:main_characters repeat=0 arm=B model=glm-4.7-flash: recorded
+20486:main_characters repeat=1 arm=B model=glm-4.7-flash: recorded
+20486:main_characters repeat=1 arm=A model=glm-4.7-flash: recorded
+20486:main_characters repeat=2 arm=B model=glm-4.7-flash: recorded
+20486:main_characters repeat=2 arm=A model=glm-4.7-flash: recorded
+192:format repeat=0 arm=A model=glm-4.7-flash: recorded
+192:format repeat=0 arm=B model=glm-4.7-flash: recorded
+192:format repeat=1 arm=A model=glm-4.7-flash: recorded
+192:format repeat=1 arm=B model=glm-4.7-flash: recorded
+192:format repeat=2 arm=A model=glm-4.7-flash: recorded
+192:format repeat=2 arm=B model=glm-4.7-flash: recorded
+103900:format repeat=0 arm=A model=glm-4.7-flash: recorded
+103900:format repeat=0 arm=B model=glm-4.7-flash: recorded
+103900:format repeat=1 arm=A model=glm-4.7-flash: recorded
+103900:format repeat=1 arm=B model=glm-4.7-flash: recorded
+103900:format repeat=2 arm=A model=glm-4.7-flash: recorded
+103900:format repeat=2 arm=B model=glm-4.7-flash: recorded
+21306:source repeat=0 arm=A model=glm-4.7-flash: recorded
+21306:source repeat=0 arm=B model=glm-4.7-flash: recorded
+21306:source repeat=1 arm=B model=glm-4.7-flash: recorded
+21306:source repeat=1 arm=A model=glm-4.7-flash: recorded
+21306:source repeat=2 arm=A model=glm-4.7-flash: recorded
+21306:source repeat=2 arm=B model=glm-4.7-flash: recorded
+104276:source repeat=0 arm=A model=glm-4.7-flash: recorded
+104276:source repeat=0 arm=B model=glm-4.7-flash: recorded
+104276:source repeat=1 arm=B model=glm-4.7-flash: recorded
+104276:source repeat=1 arm=A model=glm-4.7-flash: recorded
+104276:source repeat=2 arm=A model=glm-4.7-flash: recorded
+104276:source repeat=2 arm=B model=glm-4.7-flash: recorded
+132467:format repeat=0 arm=B model=glm-4.7-flash: recorded
+132467:format repeat=0 arm=A model=glm-4.7-flash: recorded
+132467:format repeat=1 arm=A model=glm-4.7-flash: recorded
+132467:format repeat=1 arm=B model=glm-4.7-flash: recorded
+132467:format repeat=2 arm=A model=glm-4.7-flash: recorded
+132467:format repeat=2 arm=B model=glm-4.7-flash: recorded
+1535:studio repeat=0 arm=B model=glm-4.7-flash: recorded
+1535:studio repeat=0 arm=A model=glm-4.7-flash: recorded
+1535:studio repeat=1 arm=B model=glm-4.7-flash: recorded
+1535:studio repeat=1 arm=A model=glm-4.7-flash: recorded
+1535:studio repeat=2 arm=A model=glm-4.7-flash: recorded
+1535:studio repeat=2 arm=B model=glm-4.7-flash: recorded
+16498:season repeat=0 arm=A model=glm-4.7-flash: recorded
+16498:season repeat=0 arm=B model=glm-4.7-flash: recorded
+16498:season repeat=1 arm=B model=glm-4.7-flash: recorded
+16498:season repeat=1 arm=A model=glm-4.7-flash: recorded
+16498:season repeat=2 arm=B model=glm-4.7-flash: recorded
+16498:season repeat=2 arm=A model=glm-4.7-flash: recorded
+4705:year repeat=0 arm=A model=glm-4.7-flash: recorded
+4705:year repeat=0 arm=B model=glm-4.7-flash: recorded
+4705:year repeat=1 arm=A model=glm-4.7-flash: recorded
+4705:year repeat=1 arm=B model=glm-4.7-flash: recorded
+4705:year repeat=2 arm=A model=glm-4.7-flash: recorded
+4705:year repeat=2 arm=B model=glm-4.7-flash: recorded
+9041:episodes repeat=0 arm=A model=glm-4.7-flash: recorded
+9041:episodes repeat=0 arm=B model=glm-4.7-flash: recorded
+9041:episodes repeat=1 arm=B model=glm-4.7-flash: recorded
+9041:episodes repeat=1 arm=A model=glm-4.7-flash: recorded
+9041:episodes repeat=2 arm=B model=glm-4.7-flash: recorded
+9041:episodes repeat=2 arm=A model=glm-4.7-flash: recorded
+20958:season repeat=0 arm=B model=glm-4.7-flash: recorded
+20958:season repeat=0 arm=A model=glm-4.7-flash: recorded
+20958:season repeat=1 arm=A model=glm-4.7-flash: recorded
+20958:season repeat=1 arm=B model=glm-4.7-flash: recorded
+20958:season repeat=2 arm=A model=glm-4.7-flash: recorded
+20958:season repeat=2 arm=B model=glm-4.7-flash: recorded
+21306:format repeat=0 arm=B model=glm-4.7-flash: recorded
+21306:format repeat=0 arm=A model=glm-4.7-flash: recorded
+21306:format repeat=1 arm=A model=glm-4.7-flash: recorded
+21306:format repeat=1 arm=B model=glm-4.7-flash: recorded
+21306:format repeat=2 arm=A model=glm-4.7-flash: recorded
+21306:format repeat=2 arm=B model=glm-4.7-flash: recorded
+21123:episodes repeat=0 arm=A model=glm-4.7-flash: recorded
+21123:episodes repeat=0 arm=B model=glm-4.7-flash: recorded
+21123:episodes repeat=1 arm=B model=glm-4.7-flash: recorded
+21123:episodes repeat=1 arm=A model=glm-4.7-flash: recorded
+21123:episodes repeat=2 arm=A model=glm-4.7-flash: recorded
+21123:episodes repeat=2 arm=B model=glm-4.7-flash: recorded
+20958:episodes repeat=0 arm=A model=glm-4.7-flash: recorded
+20958:episodes repeat=0 arm=B model=glm-4.7-flash: recorded
+20958:episodes repeat=1 arm=A model=glm-4.7-flash: recorded
+20958:episodes repeat=1 arm=B model=glm-4.7-flash: recorded
+20958:episodes repeat=2 arm=A model=glm-4.7-flash: recorded
+20958:episodes repeat=2 arm=B model=glm-4.7-flash: recorded
+16498:episodes repeat=0 arm=A model=glm-4.7-flash: recorded
+16498:episodes repeat=0 arm=B model=glm-4.7-flash: recorded
+16498:episodes repeat=1 arm=B model=glm-4.7-flash: recorded
+16498:episodes repeat=1 arm=A model=glm-4.7-flash: recorded
+16498:episodes repeat=2 arm=A model=glm-4.7-flash: recorded
+16498:episodes repeat=2 arm=B model=glm-4.7-flash: recorded
+21718:year repeat=0 arm=A model=glm-4.7-flash: recorded
+21718:year repeat=0 arm=B model=glm-4.7-flash: recorded
+21718:year repeat=1 arm=A model=glm-4.7-flash: recorded
+21718:year repeat=1 arm=B model=glm-4.7-flash: recorded
+21718:year repeat=2 arm=A model=glm-4.7-flash: recorded
+21718:year repeat=2 arm=B model=glm-4.7-flash: recorded
+183128:source repeat=0 arm=B model=glm-4.7-flash: recorded
+183128:source repeat=0 arm=A model=glm-4.7-flash: recorded
+183128:source repeat=1 arm=B model=glm-4.7-flash: recorded
+183128:source repeat=1 arm=A model=glm-4.7-flash: recorded
+183128:source repeat=2 arm=B model=glm-4.7-flash: recorded
+183128:source repeat=2 arm=A model=glm-4.7-flash: recorded
+21306:season repeat=0 arm=A model=glm-4.7-flash: recorded
+21306:season repeat=0 arm=B model=glm-4.7-flash: recorded
+21306:season repeat=1 arm=A model=glm-4.7-flash: recorded
+21306:season repeat=1 arm=B model=glm-4.7-flash: recorded
+21306:season repeat=2 arm=A model=glm-4.7-flash: recorded
+21306:season repeat=2 arm=B model=glm-4.7-flash: recorded
+11061:main_characters repeat=0 arm=B model=glm-4.7-flash: recorded
+11061:main_characters repeat=0 arm=A model=glm-4.7-flash: recorded
+11061:main_characters repeat=1 arm=B model=glm-4.7-flash: recorded
+11061:main_characters repeat=1 arm=A model=glm-4.7-flash: recorded
+11061:main_characters repeat=2 arm=B model=glm-4.7-flash: recorded
+11061:main_characters repeat=2 arm=A model=glm-4.7-flash: recorded
+4705:studio repeat=0 arm=B model=glm-4.7-flash: recorded
+4705:studio repeat=0 arm=A model=glm-4.7-flash: recorded
+4705:studio repeat=1 arm=A model=glm-4.7-flash: recorded
+4705:studio repeat=1 arm=B model=glm-4.7-flash: recorded
+4705:studio repeat=2 arm=A model=glm-4.7-flash: recorded
+4705:studio repeat=2 arm=B model=glm-4.7-flash: recorded
+21123:main_characters repeat=0 arm=A model=glm-4.7-flash: recorded
+21123:main_characters repeat=0 arm=B model=glm-4.7-flash: recorded
+21123:main_characters repeat=1 arm=B model=glm-4.7-flash: recorded
+21123:main_characters repeat=1 arm=A model=glm-4.7-flash: recorded
+21123:main_characters repeat=2 arm=B model=glm-4.7-flash: recorded
+21123:main_characters repeat=2 arm=A model=glm-4.7-flash: recorded
+135806:main_characters repeat=0 arm=A model=glm-4.7-flash: recorded
+135806:main_characters repeat=0 arm=B model=glm-4.7-flash: recorded
+135806:main_characters repeat=1 arm=B model=glm-4.7-flash: recorded
+135806:main_characters repeat=1 arm=A model=glm-4.7-flash: recorded
+135806:main_characters repeat=2 arm=B model=glm-4.7-flash: recorded
+135806:main_characters repeat=2 arm=A model=glm-4.7-flash: recorded
+21123:source repeat=0 arm=B model=glm-4.7-flash: recorded
+21123:source repeat=0 arm=A model=glm-4.7-flash: recorded
+21123:source repeat=1 arm=A model=glm-4.7-flash: recorded
+21123:source repeat=1 arm=B model=glm-4.7-flash: recorded
+21123:source repeat=2 arm=B model=glm-4.7-flash: recorded
+21123:source repeat=2 arm=A model=glm-4.7-flash: recorded
+103900:source repeat=0 arm=B model=glm-4.7-flash: recorded
+103900:source repeat=0 arm=A model=glm-4.7-flash: recorded
+103900:source repeat=1 arm=B model=glm-4.7-flash: recorded
+103900:source repeat=1 arm=A model=glm-4.7-flash: recorded
+103900:source repeat=2 arm=A model=glm-4.7-flash: recorded
+103900:source repeat=2 arm=B model=glm-4.7-flash: recorded
+1563:main_characters repeat=0 arm=A model=glm-4.7-flash: recorded
+1563:main_characters repeat=0 arm=B model=glm-4.7-flash: recorded
+1563:main_characters repeat=1 arm=A model=glm-4.7-flash: recorded
+1563:main_characters repeat=1 arm=B model=glm-4.7-flash: recorded
+1563:main_characters repeat=2 arm=B model=glm-4.7-flash: recorded
+1563:main_characters repeat=2 arm=A model=glm-4.7-flash: recorded
+20958:source repeat=0 arm=B model=glm-4.7-flash: recorded
+20958:source repeat=0 arm=A model=glm-4.7-flash: recorded
+20958:source repeat=1 arm=B model=glm-4.7-flash: recorded
+20958:source repeat=1 arm=A model=glm-4.7-flash: recorded
+20958:source repeat=2 arm=A model=glm-4.7-flash: recorded
+20958:source repeat=2 arm=B model=glm-4.7-flash: recorded
+21856:episodes repeat=0 arm=A model=glm-4.7-flash: recorded
+21856:episodes repeat=0 arm=B model=glm-4.7-flash: recorded
+21856:episodes repeat=1 arm=B model=glm-4.7-flash: recorded
+21856:episodes repeat=1 arm=A model=glm-4.7-flash: recorded
+21856:episodes repeat=2 arm=A model=glm-4.7-flash: recorded
+21856:episodes repeat=2 arm=B model=glm-4.7-flash: recorded
+135806:format repeat=0 arm=A model=glm-4.7-flash: recorded
+135806:format repeat=0 arm=B model=glm-4.7-flash: recorded
+135806:format repeat=1 arm=B model=glm-4.7-flash: recorded
+135806:format repeat=1 arm=A model=glm-4.7-flash: recorded
+135806:format repeat=2 arm=B model=glm-4.7-flash: recorded
+135806:format repeat=2 arm=A model=glm-4.7-flash: recorded
+9041:season repeat=0 arm=B model=glm-4.7-flash: recorded
+9041:season repeat=0 arm=A model=glm-4.7-flash: recorded
+9041:season repeat=1 arm=A model=glm-4.7-flash: recorded
+9041:season repeat=1 arm=B model=glm-4.7-flash: recorded
+9041:season repeat=2 arm=A model=glm-4.7-flash: recorded
+9041:season repeat=2 arm=B model=glm-4.7-flash: recorded
+1563:source repeat=0 arm=B model=glm-4.7-flash: recorded
+1563:source repeat=0 arm=A model=glm-4.7-flash: recorded
+1563:source repeat=1 arm=B model=glm-4.7-flash: recorded
+1563:source repeat=1 arm=A model=glm-4.7-flash: recorded
+1563:source repeat=2 arm=A model=glm-4.7-flash: recorded
+1563:source repeat=2 arm=B model=glm-4.7-flash: recorded
+21718:format repeat=0 arm=A model=glm-4.7-flash: recorded
+21718:format repeat=0 arm=B model=glm-4.7-flash: recorded
+21718:format repeat=1 arm=B model=glm-4.7-flash: recorded
+21718:format repeat=1 arm=A model=glm-4.7-flash: recorded
+21718:format repeat=2 arm=A model=glm-4.7-flash: recorded
+21718:format repeat=2 arm=B model=glm-4.7-flash: recorded
+1535:year repeat=0 arm=A model=glm-4.7-flash: recorded
+1535:year repeat=0 arm=B model=glm-4.7-flash: recorded
+1535:year repeat=1 arm=A model=glm-4.7-flash: recorded
+1535:year repeat=1 arm=B model=glm-4.7-flash: recorded
+1535:year repeat=2 arm=A model=glm-4.7-flash: recorded
+1535:year repeat=2 arm=B model=glm-4.7-flash: recorded
+20486:episodes repeat=0 arm=A model=glm-4.7-flash: recorded
+20486:episodes repeat=0 arm=B model=glm-4.7-flash: recorded
+20486:episodes repeat=1 arm=B model=glm-4.7-flash: recorded
+20486:episodes repeat=1 arm=A model=glm-4.7-flash: recorded
+20486:episodes repeat=2 arm=B model=glm-4.7-flash: recorded
+20486:episodes repeat=2 arm=A model=glm-4.7-flash: recorded
+135806:episodes repeat=0 arm=A model=glm-4.7-flash: recorded
+135806:episodes repeat=0 arm=B model=glm-4.7-flash: recorded
+135806:episodes repeat=1 arm=A model=glm-4.7-flash: recorded
+135806:episodes repeat=1 arm=B model=glm-4.7-flash: recorded
+135806:episodes repeat=2 arm=A model=glm-4.7-flash: recorded
+135806:episodes repeat=2 arm=B model=glm-4.7-flash: recorded
+4705:main_characters repeat=0 arm=B model=glm-4.7-flash: recorded
+4705:main_characters repeat=0 arm=A model=glm-4.7-flash: recorded
+4705:main_characters repeat=1 arm=B model=glm-4.7-flash: recorded
+4705:main_characters repeat=1 arm=A model=glm-4.7-flash: recorded
+4705:main_characters repeat=2 arm=A model=glm-4.7-flash: recorded
+4705:main_characters repeat=2 arm=B model=glm-4.7-flash: recorded
+1563:year repeat=0 arm=B model=glm-4.7-flash: recorded
+1563:year repeat=0 arm=A model=glm-4.7-flash: recorded
+1563:year repeat=1 arm=B model=glm-4.7-flash: recorded
+1563:year repeat=1 arm=A model=glm-4.7-flash: recorded
+1563:year repeat=2 arm=A model=glm-4.7-flash: recorded
+1563:year repeat=2 arm=B model=glm-4.7-flash: recorded
+183128:year repeat=0 arm=B model=glm-4.7-flash: recorded
+183128:year repeat=0 arm=A model=glm-4.7-flash: recorded
+183128:year repeat=1 arm=A model=glm-4.7-flash: recorded
+183128:year repeat=1 arm=B model=glm-4.7-flash: recorded
+183128:year repeat=2 arm=B model=glm-4.7-flash: recorded
+183128:year repeat=2 arm=A model=glm-4.7-flash: recorded
+183128:episodes repeat=0 arm=B model=glm-4.7-flash: recorded
+183128:episodes repeat=0 arm=A model=glm-4.7-flash: recorded
+183128:episodes repeat=1 arm=A model=glm-4.7-flash: recorded
+183128:episodes repeat=1 arm=B model=glm-4.7-flash: recorded
+183128:episodes repeat=2 arm=B model=glm-4.7-flash: recorded
+183128:episodes repeat=2 arm=A model=glm-4.7-flash: recorded
+4705:format repeat=0 arm=A model=glm-4.7-flash: recorded
+4705:format repeat=0 arm=B model=glm-4.7-flash: recorded
+4705:format repeat=1 arm=B model=glm-4.7-flash: recorded
+4705:format repeat=1 arm=A model=glm-4.7-flash: recorded
+4705:format repeat=2 arm=A model=glm-4.7-flash: recorded
+4705:format repeat=2 arm=B model=glm-4.7-flash: recorded
+103900:episodes repeat=0 arm=B model=glm-4.7-flash: recorded
+103900:episodes repeat=0 arm=A model=glm-4.7-flash: recorded
+103900:episodes repeat=1 arm=A model=glm-4.7-flash: recorded
+103900:episodes repeat=1 arm=B model=glm-4.7-flash: recorded
+103900:episodes repeat=2 arm=A model=glm-4.7-flash: recorded
+103900:episodes repeat=2 arm=B model=glm-4.7-flash: recorded
+132467:episodes repeat=0 arm=B model=glm-4.7-flash: recorded
+132467:episodes repeat=0 arm=A model=glm-4.7-flash: recorded
+132467:episodes repeat=1 arm=B model=glm-4.7-flash: recorded
+132467:episodes repeat=1 arm=A model=glm-4.7-flash: recorded
+132467:episodes repeat=2 arm=B model=glm-4.7-flash: recorded
+132467:episodes repeat=2 arm=A model=glm-4.7-flash: recorded
+21718:source repeat=0 arm=A model=glm-4.7-flash: recorded
+21718:source repeat=0 arm=B model=glm-4.7-flash: recorded
+21718:source repeat=1 arm=A model=glm-4.7-flash: recorded
+21718:source repeat=1 arm=B model=glm-4.7-flash: recorded
+21718:source repeat=2 arm=B model=glm-4.7-flash: recorded
+21718:source repeat=2 arm=A model=glm-4.7-flash: recorded
+16498:source repeat=0 arm=B model=glm-4.7-flash: recorded
+16498:source repeat=0 arm=A model=glm-4.7-flash: recorded
+16498:source repeat=1 arm=B model=glm-4.7-flash: recorded
+16498:source repeat=1 arm=A model=glm-4.7-flash: recorded
+16498:source repeat=2 arm=B model=glm-4.7-flash: recorded
+16498:source repeat=2 arm=A model=glm-4.7-flash: recorded
+20958:studio repeat=0 arm=A model=glm-4.7-flash: recorded
+20958:studio repeat=0 arm=B model=glm-4.7-flash: recorded
+20958:studio repeat=1 arm=B model=glm-4.7-flash: recorded
+20958:studio repeat=1 arm=A model=glm-4.7-flash: recorded
+20958:studio repeat=2 arm=A model=glm-4.7-flash: recorded
+20958:studio repeat=2 arm=B model=glm-4.7-flash: recorded
+183128:format repeat=0 arm=A model=glm-4.7-flash: recorded
+183128:format repeat=0 arm=B model=glm-4.7-flash: recorded
+183128:format repeat=1 arm=A model=glm-4.7-flash: recorded
+183128:format repeat=1 arm=B model=glm-4.7-flash: recorded
+183128:format repeat=2 arm=A model=glm-4.7-flash: recorded
+183128:format repeat=2 arm=B model=glm-4.7-flash: recorded
+21856:main_characters repeat=0 arm=A model=glm-4.7-flash: recorded
+21856:main_characters repeat=0 arm=B model=glm-4.7-flash: recorded
+21856:main_characters repeat=1 arm=A model=glm-4.7-flash: recorded
+21856:main_characters repeat=1 arm=B model=glm-4.7-flash: recorded
+21856:main_characters repeat=2 arm=B model=glm-4.7-flash: recorded
+21856:main_characters repeat=2 arm=A model=glm-4.7-flash: recorded
+20958:main_characters repeat=0 arm=A model=glm-4.7-flash: recorded
+20958:main_characters repeat=0 arm=B model=glm-4.7-flash: recorded
+20958:main_characters repeat=1 arm=A model=glm-4.7-flash: recorded
+20958:main_characters repeat=1 arm=B model=glm-4.7-flash: recorded
+20958:main_characters repeat=2 arm=A model=glm-4.7-flash: recorded
+20958:main_characters repeat=2 arm=B model=glm-4.7-flash: recorded
+11061:studio repeat=0 arm=A model=glm-4.7-flash: recorded
+11061:studio repeat=0 arm=B model=glm-4.7-flash: recorded
+11061:studio repeat=1 arm=A model=glm-4.7-flash: recorded
+11061:studio repeat=1 arm=B model=glm-4.7-flash: recorded
+11061:studio repeat=2 arm=B model=glm-4.7-flash: recorded
+11061:studio repeat=2 arm=A model=glm-4.7-flash: recorded
+104276:format repeat=0 arm=B model=glm-4.7-flash: recorded
+104276:format repeat=0 arm=A model=glm-4.7-flash: recorded
+104276:format repeat=1 arm=A model=glm-4.7-flash: recorded
+104276:format repeat=1 arm=B model=glm-4.7-flash: recorded
+104276:format repeat=2 arm=A model=glm-4.7-flash: recorded
+104276:format repeat=2 arm=B model=glm-4.7-flash: recorded
+183128:main_characters repeat=0 arm=B model=glm-4.7-flash: recorded
+183128:main_characters repeat=0 arm=A model=glm-4.7-flash: recorded
+183128:main_characters repeat=1 arm=A model=glm-4.7-flash: recorded
+183128:main_characters repeat=1 arm=B model=glm-4.7-flash: recorded
+183128:main_characters repeat=2 arm=B model=glm-4.7-flash: recorded
+183128:main_characters repeat=2 arm=A model=glm-4.7-flash: recorded
+104276:episodes repeat=0 arm=A model=glm-4.7-flash: recorded
+104276:episodes repeat=0 arm=B model=glm-4.7-flash: recorded
+104276:episodes repeat=1 arm=B model=glm-4.7-flash: recorded
+104276:episodes repeat=1 arm=A model=glm-4.7-flash: recorded
+104276:episodes repeat=2 arm=A model=glm-4.7-flash: recorded
+104276:episodes repeat=2 arm=B model=glm-4.7-flash: recorded
+4705:episodes repeat=0 arm=A model=glm-4.7-flash: recorded
+4705:episodes repeat=0 arm=B model=glm-4.7-flash: recorded
+4705:episodes repeat=1 arm=B model=glm-4.7-flash: recorded
+4705:episodes repeat=1 arm=A model=glm-4.7-flash: recorded
+4705:episodes repeat=2 arm=A model=glm-4.7-flash: recorded
+4705:episodes repeat=2 arm=B model=glm-4.7-flash: recorded
+192:year repeat=0 arm=B model=glm-4.7-flash: recorded
+192:year repeat=0 arm=A model=glm-4.7-flash: recorded
+192:year repeat=1 arm=B model=glm-4.7-flash: recorded
+192:year repeat=1 arm=A model=glm-4.7-flash: recorded
+192:year repeat=2 arm=A model=glm-4.7-flash: recorded
+192:year repeat=2 arm=B model=glm-4.7-flash: recorded
+16498:studio repeat=0 arm=A model=glm-4.7-flash: recorded
+16498:studio repeat=0 arm=B model=glm-4.7-flash: recorded
+16498:studio repeat=1 arm=A model=glm-4.7-flash: recorded
+16498:studio repeat=1 arm=B model=glm-4.7-flash: recorded
+16498:studio repeat=2 arm=A model=glm-4.7-flash: recorded
+16498:studio repeat=2 arm=B model=glm-4.7-flash: recorded
+21123:year repeat=0 arm=A model=glm-4.7-flash: recorded
+21123:year repeat=0 arm=B model=glm-4.7-flash: recorded
+21123:year repeat=1 arm=B model=glm-4.7-flash: recorded
+21123:year repeat=1 arm=A model=glm-4.7-flash: recorded
+21123:year repeat=2 arm=A model=glm-4.7-flash: recorded
+21123:year repeat=2 arm=B model=glm-4.7-flash: recorded
+16498:main_characters repeat=0 arm=B model=glm-4.7-flash: recorded
+16498:main_characters repeat=0 arm=A model=glm-4.7-flash: recorded
+16498:main_characters repeat=1 arm=B model=glm-4.7-flash: recorded
+16498:main_characters repeat=1 arm=A model=glm-4.7-flash: recorded
+16498:main_characters repeat=2 arm=B model=glm-4.7-flash: recorded
+16498:main_characters repeat=2 arm=A model=glm-4.7-flash: recorded
+132467:season repeat=0 arm=B model=glm-4.7-flash: recorded
+132467:season repeat=0 arm=A model=glm-4.7-flash: recorded
+132467:season repeat=1 arm=B model=glm-4.7-flash: recorded
+132467:season repeat=1 arm=A model=glm-4.7-flash: recorded
+132467:season repeat=2 arm=A model=glm-4.7-flash: recorded
+132467:season repeat=2 arm=B model=glm-4.7-flash: recorded
+21306:year repeat=0 arm=A model=glm-4.7-flash: recorded
+21306:year repeat=0 arm=B model=glm-4.7-flash: recorded
+21306:year repeat=1 arm=B model=glm-4.7-flash: recorded
+21306:year repeat=1 arm=A model=glm-4.7-flash: recorded
+21306:year repeat=2 arm=A model=glm-4.7-flash: recorded
+21306:year repeat=2 arm=B model=glm-4.7-flash: recorded
+104276:studio repeat=0 arm=A model=glm-4.7-flash: recorded
+104276:studio repeat=0 arm=B model=glm-4.7-flash: recorded
+104276:studio repeat=1 arm=B model=glm-4.7-flash: recorded
+104276:studio repeat=1 arm=A model=glm-4.7-flash: recorded
+104276:studio repeat=2 arm=A model=glm-4.7-flash: recorded
+104276:studio repeat=2 arm=B model=glm-4.7-flash: recorded
+21856:year repeat=0 arm=B model=glm-4.7-flash: recorded
+21856:year repeat=0 arm=A model=glm-4.7-flash: recorded
+21856:year repeat=1 arm=B model=glm-4.7-flash: recorded
+21856:year repeat=1 arm=A model=glm-4.7-flash: recorded
+21856:year repeat=2 arm=A model=glm-4.7-flash: recorded
+21856:year repeat=2 arm=B model=glm-4.7-flash: recorded
+11061:format repeat=0 arm=B model=glm-4.7-flash: recorded
+11061:format repeat=0 arm=A model=glm-4.7-flash: recorded
+11061:format repeat=1 arm=A model=glm-4.7-flash: recorded
+11061:format repeat=1 arm=B model=glm-4.7-flash: recorded
+11061:format repeat=2 arm=A model=glm-4.7-flash: recorded
+11061:format repeat=2 arm=B model=glm-4.7-flash: recorded
+1535:source repeat=0 arm=A model=glm-4.7-flash: recorded
+1535:source repeat=0 arm=B model=glm-4.7-flash: recorded
+1535:source repeat=1 arm=B model=glm-4.7-flash: recorded
+1535:source repeat=1 arm=A model=glm-4.7-flash: recorded
+1535:source repeat=2 arm=A model=glm-4.7-flash: recorded
+1535:source repeat=2 arm=B model=glm-4.7-flash: recorded
+104276:main_characters repeat=0 arm=B model=glm-4.7-flash: recorded
+104276:main_characters repeat=0 arm=A model=glm-4.7-flash: recorded
+104276:main_characters repeat=1 arm=A model=glm-4.7-flash: recorded
+104276:main_characters repeat=1 arm=B model=glm-4.7-flash: recorded
+104276:main_characters repeat=2 arm=B model=glm-4.7-flash: recorded
+104276:main_characters repeat=2 arm=A model=glm-4.7-flash: recorded
+21306:main_characters repeat=0 arm=A model=glm-4.7-flash: recorded
+21306:main_characters repeat=0 arm=B model=glm-4.7-flash: recorded
+21306:main_characters repeat=1 arm=A model=glm-4.7-flash: recorded
+21306:main_characters repeat=1 arm=B model=glm-4.7-flash: recorded
+21306:main_characters repeat=2 arm=A model=glm-4.7-flash: recorded
+21306:main_characters repeat=2 arm=B model=glm-4.7-flash: recorded
+Completed run; assess preregistered thresholds

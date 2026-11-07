@@ -1,0 +1,79 @@
+{
+  "fetched_at": "2026-11-05T20:22:25.108385+00:00",
+  "endpoint": "https://graphql.anilist.co",
+  "query": "query($id:Int!) { Media(id:$id, type:ANIME) { \nid title { romaji english native } siteUrl popularity episodes startDate { year }\nformat source season status isAdult\nstudios(isMain: true) { nodes { id name } }\ncharacters(role: MAIN, perPage: 50) { pageInfo { hasNextPage } edges { role node { id } } }\n } }",
+  "variables": {
+    "id": 21718
+  },
+  "attempts": [
+    {
+      "at": "2026-11-05T20:22:24.455931+00:00",
+      "status": 200,
+      "seconds": 0.652,
+      "rate_limit": "30",
+      "rate_remaining": "28"
+    }
+  ],
+  "response": {
+    "data": {
+      "Media": {
+        "id": 21718,
+        "title": {
+          "romaji": "Fate/stay night [Heaven's Feel] II. lost butterfly",
+          "english": "Fate/stay night [Heaven's Feel] II. lost butterfly",
+          "native": "Fate/stay night[Heaven's Feel] ⅠⅠ.lost butterfly"
+        },
+        "siteUrl": "https://anilist.co/anime/21718",
+        "popularity": 132496,
+        "episodes": 1,
+        "startDate": {
+          "year": 2019
+        },
+        "format": "MOVIE",
+        "source": "VISUAL_NOVEL",
+        "season": "WINTER",
+        "status": "FINISHED",
+        "isAdult": false,
+        "studios": {
+          "nodes": [
+            {
+              "id": 43,
+              "name": "ufotable"
+            }
+          ]
+        },
+        "characters": {
+          "pageInfo": {
+            "hasNextPage": false
+          },
+          "edges": [
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 496
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 498
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 500
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 503
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

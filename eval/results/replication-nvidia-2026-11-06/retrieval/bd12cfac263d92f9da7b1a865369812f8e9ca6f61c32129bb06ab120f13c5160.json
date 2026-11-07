@@ -1,0 +1,91 @@
+{
+  "fetched_at": "2026-11-05T20:17:52.092232+00:00",
+  "endpoint": "https://graphql.anilist.co",
+  "query": "query($id:Int!) { Media(id:$id, type:ANIME) { \nid title { romaji english native } siteUrl popularity episodes startDate { year }\nformat source season status isAdult\nstudios(isMain: true) { nodes { id name } }\ncharacters(role: MAIN, perPage: 50) { pageInfo { hasNextPage } edges { role node { id } } }\n } }",
+  "variables": {
+    "id": 20486
+  },
+  "attempts": [
+    {
+      "at": "2026-11-05T20:17:50.430213+00:00",
+      "status": 200,
+      "seconds": 1.662,
+      "rate_limit": "30",
+      "rate_remaining": "28"
+    }
+  ],
+  "response": {
+    "data": {
+      "Media": {
+        "id": 20486,
+        "title": {
+          "romaji": "Z/X IGNITION",
+          "english": "Z/X IGNITION",
+          "native": "Z/X IGNITION"
+        },
+        "siteUrl": "https://anilist.co/anime/20486",
+        "popularity": 8442,
+        "episodes": 12,
+        "startDate": {
+          "year": 2014
+        },
+        "format": "TV",
+        "source": "OTHER",
+        "season": "WINTER",
+        "status": "FINISHED",
+        "isAdult": false,
+        "studios": {
+          "nodes": [
+            {
+              "id": 94,
+              "name": "Telecom Animation Film"
+            }
+          ]
+        },
+        "characters": {
+          "pageInfo": {
+            "hasNextPage": false
+          },
+          "edges": [
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 87587
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 87590
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 87591
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 87592
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 87594
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 87595
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

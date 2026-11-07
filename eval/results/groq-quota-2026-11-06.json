@@ -1,0 +1,5848 @@
+[
+  {
+    "time": 1793997050.2081418,
+    "tokens": 388,
+    "input_byte_bound": 1055,
+    "status": 200,
+    "measured_prompt_tokens": 277,
+    "measured_total_tokens": 388,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "982",
+      "x-ratelimit-remaining-tokens": "7070",
+      "x-ratelimit-reset-requests": "25m55.199s",
+      "x-ratelimit-reset-tokens": "6.975s"
+    }
+  },
+  {
+    "time": 1793997053.47045,
+    "tokens": 372,
+    "input_byte_bound": 1055,
+    "status": 200,
+    "measured_prompt_tokens": 277,
+    "measured_total_tokens": 372,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "981",
+      "x-ratelimit-remaining-tokens": "7081",
+      "x-ratelimit-reset-requests": "27m21.6s",
+      "x-ratelimit-reset-tokens": "6.892s"
+    }
+  },
+  {
+    "time": 1793997056.3098006,
+    "tokens": 596,
+    "input_byte_bound": 1939,
+    "status": 200,
+    "measured_prompt_tokens": 541,
+    "measured_total_tokens": 596,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "980",
+      "x-ratelimit-remaining-tokens": "6866",
+      "x-ratelimit-reset-requests": "28m48s",
+      "x-ratelimit-reset-tokens": "8.504s"
+    }
+  },
+  {
+    "time": 1793997059.6424162,
+    "tokens": 364,
+    "input_byte_bound": 1046,
+    "status": 200,
+    "measured_prompt_tokens": 281,
+    "measured_total_tokens": 364,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "979",
+      "x-ratelimit-remaining-tokens": "6967",
+      "x-ratelimit-reset-requests": "30m14.4s",
+      "x-ratelimit-reset-tokens": "7.747s"
+    }
+  },
+  {
+    "time": 1793997100.77171,
+    "tokens": 641,
+    "input_byte_bound": 2007,
+    "status": 200,
+    "measured_prompt_tokens": 577,
+    "measured_total_tokens": 641,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "978",
+      "x-ratelimit-remaining-tokens": "7340",
+      "x-ratelimit-reset-requests": "31m40.8s",
+      "x-ratelimit-reset-tokens": "4.95s"
+    }
+  },
+  {
+    "time": 1793997104.0907888,
+    "tokens": 641,
+    "input_byte_bound": 2007,
+    "status": 200,
+    "measured_prompt_tokens": 577,
+    "measured_total_tokens": 641,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "977",
+      "x-ratelimit-remaining-tokens": "7144",
+      "x-ratelimit-reset-requests": "33m7.2s",
+      "x-ratelimit-reset-tokens": "6.42s"
+    }
+  },
+  {
+    "time": 1793997105.2154655,
+    "tokens": 364,
+    "input_byte_bound": 1046,
+    "status": 200,
+    "measured_prompt_tokens": 281,
+    "measured_total_tokens": 364,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "976",
+      "x-ratelimit-remaining-tokens": "7455",
+      "x-ratelimit-reset-requests": "34m33.6s",
+      "x-ratelimit-reset-tokens": "4.087s"
+    }
+  },
+  {
+    "time": 1793997108.167869,
+    "tokens": 359,
+    "input_byte_bound": 1046,
+    "status": 200,
+    "measured_prompt_tokens": 281,
+    "measured_total_tokens": 359,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "975",
+      "x-ratelimit-remaining-tokens": "7491",
+      "x-ratelimit-reset-requests": "36m0s",
+      "x-ratelimit-reset-tokens": "3.817s"
+    }
+  },
+  {
+    "time": 1793997113.5712378,
+    "tokens": 641,
+    "input_byte_bound": 2007,
+    "status": 200,
+    "measured_prompt_tokens": 577,
+    "measured_total_tokens": 641,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "974",
+      "x-ratelimit-remaining-tokens": "7294",
+      "x-ratelimit-reset-requests": "37m26.4s",
+      "x-ratelimit-reset-tokens": "5.295s"
+    }
+  },
+  {
+    "time": 1793997116.410498,
+    "tokens": 581,
+    "input_byte_bound": 1800,
+    "status": 200,
+    "measured_prompt_tokens": 518,
+    "measured_total_tokens": 581,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "973",
+      "x-ratelimit-remaining-tokens": "7126",
+      "x-ratelimit-reset-requests": "38m52.8s",
+      "x-ratelimit-reset-tokens": "6.555s"
+    }
+  },
+  {
+    "time": 1793997117.6174686,
+    "tokens": 654,
+    "input_byte_bound": 969,
+    "status": 200,
+    "measured_prompt_tokens": 519,
+    "measured_total_tokens": 654,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "972",
+      "x-ratelimit-remaining-tokens": "7209",
+      "x-ratelimit-reset-requests": "40m19.2s",
+      "x-ratelimit-reset-tokens": "5.932s"
+    }
+  },
+  {
+    "time": 1793997120.8446126,
+    "tokens": 356,
+    "input_byte_bound": 969,
+    "status": 200,
+    "measured_prompt_tokens": 263,
+    "measured_total_tokens": 356,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "971",
+      "x-ratelimit-remaining-tokens": "7222",
+      "x-ratelimit-reset-requests": "41m45.6s",
+      "x-ratelimit-reset-tokens": "5.835s"
+    }
+  },
+  {
+    "time": 1793997164.191556,
+    "tokens": 581,
+    "input_byte_bound": 1800,
+    "status": 200,
+    "measured_prompt_tokens": 518,
+    "measured_total_tokens": 581,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "970",
+      "x-ratelimit-remaining-tokens": "7347",
+      "x-ratelimit-reset-requests": "43m12s",
+      "x-ratelimit-reset-tokens": "4.897s"
+    }
+  },
+  {
+    "time": 1793997165.2730367,
+    "tokens": 389,
+    "input_byte_bound": 969,
+    "status": 200,
+    "measured_prompt_tokens": 263,
+    "measured_total_tokens": 389,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "969",
+      "x-ratelimit-remaining-tokens": "7481",
+      "x-ratelimit-reset-requests": "44m38.4s",
+      "x-ratelimit-reset-tokens": "3.892s"
+    }
+  },
+  {
+    "time": 1793997173.6721585,
+    "tokens": 835,
+    "input_byte_bound": 1800,
+    "status": 200,
+    "measured_prompt_tokens": 774,
+    "measured_total_tokens": 835,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "968",
+      "x-ratelimit-remaining-tokens": "7389",
+      "x-ratelimit-reset-requests": "46m4.8s",
+      "x-ratelimit-reset-tokens": "4.582s"
+    }
+  },
+  {
+    "time": 1793997176.5114136,
+    "tokens": 608,
+    "input_byte_bound": 1933,
+    "status": 200,
+    "measured_prompt_tokens": 552,
+    "measured_total_tokens": 608,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "967",
+      "x-ratelimit-remaining-tokens": "7313",
+      "x-ratelimit-reset-requests": "47m31.2s",
+      "x-ratelimit-reset-tokens": "5.152s"
+    }
+  },
+  {
+    "time": 1793997177.7865422,
+    "tokens": 339,
+    "input_byte_bound": 952,
+    "status": 200,
+    "measured_prompt_tokens": 246,
+    "measured_total_tokens": 339,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "966",
+      "x-ratelimit-remaining-tokens": "7426",
+      "x-ratelimit-reset-requests": "48m57.6s",
+      "x-ratelimit-reset-tokens": "4.305s"
+    }
+  },
+  {
+    "time": 1793997180.9540677,
+    "tokens": 608,
+    "input_byte_bound": 1933,
+    "status": 200,
+    "measured_prompt_tokens": 552,
+    "measured_total_tokens": 608,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "965",
+      "x-ratelimit-remaining-tokens": "7240",
+      "x-ratelimit-reset-requests": "50m24s",
+      "x-ratelimit-reset-tokens": "5.7s"
+    }
+  },
+  {
+    "time": 1793997184.1512988,
+    "tokens": 340,
+    "input_byte_bound": 952,
+    "status": 200,
+    "measured_prompt_tokens": 246,
+    "measured_total_tokens": 340,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "964",
+      "x-ratelimit-remaining-tokens": "7309",
+      "x-ratelimit-reset-requests": "51m50.399s",
+      "x-ratelimit-reset-tokens": "5.182s"
+    }
+  },
+  {
+    "time": 1793997187.1353834,
+    "tokens": 340,
+    "input_byte_bound": 952,
+    "status": 200,
+    "measured_prompt_tokens": 246,
+    "measured_total_tokens": 340,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "963",
+      "x-ratelimit-remaining-tokens": "7371",
+      "x-ratelimit-reset-requests": "53m16.799s",
+      "x-ratelimit-reset-tokens": "4.717s"
+    }
+  },
+  {
+    "time": 1793997233.7725697,
+    "tokens": 608,
+    "input_byte_bound": 1933,
+    "status": 200,
+    "measured_prompt_tokens": 552,
+    "measured_total_tokens": 608,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "962",
+      "x-ratelimit-remaining-tokens": "7316",
+      "x-ratelimit-reset-requests": "54m43.2s",
+      "x-ratelimit-reset-tokens": "5.13s"
+    }
+  },
+  {
+    "time": 1793997234.6828682,
+    "tokens": 339,
+    "input_byte_bound": 944,
+    "status": 200,
+    "measured_prompt_tokens": 254,
+    "measured_total_tokens": 339,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "961",
+      "x-ratelimit-remaining-tokens": "7450",
+      "x-ratelimit-reset-requests": "56m9.6s",
+      "x-ratelimit-reset-tokens": "4.125s"
+    }
+  },
+  {
+    "time": 1793997238.1019995,
+    "tokens": 538,
+    "input_byte_bound": 1676,
+    "status": 200,
+    "measured_prompt_tokens": 480,
+    "measured_total_tokens": 538,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "960",
+      "x-ratelimit-remaining-tokens": "7264",
+      "x-ratelimit-reset-requests": "57m36s",
+      "x-ratelimit-reset-tokens": "5.52s"
+    }
+  },
+  {
+    "time": 1793997241.126335,
+    "tokens": 538,
+    "input_byte_bound": 1676,
+    "status": 200,
+    "measured_prompt_tokens": 480,
+    "measured_total_tokens": 538,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "959",
+      "x-ratelimit-remaining-tokens": "7140",
+      "x-ratelimit-reset-requests": "59m2.4s",
+      "x-ratelimit-reset-tokens": "6.45s"
+    }
+  },
+  {
+    "time": 1793997244.0685067,
+    "tokens": 339,
+    "input_byte_bound": 944,
+    "status": 200,
+    "measured_prompt_tokens": 254,
+    "measured_total_tokens": 339,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "958",
+      "x-ratelimit-remaining-tokens": "7243",
+      "x-ratelimit-reset-requests": "1h0m28.8s",
+      "x-ratelimit-reset-tokens": "5.677s"
+    }
+  },
+  {
+    "time": 1793997247.5898635,
+    "tokens": 538,
+    "input_byte_bound": 1676,
+    "status": 200,
+    "measured_prompt_tokens": 480,
+    "measured_total_tokens": 538,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "957",
+      "x-ratelimit-remaining-tokens": "7084",
+      "x-ratelimit-reset-requests": "1h1m55.2s",
+      "x-ratelimit-reset-tokens": "6.87s"
+    }
+  },
+  {
+    "time": 1793997250.0945268,
+    "tokens": 343,
+    "input_byte_bound": 944,
+    "status": 200,
+    "measured_prompt_tokens": 254,
+    "measured_total_tokens": 343,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "956",
+      "x-ratelimit-remaining-tokens": "7180",
+      "x-ratelimit-reset-requests": "1h3m21.6s",
+      "x-ratelimit-reset-tokens": "6.149s"
+    }
+  },
+  {
+    "time": 1793997253.61794,
+    "tokens": 372,
+    "input_byte_bound": 975,
+    "status": 200,
+    "measured_prompt_tokens": 257,
+    "measured_total_tokens": 372,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "955",
+      "x-ratelimit-remaining-tokens": "7251",
+      "x-ratelimit-reset-requests": "1h4m48s",
+      "x-ratelimit-reset-tokens": "5.617s"
+    }
+  },
+  {
+    "time": 1793997293.8734238,
+    "tokens": 496,
+    "input_byte_bound": 1580,
+    "status": 200,
+    "measured_prompt_tokens": 437,
+    "measured_total_tokens": 496,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "954",
+      "x-ratelimit-remaining-tokens": "7437",
+      "x-ratelimit-reset-requests": "1h6m14.4s",
+      "x-ratelimit-reset-tokens": "4.222s"
+    }
+  },
+  {
+    "time": 1793997295.0774424,
+    "tokens": 372,
+    "input_byte_bound": 975,
+    "status": 200,
+    "measured_prompt_tokens": 257,
+    "measured_total_tokens": 372,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "953",
+      "x-ratelimit-remaining-tokens": "7537",
+      "x-ratelimit-reset-requests": "1h7m40.8s",
+      "x-ratelimit-reset-tokens": "3.472s"
+    }
+  },
+  {
+    "time": 1793997298.2028756,
+    "tokens": 496,
+    "input_byte_bound": 1580,
+    "status": 200,
+    "measured_prompt_tokens": 437,
+    "measured_total_tokens": 496,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "952",
+      "x-ratelimit-remaining-tokens": "7397",
+      "x-ratelimit-reset-requests": "1h9m7.2s",
+      "x-ratelimit-reset-tokens": "4.522s"
+    }
+  },
+  {
+    "time": 1793997301.2711434,
+    "tokens": 372,
+    "input_byte_bound": 975,
+    "status": 200,
+    "measured_prompt_tokens": 257,
+    "measured_total_tokens": 372,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "951",
+      "x-ratelimit-remaining-tokens": "7502",
+      "x-ratelimit-reset-requests": "1h10m33.6s",
+      "x-ratelimit-reset-tokens": "3.735s"
+    }
+  },
+  {
+    "time": 1793997304.5393424,
+    "tokens": 496,
+    "input_byte_bound": 1580,
+    "status": 200,
+    "measured_prompt_tokens": 437,
+    "measured_total_tokens": 496,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "950",
+      "x-ratelimit-remaining-tokens": "7363",
+      "x-ratelimit-reset-requests": "1h12m0s",
+      "x-ratelimit-reset-tokens": "4.777s"
+    }
+  },
+  {
+    "time": 1793997307.5619152,
+    "tokens": 308,
+    "input_byte_bound": 967,
+    "status": 200,
+    "measured_prompt_tokens": 251,
+    "measured_total_tokens": 308,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "949",
+      "x-ratelimit-remaining-tokens": "7464",
+      "x-ratelimit-reset-requests": "1h13m26.4s",
+      "x-ratelimit-reset-tokens": "4.02s"
+    }
+  },
+  {
+    "time": 1793997310.4564283,
+    "tokens": 579,
+    "input_byte_bound": 1879,
+    "status": 200,
+    "measured_prompt_tokens": 530,
+    "measured_total_tokens": 579,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "948",
+      "x-ratelimit-remaining-tokens": "7282",
+      "x-ratelimit-reset-requests": "1h14m52.8s",
+      "x-ratelimit-reset-tokens": "5.385s"
+    }
+  },
+  {
+    "time": 1793997353.9752817,
+    "tokens": 579,
+    "input_byte_bound": 1879,
+    "status": 200,
+    "measured_prompt_tokens": 530,
+    "measured_total_tokens": 579,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "947",
+      "x-ratelimit-remaining-tokens": "7348",
+      "x-ratelimit-reset-requests": "1h16m19.2s",
+      "x-ratelimit-reset-tokens": "4.89s"
+    }
+  },
+  {
+    "time": 1793997355.1762528,
+    "tokens": 308,
+    "input_byte_bound": 967,
+    "status": 200,
+    "measured_prompt_tokens": 251,
+    "measured_total_tokens": 308,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "946",
+      "x-ratelimit-remaining-tokens": "7472",
+      "x-ratelimit-reset-requests": "1h17m45.6s",
+      "x-ratelimit-reset-tokens": "3.96s"
+    }
+  },
+  {
+    "time": 1793997358.303422,
+    "tokens": 579,
+    "input_byte_bound": 1879,
+    "status": 200,
+    "measured_prompt_tokens": 530,
+    "measured_total_tokens": 579,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "945",
+      "x-ratelimit-remaining-tokens": "7318",
+      "x-ratelimit-reset-requests": "1h19m12s",
+      "x-ratelimit-reset-tokens": "5.115s"
+    }
+  },
+  {
+    "time": 1793997361.1209912,
+    "tokens": 308,
+    "input_byte_bound": 967,
+    "status": 200,
+    "measured_prompt_tokens": 251,
+    "measured_total_tokens": 308,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "944",
+      "x-ratelimit-remaining-tokens": "7407",
+      "x-ratelimit-reset-requests": "1h20m38.4s",
+      "x-ratelimit-reset-tokens": "4.447s"
+    }
+  },
+  {
+    "time": 1793997364.563998,
+    "tokens": 597,
+    "input_byte_bound": 1829,
+    "status": 200,
+    "measured_prompt_tokens": 527,
+    "measured_total_tokens": 597,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "943",
+      "x-ratelimit-remaining-tokens": "7279",
+      "x-ratelimit-reset-requests": "1h22m4.8s",
+      "x-ratelimit-reset-tokens": "5.407s"
+    }
+  },
+  {
+    "time": 1793997367.5090683,
+    "tokens": 354,
+    "input_byte_bound": 972,
+    "status": 200,
+    "measured_prompt_tokens": 262,
+    "measured_total_tokens": 354,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "942",
+      "x-ratelimit-remaining-tokens": "7321",
+      "x-ratelimit-reset-requests": "1h23m31.2s",
+      "x-ratelimit-reset-tokens": "5.092s"
+    }
+  },
+  {
+    "time": 1793997370.6733773,
+    "tokens": 407,
+    "input_byte_bound": 972,
+    "status": 200,
+    "measured_prompt_tokens": 262,
+    "measured_total_tokens": 407,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "941",
+      "x-ratelimit-remaining-tokens": "7408",
+      "x-ratelimit-reset-requests": "1h24m57.599s",
+      "x-ratelimit-reset-tokens": "4.439s"
+    }
+  },
+  {
+    "time": 1793997373.8346431,
+    "tokens": 594,
+    "input_byte_bound": 1829,
+    "status": 200,
+    "measured_prompt_tokens": 527,
+    "measured_total_tokens": 594,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "940",
+      "x-ratelimit-remaining-tokens": "7119",
+      "x-ratelimit-reset-requests": "1h26m24s",
+      "x-ratelimit-reset-tokens": "6.607s"
+    }
+  },
+  {
+    "time": 1793997376.8569388,
+    "tokens": 368,
+    "input_byte_bound": 972,
+    "status": 200,
+    "measured_prompt_tokens": 262,
+    "measured_total_tokens": 368,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "939",
+      "x-ratelimit-remaining-tokens": "7202",
+      "x-ratelimit-reset-requests": "1h27m50.4s",
+      "x-ratelimit-reset-tokens": "5.985s"
+    }
+  },
+  {
+    "time": 1793997418.404496,
+    "tokens": 592,
+    "input_byte_bound": 1829,
+    "status": 200,
+    "measured_prompt_tokens": 527,
+    "measured_total_tokens": 592,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "938",
+      "x-ratelimit-remaining-tokens": "7350",
+      "x-ratelimit-reset-requests": "1h29m16.8s",
+      "x-ratelimit-reset-tokens": "4.875s"
+    }
+  },
+  {
+    "time": 1793997421.2215648,
+    "tokens": 588,
+    "input_byte_bound": 1907,
+    "status": 200,
+    "measured_prompt_tokens": 538,
+    "measured_total_tokens": 588,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "937",
+      "x-ratelimit-remaining-tokens": "7152",
+      "x-ratelimit-reset-requests": "1h30m43.2s",
+      "x-ratelimit-reset-tokens": "6.359s"
+    }
+  },
+  {
+    "time": 1793997422.744239,
+    "tokens": 357,
+    "input_byte_bound": 1023,
+    "status": 200,
+    "measured_prompt_tokens": 273,
+    "measured_total_tokens": 357,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "936",
+      "x-ratelimit-remaining-tokens": "7243",
+      "x-ratelimit-reset-requests": "1h32m9.6s",
+      "x-ratelimit-reset-tokens": "5.677s"
+    }
+  },
+  {
+    "time": 1793997425.8439753,
+    "tokens": 357,
+    "input_byte_bound": 1023,
+    "status": 200,
+    "measured_prompt_tokens": 273,
+    "measured_total_tokens": 357,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "935",
+      "x-ratelimit-remaining-tokens": "7301",
+      "x-ratelimit-reset-requests": "1h33m36s",
+      "x-ratelimit-reset-tokens": "5.242s"
+    }
+  },
+  {
+    "time": 1793997430.7744262,
+    "tokens": 599,
+    "input_byte_bound": 1907,
+    "status": 200,
+    "measured_prompt_tokens": 538,
+    "measured_total_tokens": 599,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "934",
+      "x-ratelimit-remaining-tokens": "7064",
+      "x-ratelimit-reset-requests": "1h35m2.4s",
+      "x-ratelimit-reset-tokens": "7.02s"
+    }
+  },
+  {
+    "time": 1793997432.1116452,
+    "tokens": 357,
+    "input_byte_bound": 1023,
+    "status": 200,
+    "measured_prompt_tokens": 273,
+    "measured_total_tokens": 357,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "933",
+      "x-ratelimit-remaining-tokens": "7180",
+      "x-ratelimit-reset-requests": "1h36m28.8s",
+      "x-ratelimit-reset-tokens": "6.149s"
+    }
+  },
+  {
+    "time": 1793997436.9578297,
+    "tokens": 588,
+    "input_byte_bound": 1907,
+    "status": 200,
+    "measured_prompt_tokens": 538,
+    "measured_total_tokens": 588,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "932",
+      "x-ratelimit-remaining-tokens": "7216",
+      "x-ratelimit-reset-requests": "1h37m55.2s",
+      "x-ratelimit-reset-tokens": "5.88s"
+    }
+  },
+  {
+    "time": 1793997438.2412536,
+    "tokens": 300,
+    "input_byte_bound": 909,
+    "status": 200,
+    "measured_prompt_tokens": 240,
+    "measured_total_tokens": 300,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "931",
+      "x-ratelimit-remaining-tokens": "7333",
+      "x-ratelimit-reset-requests": "1h39m21.6s",
+      "x-ratelimit-reset-tokens": "5.002s"
+    }
+  },
+  {
+    "time": 1793997478.5048919,
+    "tokens": 508,
+    "input_byte_bound": 1623,
+    "status": 200,
+    "measured_prompt_tokens": 458,
+    "measured_total_tokens": 508,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "930",
+      "x-ratelimit-remaining-tokens": "7397",
+      "x-ratelimit-reset-requests": "1h40m48s",
+      "x-ratelimit-reset-tokens": "4.522s"
+    }
+  },
+  {
+    "time": 1793997481.3222919,
+    "tokens": 505,
+    "input_byte_bound": 1623,
+    "status": 200,
+    "measured_prompt_tokens": 458,
+    "measured_total_tokens": 505,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "929",
+      "x-ratelimit-remaining-tokens": "7337",
+      "x-ratelimit-reset-requests": "1h42m14.4s",
+      "x-ratelimit-reset-tokens": "4.972s"
+    }
+  },
+  {
+    "time": 1793997482.9334319,
+    "tokens": 300,
+    "input_byte_bound": 909,
+    "status": 200,
+    "measured_prompt_tokens": 240,
+    "measured_total_tokens": 300,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "928",
+      "x-ratelimit-remaining-tokens": "7452",
+      "x-ratelimit-reset-requests": "1h43m40.799s",
+      "x-ratelimit-reset-tokens": "4.11s"
+    }
+  },
+  {
+    "time": 1793997485.7619727,
+    "tokens": 300,
+    "input_byte_bound": 909,
+    "status": 200,
+    "measured_prompt_tokens": 240,
+    "measured_total_tokens": 300,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "927",
+      "x-ratelimit-remaining-tokens": "7545",
+      "x-ratelimit-reset-requests": "1h45m7.2s",
+      "x-ratelimit-reset-tokens": "3.412s"
+    }
+  },
+  {
+    "time": 1793997490.8749416,
+    "tokens": 505,
+    "input_byte_bound": 1623,
+    "status": 200,
+    "measured_prompt_tokens": 458,
+    "measured_total_tokens": 505,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "926",
+      "x-ratelimit-remaining-tokens": "7403",
+      "x-ratelimit-reset-requests": "1h46m33.599s",
+      "x-ratelimit-reset-tokens": "4.477s"
+    }
+  },
+  {
+    "time": 1793997492.1749508,
+    "tokens": 335,
+    "input_byte_bound": 961,
+    "status": 200,
+    "measured_prompt_tokens": 254,
+    "measured_total_tokens": 335,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "925",
+      "x-ratelimit-remaining-tokens": "7536",
+      "x-ratelimit-reset-requests": "1h48m0s",
+      "x-ratelimit-reset-tokens": "3.48s"
+    }
+  },
+  {
+    "time": 1793997497.0587518,
+    "tokens": 567,
+    "input_byte_bound": 1818,
+    "status": 200,
+    "measured_prompt_tokens": 519,
+    "measured_total_tokens": 567,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "924",
+      "x-ratelimit-remaining-tokens": "7349",
+      "x-ratelimit-reset-requests": "1h49m26.4s",
+      "x-ratelimit-reset-tokens": "4.882s"
+    }
+  },
+  {
+    "time": 1793997498.4520888,
+    "tokens": 335,
+    "input_byte_bound": 961,
+    "status": 200,
+    "measured_prompt_tokens": 254,
+    "measured_total_tokens": 335,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "923",
+      "x-ratelimit-remaining-tokens": "7436",
+      "x-ratelimit-reset-requests": "1h50m52.8s",
+      "x-ratelimit-reset-tokens": "4.229s"
+    }
+  },
+  {
+    "time": 1793997538.6056845,
+    "tokens": 567,
+    "input_byte_bound": 1818,
+    "status": 200,
+    "measured_prompt_tokens": 519,
+    "measured_total_tokens": 567,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "922",
+      "x-ratelimit-remaining-tokens": "7362",
+      "x-ratelimit-reset-requests": "1h52m19.2s",
+      "x-ratelimit-reset-tokens": "4.785s"
+    }
+  },
+  {
+    "time": 1793997539.622158,
+    "tokens": 333,
+    "input_byte_bound": 961,
+    "status": 200,
+    "measured_prompt_tokens": 254,
+    "measured_total_tokens": 333,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "921",
+      "x-ratelimit-remaining-tokens": "7473",
+      "x-ratelimit-reset-requests": "1h53m45.6s",
+      "x-ratelimit-reset-tokens": "3.952s"
+    }
+  },
+  {
+    "time": 1793997542.9356174,
+    "tokens": 569,
+    "input_byte_bound": 1818,
+    "status": 200,
+    "measured_prompt_tokens": 519,
+    "measured_total_tokens": 569,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "920",
+      "x-ratelimit-remaining-tokens": "7288",
+      "x-ratelimit-reset-requests": "1h55m12s",
+      "x-ratelimit-reset-tokens": "5.34s"
+    }
+  },
+  {
+    "time": 1793997545.7135713,
+    "tokens": 485,
+    "input_byte_bound": 933,
+    "status": 200,
+    "measured_prompt_tokens": 246,
+    "measured_total_tokens": 485,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "919",
+      "x-ratelimit-remaining-tokens": "7407",
+      "x-ratelimit-reset-requests": "1h56m38.4s",
+      "x-ratelimit-reset-tokens": "4.447s"
+    }
+  },
+  {
+    "time": 1793997550.975583,
+    "tokens": 522,
+    "input_byte_bound": 1665,
+    "status": 200,
+    "measured_prompt_tokens": 472,
+    "measured_total_tokens": 522,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "918",
+      "x-ratelimit-remaining-tokens": "7105",
+      "x-ratelimit-reset-requests": "1h58m4.8s",
+      "x-ratelimit-reset-tokens": "6.712s"
+    }
+  },
+  {
+    "time": 1793997557.1596014,
+    "tokens": 522,
+    "input_byte_bound": 1665,
+    "status": 200,
+    "measured_prompt_tokens": 472,
+    "measured_total_tokens": 522,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "917",
+      "x-ratelimit-remaining-tokens": "7391",
+      "x-ratelimit-reset-requests": "1h59m31.2s",
+      "x-ratelimit-reset-tokens": "4.567s"
+    }
+  },
+  {
+    "time": 1793997558.212437,
+    "tokens": 456,
+    "input_byte_bound": 933,
+    "status": 200,
+    "measured_prompt_tokens": 246,
+    "measured_total_tokens": 456,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "916",
+      "x-ratelimit-remaining-tokens": "7501",
+      "x-ratelimit-reset-requests": "2h0m57.6s",
+      "x-ratelimit-reset-tokens": "3.742s"
+    }
+  },
+  {
+    "time": 1793997561.7942343,
+    "tokens": 438,
+    "input_byte_bound": 933,
+    "status": 200,
+    "measured_prompt_tokens": 246,
+    "measured_total_tokens": 438,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "915",
+      "x-ratelimit-remaining-tokens": "7464",
+      "x-ratelimit-reset-requests": "2h2m24s",
+      "x-ratelimit-reset-tokens": "4.02s"
+    }
+  },
+  {
+    "time": 1793997599.7245982,
+    "tokens": 520,
+    "input_byte_bound": 1665,
+    "status": 200,
+    "measured_prompt_tokens": 472,
+    "measured_total_tokens": 520,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "914",
+      "x-ratelimit-remaining-tokens": "7408",
+      "x-ratelimit-reset-requests": "2h3m50.4s",
+      "x-ratelimit-reset-tokens": "4.439s"
+    }
+  },
+  {
+    "time": 1793997601.0180876,
+    "tokens": 388,
+    "input_byte_bound": 1043,
+    "status": 200,
+    "measured_prompt_tokens": 280,
+    "measured_total_tokens": 388,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "913",
+      "x-ratelimit-remaining-tokens": "7493",
+      "x-ratelimit-reset-requests": "2h5m16.799s",
+      "x-ratelimit-reset-tokens": "3.802s"
+    }
+  },
+  {
+    "time": 1793997605.814065,
+    "tokens": 599,
+    "input_byte_bound": 1925,
+    "status": 200,
+    "measured_prompt_tokens": 552,
+    "measured_total_tokens": 599,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "912",
+      "x-ratelimit-remaining-tokens": "7246",
+      "x-ratelimit-reset-requests": "2h6m43.2s",
+      "x-ratelimit-reset-tokens": "5.655s"
+    }
+  },
+  {
+    "time": 1793997607.3032868,
+    "tokens": 388,
+    "input_byte_bound": 1043,
+    "status": 200,
+    "measured_prompt_tokens": 280,
+    "measured_total_tokens": 388,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "911",
+      "x-ratelimit-remaining-tokens": "7514",
+      "x-ratelimit-reset-requests": "2h8m9.599s",
+      "x-ratelimit-reset-tokens": "3.645s"
+    }
+  },
+  {
+    "time": 1793997617.2603033,
+    "tokens": 604,
+    "input_byte_bound": 1925,
+    "status": 200,
+    "measured_prompt_tokens": 552,
+    "measured_total_tokens": 604,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "910",
+      "x-ratelimit-remaining-tokens": "7329",
+      "x-ratelimit-reset-requests": "2h9m36s",
+      "x-ratelimit-reset-tokens": "5.032s"
+    }
+  },
+  {
+    "time": 1793997618.5082033,
+    "tokens": 647,
+    "input_byte_bound": 1043,
+    "status": 200,
+    "measured_prompt_tokens": 536,
+    "measured_total_tokens": 647,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "909",
+      "x-ratelimit-remaining-tokens": "7409",
+      "x-ratelimit-reset-requests": "2h11m2.4s",
+      "x-ratelimit-reset-tokens": "4.432s"
+    }
+  },
+  {
+    "time": 1793997659.8255036,
+    "tokens": 605,
+    "input_byte_bound": 1925,
+    "status": 200,
+    "measured_prompt_tokens": 552,
+    "measured_total_tokens": 605,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "908",
+      "x-ratelimit-remaining-tokens": "7248",
+      "x-ratelimit-reset-requests": "2h12m28.8s",
+      "x-ratelimit-reset-tokens": "5.64s"
+    }
+  },
+  {
+    "time": 1793997661.019621,
+    "tokens": 587,
+    "input_byte_bound": 1818,
+    "status": 200,
+    "measured_prompt_tokens": 521,
+    "measured_total_tokens": 587,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "907",
+      "x-ratelimit-remaining-tokens": "7152",
+      "x-ratelimit-reset-requests": "2h13m55.2s",
+      "x-ratelimit-reset-tokens": "6.359s"
+    }
+  },
+  {
+    "time": 1793997664.012316,
+    "tokens": 374,
+    "input_byte_bound": 1023,
+    "status": 200,
+    "measured_prompt_tokens": 276,
+    "measured_total_tokens": 374,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "906",
+      "x-ratelimit-remaining-tokens": "7145",
+      "x-ratelimit-reset-requests": "2h15m21.6s",
+      "x-ratelimit-reset-tokens": "6.412s"
+    }
+  },
+  {
+    "time": 1793997667.4038668,
+    "tokens": 587,
+    "input_byte_bound": 1818,
+    "status": 200,
+    "measured_prompt_tokens": 521,
+    "measured_total_tokens": 587,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "905",
+      "x-ratelimit-remaining-tokens": "6936",
+      "x-ratelimit-reset-requests": "2h16m48s",
+      "x-ratelimit-reset-tokens": "7.98s"
+    }
+  },
+  {
+    "time": 1793997670.4076185,
+    "tokens": 361,
+    "input_byte_bound": 1023,
+    "status": 200,
+    "measured_prompt_tokens": 276,
+    "measured_total_tokens": 361,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "904",
+      "x-ratelimit-remaining-tokens": "7087",
+      "x-ratelimit-reset-requests": "2h18m14.4s",
+      "x-ratelimit-reset-tokens": "6.847s"
+    }
+  },
+  {
+    "time": 1793997678.609466,
+    "tokens": 587,
+    "input_byte_bound": 1818,
+    "status": 200,
+    "measured_prompt_tokens": 521,
+    "measured_total_tokens": 587,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "903",
+      "x-ratelimit-remaining-tokens": "7260",
+      "x-ratelimit-reset-requests": "2h19m40.8s",
+      "x-ratelimit-reset-tokens": "5.55s"
+    }
+  },
+  {
+    "time": 1793997679.6664383,
+    "tokens": 630,
+    "input_byte_bound": 1023,
+    "status": 200,
+    "measured_prompt_tokens": 532,
+    "measured_total_tokens": 630,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "902",
+      "x-ratelimit-remaining-tokens": "7402",
+      "x-ratelimit-reset-requests": "2h21m7.2s",
+      "x-ratelimit-reset-tokens": "4.484s"
+    }
+  },
+  {
+    "time": 1793997682.746287,
+    "tokens": 373,
+    "input_byte_bound": 990,
+    "status": 200,
+    "measured_prompt_tokens": 260,
+    "measured_total_tokens": 373,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "901",
+      "x-ratelimit-remaining-tokens": "7456",
+      "x-ratelimit-reset-requests": "2h22m33.6s",
+      "x-ratelimit-reset-tokens": "4.08s"
+    }
+  },
+  {
+    "time": 1793997721.1205707,
+    "tokens": 570,
+    "input_byte_bound": 1874,
+    "status": 200,
+    "measured_prompt_tokens": 524,
+    "measured_total_tokens": 570,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "900",
+      "x-ratelimit-remaining-tokens": "7276",
+      "x-ratelimit-reset-requests": "2h24m0s",
+      "x-ratelimit-reset-tokens": "5.43s"
+    }
+  },
+  {
+    "time": 1793997722.175319,
+    "tokens": 350,
+    "input_byte_bound": 990,
+    "status": 200,
+    "measured_prompt_tokens": 260,
+    "measured_total_tokens": 350,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "899",
+      "x-ratelimit-remaining-tokens": "7462",
+      "x-ratelimit-reset-requests": "2h25m26.4s",
+      "x-ratelimit-reset-tokens": "4.035s"
+    }
+  },
+  {
+    "time": 1793997727.5049329,
+    "tokens": 573,
+    "input_byte_bound": 1874,
+    "status": 200,
+    "measured_prompt_tokens": 524,
+    "measured_total_tokens": 573,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "898",
+      "x-ratelimit-remaining-tokens": "7201",
+      "x-ratelimit-reset-requests": "2h26m52.8s",
+      "x-ratelimit-reset-tokens": "5.992s"
+    }
+  },
+  {
+    "time": 1793997728.5221999,
+    "tokens": 353,
+    "input_byte_bound": 990,
+    "status": 200,
+    "measured_prompt_tokens": 260,
+    "measured_total_tokens": 353,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "897",
+      "x-ratelimit-remaining-tokens": "7390",
+      "x-ratelimit-reset-requests": "2h28m19.199s",
+      "x-ratelimit-reset-tokens": "4.575s"
+    }
+  },
+  {
+    "time": 1793997738.7106993,
+    "tokens": 573,
+    "input_byte_bound": 1874,
+    "status": 200,
+    "measured_prompt_tokens": 524,
+    "measured_total_tokens": 573,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "896",
+      "x-ratelimit-remaining-tokens": "7276",
+      "x-ratelimit-reset-requests": "2h29m45.6s",
+      "x-ratelimit-reset-tokens": "5.43s"
+    }
+  },
+  {
+    "time": 1793997739.7361188,
+    "tokens": 600,
+    "input_byte_bound": 1810,
+    "status": 200,
+    "measured_prompt_tokens": 527,
+    "measured_total_tokens": 600,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "895",
+      "x-ratelimit-remaining-tokens": "7115",
+      "x-ratelimit-reset-requests": "2h31m12s",
+      "x-ratelimit-reset-tokens": "6.637s"
+    }
+  },
+  {
+    "time": 1793997742.901246,
+    "tokens": 310,
+    "input_byte_bound": 984,
+    "status": 200,
+    "measured_prompt_tokens": 265,
+    "measured_total_tokens": 310,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "894",
+      "x-ratelimit-remaining-tokens": "7269",
+      "x-ratelimit-reset-requests": "2h32m38.4s",
+      "x-ratelimit-reset-tokens": "5.482s"
+    }
+  },
+  {
+    "time": 1793997781.2217922,
+    "tokens": 570,
+    "input_byte_bound": 1810,
+    "status": 200,
+    "measured_prompt_tokens": 527,
+    "measured_total_tokens": 570,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "893",
+      "x-ratelimit-remaining-tokens": "7354",
+      "x-ratelimit-reset-requests": "2h34m4.8s",
+      "x-ratelimit-reset-tokens": "4.845s"
+    }
+  },
+  {
+    "time": 1793997782.2740734,
+    "tokens": 566,
+    "input_byte_bound": 984,
+    "status": 200,
+    "measured_prompt_tokens": 521,
+    "measured_total_tokens": 566,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "892",
+      "x-ratelimit-remaining-tokens": "7382",
+      "x-ratelimit-reset-requests": "2h35m31.2s",
+      "x-ratelimit-reset-tokens": "4.635s"
+    }
+  },
+  {
+    "time": 1793997787.6052325,
+    "tokens": 570,
+    "input_byte_bound": 1810,
+    "status": 200,
+    "measured_prompt_tokens": 527,
+    "measured_total_tokens": 570,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "891",
+      "x-ratelimit-remaining-tokens": "7237",
+      "x-ratelimit-reset-requests": "2h36m57.6s",
+      "x-ratelimit-reset-tokens": "5.722s"
+    }
+  },
+  {
+    "time": 1793997788.4935513,
+    "tokens": 566,
+    "input_byte_bound": 984,
+    "status": 200,
+    "measured_prompt_tokens": 521,
+    "measured_total_tokens": 566,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "890",
+      "x-ratelimit-remaining-tokens": "7348",
+      "x-ratelimit-reset-requests": "2h38m24s",
+      "x-ratelimit-reset-tokens": "4.89s"
+    }
+  },
+  {
+    "time": 1793997798.811189,
+    "tokens": 498,
+    "input_byte_bound": 1612,
+    "status": 200,
+    "measured_prompt_tokens": 442,
+    "measured_total_tokens": 498,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "889",
+      "x-ratelimit-remaining-tokens": "7443",
+      "x-ratelimit-reset-requests": "2h39m50.4s",
+      "x-ratelimit-reset-tokens": "4.177s"
+    }
+  },
+  {
+    "time": 1793997800.021538,
+    "tokens": 369,
+    "input_byte_bound": 1007,
+    "status": 200,
+    "measured_prompt_tokens": 262,
+    "measured_total_tokens": 369,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "888",
+      "x-ratelimit-remaining-tokens": "7458",
+      "x-ratelimit-reset-requests": "2h41m16.8s",
+      "x-ratelimit-reset-tokens": "4.065s"
+    }
+  },
+  {
+    "time": 1793997803.1234164,
+    "tokens": 417,
+    "input_byte_bound": 1007,
+    "status": 200,
+    "measured_prompt_tokens": 262,
+    "measured_total_tokens": 417,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "887",
+      "x-ratelimit-remaining-tokens": "7567",
+      "x-ratelimit-reset-requests": "2h42m43.2s",
+      "x-ratelimit-reset-tokens": "3.247s"
+    }
+  },
+  {
+    "time": 1793997841.3225586,
+    "tokens": 514,
+    "input_byte_bound": 1612,
+    "status": 200,
+    "measured_prompt_tokens": 442,
+    "measured_total_tokens": 514,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "886",
+      "x-ratelimit-remaining-tokens": "7358",
+      "x-ratelimit-reset-requests": "2h44m9.6s",
+      "x-ratelimit-reset-tokens": "4.815s"
+    }
+  },
+  {
+    "time": 1793997842.5374017,
+    "tokens": 369,
+    "input_byte_bound": 1007,
+    "status": 200,
+    "measured_prompt_tokens": 262,
+    "measured_total_tokens": 369,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "885",
+      "x-ratelimit-remaining-tokens": "7437",
+      "x-ratelimit-reset-requests": "2h45m36s",
+      "x-ratelimit-reset-tokens": "4.222s"
+    }
+  },
+  {
+    "time": 1793997845.5984788,
+    "tokens": 499,
+    "input_byte_bound": 1612,
+    "status": 200,
+    "measured_prompt_tokens": 442,
+    "measured_total_tokens": 499,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "884",
+      "x-ratelimit-remaining-tokens": "7296",
+      "x-ratelimit-reset-requests": "2h47m2.4s",
+      "x-ratelimit-reset-tokens": "5.279s"
+    }
+  },
+  {
+    "time": 1793997848.4526472,
+    "tokens": 291,
+    "input_byte_bound": 944,
+    "status": 200,
+    "measured_prompt_tokens": 247,
+    "measured_total_tokens": 291,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "883",
+      "x-ratelimit-remaining-tokens": "7455",
+      "x-ratelimit-reset-requests": "2h48m28.8s",
+      "x-ratelimit-reset-tokens": "4.087s"
+    }
+  },
+  {
+    "time": 1793997851.7767742,
+    "tokens": 534,
+    "input_byte_bound": 1658,
+    "status": 200,
+    "measured_prompt_tokens": 465,
+    "measured_total_tokens": 534,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "882",
+      "x-ratelimit-remaining-tokens": "7309",
+      "x-ratelimit-reset-requests": "2h49m55.199s",
+      "x-ratelimit-reset-tokens": "5.182s"
+    }
+  },
+  {
+    "time": 1793997858.9124877,
+    "tokens": 535,
+    "input_byte_bound": 1658,
+    "status": 200,
+    "measured_prompt_tokens": 465,
+    "measured_total_tokens": 535,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "881",
+      "x-ratelimit-remaining-tokens": "7335",
+      "x-ratelimit-reset-requests": "2h51m21.6s",
+      "x-ratelimit-reset-tokens": "4.987s"
+    }
+  },
+  {
+    "time": 1793997860.2215767,
+    "tokens": 291,
+    "input_byte_bound": 944,
+    "status": 200,
+    "measured_prompt_tokens": 247,
+    "measured_total_tokens": 291,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "880",
+      "x-ratelimit-remaining-tokens": "7432",
+      "x-ratelimit-reset-requests": "2h52m48s",
+      "x-ratelimit-reset-tokens": "4.26s"
+    }
+  },
+  {
+    "time": 1793997863.224363,
+    "tokens": 534,
+    "input_byte_bound": 1658,
+    "status": 200,
+    "measured_prompt_tokens": 465,
+    "measured_total_tokens": 534,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "879",
+      "x-ratelimit-remaining-tokens": "7384",
+      "x-ratelimit-reset-requests": "2h54m14.4s",
+      "x-ratelimit-reset-tokens": "4.62s"
+    }
+  },
+  {
+    "time": 1793997866.3450692,
+    "tokens": 291,
+    "input_byte_bound": 944,
+    "status": 200,
+    "measured_prompt_tokens": 247,
+    "measured_total_tokens": 291,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "878",
+      "x-ratelimit-remaining-tokens": "7430",
+      "x-ratelimit-reset-requests": "2h55m40.8s",
+      "x-ratelimit-reset-tokens": "4.274s"
+    }
+  },
+  {
+    "time": 1793997869.1732826,
+    "tokens": 298,
+    "input_byte_bound": 980,
+    "status": 200,
+    "measured_prompt_tokens": 254,
+    "measured_total_tokens": 298,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "877",
+      "x-ratelimit-remaining-tokens": "7596",
+      "x-ratelimit-reset-requests": "2h57m7.2s",
+      "x-ratelimit-reset-tokens": "3.03s"
+    }
+  },
+  {
+    "time": 1793997902.6382098,
+    "tokens": 534,
+    "input_byte_bound": 1685,
+    "status": 200,
+    "measured_prompt_tokens": 466,
+    "measured_total_tokens": 534,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "876",
+      "x-ratelimit-remaining-tokens": "7334",
+      "x-ratelimit-reset-requests": "2h58m33.6s",
+      "x-ratelimit-reset-tokens": "4.995s"
+    }
+  },
+  {
+    "time": 1793997908.553898,
+    "tokens": 534,
+    "input_byte_bound": 1685,
+    "status": 200,
+    "measured_prompt_tokens": 466,
+    "measured_total_tokens": 534,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "875",
+      "x-ratelimit-remaining-tokens": "7334",
+      "x-ratelimit-reset-requests": "3h0m0s",
+      "x-ratelimit-reset-tokens": "4.995s"
+    }
+  },
+  {
+    "time": 1793997909.8760405,
+    "tokens": 298,
+    "input_byte_bound": 980,
+    "status": 200,
+    "measured_prompt_tokens": 254,
+    "measured_total_tokens": 298,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "874",
+      "x-ratelimit-remaining-tokens": "7433",
+      "x-ratelimit-reset-requests": "3h1m26.4s",
+      "x-ratelimit-reset-tokens": "4.252s"
+    }
+  },
+  {
+    "time": 1793997919.013494,
+    "tokens": 534,
+    "input_byte_bound": 1685,
+    "status": 200,
+    "measured_prompt_tokens": 466,
+    "measured_total_tokens": 534,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "873",
+      "x-ratelimit-remaining-tokens": "7419",
+      "x-ratelimit-reset-requests": "3h2m52.8s",
+      "x-ratelimit-reset-tokens": "4.357s"
+    }
+  },
+  {
+    "time": 1793997920.0323853,
+    "tokens": 303,
+    "input_byte_bound": 980,
+    "status": 200,
+    "measured_prompt_tokens": 254,
+    "measured_total_tokens": 303,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "872",
+      "x-ratelimit-remaining-tokens": "7426",
+      "x-ratelimit-reset-requests": "3h4m19.2s",
+      "x-ratelimit-reset-tokens": "4.305s"
+    }
+  },
+  {
+    "time": 1793997923.3249276,
+    "tokens": 538,
+    "input_byte_bound": 1699,
+    "status": 200,
+    "measured_prompt_tokens": 483,
+    "measured_total_tokens": 538,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "871",
+      "x-ratelimit-remaining-tokens": "7305",
+      "x-ratelimit-reset-requests": "3h5m45.6s",
+      "x-ratelimit-reset-tokens": "5.212s"
+    }
+  },
+  {
+    "time": 1793997926.247631,
+    "tokens": 353,
+    "input_byte_bound": 985,
+    "status": 200,
+    "measured_prompt_tokens": 265,
+    "measured_total_tokens": 353,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "870",
+      "x-ratelimit-remaining-tokens": "7482",
+      "x-ratelimit-reset-requests": "3h7m12s",
+      "x-ratelimit-reset-tokens": "3.885s"
+    }
+  },
+  {
+    "time": 1793997929.3685737,
+    "tokens": 607,
+    "input_byte_bound": 985,
+    "status": 200,
+    "measured_prompt_tokens": 521,
+    "measured_total_tokens": 607,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "869",
+      "x-ratelimit-remaining-tokens": "7543",
+      "x-ratelimit-reset-requests": "3h8m38.4s",
+      "x-ratelimit-reset-tokens": "3.427s"
+    }
+  },
+  {
+    "time": 1793997962.7391,
+    "tokens": 538,
+    "input_byte_bound": 1699,
+    "status": 200,
+    "measured_prompt_tokens": 483,
+    "measured_total_tokens": 538,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "868",
+      "x-ratelimit-remaining-tokens": "7406",
+      "x-ratelimit-reset-requests": "3h10m4.8s",
+      "x-ratelimit-reset-tokens": "4.455s"
+    }
+  },
+  {
+    "time": 1793997968.654977,
+    "tokens": 546,
+    "input_byte_bound": 1699,
+    "status": 200,
+    "measured_prompt_tokens": 483,
+    "measured_total_tokens": 546,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "867",
+      "x-ratelimit-remaining-tokens": "7367",
+      "x-ratelimit-reset-requests": "3h11m31.2s",
+      "x-ratelimit-reset-tokens": "4.747s"
+    }
+  },
+  {
+    "time": 1793997969.9076114,
+    "tokens": 353,
+    "input_byte_bound": 985,
+    "status": 200,
+    "measured_prompt_tokens": 265,
+    "measured_total_tokens": 353,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "866",
+      "x-ratelimit-remaining-tokens": "7504",
+      "x-ratelimit-reset-requests": "3h12m57.6s",
+      "x-ratelimit-reset-tokens": "3.719s"
+    }
+  },
+  {
+    "time": 1793997980.1334355,
+    "tokens": 651,
+    "input_byte_bound": 2031,
+    "status": 200,
+    "measured_prompt_tokens": 588,
+    "measured_total_tokens": 651,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "865",
+      "x-ratelimit-remaining-tokens": "7301",
+      "x-ratelimit-reset-requests": "3h14m24s",
+      "x-ratelimit-reset-tokens": "5.242s"
+    }
+  },
+  {
+    "time": 1793997981.2081108,
+    "tokens": 368,
+    "input_byte_bound": 1052,
+    "status": 200,
+    "measured_prompt_tokens": 286,
+    "measured_total_tokens": 368,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "864",
+      "x-ratelimit-remaining-tokens": "7277",
+      "x-ratelimit-reset-requests": "3h15m50.4s",
+      "x-ratelimit-reset-tokens": "5.422s"
+    }
+  },
+  {
+    "time": 1793997989.4696267,
+    "tokens": 651,
+    "input_byte_bound": 2031,
+    "status": 200,
+    "measured_prompt_tokens": 588,
+    "measured_total_tokens": 651,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "863",
+      "x-ratelimit-remaining-tokens": "7212",
+      "x-ratelimit-reset-requests": "3h17m16.8s",
+      "x-ratelimit-reset-tokens": "5.91s"
+    }
+  },
+  {
+    "time": 1793997990.5240114,
+    "tokens": 367,
+    "input_byte_bound": 1052,
+    "status": 200,
+    "measured_prompt_tokens": 286,
+    "measured_total_tokens": 367,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "862",
+      "x-ratelimit-remaining-tokens": "7364",
+      "x-ratelimit-reset-requests": "3h18m43.2s",
+      "x-ratelimit-reset-tokens": "4.77s"
+    }
+  },
+  {
+    "time": 1793997993.7344413,
+    "tokens": 367,
+    "input_byte_bound": 1052,
+    "status": 200,
+    "measured_prompt_tokens": 286,
+    "measured_total_tokens": 367,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "861",
+      "x-ratelimit-remaining-tokens": "7402",
+      "x-ratelimit-reset-requests": "3h20m9.6s",
+      "x-ratelimit-reset-tokens": "4.484s"
+    }
+  },
+  {
+    "time": 1793998028.7560275,
+    "tokens": 651,
+    "input_byte_bound": 2031,
+    "status": 200,
+    "measured_prompt_tokens": 588,
+    "measured_total_tokens": 651,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "860",
+      "x-ratelimit-remaining-tokens": "7263",
+      "x-ratelimit-reset-requests": "3h21m36s",
+      "x-ratelimit-reset-tokens": "5.527s"
+    }
+  },
+  {
+    "time": 1793998029.7369645,
+    "tokens": 304,
+    "input_byte_bound": 1000,
+    "status": 200,
+    "measured_prompt_tokens": 260,
+    "measured_total_tokens": 304,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "859",
+      "x-ratelimit-remaining-tokens": "7392",
+      "x-ratelimit-reset-requests": "3h23m2.4s",
+      "x-ratelimit-reset-tokens": "4.56s"
+    }
+  },
+  {
+    "time": 1793998040.2342134,
+    "tokens": 556,
+    "input_byte_bound": 1759,
+    "status": 200,
+    "measured_prompt_tokens": 488,
+    "measured_total_tokens": 556,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "858",
+      "x-ratelimit-remaining-tokens": "7401",
+      "x-ratelimit-reset-requests": "3h24m28.8s",
+      "x-ratelimit-reset-tokens": "4.492s"
+    }
+  },
+  {
+    "time": 1793998041.5301366,
+    "tokens": 315,
+    "input_byte_bound": 1000,
+    "status": 200,
+    "measured_prompt_tokens": 260,
+    "measured_total_tokens": 315,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "857",
+      "x-ratelimit-remaining-tokens": "7397",
+      "x-ratelimit-reset-requests": "3h25m55.199s",
+      "x-ratelimit-reset-tokens": "4.522s"
+    }
+  },
+  {
+    "time": 1793998044.5938525,
+    "tokens": 558,
+    "input_byte_bound": 1759,
+    "status": 200,
+    "measured_prompt_tokens": 488,
+    "measured_total_tokens": 558,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "856",
+      "x-ratelimit-remaining-tokens": "7263",
+      "x-ratelimit-reset-requests": "3h27m21.599s",
+      "x-ratelimit-reset-tokens": "5.527s"
+    }
+  },
+  {
+    "time": 1793998049.5705106,
+    "tokens": 562,
+    "input_byte_bound": 1759,
+    "status": 200,
+    "measured_prompt_tokens": 488,
+    "measured_total_tokens": 562,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "855",
+      "x-ratelimit-remaining-tokens": "7218",
+      "x-ratelimit-reset-requests": "3h28m48s",
+      "x-ratelimit-reset-tokens": "5.865s"
+    }
+  },
+  {
+    "time": 1793998050.6180973,
+    "tokens": 305,
+    "input_byte_bound": 1000,
+    "status": 200,
+    "measured_prompt_tokens": 260,
+    "measured_total_tokens": 305,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "854",
+      "x-ratelimit-remaining-tokens": "7285",
+      "x-ratelimit-reset-requests": "3h30m14.4s",
+      "x-ratelimit-reset-tokens": "5.362s"
+    }
+  },
+  {
+    "time": 1793998088.8568597,
+    "tokens": 610,
+    "input_byte_bound": 1894,
+    "status": 200,
+    "measured_prompt_tokens": 544,
+    "measured_total_tokens": 610,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "853",
+      "x-ratelimit-remaining-tokens": "7311",
+      "x-ratelimit-reset-requests": "3h31m40.8s",
+      "x-ratelimit-reset-tokens": "5.167s"
+    }
+  },
+  {
+    "time": 1793998090.0972972,
+    "tokens": 366,
+    "input_byte_bound": 1037,
+    "status": 200,
+    "measured_prompt_tokens": 279,
+    "measured_total_tokens": 366,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "852",
+      "x-ratelimit-remaining-tokens": "7407",
+      "x-ratelimit-reset-requests": "3h33m7.199s",
+      "x-ratelimit-reset-tokens": "4.447s"
+    }
+  },
+  {
+    "time": 1793998100.334975,
+    "tokens": 610,
+    "input_byte_bound": 1894,
+    "status": 200,
+    "measured_prompt_tokens": 544,
+    "measured_total_tokens": 610,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "851",
+      "x-ratelimit-remaining-tokens": "7307",
+      "x-ratelimit-reset-requests": "3h34m33.599s",
+      "x-ratelimit-reset-tokens": "5.197s"
+    }
+  },
+  {
+    "time": 1793998101.8747005,
+    "tokens": 359,
+    "input_byte_bound": 1037,
+    "status": 200,
+    "measured_prompt_tokens": 279,
+    "measured_total_tokens": 359,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "850",
+      "x-ratelimit-remaining-tokens": "7411",
+      "x-ratelimit-reset-requests": "3h36m0s",
+      "x-ratelimit-reset-tokens": "4.417s"
+    }
+  },
+  {
+    "time": 1793998104.8034246,
+    "tokens": 356,
+    "input_byte_bound": 1037,
+    "status": 200,
+    "measured_prompt_tokens": 279,
+    "measured_total_tokens": 356,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "849",
+      "x-ratelimit-remaining-tokens": "7421",
+      "x-ratelimit-reset-requests": "3h37m26.4s",
+      "x-ratelimit-reset-tokens": "4.342s"
+    }
+  },
+  {
+    "time": 1793998109.671143,
+    "tokens": 610,
+    "input_byte_bound": 1894,
+    "status": 200,
+    "measured_prompt_tokens": 544,
+    "measured_total_tokens": 610,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "848",
+      "x-ratelimit-remaining-tokens": "7256",
+      "x-ratelimit-reset-requests": "3h38m52.8s",
+      "x-ratelimit-reset-tokens": "5.58s"
+    }
+  },
+  {
+    "time": 1793998110.7885628,
+    "tokens": 339,
+    "input_byte_bound": 969,
+    "status": 200,
+    "measured_prompt_tokens": 256,
+    "measured_total_tokens": 339,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "847",
+      "x-ratelimit-remaining-tokens": "7350",
+      "x-ratelimit-reset-requests": "3h40m19.199s",
+      "x-ratelimit-reset-tokens": "4.875s"
+    }
+  },
+  {
+    "time": 1793998148.9577272,
+    "tokens": 586,
+    "input_byte_bound": 1876,
+    "status": 200,
+    "measured_prompt_tokens": 536,
+    "measured_total_tokens": 586,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "846",
+      "x-ratelimit-remaining-tokens": "7362",
+      "x-ratelimit-reset-requests": "3h41m45.6s",
+      "x-ratelimit-reset-tokens": "4.785s"
+    }
+  },
+  {
+    "time": 1793998150.4339328,
+    "tokens": 583,
+    "input_byte_bound": 1876,
+    "status": 200,
+    "measured_prompt_tokens": 536,
+    "measured_total_tokens": 583,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "845",
+      "x-ratelimit-remaining-tokens": "7164",
+      "x-ratelimit-reset-requests": "3h43m12s",
+      "x-ratelimit-reset-tokens": "6.27s"
+    }
+  },
+  {
+    "time": 1793998153.0065222,
+    "tokens": 340,
+    "input_byte_bound": 969,
+    "status": 200,
+    "measured_prompt_tokens": 256,
+    "measured_total_tokens": 340,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "844",
+      "x-ratelimit-remaining-tokens": "7262",
+      "x-ratelimit-reset-requests": "3h44m38.4s",
+      "x-ratelimit-reset-tokens": "5.535s"
+    }
+  },
+  {
+    "time": 1793998156.2590055,
+    "tokens": 339,
+    "input_byte_bound": 969,
+    "status": 200,
+    "measured_prompt_tokens": 256,
+    "measured_total_tokens": 339,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "843",
+      "x-ratelimit-remaining-tokens": "7335",
+      "x-ratelimit-reset-requests": "3h46m4.8s",
+      "x-ratelimit-reset-tokens": "4.987s"
+    }
+  },
+  {
+    "time": 1793998164.9039633,
+    "tokens": 1113,
+    "input_byte_bound": 1876,
+    "status": 200,
+    "measured_prompt_tokens": 1048,
+    "measured_total_tokens": 1113,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "842",
+      "x-ratelimit-remaining-tokens": "7360",
+      "x-ratelimit-reset-requests": "3h47m31.2s",
+      "x-ratelimit-reset-tokens": "4.8s"
+    }
+  },
+  {
+    "time": 1793998165.8491035,
+    "tokens": 391,
+    "input_byte_bound": 989,
+    "status": 200,
+    "measured_prompt_tokens": 268,
+    "measured_total_tokens": 391,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "841",
+      "x-ratelimit-remaining-tokens": "7442",
+      "x-ratelimit-reset-requests": "3h48m57.6s",
+      "x-ratelimit-reset-tokens": "4.185s"
+    }
+  },
+  {
+    "time": 1793998209.058337,
+    "tokens": 542,
+    "input_byte_bound": 1694,
+    "status": 200,
+    "measured_prompt_tokens": 481,
+    "measured_total_tokens": 542,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "840",
+      "x-ratelimit-remaining-tokens": "7417",
+      "x-ratelimit-reset-requests": "3h50m24s",
+      "x-ratelimit-reset-tokens": "4.372s"
+    }
+  },
+  {
+    "time": 1793998210.534481,
+    "tokens": 528,
+    "input_byte_bound": 1694,
+    "status": 200,
+    "measured_prompt_tokens": 481,
+    "measured_total_tokens": 528,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "839",
+      "x-ratelimit-remaining-tokens": "7295",
+      "x-ratelimit-reset-requests": "3h51m50.4s",
+      "x-ratelimit-reset-tokens": "5.287s"
+    }
+  },
+  {
+    "time": 1793998213.4945908,
+    "tokens": 386,
+    "input_byte_bound": 989,
+    "status": 200,
+    "measured_prompt_tokens": 268,
+    "measured_total_tokens": 386,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "838",
+      "x-ratelimit-remaining-tokens": "7385",
+      "x-ratelimit-reset-requests": "3h53m16.8s",
+      "x-ratelimit-reset-tokens": "4.612s"
+    }
+  },
+  {
+    "time": 1793998216.4667227,
+    "tokens": 531,
+    "input_byte_bound": 1694,
+    "status": 200,
+    "measured_prompt_tokens": 481,
+    "measured_total_tokens": 531,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "837",
+      "x-ratelimit-remaining-tokens": "7212",
+      "x-ratelimit-reset-requests": "3h54m43.2s",
+      "x-ratelimit-reset-tokens": "5.91s"
+    }
+  },
+  {
+    "time": 1793998219.443602,
+    "tokens": 394,
+    "input_byte_bound": 989,
+    "status": 200,
+    "measured_prompt_tokens": 268,
+    "measured_total_tokens": 394,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "836",
+      "x-ratelimit-remaining-tokens": "7246",
+      "x-ratelimit-reset-requests": "3h56m9.6s",
+      "x-ratelimit-reset-tokens": "5.655s"
+    }
+  },
+  {
+    "time": 1793998225.0045393,
+    "tokens": 587,
+    "input_byte_bound": 1890,
+    "status": 200,
+    "measured_prompt_tokens": 538,
+    "measured_total_tokens": 587,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "835",
+      "x-ratelimit-remaining-tokens": "7112",
+      "x-ratelimit-reset-requests": "3h57m36s",
+      "x-ratelimit-reset-tokens": "6.66s"
+    }
+  },
+  {
+    "time": 1793998226.202909,
+    "tokens": 352,
+    "input_byte_bound": 978,
+    "status": 200,
+    "measured_prompt_tokens": 259,
+    "measured_total_tokens": 352,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "834",
+      "x-ratelimit-remaining-tokens": "7166",
+      "x-ratelimit-reset-requests": "3h59m2.4s",
+      "x-ratelimit-reset-tokens": "6.255s"
+    }
+  },
+  {
+    "time": 1793998229.1629887,
+    "tokens": 351,
+    "input_byte_bound": 978,
+    "status": 200,
+    "measured_prompt_tokens": 259,
+    "measured_total_tokens": 351,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "833",
+      "x-ratelimit-remaining-tokens": "7222",
+      "x-ratelimit-reset-requests": "4h0m28.8s",
+      "x-ratelimit-reset-tokens": "5.835s"
+    }
+  },
+  {
+    "time": 1793998270.6353903,
+    "tokens": 587,
+    "input_byte_bound": 1890,
+    "status": 200,
+    "measured_prompt_tokens": 538,
+    "measured_total_tokens": 587,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "832",
+      "x-ratelimit-remaining-tokens": "7369",
+      "x-ratelimit-reset-requests": "4h1m55.2s",
+      "x-ratelimit-reset-tokens": "4.732s"
+    }
+  },
+  {
+    "time": 1793998271.9474094,
+    "tokens": 604,
+    "input_byte_bound": 978,
+    "status": 200,
+    "measured_prompt_tokens": 515,
+    "measured_total_tokens": 604,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "831",
+      "x-ratelimit-remaining-tokens": "7455",
+      "x-ratelimit-reset-requests": "4h3m21.6s",
+      "x-ratelimit-reset-tokens": "4.087s"
+    }
+  },
+  {
+    "time": 1793998276.56758,
+    "tokens": 587,
+    "input_byte_bound": 1890,
+    "status": 200,
+    "measured_prompt_tokens": 538,
+    "measured_total_tokens": 587,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "830",
+      "x-ratelimit-remaining-tokens": "7206",
+      "x-ratelimit-reset-requests": "4h4m48s",
+      "x-ratelimit-reset-tokens": "5.955s"
+    }
+  },
+  {
+    "time": 1793998279.5440314,
+    "tokens": 571,
+    "input_byte_bound": 1800,
+    "status": 200,
+    "measured_prompt_tokens": 506,
+    "measured_total_tokens": 571,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "829",
+      "x-ratelimit-remaining-tokens": "7054",
+      "x-ratelimit-reset-requests": "4h6m14.4s",
+      "x-ratelimit-reset-tokens": "7.095s"
+    }
+  },
+  {
+    "time": 1793998281.2818294,
+    "tokens": 401,
+    "input_byte_bound": 1041,
+    "status": 200,
+    "measured_prompt_tokens": 278,
+    "measured_total_tokens": 401,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "828",
+      "x-ratelimit-remaining-tokens": "7126",
+      "x-ratelimit-reset-requests": "4h7m40.8s",
+      "x-ratelimit-reset-tokens": "6.555s"
+    }
+  },
+  {
+    "time": 1793998286.3034003,
+    "tokens": 571,
+    "input_byte_bound": 1800,
+    "status": 200,
+    "measured_prompt_tokens": 506,
+    "measured_total_tokens": 571,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "827",
+      "x-ratelimit-remaining-tokens": "6966",
+      "x-ratelimit-reset-requests": "4h9m7.199s",
+      "x-ratelimit-reset-tokens": "7.755s"
+    }
+  },
+  {
+    "time": 1793998287.6434867,
+    "tokens": 383,
+    "input_byte_bound": 1041,
+    "status": 200,
+    "measured_prompt_tokens": 278,
+    "measured_total_tokens": 383,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "826",
+      "x-ratelimit-remaining-tokens": "7049",
+      "x-ratelimit-reset-requests": "4h10m33.599s",
+      "x-ratelimit-reset-tokens": "7.132s"
+    }
+  },
+  {
+    "time": 1793998290.837832,
+    "tokens": 353,
+    "input_byte_bound": 1041,
+    "status": 200,
+    "measured_prompt_tokens": 278,
+    "measured_total_tokens": 353,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "825",
+      "x-ratelimit-remaining-tokens": "7090",
+      "x-ratelimit-reset-requests": "4h11m59.999s",
+      "x-ratelimit-reset-tokens": "6.825s"
+    }
+  },
+  {
+    "time": 1793998332.049038,
+    "tokens": 570,
+    "input_byte_bound": 1800,
+    "status": 200,
+    "measured_prompt_tokens": 506,
+    "measured_total_tokens": 570,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "824",
+      "x-ratelimit-remaining-tokens": "7401",
+      "x-ratelimit-reset-requests": "4h13m26.4s",
+      "x-ratelimit-reset-tokens": "4.492s"
+    }
+  },
+  {
+    "time": 1793998333.2959719,
+    "tokens": 399,
+    "input_byte_bound": 1081,
+    "status": 200,
+    "measured_prompt_tokens": 299,
+    "measured_total_tokens": 399,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "823",
+      "x-ratelimit-remaining-tokens": "7453",
+      "x-ratelimit-reset-requests": "4h14m52.8s",
+      "x-ratelimit-reset-tokens": "4.102s"
+    }
+  },
+  {
+    "time": 1793998339.6452334,
+    "tokens": 620,
+    "input_byte_bound": 1963,
+    "status": 200,
+    "measured_prompt_tokens": 572,
+    "measured_total_tokens": 620,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "822",
+      "x-ratelimit-remaining-tokens": "7325",
+      "x-ratelimit-reset-requests": "4h16m19.199s",
+      "x-ratelimit-reset-tokens": "5.062s"
+    }
+  },
+  {
+    "time": 1793998341.3828506,
+    "tokens": 622,
+    "input_byte_bound": 1963,
+    "status": 200,
+    "measured_prompt_tokens": 572,
+    "measured_total_tokens": 622,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "821",
+      "x-ratelimit-remaining-tokens": "7128",
+      "x-ratelimit-reset-requests": "4h17m45.599s",
+      "x-ratelimit-reset-tokens": "6.54s"
+    }
+  },
+  {
+    "time": 1793998343.9050891,
+    "tokens": 393,
+    "input_byte_bound": 1081,
+    "status": 200,
+    "measured_prompt_tokens": 299,
+    "measured_total_tokens": 393,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "820",
+      "x-ratelimit-remaining-tokens": "7178",
+      "x-ratelimit-reset-requests": "4h19m12s",
+      "x-ratelimit-reset-tokens": "6.165s"
+    }
+  },
+  {
+    "time": 1793998347.2175937,
+    "tokens": 395,
+    "input_byte_bound": 1081,
+    "status": 200,
+    "measured_prompt_tokens": 299,
+    "measured_total_tokens": 395,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "819",
+      "x-ratelimit-remaining-tokens": "7194",
+      "x-ratelimit-reset-requests": "4h20m38.4s",
+      "x-ratelimit-reset-tokens": "6.045s"
+    }
+  },
+  {
+    "time": 1793998350.9389462,
+    "tokens": 622,
+    "input_byte_bound": 1963,
+    "status": 200,
+    "measured_prompt_tokens": 572,
+    "measured_total_tokens": 622,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "818",
+      "x-ratelimit-remaining-tokens": "6937",
+      "x-ratelimit-reset-requests": "4h22m4.8s",
+      "x-ratelimit-reset-tokens": "7.972s"
+    }
+  },
+  {
+    "time": 1793998353.2934437,
+    "tokens": 293,
+    "input_byte_bound": 920,
+    "status": 200,
+    "measured_prompt_tokens": 241,
+    "measured_total_tokens": 293,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "817",
+      "x-ratelimit-remaining-tokens": "7058",
+      "x-ratelimit-reset-requests": "4h23m31.199s",
+      "x-ratelimit-reset-tokens": "7.064s"
+    }
+  },
+  {
+    "time": 1793998393.396795,
+    "tokens": 598,
+    "input_byte_bound": 1901,
+    "status": 200,
+    "measured_prompt_tokens": 547,
+    "measured_total_tokens": 598,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "816",
+      "x-ratelimit-remaining-tokens": "7357",
+      "x-ratelimit-reset-requests": "4h24m57.6s",
+      "x-ratelimit-reset-tokens": "4.822s"
+    }
+  },
+  {
+    "time": 1793998394.3566494,
+    "tokens": 342,
+    "input_byte_bound": 920,
+    "status": 200,
+    "measured_prompt_tokens": 241,
+    "measured_total_tokens": 342,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "815",
+      "x-ratelimit-remaining-tokens": "7471",
+      "x-ratelimit-reset-requests": "4h26m24s",
+      "x-ratelimit-reset-tokens": "3.967s"
+    }
+  },
+  {
+    "time": 1793998401.4837468,
+    "tokens": 598,
+    "input_byte_bound": 1901,
+    "status": 200,
+    "measured_prompt_tokens": 547,
+    "measured_total_tokens": 598,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "814",
+      "x-ratelimit-remaining-tokens": "7357",
+      "x-ratelimit-reset-requests": "4h27m50.4s",
+      "x-ratelimit-reset-tokens": "4.822s"
+    }
+  },
+  {
+    "time": 1793998402.535441,
+    "tokens": 293,
+    "input_byte_bound": 920,
+    "status": 200,
+    "measured_prompt_tokens": 241,
+    "measured_total_tokens": 293,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "813",
+      "x-ratelimit-remaining-tokens": "7474",
+      "x-ratelimit-reset-requests": "4h29m16.8s",
+      "x-ratelimit-reset-tokens": "3.945s"
+    }
+  },
+  {
+    "time": 1793998407.3183188,
+    "tokens": 1110,
+    "input_byte_bound": 1901,
+    "status": 200,
+    "measured_prompt_tokens": 1059,
+    "measured_total_tokens": 1110,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "812",
+      "x-ratelimit-remaining-tokens": "7288",
+      "x-ratelimit-reset-requests": "4h30m43.2s",
+      "x-ratelimit-reset-tokens": "5.34s"
+    }
+  },
+  {
+    "time": 1793998408.6019554,
+    "tokens": 308,
+    "input_byte_bound": 921,
+    "status": 200,
+    "measured_prompt_tokens": 243,
+    "measured_total_tokens": 308,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "811",
+      "x-ratelimit-remaining-tokens": "7402",
+      "x-ratelimit-reset-requests": "4h32m9.6s",
+      "x-ratelimit-reset-tokens": "4.484s"
+    }
+  },
+  {
+    "time": 1793998453.497745,
+    "tokens": 561,
+    "input_byte_bound": 1796,
+    "status": 200,
+    "measured_prompt_tokens": 512,
+    "measured_total_tokens": 561,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "810",
+      "x-ratelimit-remaining-tokens": "7392",
+      "x-ratelimit-reset-requests": "4h33m36s",
+      "x-ratelimit-reset-tokens": "4.56s"
+    }
+  },
+  {
+    "time": 1793998454.4892635,
+    "tokens": 559,
+    "input_byte_bound": 1796,
+    "status": 200,
+    "measured_prompt_tokens": 512,
+    "measured_total_tokens": 559,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "809",
+      "x-ratelimit-remaining-tokens": "7228",
+      "x-ratelimit-reset-requests": "4h35m2.4s",
+      "x-ratelimit-reset-tokens": "5.79s"
+    }
+  },
+  {
+    "time": 1793998457.9745932,
+    "tokens": 309,
+    "input_byte_bound": 921,
+    "status": 200,
+    "measured_prompt_tokens": 243,
+    "measured_total_tokens": 309,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "808",
+      "x-ratelimit-remaining-tokens": "7370",
+      "x-ratelimit-reset-requests": "4h36m28.8s",
+      "x-ratelimit-reset-tokens": "4.725s"
+    }
+  },
+  {
+    "time": 1793998461.5849612,
+    "tokens": 561,
+    "input_byte_bound": 1796,
+    "status": 200,
+    "measured_prompt_tokens": 512,
+    "measured_total_tokens": 561,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "807",
+      "x-ratelimit-remaining-tokens": "7202",
+      "x-ratelimit-reset-requests": "4h37m55.2s",
+      "x-ratelimit-reset-tokens": "5.985s"
+    }
+  },
+  {
+    "time": 1793998464.0570312,
+    "tokens": 308,
+    "input_byte_bound": 921,
+    "status": 200,
+    "measured_prompt_tokens": 243,
+    "measured_total_tokens": 308,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "806",
+      "x-ratelimit-remaining-tokens": "7326",
+      "x-ratelimit-reset-requests": "4h39m21.6s",
+      "x-ratelimit-reset-tokens": "5.055s"
+    }
+  },
+  {
+    "time": 1793998466.914926,
+    "tokens": 321,
+    "input_byte_bound": 945,
+    "status": 200,
+    "measured_prompt_tokens": 247,
+    "measured_total_tokens": 321,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "805",
+      "x-ratelimit-remaining-tokens": "7408",
+      "x-ratelimit-reset-requests": "4h40m48s",
+      "x-ratelimit-reset-tokens": "4.439s"
+    }
+  },
+  {
+    "time": 1793998470.221078,
+    "tokens": 506,
+    "input_byte_bound": 1650,
+    "status": 200,
+    "measured_prompt_tokens": 459,
+    "measured_total_tokens": 506,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "804",
+      "x-ratelimit-remaining-tokens": "7287",
+      "x-ratelimit-reset-requests": "4h42m14.4s",
+      "x-ratelimit-reset-tokens": "5.347s"
+    }
+  },
+  {
+    "time": 1793998473.4588346,
+    "tokens": 1969,
+    "input_byte_bound": 945,
+    "status": "reserved"
+  },
+  {
+    "time": 1793998514.5950434,
+    "tokens": 316,
+    "input_byte_bound": 945,
+    "status": 200,
+    "measured_prompt_tokens": 247,
+    "measured_total_tokens": 316,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "803",
+      "x-ratelimit-remaining-tokens": "7657",
+      "x-ratelimit-reset-requests": "4h43m40.8s",
+      "x-ratelimit-reset-tokens": "2.572s"
+    }
+  },
+  {
+    "time": 1793998524.1576905,
+    "tokens": 506,
+    "input_byte_bound": 1650,
+    "status": 200,
+    "measured_prompt_tokens": 459,
+    "measured_total_tokens": 506,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "802",
+      "x-ratelimit-remaining-tokens": "7392",
+      "x-ratelimit-reset-requests": "4h45m7.2s",
+      "x-ratelimit-reset-tokens": "4.56s"
+    }
+  },
+  {
+    "time": 1793998525.3275228,
+    "tokens": 317,
+    "input_byte_bound": 945,
+    "status": 200,
+    "measured_prompt_tokens": 247,
+    "measured_total_tokens": 317,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "801",
+      "x-ratelimit-remaining-tokens": "7562",
+      "x-ratelimit-reset-requests": "4h46m33.6s",
+      "x-ratelimit-reset-tokens": "3.285s"
+    }
+  },
+  {
+    "time": 1793998530.321966,
+    "tokens": 508,
+    "input_byte_bound": 1650,
+    "status": 200,
+    "measured_prompt_tokens": 459,
+    "measured_total_tokens": 508,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "800",
+      "x-ratelimit-remaining-tokens": "7433",
+      "x-ratelimit-reset-requests": "4h48m0s",
+      "x-ratelimit-reset-tokens": "4.252s"
+    }
+  },
+  {
+    "time": 1793998533.5597906,
+    "tokens": 512,
+    "input_byte_bound": 1609,
+    "status": 200,
+    "measured_prompt_tokens": 442,
+    "measured_total_tokens": 512,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "799",
+      "x-ratelimit-remaining-tokens": "7367",
+      "x-ratelimit-reset-requests": "4h49m26.4s",
+      "x-ratelimit-reset-tokens": "4.747s"
+    }
+  },
+  {
+    "time": 1793998534.6427264,
+    "tokens": 317,
+    "input_byte_bound": 1004,
+    "status": 200,
+    "measured_prompt_tokens": 262,
+    "measured_total_tokens": 317,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "798",
+      "x-ratelimit-remaining-tokens": "7447",
+      "x-ratelimit-reset-requests": "4h50m52.8s",
+      "x-ratelimit-reset-tokens": "4.147s"
+    }
+  },
+  {
+    "time": 1793998537.8994503,
+    "tokens": 511,
+    "input_byte_bound": 1609,
+    "status": 200,
+    "measured_prompt_tokens": 442,
+    "measured_total_tokens": 511,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "797",
+      "x-ratelimit-remaining-tokens": "7409",
+      "x-ratelimit-reset-requests": "4h52m19.2s",
+      "x-ratelimit-reset-tokens": "4.432s"
+    }
+  },
+  {
+    "time": 1793998543.6644735,
+    "tokens": 307,
+    "input_byte_bound": 1004,
+    "status": 200,
+    "measured_prompt_tokens": 262,
+    "measured_total_tokens": 307,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "796",
+      "x-ratelimit-remaining-tokens": "7581",
+      "x-ratelimit-reset-requests": "4h53m45.6s",
+      "x-ratelimit-reset-tokens": "3.142s"
+    }
+  },
+  {
+    "time": 1793998544.706789,
+    "tokens": 307,
+    "input_byte_bound": 1004,
+    "status": 200,
+    "measured_prompt_tokens": 262,
+    "measured_total_tokens": 307,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "795",
+      "x-ratelimit-remaining-tokens": "7628",
+      "x-ratelimit-reset-requests": "4h55m12s",
+      "x-ratelimit-reset-tokens": "2.79s"
+    }
+  },
+  {
+    "time": 1793998574.6960266,
+    "tokens": 512,
+    "input_byte_bound": 1609,
+    "status": 200,
+    "measured_prompt_tokens": 442,
+    "measured_total_tokens": 512,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "794",
+      "x-ratelimit-remaining-tokens": "7462",
+      "x-ratelimit-reset-requests": "4h56m38.399s",
+      "x-ratelimit-reset-tokens": "4.035s"
+    }
+  },
+  {
+    "time": 1793998585.4283404,
+    "tokens": 544,
+    "input_byte_bound": 1730,
+    "status": 200,
+    "measured_prompt_tokens": 483,
+    "measured_total_tokens": 544,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "793",
+      "x-ratelimit-remaining-tokens": "7407",
+      "x-ratelimit-reset-requests": "4h58m4.8s",
+      "x-ratelimit-reset-tokens": "4.447s"
+    }
+  },
+  {
+    "time": 1793998586.5158646,
+    "tokens": 349,
+    "input_byte_bound": 971,
+    "status": 200,
+    "measured_prompt_tokens": 255,
+    "measured_total_tokens": 349,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "792",
+      "x-ratelimit-remaining-tokens": "7508",
+      "x-ratelimit-reset-requests": "4h59m31.2s",
+      "x-ratelimit-reset-tokens": "3.69s"
+    }
+  },
+  {
+    "time": 1793998593.6606865,
+    "tokens": 541,
+    "input_byte_bound": 1730,
+    "status": 200,
+    "measured_prompt_tokens": 483,
+    "measured_total_tokens": 541,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "791",
+      "x-ratelimit-remaining-tokens": "7407",
+      "x-ratelimit-reset-requests": "5h0m57.6s",
+      "x-ratelimit-reset-tokens": "4.447s"
+    }
+  },
+  {
+    "time": 1793998595.3186991,
+    "tokens": 375,
+    "input_byte_bound": 971,
+    "status": 200,
+    "measured_prompt_tokens": 255,
+    "measured_total_tokens": 375,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "790",
+      "x-ratelimit-remaining-tokens": "7464",
+      "x-ratelimit-reset-requests": "5h2m24s",
+      "x-ratelimit-reset-tokens": "4.02s"
+    }
+  },
+  {
+    "time": 1793998597.8393314,
+    "tokens": 373,
+    "input_byte_bound": 971,
+    "status": 200,
+    "measured_prompt_tokens": 255,
+    "measured_total_tokens": 373,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "789",
+      "x-ratelimit-remaining-tokens": "7514",
+      "x-ratelimit-reset-requests": "5h3m50.399s",
+      "x-ratelimit-reset-tokens": "3.645s"
+    }
+  },
+  {
+    "time": 1793998603.7683275,
+    "tokens": 538,
+    "input_byte_bound": 1730,
+    "status": 200,
+    "measured_prompt_tokens": 483,
+    "measured_total_tokens": 538,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "788",
+      "x-ratelimit-remaining-tokens": "7409",
+      "x-ratelimit-reset-requests": "5h5m16.8s",
+      "x-ratelimit-reset-tokens": "4.432s"
+    }
+  },
+  {
+    "time": 1793998634.796631,
+    "tokens": 550,
+    "input_byte_bound": 1748,
+    "status": 200,
+    "measured_prompt_tokens": 498,
+    "measured_total_tokens": 550,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "787",
+      "x-ratelimit-remaining-tokens": "7392",
+      "x-ratelimit-reset-requests": "5h6m43.2s",
+      "x-ratelimit-reset-tokens": "4.56s"
+    }
+  },
+  {
+    "time": 1793998635.7359838,
+    "tokens": 353,
+    "input_byte_bound": 953,
+    "status": 200,
+    "measured_prompt_tokens": 253,
+    "measured_total_tokens": 353,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "786",
+      "x-ratelimit-remaining-tokens": "6616",
+      "x-ratelimit-reset-requests": "5h8m9.6s",
+      "x-ratelimit-reset-tokens": "10.379s"
+    }
+  },
+  {
+    "time": 1793998639.6692488,
+    "tokens": 361,
+    "input_byte_bound": 953,
+    "status": 200,
+    "measured_prompt_tokens": 253,
+    "measured_total_tokens": 361,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "785",
+      "x-ratelimit-remaining-tokens": "7560",
+      "x-ratelimit-reset-requests": "5h9m36s",
+      "x-ratelimit-reset-tokens": "3.3s"
+    }
+  },
+  {
+    "time": 1793998646.6669605,
+    "tokens": 549,
+    "input_byte_bound": 1748,
+    "status": 200,
+    "measured_prompt_tokens": 498,
+    "measured_total_tokens": 549,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "784",
+      "x-ratelimit-remaining-tokens": "7394",
+      "x-ratelimit-reset-requests": "5h11m2.4s",
+      "x-ratelimit-reset-tokens": "4.545s"
+    }
+  },
+  {
+    "time": 1793998653.766784,
+    "tokens": 549,
+    "input_byte_bound": 1748,
+    "status": 200,
+    "measured_prompt_tokens": 498,
+    "measured_total_tokens": 549,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "783",
+      "x-ratelimit-remaining-tokens": "7390",
+      "x-ratelimit-reset-requests": "5h12m28.8s",
+      "x-ratelimit-reset-tokens": "4.575s"
+    }
+  },
+  {
+    "time": 1793998654.7696674,
+    "tokens": 1977,
+    "input_byte_bound": 953,
+    "status": 400,
+    "measured_prompt_tokens": null,
+    "measured_total_tokens": null,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "782",
+      "x-ratelimit-remaining-tokens": "7502",
+      "x-ratelimit-reset-requests": "5h13m55.2s",
+      "x-ratelimit-reset-tokens": "3.735s"
+    }
+  },
+  {
+    "time": 1793998694.8971164,
+    "tokens": 362,
+    "input_byte_bound": 953,
+    "status": 200,
+    "measured_prompt_tokens": 253,
+    "measured_total_tokens": 362,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "781",
+      "x-ratelimit-remaining-tokens": "7635",
+      "x-ratelimit-reset-requests": "5h15m21.6s",
+      "x-ratelimit-reset-tokens": "2.737s"
+    }
+  },
+  {
+    "time": 1793998706.7676303,
+    "tokens": 544,
+    "input_byte_bound": 1742,
+    "status": 200,
+    "measured_prompt_tokens": 496,
+    "measured_total_tokens": 544,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "780",
+      "x-ratelimit-remaining-tokens": "7391",
+      "x-ratelimit-reset-requests": "5h16m48s",
+      "x-ratelimit-reset-tokens": "4.567s"
+    }
+  },
+  {
+    "time": 1793998707.936339,
+    "tokens": 372,
+    "input_byte_bound": 947,
+    "status": 200,
+    "measured_prompt_tokens": 251,
+    "measured_total_tokens": 372,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "779",
+      "x-ratelimit-remaining-tokens": "7499",
+      "x-ratelimit-reset-requests": "5h18m14.4s",
+      "x-ratelimit-reset-tokens": "3.757s"
+    }
+  },
+  {
+    "time": 1793998711.118919,
+    "tokens": 375,
+    "input_byte_bound": 947,
+    "status": 200,
+    "measured_prompt_tokens": 251,
+    "measured_total_tokens": 375,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "778",
+      "x-ratelimit-remaining-tokens": "7559",
+      "x-ratelimit-reset-requests": "5h19m40.8s",
+      "x-ratelimit-reset-tokens": "3.307s"
+    }
+  },
+  {
+    "time": 1793998714.8728828,
+    "tokens": 544,
+    "input_byte_bound": 1742,
+    "status": 200,
+    "measured_prompt_tokens": 496,
+    "measured_total_tokens": 544,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "777",
+      "x-ratelimit-remaining-tokens": "7347",
+      "x-ratelimit-reset-requests": "5h21m7.2s",
+      "x-ratelimit-reset-tokens": "4.897s"
+    }
+  },
+  {
+    "time": 1793998717.4715393,
+    "tokens": 544,
+    "input_byte_bound": 1742,
+    "status": 200,
+    "measured_prompt_tokens": 496,
+    "measured_total_tokens": 544,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "776",
+      "x-ratelimit-remaining-tokens": "7182",
+      "x-ratelimit-reset-requests": "5h22m33.6s",
+      "x-ratelimit-reset-tokens": "6.135s"
+    }
+  },
+  {
+    "time": 1793998720.3079479,
+    "tokens": 362,
+    "input_byte_bound": 947,
+    "status": 200,
+    "measured_prompt_tokens": 251,
+    "measured_total_tokens": 362,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "775",
+      "x-ratelimit-remaining-tokens": "7305",
+      "x-ratelimit-reset-requests": "5h24m0s",
+      "x-ratelimit-reset-tokens": "5.212s"
+    }
+  },
+  {
+    "time": 1793998723.6943524,
+    "tokens": 396,
+    "input_byte_bound": 1013,
+    "status": 200,
+    "measured_prompt_tokens": 276,
+    "measured_total_tokens": 396,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "774",
+      "x-ratelimit-remaining-tokens": "7331",
+      "x-ratelimit-reset-requests": "5h25m26.4s",
+      "x-ratelimit-reset-tokens": "5.017s"
+    }
+  },
+  {
+    "time": 1793998754.9986525,
+    "tokens": 506,
+    "input_byte_bound": 1618,
+    "status": 200,
+    "measured_prompt_tokens": 457,
+    "measured_total_tokens": 506,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "773",
+      "x-ratelimit-remaining-tokens": "7423",
+      "x-ratelimit-reset-requests": "5h26m52.8s",
+      "x-ratelimit-reset-tokens": "4.327s"
+    }
+  },
+  {
+    "time": 1793998766.8693306,
+    "tokens": 511,
+    "input_byte_bound": 1618,
+    "status": 200,
+    "measured_prompt_tokens": 457,
+    "measured_total_tokens": 511,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "772",
+      "x-ratelimit-remaining-tokens": "7423",
+      "x-ratelimit-reset-requests": "5h28m19.2s",
+      "x-ratelimit-reset-tokens": "4.327s"
+    }
+  },
+  {
+    "time": 1793998767.9391756,
+    "tokens": 404,
+    "input_byte_bound": 1013,
+    "status": 200,
+    "measured_prompt_tokens": 276,
+    "measured_total_tokens": 404,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "771",
+      "x-ratelimit-remaining-tokens": "7478",
+      "x-ratelimit-reset-requests": "5h29m45.6s",
+      "x-ratelimit-reset-tokens": "3.915s"
+    }
+  },
+  {
+    "time": 1793998771.4549358,
+    "tokens": 396,
+    "input_byte_bound": 1013,
+    "status": 200,
+    "measured_prompt_tokens": 276,
+    "measured_total_tokens": 396,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "770",
+      "x-ratelimit-remaining-tokens": "7515",
+      "x-ratelimit-reset-requests": "5h31m12s",
+      "x-ratelimit-reset-tokens": "3.637s"
+    }
+  },
+  {
+    "time": 1793998774.973619,
+    "tokens": 517,
+    "input_byte_bound": 1618,
+    "status": 200,
+    "measured_prompt_tokens": 457,
+    "measured_total_tokens": 517,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "769",
+      "x-ratelimit-remaining-tokens": "7360",
+      "x-ratelimit-reset-requests": "5h32m38.4s",
+      "x-ratelimit-reset-tokens": "4.8s"
+    }
+  },
+  {
+    "time": 1793998780.408609,
+    "tokens": 612,
+    "input_byte_bound": 1955,
+    "status": 200,
+    "measured_prompt_tokens": 563,
+    "measured_total_tokens": 612,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "768",
+      "x-ratelimit-remaining-tokens": "7265",
+      "x-ratelimit-reset-requests": "5h34m4.8s",
+      "x-ratelimit-reset-tokens": "5.512s"
+    }
+  },
+  {
+    "time": 1793998781.7640781,
+    "tokens": 362,
+    "input_byte_bound": 976,
+    "status": 200,
+    "measured_prompt_tokens": 261,
+    "measured_total_tokens": 362,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "767",
+      "x-ratelimit-remaining-tokens": "7393",
+      "x-ratelimit-reset-requests": "5h35m31.2s",
+      "x-ratelimit-reset-tokens": "4.552s"
+    }
+  },
+  {
+    "time": 1793998784.9558206,
+    "tokens": 361,
+    "input_byte_bound": 976,
+    "status": 200,
+    "measured_prompt_tokens": 261,
+    "measured_total_tokens": 361,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "766",
+      "x-ratelimit-remaining-tokens": "7442",
+      "x-ratelimit-reset-requests": "5h36m57.6s",
+      "x-ratelimit-reset-tokens": "4.185s"
+    }
+  },
+  {
+    "time": 1793998826.9700606,
+    "tokens": 610,
+    "input_byte_bound": 1955,
+    "status": 200,
+    "measured_prompt_tokens": 563,
+    "measured_total_tokens": 610,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "765",
+      "x-ratelimit-remaining-tokens": "7297",
+      "x-ratelimit-reset-requests": "5h38m24s",
+      "x-ratelimit-reset-tokens": "5.272s"
+    }
+  },
+  {
+    "time": 1793998827.9567277,
+    "tokens": 362,
+    "input_byte_bound": 976,
+    "status": 200,
+    "measured_prompt_tokens": 261,
+    "measured_total_tokens": 362,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "764",
+      "x-ratelimit-remaining-tokens": "7419",
+      "x-ratelimit-reset-requests": "5h39m50.399s",
+      "x-ratelimit-reset-tokens": "4.357s"
+    }
+  },
+  {
+    "time": 1793998831.5580578,
+    "tokens": 610,
+    "input_byte_bound": 1955,
+    "status": 200,
+    "measured_prompt_tokens": 563,
+    "measured_total_tokens": 610,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "763",
+      "x-ratelimit-remaining-tokens": "7148",
+      "x-ratelimit-reset-requests": "5h41m16.8s",
+      "x-ratelimit-reset-tokens": "6.39s"
+    }
+  },
+  {
+    "time": 1793998835.074632,
+    "tokens": 544,
+    "input_byte_bound": 1756,
+    "status": 200,
+    "measured_prompt_tokens": 496,
+    "measured_total_tokens": 544,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "762",
+      "x-ratelimit-remaining-tokens": "7043",
+      "x-ratelimit-reset-requests": "5h42m43.2s",
+      "x-ratelimit-reset-tokens": "7.177s"
+    }
+  },
+  {
+    "time": 1793998837.322322,
+    "tokens": 385,
+    "input_byte_bound": 925,
+    "status": 200,
+    "measured_prompt_tokens": 242,
+    "measured_total_tokens": 385,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "761",
+      "x-ratelimit-remaining-tokens": "7166",
+      "x-ratelimit-reset-requests": "5h44m9.6s",
+      "x-ratelimit-reset-tokens": "6.255s"
+    }
+  },
+  {
+    "time": 1793998841.8647625,
+    "tokens": 544,
+    "input_byte_bound": 1756,
+    "status": 200,
+    "measured_prompt_tokens": 496,
+    "measured_total_tokens": 544,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "760",
+      "x-ratelimit-remaining-tokens": "6938",
+      "x-ratelimit-reset-requests": "5h45m36s",
+      "x-ratelimit-reset-tokens": "7.965s"
+    }
+  },
+  {
+    "time": 1793998843.800123,
+    "tokens": 387,
+    "input_byte_bound": 925,
+    "status": 200,
+    "measured_prompt_tokens": 242,
+    "measured_total_tokens": 387,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "759",
+      "x-ratelimit-remaining-tokens": "7055",
+      "x-ratelimit-reset-requests": "5h47m2.399s",
+      "x-ratelimit-reset-tokens": "7.087s"
+    }
+  },
+  {
+    "time": 1793998887.0726125,
+    "tokens": 544,
+    "input_byte_bound": 1756,
+    "status": 200,
+    "measured_prompt_tokens": 496,
+    "measured_total_tokens": 544,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "758",
+      "x-ratelimit-remaining-tokens": "7373",
+      "x-ratelimit-reset-requests": "5h48m28.8s",
+      "x-ratelimit-reset-tokens": "4.702s"
+    }
+  },
+  {
+    "time": 1793998888.2659497,
+    "tokens": 387,
+    "input_byte_bound": 925,
+    "status": 200,
+    "measured_prompt_tokens": 242,
+    "measured_total_tokens": 387,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "757",
+      "x-ratelimit-remaining-tokens": "7501",
+      "x-ratelimit-reset-requests": "5h49m55.2s",
+      "x-ratelimit-reset-tokens": "3.742s"
+    }
+  },
+  {
+    "time": 1793998891.8585105,
+    "tokens": 387,
+    "input_byte_bound": 1113,
+    "status": 200,
+    "measured_prompt_tokens": 303,
+    "measured_total_tokens": 387,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "756",
+      "x-ratelimit-remaining-tokens": "7463",
+      "x-ratelimit-reset-requests": "5h51m21.6s",
+      "x-ratelimit-reset-tokens": "4.027s"
+    }
+  },
+  {
+    "time": 1793998895.174998,
+    "tokens": 644,
+    "input_byte_bound": 1995,
+    "status": 200,
+    "measured_prompt_tokens": 575,
+    "measured_total_tokens": 644,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "755",
+      "x-ratelimit-remaining-tokens": "7217",
+      "x-ratelimit-reset-requests": "5h52m48s",
+      "x-ratelimit-reset-tokens": "5.872s"
+    }
+  },
+  {
+    "time": 1793998897.751994,
+    "tokens": 381,
+    "input_byte_bound": 1113,
+    "status": 200,
+    "measured_prompt_tokens": 303,
+    "measured_total_tokens": 381,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "754",
+      "x-ratelimit-remaining-tokens": "7265",
+      "x-ratelimit-reset-requests": "5h54m14.4s",
+      "x-ratelimit-reset-tokens": "5.512s"
+    }
+  },
+  {
+    "time": 1793998901.9666216,
+    "tokens": 635,
+    "input_byte_bound": 1995,
+    "status": 200,
+    "measured_prompt_tokens": 575,
+    "measured_total_tokens": 635,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "753",
+      "x-ratelimit-remaining-tokens": "7019",
+      "x-ratelimit-reset-requests": "5h55m40.8s",
+      "x-ratelimit-reset-tokens": "7.357s"
+    }
+  },
+  {
+    "time": 1793998904.0162804,
+    "tokens": 638,
+    "input_byte_bound": 1995,
+    "status": 200,
+    "measured_prompt_tokens": 575,
+    "measured_total_tokens": 638,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "752",
+      "x-ratelimit-remaining-tokens": "6782",
+      "x-ratelimit-reset-requests": "5h57m7.2s",
+      "x-ratelimit-reset-tokens": "9.135s"
+    }
+  },
+  {
+    "time": 1793998907.2476888,
+    "tokens": 397,
+    "input_byte_bound": 1113,
+    "status": 200,
+    "measured_prompt_tokens": 303,
+    "measured_total_tokens": 397,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "751",
+      "x-ratelimit-remaining-tokens": "7097",
+      "x-ratelimit-reset-requests": "5h58m33.6s",
+      "x-ratelimit-reset-tokens": "6.772s"
+    }
+  },
+  {
+    "time": 1793998948.367174,
+    "tokens": 563,
+    "input_byte_bound": 1741,
+    "status": 200,
+    "measured_prompt_tokens": 497,
+    "measured_total_tokens": 563,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "750",
+      "x-ratelimit-remaining-tokens": "7363",
+      "x-ratelimit-reset-requests": "6h0m0s",
+      "x-ratelimit-reset-tokens": "4.777s"
+    }
+  },
+  {
+    "time": 1793998949.652068,
+    "tokens": 344,
+    "input_byte_bound": 1009,
+    "status": 200,
+    "measured_prompt_tokens": 271,
+    "measured_total_tokens": 344,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "749",
+      "x-ratelimit-remaining-tokens": "7448",
+      "x-ratelimit-reset-requests": "6h1m26.4s",
+      "x-ratelimit-reset-tokens": "4.14s"
+    }
+  },
+  {
+    "time": 1793998955.2766201,
+    "tokens": 563,
+    "input_byte_bound": 1741,
+    "status": 200,
+    "measured_prompt_tokens": 497,
+    "measured_total_tokens": 563,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "748",
+      "x-ratelimit-remaining-tokens": "7370",
+      "x-ratelimit-reset-requests": "6h2m52.8s",
+      "x-ratelimit-reset-tokens": "4.725s"
+    }
+  },
+  {
+    "time": 1793998956.6611998,
+    "tokens": 344,
+    "input_byte_bound": 1009,
+    "status": 200,
+    "measured_prompt_tokens": 271,
+    "measured_total_tokens": 344,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "747",
+      "x-ratelimit-remaining-tokens": "7443",
+      "x-ratelimit-reset-requests": "6h4m19.2s",
+      "x-ratelimit-reset-tokens": "4.177s"
+    }
+  },
+  {
+    "time": 1793998962.0677547,
+    "tokens": 561,
+    "input_byte_bound": 1741,
+    "status": 200,
+    "measured_prompt_tokens": 497,
+    "measured_total_tokens": 561,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "746",
+      "x-ratelimit-remaining-tokens": "7363",
+      "x-ratelimit-reset-requests": "6h5m45.6s",
+      "x-ratelimit-reset-tokens": "4.777s"
+    }
+  },
+  {
+    "time": 1793998963.2309568,
+    "tokens": 344,
+    "input_byte_bound": 1009,
+    "status": 200,
+    "measured_prompt_tokens": 271,
+    "measured_total_tokens": 344,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "745",
+      "x-ratelimit-remaining-tokens": "7441",
+      "x-ratelimit-reset-requests": "6h7m12s",
+      "x-ratelimit-reset-tokens": "4.192s"
+    }
+  },
+  {
+    "time": 1793998966.5324411,
+    "tokens": 364,
+    "input_byte_bound": 999,
+    "status": 200,
+    "measured_prompt_tokens": 261,
+    "measured_total_tokens": 364,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "744",
+      "x-ratelimit-remaining-tokens": "7519",
+      "x-ratelimit-reset-requests": "6h8m38.4s",
+      "x-ratelimit-reset-tokens": "3.607s"
+    }
+  },
+  {
+    "time": 1793998969.5034556,
+    "tokens": 600,
+    "input_byte_bound": 1856,
+    "status": 200,
+    "measured_prompt_tokens": 526,
+    "measured_total_tokens": 600,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "743",
+      "x-ratelimit-remaining-tokens": "7303",
+      "x-ratelimit-reset-requests": "6h10m4.8s",
+      "x-ratelimit-reset-tokens": "5.227s"
+    }
+  },
+  {
+    "time": 1793999008.4687111,
+    "tokens": 604,
+    "input_byte_bound": 1856,
+    "status": 200,
+    "measured_prompt_tokens": 526,
+    "measured_total_tokens": 604,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "742",
+      "x-ratelimit-remaining-tokens": "7334",
+      "x-ratelimit-reset-requests": "6h11m31.2s",
+      "x-ratelimit-reset-tokens": "4.995s"
+    }
+  },
+  {
+    "time": 1793999009.6500988,
+    "tokens": 379,
+    "input_byte_bound": 999,
+    "status": 200,
+    "measured_prompt_tokens": 261,
+    "measured_total_tokens": 379,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "741",
+      "x-ratelimit-remaining-tokens": "7415",
+      "x-ratelimit-reset-requests": "6h12m57.6s",
+      "x-ratelimit-reset-tokens": "4.387s"
+    }
+  },
+  {
+    "time": 1793999012.836949,
+    "tokens": 374,
+    "input_byte_bound": 999,
+    "status": 200,
+    "measured_prompt_tokens": 261,
+    "measured_total_tokens": 374,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "740",
+      "x-ratelimit-remaining-tokens": "7452",
+      "x-ratelimit-reset-requests": "6h14m24s",
+      "x-ratelimit-reset-tokens": "4.11s"
+    }
+  },
+  {
+    "time": 1793999022.168433,
+    "tokens": 602,
+    "input_byte_bound": 1856,
+    "status": 200,
+    "measured_prompt_tokens": 526,
+    "measured_total_tokens": 602,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "739",
+      "x-ratelimit-remaining-tokens": "7334",
+      "x-ratelimit-reset-requests": "6h15m50.4s",
+      "x-ratelimit-reset-tokens": "4.995s"
+    }
+  },
+  {
+    "time": 1793999023.5283458,
+    "tokens": 364,
+    "input_byte_bound": 991,
+    "status": 200,
+    "measured_prompt_tokens": 272,
+    "measured_total_tokens": 364,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "738",
+      "x-ratelimit-remaining-tokens": "7399",
+      "x-ratelimit-reset-requests": "6h17m16.8s",
+      "x-ratelimit-reset-tokens": "4.507s"
+    }
+  },
+  {
+    "time": 1793999026.6333983,
+    "tokens": 565,
+    "input_byte_bound": 1786,
+    "status": 200,
+    "measured_prompt_tokens": 518,
+    "measured_total_tokens": 565,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "737",
+      "x-ratelimit-remaining-tokens": "7207",
+      "x-ratelimit-reset-requests": "6h18m43.2s",
+      "x-ratelimit-reset-tokens": "5.947s"
+    }
+  },
+  {
+    "time": 1793999029.3970435,
+    "tokens": 365,
+    "input_byte_bound": 991,
+    "status": 200,
+    "measured_prompt_tokens": 272,
+    "measured_total_tokens": 365,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "736",
+      "x-ratelimit-remaining-tokens": "7551",
+      "x-ratelimit-reset-requests": "6h20m9.6s",
+      "x-ratelimit-reset-tokens": "3.367s"
+    }
+  },
+  {
+    "time": 1793999068.569463,
+    "tokens": 571,
+    "input_byte_bound": 1786,
+    "status": 200,
+    "measured_prompt_tokens": 518,
+    "measured_total_tokens": 571,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "735",
+      "x-ratelimit-remaining-tokens": "7351",
+      "x-ratelimit-reset-requests": "6h21m36s",
+      "x-ratelimit-reset-tokens": "4.867s"
+    }
+  },
+  {
+    "time": 1793999069.8638527,
+    "tokens": 379,
+    "input_byte_bound": 991,
+    "status": 200,
+    "measured_prompt_tokens": 272,
+    "measured_total_tokens": 379,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "734",
+      "x-ratelimit-remaining-tokens": "7432",
+      "x-ratelimit-reset-requests": "6h23m2.4s",
+      "x-ratelimit-reset-tokens": "4.26s"
+    }
+  },
+  {
+    "time": 1793999072.938213,
+    "tokens": 577,
+    "input_byte_bound": 1786,
+    "status": 200,
+    "measured_prompt_tokens": 518,
+    "measured_total_tokens": 577,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "733",
+      "x-ratelimit-remaining-tokens": "7221",
+      "x-ratelimit-reset-requests": "6h24m28.8s",
+      "x-ratelimit-reset-tokens": "5.842s"
+    }
+  },
+  {
+    "time": 1793999075.962176,
+    "tokens": 308,
+    "input_byte_bound": 1004,
+    "status": 200,
+    "measured_prompt_tokens": 263,
+    "measured_total_tokens": 308,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "732",
+      "x-ratelimit-remaining-tokens": "7566",
+      "x-ratelimit-reset-requests": "6h25m55.2s",
+      "x-ratelimit-reset-tokens": "3.255s"
+    }
+  },
+  {
+    "time": 1793999083.6306279,
+    "tokens": 608,
+    "input_byte_bound": 1911,
+    "status": 200,
+    "measured_prompt_tokens": 543,
+    "measured_total_tokens": 608,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "731",
+      "x-ratelimit-remaining-tokens": "7317",
+      "x-ratelimit-reset-requests": "6h27m21.6s",
+      "x-ratelimit-reset-tokens": "5.122s"
+    }
+  },
+  {
+    "time": 1793999084.7458773,
+    "tokens": 308,
+    "input_byte_bound": 1004,
+    "status": 200,
+    "measured_prompt_tokens": 263,
+    "measured_total_tokens": 308,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "730",
+      "x-ratelimit-remaining-tokens": "7402",
+      "x-ratelimit-reset-requests": "6h28m48s",
+      "x-ratelimit-reset-tokens": "4.484s"
+    }
+  },
+  {
+    "time": 1793999089.4978998,
+    "tokens": 608,
+    "input_byte_bound": 1911,
+    "status": 200,
+    "measured_prompt_tokens": 543,
+    "measured_total_tokens": 608,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "729",
+      "x-ratelimit-remaining-tokens": "7229",
+      "x-ratelimit-reset-requests": "6h30m14.4s",
+      "x-ratelimit-reset-tokens": "5.782s"
+    }
+  },
+  {
+    "time": 1793999128.6709533,
+    "tokens": 608,
+    "input_byte_bound": 1911,
+    "status": 200,
+    "measured_prompt_tokens": 543,
+    "measured_total_tokens": 608,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "728",
+      "x-ratelimit-remaining-tokens": "7326",
+      "x-ratelimit-reset-requests": "6h31m40.8s",
+      "x-ratelimit-reset-tokens": "5.055s"
+    }
+  },
+  {
+    "time": 1793999130.0298555,
+    "tokens": 312,
+    "input_byte_bound": 1004,
+    "status": 200,
+    "measured_prompt_tokens": 263,
+    "measured_total_tokens": 312,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "727",
+      "x-ratelimit-remaining-tokens": "7411",
+      "x-ratelimit-reset-requests": "6h33m7.2s",
+      "x-ratelimit-reset-tokens": "4.417s"
+    }
+  },
+  {
+    "time": 1793999132.7735646,
+    "tokens": 306,
+    "input_byte_bound": 996,
+    "status": 200,
+    "measured_prompt_tokens": 261,
+    "measured_total_tokens": 306,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "726",
+      "x-ratelimit-remaining-tokens": "7513",
+      "x-ratelimit-reset-requests": "6h34m33.6s",
+      "x-ratelimit-reset-tokens": "3.652s"
+    }
+  },
+  {
+    "time": 1793999136.189453,
+    "tokens": 599,
+    "input_byte_bound": 1853,
+    "status": 200,
+    "measured_prompt_tokens": 526,
+    "measured_total_tokens": 599,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "725",
+      "x-ratelimit-remaining-tokens": "7341",
+      "x-ratelimit-reset-requests": "6h36m0s",
+      "x-ratelimit-reset-tokens": "4.942s"
+    }
+  },
+  {
+    "time": 1793999139.060526,
+    "tokens": 305,
+    "input_byte_bound": 996,
+    "status": 200,
+    "measured_prompt_tokens": 261,
+    "measured_total_tokens": 305,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "724",
+      "x-ratelimit-remaining-tokens": "7425",
+      "x-ratelimit-reset-requests": "6h37m26.4s",
+      "x-ratelimit-reset-tokens": "4.312s"
+    }
+  },
+  {
+    "time": 1793999143.7327592,
+    "tokens": 590,
+    "input_byte_bound": 1853,
+    "status": 200,
+    "measured_prompt_tokens": 526,
+    "measured_total_tokens": 590,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "723",
+      "x-ratelimit-remaining-tokens": "7268",
+      "x-ratelimit-reset-requests": "6h38m52.8s",
+      "x-ratelimit-reset-tokens": "5.49s"
+    }
+  },
+  {
+    "time": 1793999145.366319,
+    "tokens": 306,
+    "input_byte_bound": 996,
+    "status": 200,
+    "measured_prompt_tokens": 261,
+    "measured_total_tokens": 306,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "722",
+      "x-ratelimit-remaining-tokens": "7348",
+      "x-ratelimit-reset-requests": "6h40m19.2s",
+      "x-ratelimit-reset-tokens": "4.89s"
+    }
+  },
+  {
+    "time": 1793999149.5984826,
+    "tokens": 590,
+    "input_byte_bound": 1853,
+    "status": 200,
+    "measured_prompt_tokens": 526,
+    "measured_total_tokens": 590,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "721",
+      "x-ratelimit-remaining-tokens": "7189",
+      "x-ratelimit-reset-requests": "6h41m45.6s",
+      "x-ratelimit-reset-tokens": "6.082s"
+    }
+  },
+  {
+    "time": 1793999151.6049256,
+    "tokens": 363,
+    "input_byte_bound": 987,
+    "status": 200,
+    "measured_prompt_tokens": 265,
+    "measured_total_tokens": 363,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "720",
+      "x-ratelimit-remaining-tokens": "7280",
+      "x-ratelimit-reset-requests": "6h43m12s",
+      "x-ratelimit-reset-tokens": "5.399s"
+    }
+  },
+  {
+    "time": 1793999190.1309612,
+    "tokens": 582,
+    "input_byte_bound": 1813,
+    "status": 200,
+    "measured_prompt_tokens": 527,
+    "measured_total_tokens": 582,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "719",
+      "x-ratelimit-remaining-tokens": "7340",
+      "x-ratelimit-reset-requests": "6h44m38.4s",
+      "x-ratelimit-reset-tokens": "4.95s"
+    }
+  },
+  {
+    "time": 1793999191.269572,
+    "tokens": 396,
+    "input_byte_bound": 987,
+    "status": 200,
+    "measured_prompt_tokens": 265,
+    "measured_total_tokens": 396,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "718",
+      "x-ratelimit-remaining-tokens": "7429",
+      "x-ratelimit-reset-requests": "6h46m4.8s",
+      "x-ratelimit-reset-tokens": "4.282s"
+    }
+  },
+  {
+    "time": 1793999196.291156,
+    "tokens": 585,
+    "input_byte_bound": 1813,
+    "status": 200,
+    "measured_prompt_tokens": 527,
+    "measured_total_tokens": 585,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "717",
+      "x-ratelimit-remaining-tokens": "7190",
+      "x-ratelimit-reset-requests": "6h47m31.199s",
+      "x-ratelimit-reset-tokens": "6.075s"
+    }
+  },
+  {
+    "time": 1793999203.8334754,
+    "tokens": 590,
+    "input_byte_bound": 1813,
+    "status": 200,
+    "measured_prompt_tokens": 527,
+    "measured_total_tokens": 590,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "716",
+      "x-ratelimit-remaining-tokens": "7347",
+      "x-ratelimit-reset-requests": "6h48m57.6s",
+      "x-ratelimit-reset-tokens": "4.897s"
+    }
+  },
+  {
+    "time": 1793999205.176976,
+    "tokens": 393,
+    "input_byte_bound": 987,
+    "status": 200,
+    "measured_prompt_tokens": 265,
+    "measured_total_tokens": 393,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "715",
+      "x-ratelimit-remaining-tokens": "7431",
+      "x-ratelimit-reset-requests": "6h50m23.999s",
+      "x-ratelimit-reset-tokens": "4.267s"
+    }
+  },
+  {
+    "time": 1793999209.6990962,
+    "tokens": 630,
+    "input_byte_bound": 1975,
+    "status": 200,
+    "measured_prompt_tokens": 574,
+    "measured_total_tokens": 630,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "714",
+      "x-ratelimit-remaining-tokens": "7135",
+      "x-ratelimit-reset-requests": "6h51m50.399s",
+      "x-ratelimit-reset-tokens": "6.487s"
+    }
+  },
+  {
+    "time": 1793999211.0598722,
+    "tokens": 360,
+    "input_byte_bound": 1014,
+    "status": 200,
+    "measured_prompt_tokens": 277,
+    "measured_total_tokens": 360,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "713",
+      "x-ratelimit-remaining-tokens": "7225",
+      "x-ratelimit-reset-requests": "6h53m16.8s",
+      "x-ratelimit-reset-tokens": "5.812s"
+    }
+  },
+  {
+    "time": 1793999214.378657,
+    "tokens": 360,
+    "input_byte_bound": 1014,
+    "status": 200,
+    "measured_prompt_tokens": 277,
+    "measured_total_tokens": 360,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "712",
+      "x-ratelimit-remaining-tokens": "7267",
+      "x-ratelimit-reset-requests": "6h54m43.199s",
+      "x-ratelimit-reset-tokens": "5.497s"
+    }
+  },
+  {
+    "time": 1793999251.3706155,
+    "tokens": 625,
+    "input_byte_bound": 1975,
+    "status": 200,
+    "measured_prompt_tokens": 574,
+    "measured_total_tokens": 625,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "711",
+      "x-ratelimit-remaining-tokens": "7295",
+      "x-ratelimit-reset-requests": "6h56m9.6s",
+      "x-ratelimit-reset-tokens": "5.287s"
+    }
+  },
+  {
+    "time": 1793999252.741438,
+    "tokens": 333,
+    "input_byte_bound": 1014,
+    "status": 200,
+    "measured_prompt_tokens": 277,
+    "measured_total_tokens": 333,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "710",
+      "x-ratelimit-remaining-tokens": "7385",
+      "x-ratelimit-reset-requests": "6h57m36s",
+      "x-ratelimit-reset-tokens": "4.612s"
+    }
+  },
+  {
+    "time": 1793999263.9341662,
+    "tokens": 625,
+    "input_byte_bound": 1975,
+    "status": 200,
+    "measured_prompt_tokens": 574,
+    "measured_total_tokens": 625,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "709",
+      "x-ratelimit-remaining-tokens": "7298",
+      "x-ratelimit-reset-requests": "6h59m2.399s",
+      "x-ratelimit-reset-tokens": "5.265s"
+    }
+  },
+  {
+    "time": 1793999265.2779338,
+    "tokens": 573,
+    "input_byte_bound": 1777,
+    "status": 200,
+    "measured_prompt_tokens": 503,
+    "measured_total_tokens": 573,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "708",
+      "x-ratelimit-remaining-tokens": "7366",
+      "x-ratelimit-reset-requests": "7h0m28.8s",
+      "x-ratelimit-reset-tokens": "4.755s"
+    }
+  },
+  {
+    "time": 1793999312.8163595,
+    "tokens": 303,
+    "input_byte_bound": 982,
+    "status": 200,
+    "measured_prompt_tokens": 258,
+    "measured_total_tokens": 303,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "707",
+      "x-ratelimit-remaining-tokens": "7614",
+      "x-ratelimit-reset-requests": "7h1m55.199s",
+      "x-ratelimit-reset-tokens": "2.895s"
+    }
+  },
+  {
+    "time": 1793999314.319898,
+    "tokens": 302,
+    "input_byte_bound": 982,
+    "status": 200,
+    "measured_prompt_tokens": 258,
+    "measured_total_tokens": 302,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "706",
+      "x-ratelimit-remaining-tokens": "7614",
+      "x-ratelimit-reset-requests": "7h3m21.6s",
+      "x-ratelimit-reset-tokens": "2.895s"
+    }
+  },
+  {
+    "time": 1793999317.5588977,
+    "tokens": 571,
+    "input_byte_bound": 1777,
+    "status": 200,
+    "measured_prompt_tokens": 503,
+    "measured_total_tokens": 571,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "705",
+      "x-ratelimit-remaining-tokens": "7366",
+      "x-ratelimit-reset-requests": "7h4m48s",
+      "x-ratelimit-reset-tokens": "4.755s"
+    }
+  },
+  {
+    "time": 1793999320.3719447,
+    "tokens": 571,
+    "input_byte_bound": 1777,
+    "status": 200,
+    "measured_prompt_tokens": 503,
+    "measured_total_tokens": 571,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "704",
+      "x-ratelimit-remaining-tokens": "7207",
+      "x-ratelimit-reset-requests": "7h6m14.399s",
+      "x-ratelimit-reset-tokens": "5.947s"
+    }
+  },
+  {
+    "time": 1793999323.315996,
+    "tokens": 302,
+    "input_byte_bound": 982,
+    "status": 200,
+    "measured_prompt_tokens": 258,
+    "measured_total_tokens": 302,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "703",
+      "x-ratelimit-remaining-tokens": "7551",
+      "x-ratelimit-reset-requests": "7h7m40.8s",
+      "x-ratelimit-reset-tokens": "3.367s"
+    }
+  },
+  {
+    "time": 1793999326.4548368,
+    "tokens": 340,
+    "input_byte_bound": 970,
+    "status": 200,
+    "measured_prompt_tokens": 256,
+    "measured_total_tokens": 340,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "702",
+      "x-ratelimit-remaining-tokens": "7613",
+      "x-ratelimit-reset-requests": "7h9m7.199s",
+      "x-ratelimit-reset-tokens": "2.902s"
+    }
+  },
+  {
+    "time": 1793999329.899621,
+    "tokens": 600,
+    "input_byte_bound": 1931,
+    "status": 200,
+    "measured_prompt_tokens": 552,
+    "measured_total_tokens": 600,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "701",
+      "x-ratelimit-remaining-tokens": "7317",
+      "x-ratelimit-reset-requests": "7h10m33.6s",
+      "x-ratelimit-reset-tokens": "5.122s"
+    }
+  },
+  {
+    "time": 1793999333.02422,
+    "tokens": 600,
+    "input_byte_bound": 1931,
+    "status": 200,
+    "measured_prompt_tokens": 552,
+    "measured_total_tokens": 600,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "700",
+      "x-ratelimit-remaining-tokens": "7140",
+      "x-ratelimit-reset-requests": "7h12m0s",
+      "x-ratelimit-reset-tokens": "6.45s"
+    }
+  },
+  {
+    "time": 1793999336.2453578,
+    "tokens": 340,
+    "input_byte_bound": 970,
+    "status": 200,
+    "measured_prompt_tokens": 256,
+    "measured_total_tokens": 340,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "699",
+      "x-ratelimit-remaining-tokens": "7235",
+      "x-ratelimit-reset-requests": "7h13m26.399s",
+      "x-ratelimit-reset-tokens": "5.737s"
+    }
+  },
+  {
+    "time": 1793999338.8649175,
+    "tokens": 340,
+    "input_byte_bound": 970,
+    "status": 200,
+    "measured_prompt_tokens": 256,
+    "measured_total_tokens": 340,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "698",
+      "x-ratelimit-remaining-tokens": "7310",
+      "x-ratelimit-reset-requests": "7h14m52.8s",
+      "x-ratelimit-reset-tokens": "5.175s"
+    }
+  },
+  {
+    "time": 1793999380.4726975,
+    "tokens": 600,
+    "input_byte_bound": 1931,
+    "status": 200,
+    "measured_prompt_tokens": 552,
+    "measured_total_tokens": 600,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "697",
+      "x-ratelimit-remaining-tokens": "7320",
+      "x-ratelimit-reset-requests": "7h16m19.2s",
+      "x-ratelimit-reset-tokens": "5.1s"
+    }
+  },
+  {
+    "time": 1793999381.5498333,
+    "tokens": 367,
+    "input_byte_bound": 969,
+    "status": 200,
+    "measured_prompt_tokens": 255,
+    "measured_total_tokens": 367,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "696",
+      "x-ratelimit-remaining-tokens": "7423",
+      "x-ratelimit-reset-requests": "7h17m45.6s",
+      "x-ratelimit-reset-tokens": "4.327s"
+    }
+  },
+  {
+    "time": 1793999385.086452,
+    "tokens": 482,
+    "input_byte_bound": 1574,
+    "status": 200,
+    "measured_prompt_tokens": 435,
+    "measured_total_tokens": 482,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "695",
+      "x-ratelimit-remaining-tokens": "7287",
+      "x-ratelimit-reset-requests": "7h19m12s",
+      "x-ratelimit-reset-tokens": "5.347s"
+    }
+  },
+  {
+    "time": 1793999387.9623215,
+    "tokens": 482,
+    "input_byte_bound": 1574,
+    "status": 200,
+    "measured_prompt_tokens": 435,
+    "measured_total_tokens": 482,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "694",
+      "x-ratelimit-remaining-tokens": "7222",
+      "x-ratelimit-reset-requests": "7h20m38.399s",
+      "x-ratelimit-reset-tokens": "5.835s"
+    }
+  },
+  {
+    "time": 1793999391.0795956,
+    "tokens": 356,
+    "input_byte_bound": 969,
+    "status": 200,
+    "measured_prompt_tokens": 255,
+    "measured_total_tokens": 356,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "693",
+      "x-ratelimit-remaining-tokens": "7331",
+      "x-ratelimit-reset-requests": "7h22m4.8s",
+      "x-ratelimit-reset-tokens": "5.017s"
+    }
+  },
+  {
+    "time": 1793999394.0786812,
+    "tokens": 377,
+    "input_byte_bound": 969,
+    "status": 200,
+    "measured_prompt_tokens": 255,
+    "measured_total_tokens": 377,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "692",
+      "x-ratelimit-remaining-tokens": "7389",
+      "x-ratelimit-reset-requests": "7h23m31.2s",
+      "x-ratelimit-reset-tokens": "4.582s"
+    }
+  },
+  {
+    "time": 1793999397.3046224,
+    "tokens": 482,
+    "input_byte_bound": 1574,
+    "status": 200,
+    "measured_prompt_tokens": 435,
+    "measured_total_tokens": 482,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "691",
+      "x-ratelimit-remaining-tokens": "7243",
+      "x-ratelimit-reset-requests": "7h24m57.6s",
+      "x-ratelimit-reset-tokens": "5.677s"
+    }
+  },
+  {
+    "time": 1793999440.5748234,
+    "tokens": 638,
+    "input_byte_bound": 2037,
+    "status": 200,
+    "measured_prompt_tokens": 586,
+    "measured_total_tokens": 638,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "690",
+      "x-ratelimit-remaining-tokens": "7284",
+      "x-ratelimit-reset-requests": "7h26m24s",
+      "x-ratelimit-reset-tokens": "5.37s"
+    }
+  },
+  {
+    "time": 1793999442.0180552,
+    "tokens": 379,
+    "input_byte_bound": 1032,
+    "status": 200,
+    "measured_prompt_tokens": 274,
+    "measured_total_tokens": 379,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "689",
+      "x-ratelimit-remaining-tokens": "7362",
+      "x-ratelimit-reset-requests": "7h27m50.4s",
+      "x-ratelimit-reset-tokens": "4.785s"
+    }
+  },
+  {
+    "time": 1793999445.1108527,
+    "tokens": 636,
+    "input_byte_bound": 2037,
+    "status": 200,
+    "measured_prompt_tokens": 586,
+    "measured_total_tokens": 636,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "688",
+      "x-ratelimit-remaining-tokens": "7084",
+      "x-ratelimit-reset-requests": "7h29m16.8s",
+      "x-ratelimit-reset-tokens": "6.87s"
+    }
+  },
+  {
+    "time": 1793999447.9465587,
+    "tokens": 379,
+    "input_byte_bound": 1032,
+    "status": 200,
+    "measured_prompt_tokens": 274,
+    "measured_total_tokens": 379,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "687",
+      "x-ratelimit-remaining-tokens": "7170",
+      "x-ratelimit-reset-requests": "7h30m43.2s",
+      "x-ratelimit-reset-tokens": "6.225s"
+    }
+  },
+  {
+    "time": 1793999451.3380165,
+    "tokens": 642,
+    "input_byte_bound": 1032,
+    "status": 200,
+    "measured_prompt_tokens": 530,
+    "measured_total_tokens": 642,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "686",
+      "x-ratelimit-remaining-tokens": "7206",
+      "x-ratelimit-reset-requests": "7h32m9.6s",
+      "x-ratelimit-reset-tokens": "5.955s"
+    }
+  },
+  {
+    "time": 1793999457.4056766,
+    "tokens": 635,
+    "input_byte_bound": 2037,
+    "status": 200,
+    "measured_prompt_tokens": 586,
+    "measured_total_tokens": 635,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "685",
+      "x-ratelimit-remaining-tokens": "7097",
+      "x-ratelimit-reset-requests": "7h33m36s",
+      "x-ratelimit-reset-tokens": "6.772s"
+    }
+  },
+  {
+    "time": 1793999458.439115,
+    "tokens": 395,
+    "input_byte_bound": 971,
+    "status": 200,
+    "measured_prompt_tokens": 253,
+    "measured_total_tokens": 395,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "684",
+      "x-ratelimit-remaining-tokens": "7208",
+      "x-ratelimit-reset-requests": "7h35m2.4s",
+      "x-ratelimit-reset-tokens": "5.94s"
+    }
+  },
+  {
+    "time": 1793999500.6754663,
+    "tokens": 539,
+    "input_byte_bound": 1703,
+    "status": 200,
+    "measured_prompt_tokens": 479,
+    "measured_total_tokens": 539,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "683",
+      "x-ratelimit-remaining-tokens": "7378",
+      "x-ratelimit-reset-requests": "7h36m28.8s",
+      "x-ratelimit-reset-tokens": "4.665s"
+    }
+  },
+  {
+    "time": 1793999502.2195346,
+    "tokens": 368,
+    "input_byte_bound": 971,
+    "status": 200,
+    "measured_prompt_tokens": 253,
+    "measured_total_tokens": 368,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "682",
+      "x-ratelimit-remaining-tokens": "7516",
+      "x-ratelimit-reset-requests": "7h37m55.2s",
+      "x-ratelimit-reset-tokens": "3.63s"
+    }
+  },
+  {
+    "time": 1793999505.3430977,
+    "tokens": 539,
+    "input_byte_bound": 1703,
+    "status": 200,
+    "measured_prompt_tokens": 479,
+    "measured_total_tokens": 539,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "681",
+      "x-ratelimit-remaining-tokens": "7322",
+      "x-ratelimit-reset-requests": "7h39m21.6s",
+      "x-ratelimit-reset-tokens": "5.085s"
+    }
+  },
+  {
+    "time": 1793999508.0362227,
+    "tokens": 367,
+    "input_byte_bound": 971,
+    "status": 200,
+    "measured_prompt_tokens": 253,
+    "measured_total_tokens": 367,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "680",
+      "x-ratelimit-remaining-tokens": "7394",
+      "x-ratelimit-reset-requests": "7h40m48s",
+      "x-ratelimit-reset-tokens": "4.545s"
+    }
+  },
+  {
+    "time": 1793999511.4720337,
+    "tokens": 541,
+    "input_byte_bound": 1703,
+    "status": 200,
+    "measured_prompt_tokens": 479,
+    "measured_total_tokens": 541,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "679",
+      "x-ratelimit-remaining-tokens": "7237",
+      "x-ratelimit-reset-requests": "7h42m14.4s",
+      "x-ratelimit-reset-tokens": "5.722s"
+    }
+  },
+  {
+    "time": 1793999514.3648,
+    "tokens": 308,
+    "input_byte_bound": 915,
+    "status": 200,
+    "measured_prompt_tokens": 242,
+    "measured_total_tokens": 308,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "678",
+      "x-ratelimit-remaining-tokens": "7348",
+      "x-ratelimit-reset-requests": "7h43m40.8s",
+      "x-ratelimit-reset-tokens": "4.89s"
+    }
+  },
+  {
+    "time": 1793999517.5066252,
+    "tokens": 510,
+    "input_byte_bound": 1629,
+    "status": 200,
+    "measured_prompt_tokens": 460,
+    "measured_total_tokens": 510,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "677",
+      "x-ratelimit-remaining-tokens": "7216",
+      "x-ratelimit-reset-requests": "7h45m7.2s",
+      "x-ratelimit-reset-tokens": "5.88s"
+    }
+  },
+  {
+    "time": 1793999520.491141,
+    "tokens": 510,
+    "input_byte_bound": 1629,
+    "status": 200,
+    "measured_prompt_tokens": 460,
+    "measured_total_tokens": 510,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "676",
+      "x-ratelimit-remaining-tokens": "7141",
+      "x-ratelimit-reset-requests": "7h46m33.6s",
+      "x-ratelimit-reset-tokens": "6.442s"
+    }
+  },
+  {
+    "time": 1793999523.7052033,
+    "tokens": 315,
+    "input_byte_bound": 915,
+    "status": 200,
+    "measured_prompt_tokens": 242,
+    "measured_total_tokens": 315,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "675",
+      "x-ratelimit-remaining-tokens": "7256",
+      "x-ratelimit-reset-requests": "7h48m0s",
+      "x-ratelimit-reset-tokens": "5.58s"
+    }
+  },
+  {
+    "time": 1793999526.8034813,
+    "tokens": 294,
+    "input_byte_bound": 915,
+    "status": 200,
+    "measured_prompt_tokens": 242,
+    "measured_total_tokens": 294,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "674",
+      "x-ratelimit-remaining-tokens": "7355",
+      "x-ratelimit-reset-requests": "7h49m26.4s",
+      "x-ratelimit-reset-tokens": "4.837s"
+    }
+  },
+  {
+    "time": 1793999565.4440808,
+    "tokens": 510,
+    "input_byte_bound": 1629,
+    "status": 200,
+    "measured_prompt_tokens": 460,
+    "measured_total_tokens": 510,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "673",
+      "x-ratelimit-remaining-tokens": "7420",
+      "x-ratelimit-reset-requests": "7h50m52.8s",
+      "x-ratelimit-reset-tokens": "4.35s"
+    }
+  },
+  {
+    "time": 1793999568.1368594,
+    "tokens": 552,
+    "input_byte_bound": 1700,
+    "status": 200,
+    "measured_prompt_tokens": 479,
+    "measured_total_tokens": 552,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "672",
+      "x-ratelimit-remaining-tokens": "7298",
+      "x-ratelimit-reset-requests": "7h52m19.2s",
+      "x-ratelimit-reset-tokens": "5.265s"
+    }
+  },
+  {
+    "time": 1793999569.865116,
+    "tokens": 302,
+    "input_byte_bound": 968,
+    "status": 200,
+    "measured_prompt_tokens": 253,
+    "measured_total_tokens": 302,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "671",
+      "x-ratelimit-remaining-tokens": "7382",
+      "x-ratelimit-reset-requests": "7h53m45.6s",
+      "x-ratelimit-reset-tokens": "4.635s"
+    }
+  },
+  {
+    "time": 1793999574.4660306,
+    "tokens": 551,
+    "input_byte_bound": 1700,
+    "status": 200,
+    "measured_prompt_tokens": 479,
+    "measured_total_tokens": 551,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "670",
+      "x-ratelimit-remaining-tokens": "7275",
+      "x-ratelimit-reset-requests": "7h55m12s",
+      "x-ratelimit-reset-tokens": "5.437s"
+    }
+  },
+  {
+    "time": 1793999575.8289213,
+    "tokens": 297,
+    "input_byte_bound": 968,
+    "status": 200,
+    "measured_prompt_tokens": 253,
+    "measured_total_tokens": 297,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "669",
+      "x-ratelimit-remaining-tokens": "7357",
+      "x-ratelimit-reset-requests": "7h56m38.4s",
+      "x-ratelimit-reset-tokens": "4.822s"
+    }
+  },
+  {
+    "time": 1793999580.5922606,
+    "tokens": 552,
+    "input_byte_bound": 1700,
+    "status": 200,
+    "measured_prompt_tokens": 479,
+    "measured_total_tokens": 552,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "668",
+      "x-ratelimit-remaining-tokens": "7252",
+      "x-ratelimit-reset-requests": "7h58m4.8s",
+      "x-ratelimit-reset-tokens": "5.61s"
+    }
+  },
+  {
+    "time": 1793999582.2814288,
+    "tokens": 297,
+    "input_byte_bound": 968,
+    "status": 200,
+    "measured_prompt_tokens": 253,
+    "measured_total_tokens": 297,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "667",
+      "x-ratelimit-remaining-tokens": "7341",
+      "x-ratelimit-reset-requests": "7h59m31.2s",
+      "x-ratelimit-reset-tokens": "4.942s"
+    }
+  },
+  {
+    "time": 1793999586.9044046,
+    "tokens": 570,
+    "input_byte_bound": 1767,
+    "status": 200,
+    "measured_prompt_tokens": 504,
+    "measured_total_tokens": 570,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "666",
+      "x-ratelimit-remaining-tokens": "7200",
+      "x-ratelimit-reset-requests": "8h0m57.6s",
+      "x-ratelimit-reset-tokens": "6s"
+    }
+  },
+  {
+    "time": 1793999588.3630214,
+    "tokens": 361,
+    "input_byte_bound": 936,
+    "status": 200,
+    "measured_prompt_tokens": 250,
+    "measured_total_tokens": 361,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "665",
+      "x-ratelimit-remaining-tokens": "7270",
+      "x-ratelimit-reset-requests": "8h2m24s",
+      "x-ratelimit-reset-tokens": "5.475s"
+    }
+  },
+  {
+    "time": 1793999628.2384346,
+    "tokens": 569,
+    "input_byte_bound": 1767,
+    "status": 200,
+    "measured_prompt_tokens": 504,
+    "measured_total_tokens": 569,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "664",
+      "x-ratelimit-remaining-tokens": "7384",
+      "x-ratelimit-reset-requests": "8h3m50.4s",
+      "x-ratelimit-reset-tokens": "4.62s"
+    }
+  },
+  {
+    "time": 1793999629.6083274,
+    "tokens": 363,
+    "input_byte_bound": 936,
+    "status": 200,
+    "measured_prompt_tokens": 250,
+    "measured_total_tokens": 363,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "663",
+      "x-ratelimit-remaining-tokens": "7429",
+      "x-ratelimit-reset-requests": "8h5m16.8s",
+      "x-ratelimit-reset-tokens": "4.282s"
+    }
+  },
+  {
+    "time": 1793999632.7170768,
+    "tokens": 360,
+    "input_byte_bound": 936,
+    "status": 200,
+    "measured_prompt_tokens": 250,
+    "measured_total_tokens": 360,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "662",
+      "x-ratelimit-remaining-tokens": "7476",
+      "x-ratelimit-reset-requests": "8h6m43.2s",
+      "x-ratelimit-reset-tokens": "3.93s"
+    }
+  },
+  {
+    "time": 1793999636.427992,
+    "tokens": 359,
+    "input_byte_bound": 936,
+    "status": 200,
+    "measured_prompt_tokens": 250,
+    "measured_total_tokens": 359,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "661",
+      "x-ratelimit-remaining-tokens": "7518",
+      "x-ratelimit-reset-requests": "8h8m9.6s",
+      "x-ratelimit-reset-tokens": "3.615s"
+    }
+  },
+  {
+    "time": 1793999640.6930473,
+    "tokens": 570,
+    "input_byte_bound": 1767,
+    "status": 200,
+    "measured_prompt_tokens": 504,
+    "measured_total_tokens": 570,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "660",
+      "x-ratelimit-remaining-tokens": "7356",
+      "x-ratelimit-reset-requests": "8h9m36s",
+      "x-ratelimit-reset-tokens": "4.83s"
+    }
+  },
+  {
+    "time": 1793999641.86176,
+    "tokens": 344,
+    "input_byte_bound": 985,
+    "status": 200,
+    "measured_prompt_tokens": 254,
+    "measured_total_tokens": 344,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "659",
+      "x-ratelimit-remaining-tokens": "7453",
+      "x-ratelimit-reset-requests": "8h11m2.4s",
+      "x-ratelimit-reset-tokens": "4.102s"
+    }
+  },
+  {
+    "time": 1793999647.0051942,
+    "tokens": 569,
+    "input_byte_bound": 1869,
+    "status": 200,
+    "measured_prompt_tokens": 518,
+    "measured_total_tokens": 569,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "658",
+      "x-ratelimit-remaining-tokens": "7261",
+      "x-ratelimit-reset-requests": "8h12m28.8s",
+      "x-ratelimit-reset-tokens": "5.542s"
+    }
+  },
+  {
+    "time": 1793999688.3393047,
+    "tokens": 569,
+    "input_byte_bound": 1869,
+    "status": 200,
+    "measured_prompt_tokens": 518,
+    "measured_total_tokens": 569,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "657",
+      "x-ratelimit-remaining-tokens": "7381",
+      "x-ratelimit-reset-requests": "8h13m55.2s",
+      "x-ratelimit-reset-tokens": "4.642s"
+    }
+  },
+  {
+    "time": 1793999689.4943664,
+    "tokens": 319,
+    "input_byte_bound": 985,
+    "status": 200,
+    "measured_prompt_tokens": 254,
+    "measured_total_tokens": 319,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "656",
+      "x-ratelimit-remaining-tokens": "7457",
+      "x-ratelimit-reset-requests": "8h15m21.6s",
+      "x-ratelimit-reset-tokens": "4.072s"
+    }
+  },
+  {
+    "time": 1793999692.7477214,
+    "tokens": 325,
+    "input_byte_bound": 985,
+    "status": 200,
+    "measured_prompt_tokens": 254,
+    "measured_total_tokens": 325,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "655",
+      "x-ratelimit-remaining-tokens": "7540",
+      "x-ratelimit-reset-requests": "8h16m47.999s",
+      "x-ratelimit-reset-tokens": "3.45s"
+    }
+  },
+  {
+    "time": 1793999695.8510807,
+    "tokens": 569,
+    "input_byte_bound": 1869,
+    "status": 200,
+    "measured_prompt_tokens": 518,
+    "measured_total_tokens": 569,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "654",
+      "x-ratelimit-remaining-tokens": "7381",
+      "x-ratelimit-reset-requests": "8h18m14.399s",
+      "x-ratelimit-reset-tokens": "4.642s"
+    }
+  },
+  {
+    "time": 1793999698.9521346,
+    "tokens": 377,
+    "input_byte_bound": 1008,
+    "status": 200,
+    "measured_prompt_tokens": 263,
+    "measured_total_tokens": 377,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "653",
+      "x-ratelimit-remaining-tokens": "7459",
+      "x-ratelimit-reset-requests": "8h19m40.8s",
+      "x-ratelimit-reset-tokens": "4.057s"
+    }
+  },
+  {
+    "time": 1793999701.9885905,
+    "tokens": 627,
+    "input_byte_bound": 1969,
+    "status": 200,
+    "measured_prompt_tokens": 559,
+    "measured_total_tokens": 627,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "652",
+      "x-ratelimit-remaining-tokens": "7196",
+      "x-ratelimit-reset-requests": "8h21m7.199s",
+      "x-ratelimit-reset-tokens": "6.03s"
+    }
+  },
+  {
+    "time": 1793999707.1059148,
+    "tokens": 618,
+    "input_byte_bound": 1969,
+    "status": 200,
+    "measured_prompt_tokens": 559,
+    "measured_total_tokens": 618,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "651",
+      "x-ratelimit-remaining-tokens": "7026",
+      "x-ratelimit-reset-requests": "8h22m33.6s",
+      "x-ratelimit-reset-tokens": "7.305s"
+    }
+  },
+  {
+    "time": 1793999708.4371917,
+    "tokens": 375,
+    "input_byte_bound": 1008,
+    "status": 200,
+    "measured_prompt_tokens": 263,
+    "measured_total_tokens": 375,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "650",
+      "x-ratelimit-remaining-tokens": "7100",
+      "x-ratelimit-reset-requests": "8h23m59.999s",
+      "x-ratelimit-reset-tokens": "6.75s"
+    }
+  },
+  {
+    "time": 1793999711.6961586,
+    "tokens": 383,
+    "input_byte_bound": 1008,
+    "status": 200,
+    "measured_prompt_tokens": 263,
+    "measured_total_tokens": 383,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "649",
+      "x-ratelimit-remaining-tokens": "7134",
+      "x-ratelimit-reset-requests": "8h25m26.399s",
+      "x-ratelimit-reset-tokens": "6.495s"
+    }
+  },
+  {
+    "time": 1793999752.8487442,
+    "tokens": 620,
+    "input_byte_bound": 1969,
+    "status": 200,
+    "measured_prompt_tokens": 559,
+    "measured_total_tokens": 620,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "648",
+      "x-ratelimit-remaining-tokens": "7326",
+      "x-ratelimit-reset-requests": "8h26m52.8s",
+      "x-ratelimit-reset-tokens": "5.055s"
+    }
+  },
+  {
+    "time": 1793999755.9524362,
+    "tokens": 602,
+    "input_byte_bound": 1882,
+    "status": 200,
+    "measured_prompt_tokens": 538,
+    "measured_total_tokens": 602,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "647",
+      "x-ratelimit-remaining-tokens": "7117",
+      "x-ratelimit-reset-requests": "8h28m19.199s",
+      "x-ratelimit-reset-tokens": "6.622s"
+    }
+  },
+  {
+    "time": 1793999757.138303,
+    "tokens": 347,
+    "input_byte_bound": 975,
+    "status": 200,
+    "measured_prompt_tokens": 258,
+    "measured_total_tokens": 347,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "646",
+      "x-ratelimit-remaining-tokens": "7234",
+      "x-ratelimit-reset-requests": "8h29m45.6s",
+      "x-ratelimit-reset-tokens": "5.745s"
+    }
+  },
+  {
+    "time": 1793999762.0894063,
+    "tokens": 589,
+    "input_byte_bound": 1882,
+    "status": 200,
+    "measured_prompt_tokens": 538,
+    "measured_total_tokens": 589,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "645",
+      "x-ratelimit-remaining-tokens": "6993",
+      "x-ratelimit-reset-requests": "8h31m12s",
+      "x-ratelimit-reset-tokens": "7.552s"
+    }
+  },
+  {
+    "time": 1793999763.4749854,
+    "tokens": 340,
+    "input_byte_bound": 975,
+    "status": 200,
+    "measured_prompt_tokens": 258,
+    "measured_total_tokens": 340,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "644",
+      "x-ratelimit-remaining-tokens": "7112",
+      "x-ratelimit-reset-requests": "8h32m38.399s",
+      "x-ratelimit-reset-tokens": "6.66s"
+    }
+  },
+  {
+    "time": 1793999766.5187721,
+    "tokens": 340,
+    "input_byte_bound": 975,
+    "status": 200,
+    "measured_prompt_tokens": 258,
+    "measured_total_tokens": 340,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "643",
+      "x-ratelimit-remaining-tokens": "7192",
+      "x-ratelimit-reset-requests": "8h34m4.8s",
+      "x-ratelimit-reset-tokens": "6.06s"
+    }
+  },
+  {
+    "time": 1793999771.7967734,
+    "tokens": 592,
+    "input_byte_bound": 1882,
+    "status": 200,
+    "measured_prompt_tokens": 538,
+    "measured_total_tokens": 592,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "642",
+      "x-ratelimit-remaining-tokens": "7037",
+      "x-ratelimit-reset-requests": "8h35m31.199s",
+      "x-ratelimit-reset-tokens": "7.222s"
+    }
+  },
+  {
+    "time": 1793999812.9493787,
+    "tokens": 592,
+    "input_byte_bound": 1819,
+    "status": 200,
+    "measured_prompt_tokens": 542,
+    "measured_total_tokens": 592,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "641",
+      "x-ratelimit-remaining-tokens": "7328",
+      "x-ratelimit-reset-requests": "8h36m57.6s",
+      "x-ratelimit-reset-tokens": "5.04s"
+    }
+  },
+  {
+    "time": 1793999813.8369098,
+    "tokens": 346,
+    "input_byte_bound": 993,
+    "status": 200,
+    "measured_prompt_tokens": 279,
+    "measured_total_tokens": 346,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "640",
+      "x-ratelimit-remaining-tokens": "7428",
+      "x-ratelimit-reset-requests": "8h38m24s",
+      "x-ratelimit-reset-tokens": "4.29s"
+    }
+  },
+  {
+    "time": 1793999817.4688356,
+    "tokens": 349,
+    "input_byte_bound": 993,
+    "status": 200,
+    "measured_prompt_tokens": 279,
+    "measured_total_tokens": 349,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "639",
+      "x-ratelimit-remaining-tokens": "7492",
+      "x-ratelimit-reset-requests": "8h39m50.399s",
+      "x-ratelimit-reset-tokens": "3.81s"
+    }
+  },
+  {
+    "time": 1793999820.4750454,
+    "tokens": 590,
+    "input_byte_bound": 1819,
+    "status": 200,
+    "measured_prompt_tokens": 542,
+    "measured_total_tokens": 590,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "638",
+      "x-ratelimit-remaining-tokens": "7276",
+      "x-ratelimit-reset-requests": "8h41m16.8s",
+      "x-ratelimit-reset-tokens": "5.43s"
+    }
+  },
+  {
+    "time": 1793999823.6870685,
+    "tokens": 350,
+    "input_byte_bound": 993,
+    "status": 200,
+    "measured_prompt_tokens": 279,
+    "measured_total_tokens": 350,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "637",
+      "x-ratelimit-remaining-tokens": "7387",
+      "x-ratelimit-reset-requests": "8h42m43.2s",
+      "x-ratelimit-reset-tokens": "4.597s"
+    }
+  },
+  {
+    "time": 1793999826.8651955,
+    "tokens": 1102,
+    "input_byte_bound": 1819,
+    "status": 200,
+    "measured_prompt_tokens": 1054,
+    "measured_total_tokens": 1102,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "636",
+      "x-ratelimit-remaining-tokens": "7193",
+      "x-ratelimit-reset-requests": "8h44m9.6s",
+      "x-ratelimit-reset-tokens": "6.052s"
+    }
+  },
+  {
+    "time": 1793999829.5257418,
+    "tokens": 339,
+    "input_byte_bound": 990,
+    "status": 200,
+    "measured_prompt_tokens": 264,
+    "measured_total_tokens": 339,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "635",
+      "x-ratelimit-remaining-tokens": "7291",
+      "x-ratelimit-reset-requests": "8h45m36s",
+      "x-ratelimit-reset-tokens": "5.317s"
+    }
+  },
+  {
+    "time": 1793999873.9382966,
+    "tokens": 634,
+    "input_byte_bound": 1971,
+    "status": 200,
+    "measured_prompt_tokens": 570,
+    "measured_total_tokens": 634,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "634",
+      "x-ratelimit-remaining-tokens": "7329",
+      "x-ratelimit-reset-requests": "8h47m2.399s",
+      "x-ratelimit-reset-tokens": "5.032s"
+    }
+  },
+  {
+    "time": 1793999880.5761504,
+    "tokens": 636,
+    "input_byte_bound": 1971,
+    "status": 200,
+    "measured_prompt_tokens": 570,
+    "measured_total_tokens": 636,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "633",
+      "x-ratelimit-remaining-tokens": "7300",
+      "x-ratelimit-reset-requests": "8h48m28.8s",
+      "x-ratelimit-reset-tokens": "5.25s"
+    }
+  },
+  {
+    "time": 1793999881.653264,
+    "tokens": 355,
+    "input_byte_bound": 990,
+    "status": 200,
+    "measured_prompt_tokens": 264,
+    "measured_total_tokens": 355,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "632",
+      "x-ratelimit-remaining-tokens": "7621",
+      "x-ratelimit-reset-requests": "8h49m55.2s",
+      "x-ratelimit-reset-tokens": "2.842s"
+    }
+  },
+  {
+    "time": 1793999884.9672663,
+    "tokens": 611,
+    "input_byte_bound": 990,
+    "status": 200,
+    "measured_prompt_tokens": 520,
+    "measured_total_tokens": 611,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "631",
+      "x-ratelimit-remaining-tokens": "7637",
+      "x-ratelimit-reset-requests": "8h51m21.6s",
+      "x-ratelimit-reset-tokens": "2.722s"
+    }
+  },
+  {
+    "time": 1794083375.0995493,
+    "tokens": 635,
+    "input_byte_bound": 1971,
+    "status": 200,
+    "measured_prompt_tokens": 570,
+    "measured_total_tokens": 635,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "999",
+      "x-ratelimit-remaining-tokens": "7041",
+      "x-ratelimit-reset-requests": "1m26.4s",
+      "x-ratelimit-reset-tokens": "7.192s"
+    }
+  },
+  {
+    "time": 1794083376.9968452,
+    "tokens": 605,
+    "input_byte_bound": 1966,
+    "status": 200,
+    "measured_prompt_tokens": 559,
+    "measured_total_tokens": 605,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "998",
+      "x-ratelimit-remaining-tokens": "6738",
+      "x-ratelimit-reset-requests": "2m52.8s",
+      "x-ratelimit-reset-tokens": "9.465s"
+    }
+  },
+  {
+    "time": 1794083379.5810316,
+    "tokens": 307,
+    "input_byte_bound": 1005,
+    "status": 200,
+    "measured_prompt_tokens": 263,
+    "measured_total_tokens": 307,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "997",
+      "x-ratelimit-remaining-tokens": "6893",
+      "x-ratelimit-reset-requests": "4m19.2s",
+      "x-ratelimit-reset-tokens": "8.302s"
+    }
+  },
+  {
+    "time": 1794083382.4454248,
+    "tokens": 308,
+    "input_byte_bound": 1005,
+    "status": 200,
+    "measured_prompt_tokens": 263,
+    "measured_total_tokens": 308,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "996",
+      "x-ratelimit-remaining-tokens": "7293",
+      "x-ratelimit-reset-requests": "5m45.6s",
+      "x-ratelimit-reset-tokens": "5.302s"
+    }
+  },
+  {
+    "time": 1794083385.5551522,
+    "tokens": 605,
+    "input_byte_bound": 1966,
+    "status": 200,
+    "measured_prompt_tokens": 559,
+    "measured_total_tokens": 605,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "995",
+      "x-ratelimit-remaining-tokens": "7114",
+      "x-ratelimit-reset-requests": "7m12s",
+      "x-ratelimit-reset-tokens": "6.645s"
+    }
+  },
+  {
+    "time": 1794083388.6666975,
+    "tokens": 622,
+    "input_byte_bound": 1966,
+    "status": 200,
+    "measured_prompt_tokens": 559,
+    "measured_total_tokens": 622,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "994",
+      "x-ratelimit-remaining-tokens": "6930",
+      "x-ratelimit-reset-requests": "8m38.4s",
+      "x-ratelimit-reset-tokens": "8.025s"
+    }
+  },
+  {
+    "time": 1794083391.9889543,
+    "tokens": 563,
+    "input_byte_bound": 1005,
+    "status": 200,
+    "measured_prompt_tokens": 519,
+    "measured_total_tokens": 563,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "993",
+      "x-ratelimit-remaining-tokens": "7000",
+      "x-ratelimit-reset-requests": "10m4.8s",
+      "x-ratelimit-reset-tokens": "7.5s"
+    }
+  },
+  {
+    "time": 1794083394.7503695,
+    "tokens": 326,
+    "input_byte_bound": 1014,
+    "status": 200,
+    "measured_prompt_tokens": 259,
+    "measured_total_tokens": 326,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "992",
+      "x-ratelimit-remaining-tokens": "7125",
+      "x-ratelimit-reset-requests": "11m31.2s",
+      "x-ratelimit-reset-tokens": "6.562s"
+    }
+  },
+  {
+    "time": 1794083437.0976021,
+    "tokens": 587,
+    "input_byte_bound": 1898,
+    "status": 200,
+    "measured_prompt_tokens": 523,
+    "measured_total_tokens": 587,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "991",
+      "x-ratelimit-remaining-tokens": "7414",
+      "x-ratelimit-reset-requests": "12m57.599s",
+      "x-ratelimit-reset-tokens": "4.395s"
+    }
+  },
+  {
+    "time": 1794083438.3705633,
+    "tokens": 304,
+    "input_byte_bound": 1014,
+    "status": 200,
+    "measured_prompt_tokens": 259,
+    "measured_total_tokens": 304,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "990",
+      "x-ratelimit-remaining-tokens": "7504",
+      "x-ratelimit-reset-requests": "14m24s",
+      "x-ratelimit-reset-tokens": "3.719s"
+    }
+  },
+  {
+    "time": 1794083442.5464666,
+    "tokens": 587,
+    "input_byte_bound": 1898,
+    "status": 200,
+    "measured_prompt_tokens": 523,
+    "measured_total_tokens": 587,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "989",
+      "x-ratelimit-remaining-tokens": "7340",
+      "x-ratelimit-reset-requests": "15m50.4s",
+      "x-ratelimit-reset-tokens": "4.95s"
+    }
+  },
+  {
+    "time": 1794083444.4349318,
+    "tokens": 560,
+    "input_byte_bound": 1014,
+    "status": 200,
+    "measured_prompt_tokens": 515,
+    "measured_total_tokens": 560,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "988",
+      "x-ratelimit-remaining-tokens": "7432",
+      "x-ratelimit-reset-requests": "17m16.8s",
+      "x-ratelimit-reset-tokens": "4.26s"
+    }
+  },
+  {
+    "time": 1794083448.7683136,
+    "tokens": 1102,
+    "input_byte_bound": 1898,
+    "status": 200,
+    "measured_prompt_tokens": 1035,
+    "measured_total_tokens": 1102,
+    "rate_headers": {
+      "x-ratelimit-limit-requests": "1000",
+      "x-ratelimit-limit-tokens": "8000",
+      "x-ratelimit-remaining-requests": "987",
+      "x-ratelimit-remaining-tokens": "7274",
+      "x-ratelimit-reset-requests": "18m43.2s",
+      "x-ratelimit-reset-tokens": "5.445s"
+    }
+  }
+]

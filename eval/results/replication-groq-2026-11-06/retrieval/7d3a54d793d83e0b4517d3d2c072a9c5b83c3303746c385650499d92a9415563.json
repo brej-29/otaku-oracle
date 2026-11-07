@@ -1,0 +1,95 @@
+{
+  "fetched_at": "2026-11-05T20:17:32.346073+00:00",
+  "endpoint": "https://graphql.anilist.co",
+  "query": "query($id:Int!) { Media(id:$id, type:ANIME) { \nid title { romaji english native } siteUrl popularity episodes startDate { year }\nformat source season status isAdult\nstudios(isMain: true) { nodes { id name } }\ncharacters(role: MAIN, perPage: 50) { pageInfo { hasNextPage } edges { role node { id } } }\n } }",
+  "variables": {
+    "id": 103900
+  },
+  "attempts": [
+    {
+      "at": "2026-11-05T20:17:31.685659+00:00",
+      "status": 200,
+      "seconds": 0.66,
+      "rate_limit": "30",
+      "rate_remaining": "29"
+    }
+  ],
+  "response": {
+    "data": {
+      "Media": {
+        "id": 103900,
+        "title": {
+          "romaji": "Bokutachi wa Benkyou ga Dekinai",
+          "english": "We Never Learn: BOKUBEN",
+          "native": "ぼくたちは勉強ができない"
+        },
+        "siteUrl": "https://anilist.co/anime/103900",
+        "popularity": 133137,
+        "episodes": 13,
+        "startDate": {
+          "year": 2019
+        },
+        "format": "TV",
+        "source": "MANGA",
+        "season": "SPRING",
+        "status": "FINISHED",
+        "isAdult": false,
+        "studios": {
+          "nodes": [
+            {
+              "id": 6240,
+              "name": "Studio Silver"
+            },
+            {
+              "id": 6239,
+              "name": "Arvo Animation"
+            }
+          ]
+        },
+        "characters": {
+          "pageInfo": {
+            "hasNextPage": false
+          },
+          "edges": [
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 121775
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 121776
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 121777
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 121778
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 125599
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 125600
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

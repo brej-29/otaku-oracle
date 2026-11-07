@@ -1,0 +1,79 @@
+{
+  "fetched_at": "2026-11-05T20:22:10.190323+00:00",
+  "endpoint": "https://graphql.anilist.co",
+  "query": "query($id:Int!) { Media(id:$id, type:ANIME) { \nid title { romaji english native } siteUrl popularity episodes startDate { year }\nformat source season status isAdult\nstudios(isMain: true) { nodes { id name } }\ncharacters(role: MAIN, perPage: 50) { pageInfo { hasNextPage } edges { role node { id } } }\n } }",
+  "variables": {
+    "id": 183128
+  },
+  "attempts": [
+    {
+      "at": "2026-11-05T20:22:09.833788+00:00",
+      "status": 200,
+      "seconds": 0.356,
+      "rate_limit": "30",
+      "rate_remaining": "29"
+    }
+  ],
+  "response": {
+    "data": {
+      "Media": {
+        "id": 183128,
+        "title": {
+          "romaji": "Muchuu sa, Kimi ni.",
+          "english": "Captivated, By You",
+          "native": "夢中さ、きみに。"
+        },
+        "siteUrl": "https://anilist.co/anime/183128",
+        "popularity": 8440,
+        "episodes": 5,
+        "startDate": {
+          "year": 2025
+        },
+        "format": "TV",
+        "source": "MANGA",
+        "season": "SUMMER",
+        "status": "FINISHED",
+        "isAdult": false,
+        "studios": {
+          "nodes": [
+            {
+              "id": 95,
+              "name": "Doga Kobo"
+            }
+          ]
+        },
+        "characters": {
+          "pageInfo": {
+            "hasNextPage": false
+          },
+          "edges": [
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 250806
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 300018
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 300019
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 300020
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "fetched_at": "2026-11-05T20:16:11.778070+00:00",
+  "endpoint": "https://graphql.anilist.co",
+  "query": "query($id:Int!) { Media(id:$id, type:ANIME) { \nid title { romaji english native } siteUrl popularity episodes startDate { year }\nformat source season status isAdult\nstudios(isMain: true) { nodes { id name } }\ncharacters(role: MAIN, perPage: 50) { pageInfo { hasNextPage } edges { role node { id } } }\n } }",
+  "variables": {
+    "id": 192
+  },
+  "attempts": [
+    {
+      "at": "2026-11-05T20:16:11.157613+00:00",
+      "status": 200,
+      "seconds": 0.62,
+      "rate_limit": "30",
+      "rate_remaining": "29"
+    }
+  ],
+  "response": {
+    "data": {
+      "Media": {
+        "id": 192,
+        "title": {
+          "romaji": "Love Hina: Haru Special - Kimi Sakura Chiru Nakare!!",
+          "english": "Love Hina Spring Movie",
+          "native": "ラブひな春スペシャル 〜キミサクラチルナカレ!!〜"
+        },
+        "siteUrl": "https://anilist.co/anime/192",
+        "popularity": 8411,
+        "episodes": 1,
+        "startDate": {
+          "year": 2001
+        },
+        "format": "SPECIAL",
+        "source": "MANGA",
+        "season": "SPRING",
+        "status": "FINISHED",
+        "isAdult": false,
+        "studios": {
+          "nodes": [
+            {
+              "id": 27,
+              "name": "Xebec"
+            }
+          ]
+        },
+        "characters": {
+          "pageInfo": {
+            "hasNextPage": false
+          },
+          "edges": [
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 1037
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 1038
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 1040
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 1041
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 1042
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 1043
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 6409
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}
