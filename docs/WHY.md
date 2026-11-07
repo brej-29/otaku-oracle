@@ -1,6 +1,6 @@
 # Why this project, and the hard questions
 
-Numbers below are a snapshot taken 2026-11-06 02:24 UTC from the journals in `eval/results/`. Runs are still incomplete, so every figure is descriptive. The generated `summary.md` in each results folder is the source of truth and supersedes this page. The pass mark was fixed in [PREREGISTRATION.md](PREREGISTRATION.md) before any model answered.
+Numbers below come from the run summaries in `eval/results/` (registered run complete 2026-11-06 22:52 UTC; exploratory runs as stated in the table). The generated `summary.md` in each results folder is the source of truth and supersedes this page. The pass mark was fixed in [PREREGISTRATION.md](PREREGISTRATION.md) before any model answered.
 
 ## The claim in one paragraph
 
@@ -11,18 +11,18 @@ Chat models answer anime metadata questions (studio, episode count, start year, 
 | Run | Model | Role | Answers done | A (ungrounded) | B (grounded) | B minus A, 95% CI |
 |---|---|---|---:|---:|---:|---|
 | zai-flash | glm-4.5-flash | registered primary | 744 / 744 | 67.2% | 100.0% | 32.8 pts [24.7, 41.0] |
-| zai-flash | glm-4.7-flash | registered primary | 121 / 744 | 62.3% | 100.0% | 36.7 pts [15.9, 56.1], 60 pairs |
-| replication-groq | gpt-oss-120b | exploratory | 364 / 744 | 57.1% | 100.0% | 43.2 pts [31.7, 54.6], 182 pairs |
-| replication-nvidia | gemma-4-31b-it | exploratory | 412 / 744 (at snapshot) | 66.0% | 100.0% | 34.3 pts [24.0, 43.6], 206 pairs |
+| zai-flash | glm-4.7-flash | registered primary | 744 / 744 | 54.6% | 99.2% | 44.6 pts [36.6, 52.6], 372 pairs |
+| replication-groq | gpt-oss-120b | exploratory | 731 / 744 | 58.2% | 100.0% | 41.8 pts [34.9, 48.2], 365 pairs |
+| replication-nvidia | gemma-4-31b-it | exploratory | 744 / 744 | 62.9% | 100.0% | 37.1 pts [29.9, 44.2], 372 pairs |
 
-- The registered threshold (pooled gain of at least 10 points, lower bound above 0, both models, three repeats) **cannot be claimed**. `glm-4.7-flash` has 16% coverage because the provider kept returning "temporarily overloaded". The preregistration says a partial run cannot pass.
+- The registered threshold (pooled gain of at least 10 points, lower bound above 0, both models, three repeats) **passes**: pooled B minus A is 38.7 points, 95% CI [31.7, 46.0], on 744 complete pairs (`eval/results/zai-flash-2026-11-06/summary.md`). The pass says grounding helps these free models on these seven fields. It does not say the record is true, and arm B is a ceiling.
 - Exploratory runs are never pooled into the primary result.
-- Bucket pattern, descriptive only: pooled gain is 11.9 pts for head titles, 30.8 for torso and 56.5 for long tail. This points the way the long-tail prediction said it would. It is not a tested result.
+- Bucket pattern, registered pooled result: gain is 28.6 pts for head titles, 34.9 for torso and 53.3 for long tail. This is the ordering the long-tail prediction gave. The title sample is 18, so the intervals are wide (long tail [37.0, 69.4]).
 
 ## The hard questions
 
 **1. Why is this a real problem and not a toy?**
-Because the failure is measurable and silent. In the ungrounded arm every wrong answer from the GLM models carried a stated confidence of at least 0.8 (confident-wrong equals wrong-answer in the table: 32.8% and 37.7%). Nothing in the output warns the reader. Source: `eval/results/zai-flash-2026-11-06/summary.md`.
+Because the failure is measurable and silent. In the ungrounded arm every wrong answer from the GLM models carried a stated confidence of at least 0.8 (confident-wrong equals wrong-answer in the table: 32.8% and 44.9%). Nothing in the output warns the reader. Source: `eval/results/zai-flash-2026-11-06/summary.md`.
 
 **2. Grounded accuracy is 100%. Isn't that trivial, since the answer is in the prompt?**
 Yes, largely, and it should be read that way. Arm B tests whether a free model copies a fact from a supplied record correctly. It shows a ceiling, not cleverness. The informative number is arm A: roughly one answer in three is wrong without the record. I do not claim arm B proves general retrieval quality.
@@ -68,15 +68,16 @@ Per-client daily limit 50, global model budget 100 per day, a global 25 per minu
 The original was a dead deployment (the Railway URL returned 404), shipped 21 MB of 3D models, and its model IDs had all left the catalog. A Worker with D1 gives atomic counters and a free tier. The Python code remains, offline, for the evaluation. Details in [ARCHITECTURE.md](ARCHITECTURE.md).
 
 **14. Is the model's stated confidence useful?**
-Not in the ungrounded arm. For the GLM models every wrong answer was stated with confidence at or above 0.8. Groq's model abstained on 13.2% of ungrounded answers, which is the only abstention behaviour seen. Confidence is therefore not used for any decision in the product. Verification against the record is.
+Not in the ungrounded arm. For the GLM models every wrong answer was stated with confidence at or above 0.8. Groq's model abstained on 14.5% of ungrounded answers, which is the only abstention behaviour seen. Confidence is therefore not used for any decision in the product. Verification against the record is.
 
 **15. What would prove this wrong?**
 Preregistered: a completed run where the pooled gain is under 10 points or the interval touches zero, or B at or below A. Also the long-tail ordering failing. Beyond that: a larger title sample where head titles show the same 56 point gain would break the popularity story, and a field outside these seven fields where the record is silent would show the limit of the approach, since those claims stay unchecked.
 
 ## What is not done yet
 
-- `glm-4.7-flash` is not complete, so the registered pass or fail is **blocked**, not decided.
-- The Worker and interface run locally. There is no live URL yet.
+- The Groq exploratory run is at 731 of 744 (local daily quota guard); it is excluded from the primary result either way.
+- Live site: https://otaku-oracle.brejesh-bala.workers.dev, API on a Cloudflare Worker with AniList calls relayed through a free Vercel function (AniList returned 403 to Cloudflare Workers directly).
+- Cross-checking against Jikan and Wikidata has not been shown on live data.
 - Lighthouse was last measured before the cover row and claim states were added (mobile 96, 100, 100, 100). It must be re-run on the final build.
 
 

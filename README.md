@@ -2,15 +2,18 @@
 
 Anime answers where every fact is checked against its AniList record and stamped. Facts that match get a seal. Facts that contradict the record are struck through, with the record's value shown. Anything that cannot be checked stays in pencil.
 
-Status: the product works locally end to end. It is not deployed yet. The evaluation is partly done: the registered pass or fail for the central claim is **blocked**, not decided, because one of the two registered models (`glm-4.7-flash`) has only 16% of its answers. Early descriptive numbers and every hard question are answered in [docs/WHY.md](docs/WHY.md).
+Live: [otaku-oracle.brejesh-bala.workers.dev](https://otaku-oracle.brejesh-bala.workers.dev). Free tiers throughout (Cloudflare Workers and D1, Vercel Hobby relay, free model providers), so answers can be slow, rate-limited (50 questions per client per day, 100 model answers per day overall) or fall back to the record alone.
 
-| Evidence so far (partial, descriptive) | Ungrounded | Grounded in the record |
-|---|---:|---:|
-| `glm-4.5-flash`, complete run | 67.2% | 100.0% |
-| `gpt-oss-120b`, exploratory, 49% done | 57.1% | 100.0% |
-| `gemma-4-31b-it`, exploratory, 55% done | 66.0% | 100.0% |
+Status: the preregistered test **passed**. Grounding the model in the AniList record raised accuracy by 38.7 points (95% CI 31.7 to 46.0), pooled over the two registered models, 744 complete pairs, against the pass mark of 10 points with a lower bound above 0. Every hard question is answered in [docs/WHY.md](docs/WHY.md).
 
-Grounded accuracy is a ceiling, since the record holds the answer. The informative number is the ungrounded one: roughly one answer in three is wrong, and the wrong ones are stated with confidence.
+| Model | Ungrounded | Grounded in the record | Gain, 95% CI |
+|---|---:|---:|---|
+| `glm-4.7-flash` (registered) | 54.6% | 99.2% | 44.6 [36.6, 52.6] |
+| `glm-4.5-flash` (registered) | 67.2% | 100.0% | 32.8 [24.7, 41.0] |
+| `gemma-4-31b-it` (exploratory) | 62.9% | 100.0% | 37.1 [29.9, 44.2] |
+| `gpt-oss-120b` (exploratory, 731 of 744 answers) | 58.2% | 100.0% | 41.8 [34.9, 48.2] |
+
+Grounded accuracy is a ceiling, since the record holds the answer. The informative number is the ungrounded one: between a third and a half of ungrounded answers were wrong, and the wrong ones were stated with confidence. The gain is largest for obscure titles (53.3 points pooled for the long tail, 28.6 for the most popular). Only 18 titles were tested, so intervals are wide. Exploratory runs are not pooled into the registered result.
 
 ## The problem
 
@@ -53,11 +56,15 @@ Tests: `npm test` in `worker/`, `npm run build` in `web/`, `uv run --project eva
 
 ## Design
 
-The interface uses real manga materials as its meaning system: blue pencil for unchecked, black ink for checked, a red hanko seal for verified. See [web/DESIGN.md](web/DESIGN.md) and the screenshots under `docs/shots/`.
+A scroll-driven anime-cinema interface: a dusk hero with a shuffling deck of covers, a samurai guide who walks the page, and claims stamped as verified, conflicting or unchecked. Details in [web/DESIGN.md](web/DESIGN.md) and [docs/SAGA_REFINEMENT.md](docs/SAGA_REFINEMENT.md).
+
+## Extra sources (unmeasured)
+
+Beyond AniList the service can cross-check some fields against Jikan and Wikidata and link to Wikipedia and Reddit searches. This is a product extension, not an evaluated result. Live cross-checks have not been shown to work yet. See [docs/WHY.md](docs/WHY.md).
 
 ## Limits, stated now
 
-- Accuracy numbers appear in the interface only when they load from a completed evaluation file. Until then the page says so.
+- AniList blocks direct requests from Cloudflare Workers (HTTP 403, cause unconfirmed), so AniList calls pass through a small Vercel relay. If the relay fails, the service falls back to cached records or the record-only mode.
 - The evaluation hands the model the correct AniList record, so it measures grounding, not title search. It uses 18 titles, which is a small sample.
 - AniList is the reference, not the truth about anime.
 - Free model tiers have daily limits and change without notice. Model and provider IDs are configuration, not code.
