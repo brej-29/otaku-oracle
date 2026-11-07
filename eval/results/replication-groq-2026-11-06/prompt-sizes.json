@@ -1,0 +1,753 @@
+{
+  "at": "2026-11-05T20:23:20.183342+00:00",
+  "dataset_sha256": "fcc083e2d3c6950b03630c54d48db2382df9686c0802e9373c3eafae7422d8ea",
+  "method": "exact UTF-8 byte lengths plus 256 framing-token reserve, not a provider tokenizer; actual prompt tokens logged from response usage",
+  "grounded_min_byte_length": 1318,
+  "grounded_max_byte_length": 1851,
+  "questions": [
+    {
+      "question_id": "104276:studio",
+      "input_utf8_bytes": 1713,
+      "conservative_input_tokens": 1969,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "104276:episodes",
+      "input_utf8_bytes": 1675,
+      "conservative_input_tokens": 1931,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "104276:year",
+      "input_utf8_bytes": 1681,
+      "conservative_input_tokens": 1937,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "104276:format",
+      "input_utf8_bytes": 1719,
+      "conservative_input_tokens": 1975,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "104276:source",
+      "input_utf8_bytes": 1751,
+      "conservative_input_tokens": 2007,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "104276:season",
+      "input_utf8_bytes": 1686,
+      "conservative_input_tokens": 1942,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "104276:main_characters",
+      "input_utf8_bytes": 1710,
+      "conservative_input_tokens": 1966,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "1535:studio",
+      "input_utf8_bytes": 1677,
+      "conservative_input_tokens": 1933,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "1535:episodes",
+      "input_utf8_bytes": 1639,
+      "conservative_input_tokens": 1895,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "1535:year",
+      "input_utf8_bytes": 1645,
+      "conservative_input_tokens": 1901,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "1535:format",
+      "input_utf8_bytes": 1683,
+      "conservative_input_tokens": 1939,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "1535:source",
+      "input_utf8_bytes": 1715,
+      "conservative_input_tokens": 1971,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "1535:season",
+      "input_utf8_bytes": 1650,
+      "conservative_input_tokens": 1906,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "1535:main_characters",
+      "input_utf8_bytes": 1674,
+      "conservative_input_tokens": 1930,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "11061:studio",
+      "input_utf8_bytes": 1557,
+      "conservative_input_tokens": 1813,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "11061:episodes",
+      "input_utf8_bytes": 1519,
+      "conservative_input_tokens": 1775,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "11061:year",
+      "input_utf8_bytes": 1525,
+      "conservative_input_tokens": 1781,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "11061:format",
+      "input_utf8_bytes": 1563,
+      "conservative_input_tokens": 1819,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "11061:source",
+      "input_utf8_bytes": 1595,
+      "conservative_input_tokens": 1851,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "11061:season",
+      "input_utf8_bytes": 1530,
+      "conservative_input_tokens": 1786,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "11061:main_characters",
+      "input_utf8_bytes": 1554,
+      "conservative_input_tokens": 1810,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "20958:studio",
+      "input_utf8_bytes": 1600,
+      "conservative_input_tokens": 1856,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "20958:episodes",
+      "input_utf8_bytes": 1562,
+      "conservative_input_tokens": 1818,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "20958:year",
+      "input_utf8_bytes": 1568,
+      "conservative_input_tokens": 1824,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "20958:format",
+      "input_utf8_bytes": 1606,
+      "conservative_input_tokens": 1862,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "20958:source",
+      "input_utf8_bytes": 1638,
+      "conservative_input_tokens": 1894,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "20958:season",
+      "input_utf8_bytes": 1573,
+      "conservative_input_tokens": 1829,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "20958:main_characters",
+      "input_utf8_bytes": 1597,
+      "conservative_input_tokens": 1853,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "21856:studio",
+      "input_utf8_bytes": 1658,
+      "conservative_input_tokens": 1914,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "21856:episodes",
+      "input_utf8_bytes": 1620,
+      "conservative_input_tokens": 1876,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "21856:year",
+      "input_utf8_bytes": 1626,
+      "conservative_input_tokens": 1882,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "21856:format",
+      "input_utf8_bytes": 1664,
+      "conservative_input_tokens": 1920,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "21856:source",
+      "input_utf8_bytes": 1696,
+      "conservative_input_tokens": 1952,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "21856:season",
+      "input_utf8_bytes": 1631,
+      "conservative_input_tokens": 1887,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "21856:main_characters",
+      "input_utf8_bytes": 1655,
+      "conservative_input_tokens": 1911,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "16498:studio",
+      "input_utf8_bytes": 1447,
+      "conservative_input_tokens": 1703,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "16498:episodes",
+      "input_utf8_bytes": 1409,
+      "conservative_input_tokens": 1665,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "16498:year",
+      "input_utf8_bytes": 1415,
+      "conservative_input_tokens": 1671,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "16498:format",
+      "input_utf8_bytes": 1453,
+      "conservative_input_tokens": 1709,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "16498:source",
+      "input_utf8_bytes": 1485,
+      "conservative_input_tokens": 1741,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "16498:season",
+      "input_utf8_bytes": 1420,
+      "conservative_input_tokens": 1676,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "16498:main_characters",
+      "input_utf8_bytes": 1444,
+      "conservative_input_tokens": 1700,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "103900:studio",
+      "input_utf8_bytes": 1737,
+      "conservative_input_tokens": 1993,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "103900:episodes",
+      "input_utf8_bytes": 1699,
+      "conservative_input_tokens": 1955,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "103900:year",
+      "input_utf8_bytes": 1705,
+      "conservative_input_tokens": 1961,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "103900:format",
+      "input_utf8_bytes": 1743,
+      "conservative_input_tokens": 1999,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "103900:source",
+      "input_utf8_bytes": 1775,
+      "conservative_input_tokens": 2031,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "103900:season",
+      "input_utf8_bytes": 1710,
+      "conservative_input_tokens": 1966,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "103900:main_characters",
+      "input_utf8_bytes": 1734,
+      "conservative_input_tokens": 1990,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "21123:studio",
+      "input_utf8_bytes": 1405,
+      "conservative_input_tokens": 1661,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "21123:episodes",
+      "input_utf8_bytes": 1367,
+      "conservative_input_tokens": 1623,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "21123:year",
+      "input_utf8_bytes": 1373,
+      "conservative_input_tokens": 1629,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "21123:format",
+      "input_utf8_bytes": 1411,
+      "conservative_input_tokens": 1667,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "21123:source",
+      "input_utf8_bytes": 1443,
+      "conservative_input_tokens": 1699,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "21123:season",
+      "input_utf8_bytes": 1378,
+      "conservative_input_tokens": 1634,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "21123:main_characters",
+      "input_utf8_bytes": 1402,
+      "conservative_input_tokens": 1658,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "9041:studio",
+      "input_utf8_bytes": 1661,
+      "conservative_input_tokens": 1917,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "9041:episodes",
+      "input_utf8_bytes": 1623,
+      "conservative_input_tokens": 1879,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "9041:year",
+      "input_utf8_bytes": 1629,
+      "conservative_input_tokens": 1885,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "9041:format",
+      "input_utf8_bytes": 1667,
+      "conservative_input_tokens": 1923,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "9041:source",
+      "input_utf8_bytes": 1699,
+      "conservative_input_tokens": 1955,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "9041:season",
+      "input_utf8_bytes": 1634,
+      "conservative_input_tokens": 1890,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "9041:main_characters",
+      "input_utf8_bytes": 1658,
+      "conservative_input_tokens": 1914,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "135806:studio",
+      "input_utf8_bytes": 1432,
+      "conservative_input_tokens": 1688,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "135806:episodes",
+      "input_utf8_bytes": 1394,
+      "conservative_input_tokens": 1650,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "135806:year",
+      "input_utf8_bytes": 1400,
+      "conservative_input_tokens": 1656,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "135806:format",
+      "input_utf8_bytes": 1438,
+      "conservative_input_tokens": 1694,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "135806:source",
+      "input_utf8_bytes": 1470,
+      "conservative_input_tokens": 1726,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "135806:season",
+      "input_utf8_bytes": 1405,
+      "conservative_input_tokens": 1661,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "135806:main_characters",
+      "input_utf8_bytes": 1429,
+      "conservative_input_tokens": 1685,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "21718:studio",
+      "input_utf8_bytes": 1701,
+      "conservative_input_tokens": 1957,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "21718:episodes",
+      "input_utf8_bytes": 1663,
+      "conservative_input_tokens": 1919,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "21718:year",
+      "input_utf8_bytes": 1669,
+      "conservative_input_tokens": 1925,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "21718:format",
+      "input_utf8_bytes": 1707,
+      "conservative_input_tokens": 1963,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "21718:source",
+      "input_utf8_bytes": 1739,
+      "conservative_input_tokens": 1995,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "21718:season",
+      "input_utf8_bytes": 1674,
+      "conservative_input_tokens": 1930,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "21718:main_characters",
+      "input_utf8_bytes": 1698,
+      "conservative_input_tokens": 1954,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "21306:studio",
+      "input_utf8_bytes": 1645,
+      "conservative_input_tokens": 1901,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "21306:episodes",
+      "input_utf8_bytes": 1607,
+      "conservative_input_tokens": 1863,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "21306:year",
+      "input_utf8_bytes": 1613,
+      "conservative_input_tokens": 1869,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "21306:format",
+      "input_utf8_bytes": 1651,
+      "conservative_input_tokens": 1907,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "21306:source",
+      "input_utf8_bytes": 1683,
+      "conservative_input_tokens": 1939,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "21306:season",
+      "input_utf8_bytes": 1618,
+      "conservative_input_tokens": 1874,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "21306:main_characters",
+      "input_utf8_bytes": 1642,
+      "conservative_input_tokens": 1898,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "4705:studio",
+      "input_utf8_bytes": 1356,
+      "conservative_input_tokens": 1612,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "4705:episodes",
+      "input_utf8_bytes": 1318,
+      "conservative_input_tokens": 1574,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "4705:year",
+      "input_utf8_bytes": 1324,
+      "conservative_input_tokens": 1580,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "4705:format",
+      "input_utf8_bytes": 1362,
+      "conservative_input_tokens": 1618,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "4705:main_characters",
+      "input_utf8_bytes": 1353,
+      "conservative_input_tokens": 1609,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "1563:studio",
+      "input_utf8_bytes": 1506,
+      "conservative_input_tokens": 1762,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "1563:episodes",
+      "input_utf8_bytes": 1468,
+      "conservative_input_tokens": 1724,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "1563:year",
+      "input_utf8_bytes": 1474,
+      "conservative_input_tokens": 1730,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "1563:format",
+      "input_utf8_bytes": 1512,
+      "conservative_input_tokens": 1768,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "1563:source",
+      "input_utf8_bytes": 1544,
+      "conservative_input_tokens": 1800,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "1563:season",
+      "input_utf8_bytes": 1479,
+      "conservative_input_tokens": 1735,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "1563:main_characters",
+      "input_utf8_bytes": 1503,
+      "conservative_input_tokens": 1759,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "20486:studio",
+      "input_utf8_bytes": 1578,
+      "conservative_input_tokens": 1834,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "20486:episodes",
+      "input_utf8_bytes": 1540,
+      "conservative_input_tokens": 1796,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "20486:year",
+      "input_utf8_bytes": 1546,
+      "conservative_input_tokens": 1802,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "20486:format",
+      "input_utf8_bytes": 1584,
+      "conservative_input_tokens": 1840,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "20486:source",
+      "input_utf8_bytes": 1616,
+      "conservative_input_tokens": 1872,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "20486:season",
+      "input_utf8_bytes": 1551,
+      "conservative_input_tokens": 1807,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "20486:main_characters",
+      "input_utf8_bytes": 1575,
+      "conservative_input_tokens": 1831,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "132467:studio",
+      "input_utf8_bytes": 1538,
+      "conservative_input_tokens": 1794,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "132467:episodes",
+      "input_utf8_bytes": 1500,
+      "conservative_input_tokens": 1756,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "132467:year",
+      "input_utf8_bytes": 1506,
+      "conservative_input_tokens": 1762,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "132467:format",
+      "input_utf8_bytes": 1544,
+      "conservative_input_tokens": 1800,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "132467:source",
+      "input_utf8_bytes": 1576,
+      "conservative_input_tokens": 1832,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "132467:season",
+      "input_utf8_bytes": 1511,
+      "conservative_input_tokens": 1767,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "132467:main_characters",
+      "input_utf8_bytes": 1535,
+      "conservative_input_tokens": 1791,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "192:studio",
+      "input_utf8_bytes": 1813,
+      "conservative_input_tokens": 2069,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "192:episodes",
+      "input_utf8_bytes": 1775,
+      "conservative_input_tokens": 2031,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "192:year",
+      "input_utf8_bytes": 1781,
+      "conservative_input_tokens": 2037,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "192:format",
+      "input_utf8_bytes": 1819,
+      "conservative_input_tokens": 2075,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "192:source",
+      "input_utf8_bytes": 1851,
+      "conservative_input_tokens": 2107,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "192:season",
+      "input_utf8_bytes": 1786,
+      "conservative_input_tokens": 2042,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "192:main_characters",
+      "input_utf8_bytes": 1810,
+      "conservative_input_tokens": 2066,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "183128:studio",
+      "input_utf8_bytes": 1524,
+      "conservative_input_tokens": 1780,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "183128:episodes",
+      "input_utf8_bytes": 1486,
+      "conservative_input_tokens": 1742,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "183128:year",
+      "input_utf8_bytes": 1492,
+      "conservative_input_tokens": 1748,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "183128:format",
+      "input_utf8_bytes": 1530,
+      "conservative_input_tokens": 1786,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "183128:source",
+      "input_utf8_bytes": 1562,
+      "conservative_input_tokens": 1818,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "183128:season",
+      "input_utf8_bytes": 1497,
+      "conservative_input_tokens": 1753,
+      "reserved_completion_tokens": 1024
+    },
+    {
+      "question_id": "183128:main_characters",
+      "input_utf8_bytes": 1521,
+      "conservative_input_tokens": 1777,
+      "reserved_completion_tokens": 1024
+    }
+  ]
+}

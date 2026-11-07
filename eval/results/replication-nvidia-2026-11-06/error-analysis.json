@@ -1,0 +1,153 @@
+{
+  "A": [
+    {
+      "model": "google/gemma-4-31b-it",
+      "repeat": 0,
+      "question_id": "183128:main_characters",
+      "title": {
+        "romaji": "Muchuu sa, Kimi ni.",
+        "english": "Captivated, By You",
+        "native": "夢中さ、きみに。"
+      },
+      "question": "How many character edges are labelled MAIN in this anime's AniList record? Return an integer.",
+      "gold": 4,
+      "answer": 2,
+      "failure": "confident wrong"
+    },
+    {
+      "model": "google/gemma-4-31b-it",
+      "repeat": 0,
+      "question_id": "20486:year",
+      "title": {
+        "romaji": "Z/X IGNITION",
+        "english": "Z/X IGNITION",
+        "native": "Z/X IGNITION"
+      },
+      "question": "In which year did this anime start? Return a four-digit integer.",
+      "gold": 2014,
+      "answer": 2017,
+      "failure": "confident wrong"
+    },
+    {
+      "model": "google/gemma-4-31b-it",
+      "repeat": 0,
+      "question_id": "132467:main_characters",
+      "title": {
+        "romaji": "Tokyo Revengers: Chibi Reve",
+        "english": null,
+        "native": "ちびりべ"
+      },
+      "question": "How many character edges are labelled MAIN in this anime's AniList record? Return an integer.",
+      "gold": 5,
+      "answer": 0,
+      "failure": "confident wrong"
+    },
+    {
+      "model": "google/gemma-4-31b-it",
+      "repeat": 0,
+      "question_id": "21123:studio",
+      "title": {
+        "romaji": "DRIFTERS",
+        "english": "DRIFTERS",
+        "native": "DRIFTERS"
+      },
+      "question": "Which main animation studio or studios are listed for this anime? Return a list of studio names.",
+      "gold": [
+        "Hoods Entertainment"
+      ],
+      "answer": [
+        "Hodo"
+      ],
+      "failure": "confident wrong"
+    },
+    {
+      "model": "google/gemma-4-31b-it",
+      "repeat": 0,
+      "question_id": "103900:season",
+      "title": {
+        "romaji": "Bokutachi wa Benkyou ga Dekinai",
+        "english": "We Never Learn: BOKUBEN",
+        "native": "ぼくたちは勉強ができない"
+      },
+      "question": "In which season did it start? Return WINTER, SPRING, SUMMER, or FALL.",
+      "gold": "SPRING",
+      "answer": "WINTER",
+      "failure": "confident wrong"
+    },
+    {
+      "model": "google/gemma-4-31b-it",
+      "repeat": 0,
+      "question_id": "1563:season",
+      "title": {
+        "romaji": "Magic Knight Rayearth II",
+        "english": null,
+        "native": "魔法騎士（マジックナイト）レイアース II"
+      },
+      "question": "In which season did it start? Return WINTER, SPRING, SUMMER, or FALL.",
+      "gold": "SPRING",
+      "answer": "FALL",
+      "failure": "confident wrong"
+    },
+    {
+      "model": "google/gemma-4-31b-it",
+      "repeat": 0,
+      "question_id": "21856:main_characters",
+      "title": {
+        "romaji": "Boku no Hero Academia 2",
+        "english": "My Hero Academia Season 2",
+        "native": "僕のヒーローアカデミア２"
+      },
+      "question": "How many character edges are labelled MAIN in this anime's AniList record? Return an integer.",
+      "gold": 6,
+      "answer": 12,
+      "failure": "confident wrong"
+    },
+    {
+      "model": "google/gemma-4-31b-it",
+      "repeat": 0,
+      "question_id": "192:main_characters",
+      "title": {
+        "romaji": "Love Hina: Haru Special - Kimi Sakura Chiru Nakare!!",
+        "english": "Love Hina Spring Movie",
+        "native": "ラブひな春スペシャル 〜キミサクラチルナカレ!!〜"
+      },
+      "question": "How many character edges are labelled MAIN in this anime's AniList record? Return an integer.",
+      "gold": 7,
+      "answer": 5,
+      "failure": "confident wrong"
+    },
+    {
+      "model": "google/gemma-4-31b-it",
+      "repeat": 0,
+      "question_id": "16498:episodes",
+      "title": {
+        "romaji": "Shingeki no Kyojin",
+        "english": "Attack on Titan",
+        "native": "進撃の巨人"
+      },
+      "question": "How many episodes does this anime have? Return an integer.",
+      "gold": 25,
+      "answer": 88,
+      "failure": "confident wrong"
+    },
+    {
+      "model": "google/gemma-4-31b-it",
+      "repeat": 0,
+      "question_id": "20486:studio",
+      "title": {
+        "romaji": "Z/X IGNITION",
+        "english": "Z/X IGNITION",
+        "native": "Z/X IGNITION"
+      },
+      "question": "Which main animation studio or studios are listed for this anime? Return a list of studio names.",
+      "gold": [
+        "Telecom Animation Film"
+      ],
+      "answer": [
+        "Satelight"
+      ],
+      "failure": "confident wrong"
+    }
+  ],
+  "B": []
+}

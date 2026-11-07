@@ -1,0 +1,7 @@
+{
+  "pid": 53008,
+  "finished_at": "2026-11-06T09:20:44.348074+00:00",
+  "provider": "nvidia",
+  "calibration": "eval/results/calibration-nvidia-extension-2026-11-06/calibration.json",
+  "state": "exited"
+}

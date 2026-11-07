@@ -1,0 +1,91 @@
+{
+  "fetched_at": "2026-11-05T20:15:35.135107+00:00",
+  "endpoint": "https://graphql.anilist.co",
+  "query": "query($id:Int!) { Media(id:$id, type:ANIME) { \nid title { romaji english native } siteUrl popularity episodes startDate { year }\nformat source season status isAdult\nstudios(isMain: true) { nodes { id name } }\ncharacters(role: MAIN, perPage: 50) { pageInfo { hasNextPage } edges { role node { id } } }\n } }",
+  "variables": {
+    "id": 21856
+  },
+  "attempts": [
+    {
+      "at": "2026-11-05T20:15:34.477428+00:00",
+      "status": 200,
+      "seconds": 0.658,
+      "rate_limit": "30",
+      "rate_remaining": "27"
+    }
+  ],
+  "response": {
+    "data": {
+      "Media": {
+        "id": 21856,
+        "title": {
+          "romaji": "Boku no Hero Academia 2",
+          "english": "My Hero Academia Season 2",
+          "native": "僕のヒーローアカデミア２"
+        },
+        "siteUrl": "https://anilist.co/anime/21856",
+        "popularity": 664727,
+        "episodes": 25,
+        "startDate": {
+          "year": 2017
+        },
+        "format": "TV",
+        "source": "MANGA",
+        "season": "SPRING",
+        "status": "FINISHED",
+        "isAdult": false,
+        "studios": {
+          "nodes": [
+            {
+              "id": 4,
+              "name": "bones"
+            }
+          ]
+        },
+        "characters": {
+          "pageInfo": {
+            "hasNextPage": false
+          },
+          "edges": [
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 88892
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 89028
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 89220
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 89221
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 89222
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 89224
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

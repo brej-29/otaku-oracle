@@ -1,0 +1,7 @@
+{
+  "pid": 57748,
+  "finished_at": "2026-11-07T20:31:05.378339+00:00",
+  "provider": "groq",
+  "calibration": "eval/results/calibration-groq-extension-2026-11-06/calibration.json",
+  "state": "exited"
+}

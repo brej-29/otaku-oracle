@@ -1,0 +1,91 @@
+{
+  "fetched_at": "2026-11-05T20:15:15.825895+00:00",
+  "endpoint": "https://graphql.anilist.co",
+  "query": "query($id:Int!) { Media(id:$id, type:ANIME) { \nid title { romaji english native } siteUrl popularity episodes startDate { year }\nformat source season status isAdult\nstudios(isMain: true) { nodes { id name } }\ncharacters(role: MAIN, perPage: 50) { pageInfo { hasNextPage } edges { role node { id } } }\n } }",
+  "variables": {
+    "id": 9041
+  },
+  "attempts": [
+    {
+      "at": "2026-11-05T20:15:15.422622+00:00",
+      "status": 200,
+      "seconds": 0.403,
+      "rate_limit": "30",
+      "rate_remaining": "28"
+    }
+  ],
+  "response": {
+    "data": {
+      "Media": {
+        "id": 9041,
+        "title": {
+          "romaji": "IS: Infinite Stratos",
+          "english": "Infinite Stratos",
+          "native": "IS〈インフィニット・ストラトス〉"
+        },
+        "siteUrl": "https://anilist.co/anime/9041",
+        "popularity": 135326,
+        "episodes": 12,
+        "startDate": {
+          "year": 2011
+        },
+        "format": "TV",
+        "source": "LIGHT_NOVEL",
+        "season": "WINTER",
+        "status": "FINISHED",
+        "isAdult": false,
+        "studios": {
+          "nodes": [
+            {
+              "id": 4418,
+              "name": "8-bit"
+            }
+          ]
+        },
+        "characters": {
+          "pageInfo": {
+            "hasNextPage": false
+          },
+          "edges": [
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 35659
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 35660
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 35662
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 35663
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 36110
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 36111
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

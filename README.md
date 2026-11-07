@@ -11,7 +11,7 @@ Status: the preregistered test **passed**. Grounding the model in the AniList re
 | `glm-4.7-flash` (registered) | 54.6% | 99.2% | 44.6 [36.6, 52.6] |
 | `glm-4.5-flash` (registered) | 67.2% | 100.0% | 32.8 [24.7, 41.0] |
 | `gemma-4-31b-it` (exploratory) | 62.9% | 100.0% | 37.1 [29.9, 44.2] |
-| `gpt-oss-120b` (exploratory, 731 of 744 answers) | 58.2% | 100.0% | 41.8 [34.9, 48.2] |
+| `gpt-oss-120b` (exploratory) | 57.3% | 100.0% | 42.7 [35.8, 49.2] |
 
 Grounded accuracy is a ceiling, since the record holds the answer. The informative number is the ungrounded one: between a third and a half of ungrounded answers were wrong, and the wrong ones were stated with confidence. The gain is largest for obscure titles (53.3 points pooled for the long tail, 28.6 for the most popular). Only 18 titles were tested, so intervals are wide. Exploratory runs are not pooled into the registered result.
 

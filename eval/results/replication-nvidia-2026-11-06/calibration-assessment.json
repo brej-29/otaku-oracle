@@ -1,0 +1,10 @@
+{
+  "format_ready": true,
+  "expected_checks": 3,
+  "all_planned_checks_passed": true,
+  "all_six_checks_passed": false,
+  "valid_final_answers": 3,
+  "checks_recorded": 3,
+  "availability_failures": 0,
+  "note": "All returned final answers must match the schema and every model must demonstrate one; availability failures remain failures, not successful checks"
+}

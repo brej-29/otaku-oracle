@@ -1,0 +1,85 @@
+{
+  "fetched_at": "2026-11-05T20:15:50.812422+00:00",
+  "endpoint": "https://graphql.anilist.co",
+  "query": "query($id:Int!) { Media(id:$id, type:ANIME) { \nid title { romaji english native } siteUrl popularity episodes startDate { year }\nformat source season status isAdult\nstudios(isMain: true) { nodes { id name } }\ncharacters(role: MAIN, perPage: 50) { pageInfo { hasNextPage } edges { role node { id } } }\n } }",
+  "variables": {
+    "id": 21306
+  },
+  "attempts": [
+    {
+      "at": "2026-11-05T20:15:49.537770+00:00",
+      "status": 200,
+      "seconds": 1.275,
+      "rate_limit": "30",
+      "rate_remaining": "26"
+    }
+  ],
+  "response": {
+    "data": {
+      "Media": {
+        "id": 21306,
+        "title": {
+          "romaji": "Musaigen no Phantom World",
+          "english": "Myriad Colors Phantom World",
+          "native": "無彩限のファントム・ワールド"
+        },
+        "siteUrl": "https://anilist.co/anime/21306",
+        "popularity": 140090,
+        "episodes": 13,
+        "startDate": {
+          "year": 2016
+        },
+        "format": "TV",
+        "source": "LIGHT_NOVEL",
+        "season": "WINTER",
+        "status": "FINISHED",
+        "isAdult": false,
+        "studios": {
+          "nodes": [
+            {
+              "id": 2,
+              "name": "Kyoto Animation"
+            }
+          ]
+        },
+        "characters": {
+          "pageInfo": {
+            "hasNextPage": false
+          },
+          "edges": [
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 89033
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 89034
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 89035
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 89036
+              }
+            },
+            {
+              "role": "MAIN",
+              "node": {
+                "id": 89499
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}
