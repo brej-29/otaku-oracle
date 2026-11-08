@@ -218,6 +218,7 @@ export async function handle(
               : null
             : "The answer service is unavailable or its free allowance is used up. Showing facts from the source record.",
     };
+    if (route.unsupported) response.unsupported = true;
     if (expanded) {
       const values = await deadline.run(() => evidence).catch(() => []);
       return json(extendAnswer(response, route.kind, route.fields, values));
