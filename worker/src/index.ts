@@ -155,19 +155,20 @@ export async function handle(
       ? collectSources(result.record, route.kind, env, store, fetcher, deadline)
       : Promise.resolve([]);
     const sourceOnly =
-      expanded &&
-      (route.kind !== "fact" ||
-        route.fields.every(
-          (f) =>
-            ![
-              "studio",
-              "episodes",
-              "year",
-              "format",
-              "source",
-              "season",
-            ].includes(f),
-        ));
+      !!route.unsupported ||
+      (expanded &&
+        (route.kind !== "fact" ||
+          route.fields.every(
+            (f) =>
+              ![
+                "studio",
+                "episodes",
+                "year",
+                "format",
+                "source",
+                "season",
+              ].includes(f),
+          )));
     const attempt = sourceOnly
       ? Promise.resolve({ draft: null, model: null, degraded: false })
       : draftAnswer(
@@ -207,13 +208,15 @@ export async function handle(
               : "ok"
             : "exhausted",
       },
-      notice: sourceOnly
-        ? "Showing source data and related links; no drafted answer was requested."
-        : model.draft
-          ? model.degraded
-            ? "A backup answer service was used; the original record is linked for every claim."
-            : null
-          : "The answer service is unavailable or its free allowance is used up. Showing facts from the source record.",
+      notice: route.unsupported
+        ? "AniList does not record how much of the source material has been adapted, so there is no checked answer to this question. The record's facts are shown instead."
+        : sourceOnly
+          ? "Showing source data and related links; no drafted answer was requested."
+          : model.draft
+            ? model.degraded
+              ? "A backup answer service was used; the original record is linked for every claim."
+              : null
+            : "The answer service is unavailable or its free allowance is used up. Showing facts from the source record.",
     };
     if (expanded) {
       const values = await deadline.run(() => evidence).catch(() => []);

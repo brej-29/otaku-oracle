@@ -44,14 +44,20 @@ export const FIELD_TERMS: Readonly<
   main_characters: ["main character"],
   network: ["network", "tv channel", "broadcaster"],
 };
+// Questions about how much of the source material has been adapted: AniList holds no such value.
+const ADAPTATION_COVERAGE =
+  /\b(how much|how far|how many (volumes|chapters|arcs)|caught up|covered|covers|adapted so far|left to adapt)\b.*\b(novel|manga|source|book|volumes?|chapters?|story|arcs?)\b|\b(novel|manga|source|volumes?|chapters?)\b.*\b(adapted so far|come out as anime|been adapted|left to adapt)\b/;
 export function classify(question: string): {
   kind: QuestionKind;
   fields: EvidenceField[];
+  unsupported?: boolean;
 } {
   const q = question
     .toLowerCase()
     .replace(/[^a-z0-9 ]/g, " ")
     .replace(/ +/g, " ");
+  if (ADAPTATION_COVERAGE.test(q))
+    return { kind: "unclear", fields: [], unsupported: true };
   if (
     /\b(news|announcement|announced|rumou?r|renewed|renewal|trailer|upcoming|latest|confirmed)\b/.test(
       q,

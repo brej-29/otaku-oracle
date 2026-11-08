@@ -1,6 +1,6 @@
 {
   "fetchedAt": "2026-11-06T12:58:32Z",
-  "query": "query($id:Int!){Media(id:$id,type:ANIME){id idMal title{romaji english native} format episodes duration status startDate{year month day} endDate{year month day} season seasonYear source coverImage{large color} genres studios(isMain:true){nodes{name}} producers:studios(isMain:false){nodes{name isAnimationStudio}} popularity trending nextAiringEpisode{episode airingAt} relations{edges{relationType node{id title{romaji english} siteUrl}}} characters(role:MAIN,perPage:12){edges{node{name{full}} voiceActors(language:JAPANESE){name{full}}}} externalLinks{site url} streamingEpisodes{title url site}}}",
+  "query": "query($id:Int!){Media(id:$id,type:ANIME){id idMal title{romaji english native} format episodes duration status startDate{year month day} endDate{year month day} season seasonYear source coverImage{large color} genres studios{edges{isMain node{name isAnimationStudio}}} popularity trending nextAiringEpisode{episode airingAt} relations{edges{relationType node{id title{romaji english} siteUrl}}} characters(role:MAIN,perPage:12){edges{node{name{full}} voiceActors(language:JAPANESE){name{full}}}} externalLinks{site url} streamingEpisodes{title url site}}}",
   "response": {
     "data": {
       "Media": {
@@ -8,8 +8,8 @@
         "idMal": 52991,
         "title": {
           "romaji": "Sousou no Frieren",
-          "english": "Frieren: Beyond Journey\u2019s End",
-          "native": "\u846c\u9001\u306e\u30d5\u30ea\u30fc\u30ec\u30f3"
+          "english": "Frieren: Beyond Journey’s End",
+          "native": "葬送のフリーレン"
         },
         "format": "TV",
         "episodes": 28,
@@ -32,54 +32,61 @@
           "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx154587-qQTzQnEJJ3oB.jpg",
           "color": "#bbf1a1"
         },
-        "genres": ["Adventure", "Drama", "Fantasy"],
+        "genres": [
+          "Adventure",
+          "Drama",
+          "Fantasy"
+        ],
         "studios": {
-          "nodes": [
+          "edges": [
             {
-              "name": "Toho"
+              "isMain": false,
+              "node": {
+                "name": "Toho",
+                "isAnimationStudio": false
+              }
             },
             {
-              "name": "Shogakukan"
+              "isMain": true,
+              "node": {
+                "name": "MADHOUSE",
+                "isAnimationStudio": true
+              }
             },
             {
-              "name": "Nippon Television Network"
+              "isMain": false,
+              "node": {
+                "name": "Shogakukan",
+                "isAnimationStudio": false
+              }
             },
             {
-              "name": "Shogakukan-Shueisha Productions"
+              "isMain": false,
+              "node": {
+                "name": "Nippon Television Network",
+                "isAnimationStudio": false
+              }
             },
             {
-              "name": "Aniplex"
+              "isMain": false,
+              "node": {
+                "name": "Shogakukan-Shueisha Productions",
+                "isAnimationStudio": false
+              }
             },
             {
-              "name": "Dentsu"
-            }
-          ]
-        },
-        "producers": {
-          "nodes": [
-            {
-              "name": "Toho",
-              "isAnimationStudio": false
+              "isMain": false,
+              "node": {
+                "name": "Aniplex",
+                "isAnimationStudio": false
+              }
             },
             {
-              "name": "Shogakukan",
-              "isAnimationStudio": false
-            },
-            {
-              "name": "Nippon Television Network",
-              "isAnimationStudio": false
-            },
-            {
-              "name": "Shogakukan-Shueisha Productions",
-              "isAnimationStudio": false
-            },
-            {
-              "name": "Aniplex",
-              "isAnimationStudio": false
-            },
-            {
-              "name": "Dentsu",
-              "isAnimationStudio": false
+              "isMain": false,
+              "node": {
+                "name": "Dentsu",
+                "isAnimationStudio": false
+              }
             }
           ]
         },
@@ -94,7 +101,7 @@
                 "id": 118586,
                 "title": {
                   "romaji": "Sousou no Frieren",
-                  "english": "Frieren: Beyond Journey\u2019s End"
+                  "english": "Frieren: Beyond Journey’s End"
                 },
                 "siteUrl": "https://anilist.co/manga/118586"
               }
@@ -115,7 +122,7 @@
               "node": {
                 "id": 170068,
                 "title": {
-                  "romaji": "Sousou no Frieren: \u25cf\u25cf no Mahou",
+                  "romaji": "Sousou no Frieren: ●● no Mahou",
                   "english": null
                 },
                 "siteUrl": "https://anilist.co/anime/170068"
@@ -138,7 +145,7 @@
                 "id": 182255,
                 "title": {
                   "romaji": "Sousou no Frieren 2nd Season",
-                  "english": "Frieren: Beyond Journey\u2019s End Season 2"
+                  "english": "Frieren: Beyond Journey’s End Season 2"
                 },
                 "siteUrl": "https://anilist.co/anime/182255"
               }
@@ -148,7 +155,7 @@
               "node": {
                 "id": 189513,
                 "title": {
-                  "romaji": "Sousou no Frieren: \u25cf\u25cf no Mahou Part 2",
+                  "romaji": "Sousou no Frieren: ●● no Mahou Part 2",
                   "english": null
                 },
                 "siteUrl": "https://anilist.co/anime/189513"
