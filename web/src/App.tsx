@@ -1,9 +1,11 @@
 import {
-  ClaimEvidence,
-  SourceOverview,
-  RelatedShelf,
-} from "./components/Evidence";
-import { useCallback, useEffect, useRef, useState } from "react";
+  lazy,
+  Suspense,
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 import {
   API_BASE,
   ApiError,
@@ -15,7 +17,22 @@ import {
 import { sentence, recordSays } from "./sentence";
 import { Desk } from "./components/Desk";
 import { Journey } from "./components/Journey";
-import { How, Why } from "./components/Pages";
+// Only needed after an answer or on the Why/How pages, so they load on demand.
+const ClaimEvidence = lazy(() =>
+  import("./components/Evidence").then((m) => ({ default: m.ClaimEvidence })),
+);
+const SourceOverview = lazy(() =>
+  import("./components/Evidence").then((m) => ({ default: m.SourceOverview })),
+);
+const RelatedShelf = lazy(() =>
+  import("./components/Evidence").then((m) => ({ default: m.RelatedShelf })),
+);
+const Why = lazy(() =>
+  import("./components/Pages").then((m) => ({ default: m.Why })),
+);
+const How = lazy(() =>
+  import("./components/Pages").then((m) => ({ default: m.How })),
+);
 import {
   Icon,
   Logo,
@@ -353,8 +370,10 @@ export default function App() {
               />
             </Journey>
           )}
-          {page === "why" && <Why />}
-          {page === "how" && <How />}
+          <Suspense fallback={null}>
+            {page === "why" && <Why />}
+            {page === "how" && <How />}
+          </Suspense>
           {page === "answer" && (
             <div className="answer-page">
               <div className="answer-top">
@@ -500,7 +519,9 @@ export default function App() {
                             "Each claim below is compared to the retrieved record.")}
                     </p>
                   </div>
-                  <SourceOverview answer={answer} />
+                  <Suspense fallback={null}>
+                    <SourceOverview answer={answer} />
+                  </Suspense>
                   <div className="answer-layout">
                     <div className="answer-claims">
                       {answer.claims.length === 0 && !answer.resolution && (
@@ -584,7 +605,9 @@ export default function App() {
                               )}
                             </p>
                           )}
-                          <ClaimEvidence claim={c} />
+                          <Suspense fallback={null}>
+                            <ClaimEvidence claim={c} />
+                          </Suspense>
                           <a
                             href={c.sourceUrl}
                             target="_blank"
@@ -597,7 +620,9 @@ export default function App() {
                           </a>
                         </article>
                       ))}
-                      <RelatedShelf answer={answer} />
+                      <Suspense fallback={null}>
+                        <RelatedShelf answer={answer} />
+                      </Suspense>
                       {answer.explanation && (
                         <aside className="unchecked-prose">
                           <span className="status-label">
