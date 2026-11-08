@@ -27,7 +27,11 @@ export const media = {
   season: "SPRING",
   seasonYear: 1998,
   source: "ORIGINAL",
-  studios: { nodes: [{ name: "Sunrise" }] },
+  studios: {
+    edges: [
+      { isMain: true, node: { name: "Sunrise", isAnimationStudio: true } },
+    ],
+  },
   coverImage: { large: null, color: null },
   genres: ["Action"],
 };

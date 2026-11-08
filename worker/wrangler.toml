@@ -10,7 +10,8 @@ MODEL_DAILY_BUDGET = "100"
 PROVIDER_COOLDOWN_SECONDS = "900"
 PROVIDER_TIMEOUT_MS = "8000"
 REQUEST_DEADLINE_MS = "15000"
-MULTI_SOURCE_ENABLED = "true"
+# Off while Jikan times out from Cloudflare: with it on, two agreeing sources are needed and no claim can be verified.
+MULTI_SOURCE_ENABLED = "false"
 SOURCE_DAILY_BUDGET = "500"
 
 [[d1_databases]]

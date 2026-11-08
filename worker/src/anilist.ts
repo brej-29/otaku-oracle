@@ -5,7 +5,18 @@ import { Store, type StoredRecord } from "./storage";
 import { readLimited } from "./parse";
 import { retryAt } from "./providers";
 const QUERY =
-  "query($id:Int!){Media(id:$id,type:ANIME){id idMal title{romaji english native} format episodes duration status startDate{year month day} endDate{year month day} season seasonYear source coverImage{large color} genres studios(isMain:true){nodes{name}} producers:studios(isMain:false){nodes{name isAnimationStudio}} popularity trending nextAiringEpisode{episode airingAt} relations{edges{relationType node{id title{romaji english} siteUrl}}} characters(role:MAIN,perPage:12){pageInfo{total} edges{node{name{full}} voiceActors(language:JAPANESE){name{full}}}} externalLinks{site url type}}}";
+  "query($id:Int!){Media(id:$id,type:ANIME){id idMal title{romaji english native} format episodes duration status startDate{year month day} endDate{year month day} season seasonYear source coverImage{large color} genres studios{edges{isMain node{name isAnimationStudio}}} popularity trending nextAiringEpisode{episode airingAt} relations{edges{relationType node{id title{romaji english} siteUrl}}} characters(role:MAIN,perPage:12){pageInfo{total} edges{node{name{full}} voiceActors(language:JAPANESE){name{full}}}} externalLinks{site url type}}}";
+// AniList returns the same studios for two selections of the field with different isMain
+// arguments, so ask once and split on each edge's isMain flag.
+export function splitStudios(media: any) {
+  const edges: any[] = media?.studios?.edges ?? [];
+  const pick = (main: boolean) => ({
+    nodes: edges
+      .filter((e) => !!e?.isMain === main && e?.node)
+      .map((e) => e.node),
+  });
+  return { ...media, studios: pick(true), producers: pick(false) };
+}
 const flights = new WeakMap<object, Map<number, Promise<RecordResult>>>();
 export interface RecordResult extends StoredRecord {
   cached: boolean;
@@ -152,7 +163,7 @@ async function load(
         throw new ApiError(404, "title_not_found");
       if (body.errors) throw new ApiError(502, "upstream");
       if (body.data?.Media === null) throw new ApiError(404, "title_not_found");
-      const record = toRecord(body.data?.Media, id);
+      const record = toRecord(splitStudios(body.data?.Media), id);
       const fetchedAt = Date.now();
       await store.putRecord(record, fetchedAt);
       return { record, fetchedAt, cached: false };
