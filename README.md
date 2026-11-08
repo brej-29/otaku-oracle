@@ -58,9 +58,9 @@ Tests: `npm test` in `worker/`, `npm run build` in `web/`, `uv run --project eva
 
 A scroll-driven anime-cinema interface: a dusk hero with a shuffling deck of covers, a samurai guide who walks the page, and claims stamped as verified, conflicting or unchecked. Details in [web/DESIGN.md](web/DESIGN.md) and [docs/SAGA_REFINEMENT.md](docs/SAGA_REFINEMENT.md).
 
-## Extra sources (unmeasured)
+## Extra sources (built, switched off on the live site)
 
-Beyond AniList the service can cross-check some fields against Jikan and Wikidata and link to Wikipedia and Reddit searches. This is a product extension, not an evaluated result. Live cross-checks have not been shown to work yet. See [docs/WHY.md](docs/WHY.md).
+The code can cross-check some fields against Jikan and Wikidata and link to Wikipedia and Reddit searches (`MULTI_SOURCE_ENABLED`). It is off on the live site: Jikan times out from Cloudflare, and with the layer on a claim needs two agreeing sources, so nothing could be verified. It is also an unmeasured extension, not an evaluated result. See [docs/WHY.md](docs/WHY.md).
 
 ## Limits, stated now
 

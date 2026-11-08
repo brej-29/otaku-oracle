@@ -152,3 +152,5 @@ For local source-only review: use port 8788 for source-only local review so the 
 - Answer API: Cloudflare Worker `otaku-oracle-answer` with D1 `oracle`.
 - AniList returned HTTP 403 to requests from Cloudflare Workers (cause not confirmed with AniList), while the same request from a home network returned 200. AniList calls therefore go through a small relay (`relay/`, Vercel Hobby) when the `ANILIST_RELAY_URL` and `ANILIST_RELAY_KEY` secrets are set. The relay requires the `x-relay-key` header and only forwards to graphql.anilist.co.
 - Hugging Face free tier offers only Static Spaces. Docker Spaces need PRO, so the API could not move there.
+- `MULTI_SOURCE_ENABLED` is `"false"` in `worker/wrangler.toml`. With it on, Jikan timed out inside its 3 s limit from Cloudflare (a 6 s limit did not help), so no claim reached `verified`. Turn it on only after Jikan is reliable from the Worker.
+- AniList returns the same studios for two selections of `studios` with different `isMain` arguments, so the Worker queries `studios` once and splits on each edge's `isMain`. The evaluation dataset uses a single `studios(isMain: true)` selection and is not affected.
