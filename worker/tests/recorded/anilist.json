@@ -32,11 +32,7 @@
           "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx154587-qQTzQnEJJ3oB.jpg",
           "color": "#bbf1a1"
         },
-        "genres": [
-          "Adventure",
-          "Drama",
-          "Fantasy"
-        ],
+        "genres": ["Adventure", "Drama", "Fantasy"],
         "studios": {
           "edges": [
             {
