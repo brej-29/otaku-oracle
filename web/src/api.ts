@@ -49,6 +49,7 @@ export type Answer = Partial<SourceExtension> & {
   model: { id: string; provider: string } | null;
   demo: boolean; // true while no backend answered
   notice: string | null;
+  unsupported?: boolean;
   fetchedAt: string;
 };
 export class ApiError extends Error {
@@ -323,6 +324,7 @@ async function askBackend(
     model: j.model,
     demo: false,
     notice: j.notice,
+    unsupported: j.unsupported === true,
     fetchedAt: j.fetchedAt,
     questionKind: j.questionKind,
     resolution: j.resolution,

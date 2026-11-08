@@ -500,15 +500,17 @@ export default function App() {
                     data-kind={answer.questionKind}
                   >
                     <span className="status-label">
-                      {answer.resolution?.status === "discussion"
-                        ? "Discussion / not verified"
-                        : answer.demo
-                          ? "Demo · record facts only"
-                          : answer.mode === "record-only"
-                            ? answer.resolution
-                              ? "Source-led answer"
-                              : "Record-only fallback"
-                            : "Answer received · claims checked"}
+                      {answer.unsupported
+                        ? "Outside what the record holds"
+                        : answer.resolution?.status === "discussion"
+                          ? "Discussion / not verified"
+                          : answer.demo
+                            ? "Demo · record facts only"
+                            : answer.mode === "record-only"
+                              ? answer.resolution
+                                ? "Source-led answer"
+                                : "Record-only fallback"
+                              : "Answer received · claims checked"}
                     </span>
                     <p>
                       {answer.resolution

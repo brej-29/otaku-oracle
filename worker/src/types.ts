@@ -114,4 +114,5 @@ export interface Answer extends Partial<SourceExtension> {
   explanation: string | null;
   quota: { state: "ok" | "degraded" | "exhausted" };
   notice: string | null;
+  unsupported?: boolean;
 }
