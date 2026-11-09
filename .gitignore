@@ -24,3 +24,5 @@ otaku_oracle.log
 
 web/*.log
 web/*-local.json
+
+.npm-cache/

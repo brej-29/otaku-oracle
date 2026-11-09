@@ -1,5 +1,26 @@
 # Otaku Oracle
 
+[Live demo](https://otaku-oracle.brejesh-bala.workers.dev) | [Handoff and portfolio](docs/PROJECT_REPORT.md) | [Evidence](docs/EVIDENCE.md)
+
+![Otaku Oracle walkthrough of archived desktop states](docs/media/walkthrough.gif)
+
+*GIF assembled from archived interface captures; not a live API recording.*
+
+```mermaid
+flowchart LR
+  User[Choose anime and ask] --> Web[React / Vite]
+  Web --> Worker[Cloudflare Worker]
+  Worker --> D1[(D1 cache and quotas)]
+  Worker --> Relay[Vercel relay]
+  Relay --> AniList[AniList record]
+  Worker --> Model[Model drafts claims]
+  AniList --> Checker[Deterministic checker]
+  Model --> Checker
+  Checker --> Result[Verified / conflict / unchecked]
+  Result --> Web
+```
+
+
 Anime answers where every fact is checked against its AniList record and stamped. Facts that match get a seal. Facts that contradict the record are struck through, with the record's value shown. Anything that cannot be checked stays in pencil.
 
 Live: [otaku-oracle.brejesh-bala.workers.dev](https://otaku-oracle.brejesh-bala.workers.dev). Free tiers throughout (Cloudflare Workers and D1, Vercel Hobby relay, free model providers), so answers can be slow, rate-limited (50 questions per client per day, 100 model answers per day overall) or fall back to the record alone.
@@ -19,7 +40,7 @@ Grounded accuracy is a ceiling, since the record holds the answer. The informati
 
 Chat models answer anime questions fluently, and fluent is not the same as correct. Small facts such as the studio, the episode count or the start year can be wrong, and nobody stops to check them. This project tests whether giving a model the AniList record before it answers improves those facts, and shows the check to the reader.
 
-That is a hypothesis, not a finding. The test and its pass mark were written down before any results existed: [docs/PREREGISTRATION.md](docs/PREREGISTRATION.md), with changes recorded in [docs/PROTOCOL_AMENDMENTS.md](docs/PROTOCOL_AMENDMENTS.md).
+The completed result is reported above. The test and its pass mark were written down before any results existed: [docs/PREREGISTRATION.md](docs/PREREGISTRATION.md), with changes recorded in [docs/PROTOCOL_AMENDMENTS.md](docs/PROTOCOL_AMENDMENTS.md).
 
 ## What is in the repo
 
@@ -72,3 +93,5 @@ The code can cross-check some fields against Jikan and Wikidata and link to Wiki
 ## Licence
 
 MIT, see [LICENSE](LICENSE). Anime titles, cover art and metadata belong to their rights holders and come from AniList.
+
+Local MCP: [read-only project documentation server](local-mcp/README.md).

@@ -72,3 +72,35 @@ Pass rule was pooled B minus A at least 10 points with the 95% lower bound above
 - Ran a preregistered evaluation (744 pairs per model): grounding improved exact-match accuracy by 38.7 points pooled (95% CI 31.7 to 46.0), reported with its ceiling caveat.
 - Diagnosed a platform block (403 from Cloudflare IPs) and a silent-failure bug (`redirect: "error"`), each fixed with a regression test.
 - Shipped on Cloudflare Workers, D1 and a Vercel relay, with CI gating every merge.
+
+## 8. Documentation and discovery handoff (2026-11-09)
+
+The existing report is the canonical handoff; historical verification numbers above describe earlier runs, not checks repeated in this documentation update. Current web/package.json pins React 19.2, Vite 7.3.7 and TypeScript 5.9.3, with CSS/canvas motion and no motion package. The earlier stack table is historical.
+
+Goal: make anime answers auditable at the claim level and measure grounding against a preregistered baseline. Keep the distinction between agreement with AniList and independent truth in every portfolio claim. See WHY.md, EVIDENCE.md, PROTOCOL_AMENDMENTS.md and EXTENSION_RUNS.md for the reasoning, evidence and failed/blocked experiments. DEPLOY.md includes historical deployment notes; confirm the current configuration before reusing commands. Never copy an existing private .env into a public artifact; use worker/.dev.vars.example for setup.
+
+### LinkedIn draft
+
+I built Otaku Oracle to explore a simple question: can we make AI answers easier to check? A model drafts anime facts; a deterministic checker compares each claim with AniList and exposes agreement, conflict and uncertainty. The preregistered evaluation reported a pooled 38.7 percentage-point accuracy gain (95% CI 31.7�46.0). This measures faithful reading of supplied records, not independent factual truth. The difficult parts included a Cloudflare-to-AniList block, provider quotas, studio/producers ambiguity and gracefully falling back to source records. The stack combines React/TypeScript, Cloudflare Workers and D1, a Vercel relay, and a Python evaluation harness.
+
+Demo: https://otaku-oracle.brejesh-bala.workers.dev
+Source: https://github.com/brej-29/otaku-oracle
+
+### Search and sharing
+
+Added canonical URL, absolute social image URL, Twitter card, WebSite structured data, sitemap and the requested Google verification meta tag. No UI or answer behavior changes. Deploy the web build before verifying ownership in Google Search Console; then submit /sitemap.xml and inspect the homepage. Check rendered HTML and canonical selection in Search Console. Rankings, indexing and AI recommendations cannot be guaranteed. Google applies ordinary SEO fundamentals to AI features: https://developers.google.com/search/docs/appearance/ai-features . Keep schema consistent with visible content. No fabricated reviews or keyword stuffing.
+
+### Repository topics
+
+GitHub authentication is available in the normal user environment. The topic selection was updated to reflect the current stack. Reference command:
+
+```powershell
+gh repo edit brej-29/otaku-oracle --add-topic anime --add-topic anilist --add-topic fact-checking --add-topic llm --add-topic grounding --add-topic react --add-topic typescript --add-topic cloudflare-workers --add-topic cloudflare-d1 --add-topic evaluation --add-topic reproducible-research --add-topic portfolio
+```
+
+### MCP decision
+
+Implemented an isolated local stdio documentation MCP in `local-mcp/`, using the official MCP SDK. It exposes six allowlisted project documents as read-only resources, without network listeners, provider calls, arbitrary file access or app integration. Setup and client configuration are in `local-mcp/README.md`. No public MCP is planned.
+
+Validation for this update: local MCP SDK client initialized, listed and read all six resources, and rejected unlisted file/path requests; all nine existing frontend unit tests passed. README GIF decoded successfully. These checks do not remeasure the historical evaluation results.
+Web production build and lint also passed after installing the locked dependencies (zero lint warnings/errors).
